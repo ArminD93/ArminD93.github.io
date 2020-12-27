@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Home</title>
+    <link>https://armind93.github.io/projects/</link>
+    <description>Recent content in Projects on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 27 Jun 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://armind93.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Big Five Personality test - data analysis</title>
+      <link>https://armind93.github.io/projects/project_bigfive/</link>
+      <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/project_bigfive/</guid>
+      <description>link to GitHub Repository
+overview </description>
+    </item>
+    
+    <item>
+      <title>Convolutional network testing for image classification</title>
+      <link>https://armind93.github.io/projects/project_imageclass/</link>
+      <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/project_imageclass/</guid>
+      <description>link to GitHub Repository
+overview </description>
+    </item>
+    
+    <item>
+      <title>Kepler Exoplanet Search Results - data analysis</title>
+      <link>https://armind93.github.io/projects/project_kepler/</link>
+      <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/project_kepler/</guid>
+      <description>link to GitHub Repository
+overview </description>
+    </item>
+    
+    <item>
+      <title>World happiness report - data analysis</title>
+      <link>https://armind93.github.io/projects/project_worldhappiness/</link>
+      <pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/project_worldhappiness/</guid>
+      <description>Project 1: World happiness report - data analysis link to GitHub Repository
+overview </description>
+    </item>
+    
+    <item>
+      <title>Project of an automated system for selecting wooden blocks from a rack using Raspberry Pi</title>
+      <link>https://armind93.github.io/projects/project_library/</link>
+      <pubDate>Fri, 05 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/project_library/</guid>
+      <description>link to GitHub Repository
+Introduction The device was built using elements from a 3D printer (frame, stepper motors). Three randomly placed wooden blocks on the shelves of the rack are picked up by the gripper and stored in one of the cells in the bottom row of this rack.The place on the bottom shelf is chosen, where the path from these blocks to this place is the shortest
+overview  Device control through a graphical user interface:  Selecting on the keyboard the buttons corresponding to the places where the blocks are located.</description>
+    </item>
+    
+    <item>
+      <title>Books prices project</title>
+      <link>https://armind93.github.io/projects/project_booksprices/</link>
+      <pubDate>Mon, 08 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/project_booksprices/</guid>
+      <description>link to GitHub repository
+Introduction I wanted to get informations about books prices, which I&amp;rsquo;d like to buy in the future. Additionally, it would be nice to see the price curve on the chart.
+Functions:  Downloading informations about books (title, price, date) from the acount on the website: ebooki.swiatczytnikow.pl. Saving data to the database. Displaying charts - how the price has changed over time for a specific title.  </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -47,8 +47,9 @@ overview </description>
       <pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://armind93.github.io/projects/project_worldhappiness/</guid>
-      <description>Project 1: World happiness report - data analysis link to GitHub Repository
-overview </description>
+      <description>link to GitHub Repository
+Introduction: The data contain informations which might have influence for people&amp;rsquo;s happiness score in the selected country. We have 5 reports divided by years, from 2015 to 2019.
+Acording to data, the happiness score can be estimated from six factors - economic production, social support, life expectancy, freedom, absence of corruption, and generosity. These factors contribute to making life evaluations higher in each country than they are in Dystopia, a hypothetical country that has values equal to the world’s lowest national averages for each of the six factors.</description>
     </item>
     
     <item>
@@ -58,8 +59,8 @@ overview </description>
       
       <guid>https://armind93.github.io/projects/project_library/</guid>
       <description>link to GitHub Repository
-Introduction The device was built using elements from a 3D printer (frame, stepper motors). Three randomly placed wooden blocks on the shelves of the rack are picked up by the gripper and stored in one of the cells in the bottom row of this rack.The place on the bottom shelf is chosen, where the path from these blocks to this place is the shortest
-overview  Device control through a graphical user interface:  Selecting on the keyboard the buttons corresponding to the places where the blocks are located.</description>
+Introduction The device was built using elements from a 3D printer (frame, stepper motors). Three randomly placed wooden blocks on the shelves of the rack are picked up by the gripper and stored in one of the cells in the bottom row of this rack. The place on the bottom shelf is chosen, where the path from these blocks to this place is the shortest
+Overview   Device control through a graphical user interface:</description>
     </item>
     
     <item>

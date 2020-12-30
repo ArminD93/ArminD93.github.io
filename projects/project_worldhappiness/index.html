@@ -1,156 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Language" content="en">
-
-    <meta name="author" content="Armin Derencz">
-    <meta name="description" content="link to GitHub Repository
-Introduction: The data contain informations which might have influence for people&rsquo;s happiness score in the selected country. We have 5 reports divided by years, from 2015 to 2019.
-Acording to data, the happiness score can be estimated from six factors - economic production, social support, life expectancy, freedom, absence of corruption, and generosity. These factors contribute to making life evaluations higher in each country than they are in Dystopia, a hypothetical country that has values equal to the world’s lowest national averages for each of the six factors.">
-    <meta name="keywords" content="blog,developer,personal">
-
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="World happiness report - data analysis"/>
-<meta name="twitter:description" content="link to GitHub Repository
-Introduction: The data contain informations which might have influence for people&rsquo;s happiness score in the selected country. We have 5 reports divided by years, from 2015 to 2019.
-Acording to data, the happiness score can be estimated from six factors - economic production, social support, life expectancy, freedom, absence of corruption, and generosity. These factors contribute to making life evaluations higher in each country than they are in Dystopia, a hypothetical country that has values equal to the world’s lowest national averages for each of the six factors."/>
-
-    <meta property="og:title" content="World happiness report - data analysis" />
-<meta property="og:description" content="link to GitHub Repository
-Introduction: The data contain informations which might have influence for people&rsquo;s happiness score in the selected country. We have 5 reports divided by years, from 2015 to 2019.
-Acording to data, the happiness score can be estimated from six factors - economic production, social support, life expectancy, freedom, absence of corruption, and generosity. These factors contribute to making life evaluations higher in each country than they are in Dystopia, a hypothetical country that has values equal to the world’s lowest national averages for each of the six factors." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://armind93.github.io/projects/project_worldhappiness/" />
-<meta property="article:published_time" content="2020-02-19T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-02-19T00:00:00+00:00" />
+    <title>World happiness report - data analysis</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
 
-    <title>
-  World happiness report - data analysis · Home
-</title>
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/assets/css/layouts/main.css"/>
+<link rel="stylesheet" href="/assets/css/style.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+
+
+<link rel="stylesheet" href="/assets/css/style.css"/>
 
     
-      <link rel="canonical" href="https://armind93.github.io/projects/project_worldhappiness/">
-    
+<meta name="description" content="World happiness report - data analysis" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/assets/css/layouts/single.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/sidebar.css">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css"
-      integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.min.css">
-    
-      
-      
-      <link rel="stylesheet" href="https://armind93.github.io/css/coder.min.f01c647a0d25b40da992a37c3376291185eed8a50ced8c26cc2c0bcfe38c97df.css" integrity="sha256-8Bxkeg0ltA2pkqN8M3YpEYXu2KUM7YwmzCwLz&#43;OMl98=" crossorigin="anonymous" media="screen" />
-    
 
     
-
     
-      
-        
-        
-        <link rel="stylesheet" href="https://armind93.github.io/css/coder-dark.min.126ad3988d46bdae6217a11105b53c9662bca05f39d42d3c0fb366919d334620.css" integrity="sha256-EmrTmI1Gva5iF6ERBbU8lmK8oF851C08D7NmkZ0zRiA=" crossorigin="anonymous" media="screen" />
-      
-    
-
-    
-
-    
-
-    <link rel="icon" type="image/png" href="https://armind93.github.io/img/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="https://armind93.github.io/images/favicon-16x16.png" sizes="16x16">
-
-    <link rel="apple-touch-icon" href="https://armind93.github.io/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://armind93.github.io/images/apple-touch-icon.png">
-
-    
-      <script defer src="https://twemoji.maxcdn.com/v/13.0.1/twemoji.min.js"
-        integrity="sha384-5f4X0lBluNY/Ib4VhGx0Pf6iDCF99VGXJIyYy7dDLY5QlEd7Ap0hICSSZA1XYbc4" crossorigin="anonymous"></script>
-    
-
-    <meta name="generator" content="Hugo 0.68.3" />
   </head>
 
-  
-  
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
     
-  
-  <body class="colorscheme-auto"
-        onload=" twemoji.parse(document.body); "
-  >
-    
-<div class="float-container">
-    <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
-    </a>
-</div>
 
 
-    <main class="wrapper">
-      <nav class="navigation">
-  <section class="container">
-    <a class="navigation-title" href="https://armind93.github.io/">
-      Home
-    </a>
-    
-      <input type="checkbox" id="menu-toggle" />
-      <label class="menu-button float-right" for="menu-toggle">
-        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
-      </label>
-      <ul class="navigation-list">
-        
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="https://armind93.github.io/about/">About</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="https://armind93.github.io/projects/">Projects</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="https://armind93.github.io/contact/">Contact me</a>
-            </li>
-          
-        
-        
-          
-          
-          
-            
-          
-            
-              
-                <li class="navigation-item menu-separator">
-                  <span>|</span>
-                </li>
-                
-              
-              <li class="navigation-item">
-                <a href="https://armind93.github.io/pl/">Polish</a>
-              </li>
-            
-          
-        
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/assets/images/main-logo.png">Armin&#39;s portfolio</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
       </ul>
-    
-  </section>
+    </div>
+  </div>
+  
+  <img src="/assets/images/main-logo.png" class="d-none" id="main-logo">
+  <img src="/assets/images/inverted-logo.png" class="d-none" id="inverted-logo">
 </nav>
 
 
-      <div class="content">
-        
-  <section class="container page">
-  <article>
-    <header>
-      <h1>World happiness report - data analysis</h1>
-    </header>
 
-    <p><a href="https://github.com/ArminD93/WorldHappinessReport">link to GitHub Repository</a></p>
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Projects</a></li>
+            <div class="subtree">
+                
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://hugo-toha.github.io/assets/images/default-hero.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/static/images/A85.jpg'/>
+          <h5 class="author-name">Armin Derencz</h5>
+          <p>February 19, 2020</p>
+        </div>
+
+        <div class="title">
+          <h1>World happiness report - data analysis</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+          <p><a href="https://github.com/ArminD93/WorldHappinessReport">link to GitHub Repository</a></p>
 <h2 id="introduction">Introduction:</h2>
 <p>The data contain informations which might have influence for people&rsquo;s happiness score in the selected country.
 We have 5 reports divided by years, from 2015 to 2019.</p>
@@ -162,15 +123,15 @@ We have 5 reports divided by years, from 2015 to 2019.</p>
 <li>I checked if data are completed and if there is no NaN values.</li>
 <li>On the correlation maps below, we see which factor has the highest influence on happiness score and which of them has lowest. Regardless the years, the highest influence on happiness score of the country has economy level of this country. On the opposite side, the generosity factor has little effect on happiness score.</li>
 </ol>
-<p><img src="https://armind93.github.io/static/images/WorldHappinessReport/corr_maps.jpg" alt="corr_maps"></p>
+<p><img src="/static/images/WorldHappinessReport/corr_maps.jpg" alt="corr_maps"></p>
 <ol start="3">
 <li>In 2015, Switzerland was the country with the highest happiness score their citizens, but in 2016 this country took the second position in the ranking. Through the next years, Switzerland fell on the fourth, the fifth and the sixth place. In 2016, Denmark took the first place in this ranking. Unfortunately, in 2017 came on the second place, and Norway won the competion. In 2018 and 2019, Finland led in the happiness score ranking.</li>
 </ol>
-<p><img src="https://armind93.github.io/static/images/WorldHappinessReport/countries_with_highest_happiness_score.jpg" alt="highest happiness score count plots"></p>
+<p><img src="/static/images/WorldHappinessReport/countries_with_highest_happiness_score.jpg" alt="highest happiness score count plots"></p>
 <ol start="4">
 <li>Here below, we can see how the citizens happiness score has changed from 2015 to 2019. The largest increase from 2015 to 2019 had Finland. An interesting case is Austria. From 2015 to 2017, score of this country was decreasing, but in 2017 to 2019, it was start to rising. From 2015 Norway and Denmark are the countries with the highest happiness score, which hasn&rsquo;t changed rapidly to 2019.</li>
 </ol>
-<p><img src="https://armind93.github.io/static/images/WorldHappinessReport/img1.png" alt="alt"></p>
+<p><img src="/static/images/WorldHappinessReport/img1.png" alt="alt"></p>
 <ol start="5">
 <li>This time, I use heat map to show how factors has changed during next years for chosen countries, from 2015 to 2019. From this heat maps we can got to know that:</li>
 </ol>
@@ -216,7 +177,7 @@ We have 5 reports divided by years, from 2015 to 2019.</p>
 </ul>
 </li>
 </ul>
-<p><img src="https://armind93.github.io/static/images/WorldHappinessReport/countries_corr_maps.jpg" alt="countries corr maps"></p>
+<p><img src="/static/images/WorldHappinessReport/countries_corr_maps.jpg" alt="countries corr maps"></p>
 <ol start="6">
 <li></li>
 <li></li>
@@ -224,55 +185,214 @@ We have 5 reports divided by years, from 2015 to 2019.</p>
 </ol>
 <hr>
 
-  </article>
-</section>
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/hugo-toha/hugo-toha.github.io/edit/master/content/projects/project_WorldHappiness.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
 
   
 
-      </div>
+  
 
+  
+    
       
-
-    </main>
-
+      <div class="col-md-6 previous-article">
+        <a href="/projects/project_kepler/" class="btn btn-outline-info">
+          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+          <br />
+          <span>Kepler Exoplanet Search Results - data analysis</span>
+        </a>
+      </div>
+      
+    
     
       
         
-        <script src="https://armind93.github.io/js/dark-mode.min.0213e1773e6d1c5a644f847c67a6f8abac49a3776e2976f6008038af8c5b76a1.js"></script>
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/projects/project_library/" class="btn btn-outline-info">
+            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
+            <br />
+            <span>Project of an automated system for selecting wooden blocks from a rack using Raspberry Pi</span>
+          </a>
+        </div>
       
     
+  
+
+  
+
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction:</a></li>
+    <li><a href="#overview">Overview:</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
 
     
 
-    
+  
 
-    <script>
-(function(f, a, t, h, o, m){
-	a[h]=a[h]||function(){
-		(a[h].q=a[h].q||[]).push(arguments)
-	};
-	o=f.createElement('script'),
-	m=f.getElementsByTagName('script')[0];
-	o.async=1; o.src=t; o.id='fathom-script';
-	m.parentNode.insertBefore(o,m)
-})(document, window, '//analytics.example.com/tracker.js', 'fathom');
-fathom('set', 'siteId', 'ABCDE');
-fathom('trackPageview');
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">Armin Derencz</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#projects">Projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent projects</a>
+              </li>
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>armin.derencz@gmail.com</span></li>
+          
+        </ul>
+      </div>
+      
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/assets/images/inverted-logo.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/assets/images/hugo-logo-wide.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/assets/js/jquery-3.4.1.min.js"></script>
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+
+<script src="/assets/js/navbar.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/assets/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
 </script>
 
 
-    <script async defer data-domain="example.com" src="https://analytics.example.com/js/plausible.js"></script>
-
-
-    <script data-goatcounter="https://code.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
-
-
-    
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
-        data-cf-beacon='{"token": "token"}'></script>
-
-
   </body>
-
 </html>

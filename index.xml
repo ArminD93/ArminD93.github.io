@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home</title>
-    <link>https://armind93.github.io/</link>
-    <description>Recent content on Home</description>
+    <title>Armin&#39;s portfolio</title>
+    <link>https://hugo-toha.github.io/</link>
+    <description>Recent content on Armin&#39;s portfolio</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>en-us</language>
     <lastBuildDate>Sat, 27 Jun 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://armind93.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://hugo-toha.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Big Five Personality test - data analysis</title>
-      <link>https://armind93.github.io/projects/project_bigfive/</link>
+      <link>https://hugo-toha.github.io/projects/project_bigfive/</link>
       <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/project_bigfive/</guid>
+      <guid>https://hugo-toha.github.io/projects/project_bigfive/</guid>
       <description>link to GitHub Repository
 overview </description>
     </item>
     
     <item>
       <title>Convolutional network testing for image classification</title>
-      <link>https://armind93.github.io/projects/project_imageclass/</link>
+      <link>https://hugo-toha.github.io/projects/project_imageclass/</link>
       <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/project_imageclass/</guid>
+      <guid>https://hugo-toha.github.io/projects/project_imageclass/</guid>
       <description>link to GitHub Repository
 overview </description>
     </item>
     
     <item>
       <title>Kepler Exoplanet Search Results - data analysis</title>
-      <link>https://armind93.github.io/projects/project_kepler/</link>
+      <link>https://hugo-toha.github.io/projects/project_kepler/</link>
       <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/project_kepler/</guid>
+      <guid>https://hugo-toha.github.io/projects/project_kepler/</guid>
       <description>link to GitHub Repository
 overview </description>
     </item>
     
     <item>
       <title>World happiness report - data analysis</title>
-      <link>https://armind93.github.io/projects/project_worldhappiness/</link>
+      <link>https://hugo-toha.github.io/projects/project_worldhappiness/</link>
       <pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/project_worldhappiness/</guid>
+      <guid>https://hugo-toha.github.io/projects/project_worldhappiness/</guid>
       <description>link to GitHub Repository
 Introduction: The data contain informations which might have influence for people&amp;rsquo;s happiness score in the selected country. We have 5 reports divided by years, from 2015 to 2019.
 Acording to data, the happiness score can be estimated from six factors - economic production, social support, life expectancy, freedom, absence of corruption, and generosity. These factors contribute to making life evaluations higher in each country than they are in Dystopia, a hypothetical country that has values equal to the world’s lowest national averages for each of the six factors.</description>
@@ -54,10 +54,10 @@ Acording to data, the happiness score can be estimated from six factors - econom
     
     <item>
       <title>Project of an automated system for selecting wooden blocks from a rack using Raspberry Pi</title>
-      <link>https://armind93.github.io/projects/project_library/</link>
+      <link>https://hugo-toha.github.io/projects/project_library/</link>
       <pubDate>Fri, 05 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/project_library/</guid>
+      <guid>https://hugo-toha.github.io/projects/project_library/</guid>
       <description>link to GitHub Repository
 Introduction The device was built using elements from a 3D printer (frame, stepper motors). Three randomly placed wooden blocks on the shelves of the rack are picked up by the gripper and stored in one of the cells in the bottom row of this rack. The place on the bottom shelf is chosen, where the path from these blocks to this place is the shortest
 Overview   Device control through a graphical user interface:</description>
@@ -65,10 +65,10 @@ Overview   Device control through a graphical user interface:</description>
     
     <item>
       <title>Books prices project</title>
-      <link>https://armind93.github.io/projects/project_booksprices/</link>
+      <link>https://hugo-toha.github.io/projects/project_booksprices/</link>
       <pubDate>Mon, 08 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/project_booksprices/</guid>
+      <guid>https://hugo-toha.github.io/projects/project_booksprices/</guid>
       <description>link to GitHub repository
 Introduction I wanted to get informations about books prices, which I&amp;rsquo;d like to buy in the future. Additionally, it would be nice to see the price curve on the chart.
 Functions:  Downloading informations about books (title, price, date) from the acount on the website: ebooki.swiatczytnikow.pl. Saving data to the database. Displaying charts - how the price has changed over time for a specific title.  </description>
@@ -76,20 +76,20 @@ Functions:  Downloading informations about books (title, price, date) from the a
     
     <item>
       <title></title>
-      <link>https://armind93.github.io/about/</link>
+      <link>https://hugo-toha.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/about/</guid>
+      <guid>https://hugo-toha.github.io/about/</guid>
       <description>Hi, I&amp;rsquo;m Armin Hugo is the world’s fastest framework for building websites. It is written in Go. It makes use of a variety of open source projects including:
 Skills:   Python:  Completed Udemy course: Python Intermediate (Credential ID: UC-CZ6ZMUWE) Program implemented in the Master’s and Bachelor’s projects    Data analysis:  Completed Udemy course: Data Science: Data analysis in Python and pandas (Credential ID: UC-K631OZR7) pandas, numpy, matplolib, seaborn    Machine learning:  Completed Udemy: Machine Learning in Python.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://armind93.github.io/contact/</link>
+      <link>https://hugo-toha.github.io/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/contact/</guid>
+      <guid>https://hugo-toha.github.io/contact/</guid>
       <description>Social icons   </description>
     </item>
     

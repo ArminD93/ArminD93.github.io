@@ -137,30 +137,121 @@ if (!doNotTrack) {
         </div>
 
         <div class="post-content" id="post-content">
-          <p><a href="https://github.com/ArminD93/WorldHappinessReport">link to GitHub Repository</a></p>
-<h2 id="introduction">Introduction:</h2>
+          <p><a href="https://www.kaggle.com/unsdsn/world-happiness">link to data</a></p>
+<p><a href="https://github.com/ArminD93/WorldHappinessReport">link to GitHub Repository</a></p>
+<h2 id="1-data-presentation"><strong>1. Data presentation</strong>:</h2>
 <p>The data contain informations which might have influence for people&rsquo;s happiness score in the selected country.
 We have 5 reports divided by years, from 2015 to 2019.</p>
 <p>Acording to data, the happiness score can be estimated from six factors - economic production, social support, life expectancy, freedom, absence of corruption, and generosity. These factors contribute to making life evaluations higher in each country than they are in Dystopia, a hypothetical country that has values equal to the world’s lowest national averages for each of the six factors. They have no impact on the total score reported for each country, but they do explain why some countries rank higher than others.</p>
-<p>At the beginning, I considered each report separately, and then sum up my analysis into one report - summary report.</p>
-<p><a href="https://www.kaggle.com/unsdsn/world-happiness">link to data</a></p>
-<h2 id="overview">Overview:</h2>
+<p>Data downloaded from kaggle was splitted into years, which means in one file we have all factors from one year and we&rsquo;ve 5 data files.:</p>
 <ol>
-<li>I checked if data are completed and if there is no NaN values.</li>
-<li>On the correlation maps below, we see which factor has the highest influence on happiness score and which of them has lowest. Regardless the years, the highest influence on happiness score of the country has economy level of this country. On the opposite side, the generosity factor has little effect on happiness score.</li>
+<li>
+<p>Data from 2015:
+<img src="/static/images/WorldHappinessReport/dataFrom2015.png" alt="data2015"></p>
+</li>
+<li>
+<p>Data from 2016:
+<img src="/static/images/WorldHappinessReport/dataFrom2016.jpg" alt="data2015"></p>
+</li>
+<li>
+<p>Data from 2017:</p>
+<p><img src="/static/images/WorldHappinessReport/dataFrom2017.jpg" alt="data2015"></p>
+</li>
+<li>
+<p>Data from 2018:
+<img src="/static/images/WorldHappinessReport/dataFrom2018.jpg" alt="data2015"></p>
+</li>
+<li>
+<p>Data from 2019:
+<img src="/static/images/WorldHappinessReport/dataFrom2019.jpg" alt="data2015"></p>
+</li>
 </ol>
+<p>At the beginning, I considered each report separately, and then sum up my analysis into one report - summary report.</p>
+<h2 id="2-data-reviewing"><strong>2. Data reviewing</strong>:</h2>
+<p>I checked if data are completed and if there is no NaN values.</p>
+<h3 id="21-correlation-maps">2.1. Correlation maps:</h3>
+<p>On the correlation maps below, we see which factor has the highest influence on happiness score and which of them has lowest. Regardless the years, the highest influence on happiness score of the country has economy level of this country. On the opposite side, the generosity factor has little effect on happiness score.</p>
 <p><img src="/static/images/WorldHappinessReport/corr_maps.jpg" alt="corr_maps"></p>
-<ol start="3">
-<li>In 2015, Switzerland was the country with the highest happiness score their citizens, but in 2016 this country took the second position in the ranking. Through the next years, Switzerland fell on the fourth, the fifth and the sixth place. In 2016, Denmark took the first place in this ranking. Unfortunately, in 2017 came on the second place, and Norway won the competion. In 2018 and 2019, Finland led in the happiness score ranking.</li>
-</ol>
+<h3 id="22-countries-with-the-highest-happiness-score">2.2. Countries with the highest happiness score</h3>
+<p>In 2015, Switzerland was the country with the highest happiness score their citizens, but in 2016 this country took the second position in the ranking. Through the next years, Switzerland fell on the fourth, the fifth and the sixth place. In 2016, Denmark took the first place in this ranking. Unfortunately, in 2017 came on the second place, and Norway won the competion. In 2018 and 2019, Finland led in the happiness score ranking.</p>
 <p><img src="/static/images/WorldHappinessReport/countries_with_highest_happiness_score.jpg" alt="highest happiness score count plots"></p>
-<ol start="4">
-<li>Here below, we can see how the citizens happiness score has changed from 2015 to 2019. The largest increase from 2015 to 2019 had Finland. An interesting case is Austria. From 2015 to 2017, score of this country was decreasing, but in 2017 to 2019, it was start to rising. From 2015 Norway and Denmark are the countries with the highest happiness score, which hasn&rsquo;t changed rapidly to 2019.</li>
-</ol>
+<h2 id="3-preparing-report-for-one-trait-including-all-years"><strong>3. Preparing report for one trait including all years</strong>:</h2>
+<p>I wanted to transform data into one file which would be contain all factors for only one year. To do this, I prepared two functions:</p>
+<pre><code>def create_report_for_one_feature(report, col1, col2):
+    '''
+    create_report_for_one_feature - Create report which consist only two columns
+    report - set data frame
+    col1 - name of first column from chosen data frame
+    col2 - name of second column from chosen data frame
+
+    '''
+    one_feature_report = report[[col1, col2]]
+    return one_feature_report
+
+
+def create_ALLYears_report(report1, report2, report3, report4, report5, merge_on):
+    '''
+    create_ALLYears_report - merging few data frames together
+    report1, report2, report3, report4, report5  - names of data frames
+    merge_on - set a common column for all data frames
+    '''
+    report_AllYears = pd.merge(report1, report2,  on= merge_on, suffixes=['_2015', '_2016'])
+    report_AllYears = report_AllYears.merge(report3, on= merge_on                             )
+    report_AllYears = report_AllYears.merge(report4, on= merge_on, suffixes=['_2017','_2018'] )
+    report_AllYears = report_AllYears.merge(report5, on= merge_on                             )
+
+    report_AllYears.set_index('Country or region', inplace=True)  
+    return report_AllYears 
+</code></pre>
+<p>First, I run function &ldquo;create_report_for_one_feature()&rdquo; for all 5 reports to extract one factor from all years.</p>
+<pre><code>happy_report2015 = create_report_for_one_feature(report2015, 'Country or region', 'HappinessScore')
+happy_report2016 = create_report_for_one_feature(report2016, 'Country or region', 'HappinessScore')
+happy_report2017 = create_report_for_one_feature(report2017, 'Country or region', 'HappinessScore')
+happy_report2018 = create_report_for_one_feature(report2018, 'Country or region', 'HappinessScore')
+happy_report2019 = create_report_for_one_feature(report2019, 'Country or region', 'HappinessScore')
+
+economy_report2015 = create_report_for_one_feature(report2015, 'Country or region', 'Economy')
+economy_report2016 = create_report_for_one_feature(report2016, 'Country or region', 'Economy')
+economy_report2017 = create_report_for_one_feature(report2017, 'Country or region', 'Economy')
+economy_report2018 = create_report_for_one_feature(report2018, 'Country or region', 'Economy')
+economy_report2019 = create_report_for_one_feature(report2019, 'Country or region', 'Economy')
+
+healthy_report2015 = create_report_for_one_feature(report2015, 'Country or region', 'Healthy_life_expectancy')
+healthy_report2016 = create_report_for_one_feature(report2016, 'Country or region', 'Healthy_life_expectancy')
+healthy_report2017 = create_report_for_one_feature(report2017, 'Country or region', 'Healthy_life_expectancy')
+healthy_report2018 = create_report_for_one_feature(report2018, 'Country or region', 'Healthy_life_expectancy')
+healthy_report2019 = create_report_for_one_feature(report2019, 'Country or region', 'Healthy_life_expectancy')
+
+social_support_report2015 = create_report_for_one_feature(report2015, 'Country or region', 'Social_support')
+social_support_report2016 = create_report_for_one_feature(report2016, 'Country or region', 'Social_support')
+social_support_report2017 = create_report_for_one_feature(report2017, 'Country or region', 'Social_support')
+social_support_report2018 = create_report_for_one_feature(report2018, 'Country or region', 'Social_support')
+social_support_report2019 = create_report_for_one_feature(report2019, 'Country or region', 'Social_support')
+</code></pre>
+<p>Then, using function &ldquo;create_ALL Years report&rdquo;, I merged all years into into one file.</p>
+<pre><code>happy_AllYears = create_ALLYears_report(happy_report2015, happy_report2016, happy_report2017, happy_report2018, happy_report2019, merge_on='Country or region')
+happy_AllYears.head()
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/happyAllYears.jpg" alt="happiness2015"></p>
+<pre><code>economy_AllYears = create_ALLYears_report(economy_report2015, economy_report2016, economy_report2017, economy_report2018, economy_report2019, merge_on='Country or region')
+economy_AllYears.head()
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/economyAllYears.jpg" alt="economyAllYears"></p>
+<pre><code>healthy_AllYears = create_ALLYears_report(healthy_report2015, healthy_report2016, healthy_report2017, healthy_report2018, healthy_report2019, merge_on='Country or region')
+healthy_AllYears.head()
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/healthAllYears.jpg" alt="healthAllYears"></p>
+<pre><code>social_support_AllYears = create_ALLYears_report(social_support_report2015, social_support_report2016, social_support_report2017, social_support_report2018, social_support_report2019, merge_on='Country or region')
+social_support_AllYears.head()
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/socialAllYears.jpg" alt="socialAllYears"></p>
+<h3 id="31">3.1.</h3>
+<h3 id="32-changes-of-happiness-levels-in-2015-2019-on-line-plot">3.2. Changes of happiness levels in 2015-2019 on line plot</h3>
+<p>Here below, we can see how the citizens happiness score has changed from 2015 to 2019. The largest increase from 2015 to 2019 had Finland. An interesting case is Austria. From 2015 to 2017, score of this country was decreasing, but in 2017 to 2019, it was start to rising. From 2015 Norway and Denmark are the countries with the highest happiness score, which hasn&rsquo;t changed rapidly to 2019.</p>
 <p><img src="/static/images/WorldHappinessReport/img1.png" alt="alt"></p>
-<ol start="5">
-<li>This time, I use heat map to show how factors has changed during next years for chosen countries, from 2015 to 2019. From this heat maps we can got to know that:</li>
-</ol>
+<h3 id="33-presentation-of-changes-in-the-level-of-traits-that-have-the-greatest-impact-on-the-level-of-happiness-in-2015-2019">3.3. Presentation of changes in the level of traits that have the greatest impact on the level of happiness in 2015-2019</h3>
+<p><img src="/static/images/WorldHappinessReport/countries_corr_maps.jpg" alt="countries corr maps"></p>
+<p>This time, I use heat map to show how factors has changed during next years for chosen countries, from 2015 to 2019. From this heat maps we can got to know that:</p>
 <ul>
 <li>in <strong>2015</strong> country with the highest:
 <ul>
@@ -203,12 +294,6 @@ We have 5 reports divided by years, from 2015 to 2019.</p>
 </ul>
 </li>
 </ul>
-<p><img src="/static/images/WorldHappinessReport/countries_corr_maps.jpg" alt="countries corr maps"></p>
-<ol start="6">
-<li></li>
-<li></li>
-<li></li>
-</ol>
 <hr>
 
         </div>
@@ -291,8 +376,20 @@ We have 5 reports divided by years, from 2015 to 2019.</p>
       <div class="toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#introduction">Introduction:</a></li>
-    <li><a href="#overview">Overview:</a></li>
+    <li><a href="#1-data-presentation"><strong>1. Data presentation</strong>:</a></li>
+    <li><a href="#2-data-reviewing"><strong>2. Data reviewing</strong>:</a>
+      <ul>
+        <li><a href="#21-correlation-maps">2.1. Correlation maps:</a></li>
+        <li><a href="#22-countries-with-the-highest-happiness-score">2.2. Countries with the highest happiness score</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-preparing-report-for-one-trait-including-all-years"><strong>3. Preparing report for one trait including all years</strong>:</a>
+      <ul>
+        <li><a href="#31">3.1.</a></li>
+        <li><a href="#32-changes-of-happiness-levels-in-2015-2019-on-line-plot">3.2. Changes of happiness levels in 2015-2019 on line plot</a></li>
+        <li><a href="#33-presentation-of-changes-in-the-level-of-traits-that-have-the-greatest-impact-on-the-level-of-happiness-in-2015-2019">3.3. Presentation of changes in the level of traits that have the greatest impact on the level of happiness in 2015-2019</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
       </div>

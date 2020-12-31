@@ -47,8 +47,9 @@ overview </description>
       <pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://hugo-toha.github.io/projects/project_worldhappiness/</guid>
-      <description>link to GitHub Repository
-Introduction: The data contain informations which might have influence for people&amp;rsquo;s happiness score in the selected country. We have 5 reports divided by years, from 2015 to 2019.
+      <description>link to data
+link to GitHub Repository
+1. Data presentation: The data contain informations which might have influence for people&amp;rsquo;s happiness score in the selected country. We have 5 reports divided by years, from 2015 to 2019.
 Acording to data, the happiness score can be estimated from six factors - economic production, social support, life expectancy, freedom, absence of corruption, and generosity. These factors contribute to making life evaluations higher in each country than they are in Dystopia, a hypothetical country that has values equal to the world’s lowest national averages for each of the six factors.</description>
     </item>
     

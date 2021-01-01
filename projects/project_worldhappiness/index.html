@@ -245,7 +245,49 @@ healthy_AllYears.head()
 social_support_AllYears.head()
 </code></pre>
 <p><img src="/static/images/WorldHappinessReport/socialAllYears.jpg" alt="socialAllYears"></p>
-<h3 id="31">3.1.</h3>
+<h3 id="31-setting-all-years-in-one-column">3.1. Setting all years in one column</h3>
+<p>I wanted to set all years in one column of data frame. To do this, I use pandas method called stack(). Next, I have to use additional method - to_frame() which helps convert result of stack() method to data frame.</p>
+<pre><code>happy_AllYears_stacked = happy_AllYears.stack().to_frame()
+economy_AllYears_stacked = economy_AllYears.stack().to_frame()
+healthy_AllYears_stacked = healthy_AllYears.stack().to_frame()
+social_support_AllYears_stacked = social_support_AllYears.stack().to_frame()
+</code></pre>
+<p>It&rsquo;s a good idea to reset the index:</p>
+<pre><code>happy_AllYears_stacked.reset_index(inplace=True)
+economy_AllYears_stacked.reset_index(inplace=True)
+healthy_AllYears_stacked.reset_index(inplace=True)
+social_support_AllYears_stacked.reset_index(inplace=True)
+</code></pre>
+<p>Result of used above methods:</p>
+<pre><code>happy_AllYears_stacked.head()
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/AllYearsInOneColumn_1.jpg" alt="AllYearsInOneColumn_1"></p>
+<p>It&rsquo;s good to rename columns names in oder to better recognize them. I used builded in pandas method rename()</p>
+<pre><code>newHappyColNames   = { 'level_1'  :   'Year',
+                             0    :   'HappinessScore'}
+
+newEconomyColNames = { 'level_1'  :   'Year',
+                               0  :   'Economy'}
+
+newHealthyColNames = { 'level_1'  :   'Year',
+                               0  :   'Health (LifeExpectancy)'}
+
+newSocialColNames  = { 'level_1'  :   'Year',
+                               0  :   'socialSupport'}
+                               
+happy_AllYears_stacked.rename(columns=newHappyColNames, inplace=True)
+economy_AllYears_stacked.rename(columns=newEconomyColNames, inplace=True)
+healthy_AllYears_stacked.rename(columns=newHealthyColNames, inplace=True)
+social_support_AllYears_stacked.rename(columns=newSocialColNames, inplace=True)
+
+happy_AllYears_stacked.head()
+economy_AllYears_stacked.head()
+healthy_AllYears_stacked.head()
+social_support_AllYears_stacked.head()
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/happy_AllYears_stacked.jpg" alt="happy_AllYears_stacked"><img src="/static/images/WorldHappinessReport/economy_AllYears_stacked.jpg" alt="economy_AllYears_stacked"></p>
+<p><img src="/static/images/WorldHappinessReport/healthy_AllYears_stacked.jpg" alt="healthy_AllYears_stacked">
+<img src="/static/images/WorldHappinessReport/social_AllYears_stacked.jpg" alt="social_AllYears_stacked"></p>
 <h3 id="32-changes-of-happiness-levels-in-2015-2019-on-line-plot">3.2. Changes of happiness levels in 2015-2019 on line plot</h3>
 <p>Here below, we can see how the citizens happiness score has changed from 2015 to 2019. The largest increase from 2015 to 2019 had Finland. An interesting case is Austria. From 2015 to 2017, score of this country was decreasing, but in 2017 to 2019, it was start to rising. From 2015 Norway and Denmark are the countries with the highest happiness score, which hasn&rsquo;t changed rapidly to 2019.</p>
 <p><img src="/static/images/WorldHappinessReport/img1.png" alt="alt"></p>
@@ -294,6 +336,7 @@ social_support_AllYears.head()
 </ul>
 </li>
 </ul>
+<h2 id="4-preparing-data-to-machine-learning">4. <strong>Preparing data to machine learning:</strong></h2>
 <hr>
 
         </div>
@@ -385,11 +428,12 @@ social_support_AllYears.head()
     </li>
     <li><a href="#3-preparing-report-for-one-trait-including-all-years"><strong>3. Preparing report for one trait including all years</strong>:</a>
       <ul>
-        <li><a href="#31">3.1.</a></li>
+        <li><a href="#31-setting-all-years-in-one-column">3.1. Setting all years in one column</a></li>
         <li><a href="#32-changes-of-happiness-levels-in-2015-2019-on-line-plot">3.2. Changes of happiness levels in 2015-2019 on line plot</a></li>
         <li><a href="#33-presentation-of-changes-in-the-level-of-traits-that-have-the-greatest-impact-on-the-level-of-happiness-in-2015-2019">3.3. Presentation of changes in the level of traits that have the greatest impact on the level of happiness in 2015-2019</a></li>
       </ul>
     </li>
+    <li><a href="#4-preparing-data-to-machine-learning">4. <strong>Preparing data to machine learning:</strong></a></li>
   </ul>
 </nav>
       </div>

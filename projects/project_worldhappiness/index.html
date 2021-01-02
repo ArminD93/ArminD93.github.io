@@ -337,14 +337,16 @@ social_support_AllYears_stacked.head()
 </li>
 </ul>
 <h2 id="4-preparing-data-to-machine-learning">4. <strong>Preparing data to machine learning:</strong></h2>
+<p>I wanted to link all factors into one dataframe, where all years were located in one column. I used merge() method, where I chose merging on columns &lsquo;Country or region&rsquo; and &lsquo;Year&rsquo;.</p>
 <pre><code>AllFeatures = pd.merge(happy_AllYears_stacked, economy_AllYears_stacked, on= ['Country or region', 'Year'] )
 AllFeatures = AllFeatures.merge(healthy_AllYears_stacked,                on= ['Country or region', 'Year'] )
-AllFeatures = AllFeatures.merge(social_support_AllYears_stacked,         on= ['Country or region', 'Year'] )
+AllFeatures = AllFeatures.merge(social_support_AllYears_stacked,         on= ['Country or region', 'Year'] )      
 
-                                        
 AllFeatures.head()       
 </code></pre>
 <p><img src="/static/images/WorldHappinessReport/allFeatures_df.jpg" alt="allFeatures_df"></p>
+<p>Next, I wished to find out what the descibe() method returns for column &lsquo;happinessScore&rsquo; in this &lsquo;AllYears&rsquo; data frame. I received count of values, mean and standard deviation of them. Moreover there is min and max values and quantiles.
+Technically speaking, the median is 0.5 quantile (50% quantile), which split data into equal sized groups. Another quantiles are 0.25 quantile and 0.75 quantile. They are are called quartiles. Quartiles and median split data into four equal sized groups.</p>
 <pre><code>AllFeatures.groupby(by='Year')['HappinessScore'].describe()
 </code></pre>
 <p><img src="/static/images/WorldHappinessReport/AllFeaturesGrouped_describe.jpg" alt="AllFeaturesGrouped_describe"></p>

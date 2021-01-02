@@ -38,7 +38,8 @@ overview </description>
       
       <guid>https://hugo-toha.github.io/projects/project_kepler/</guid>
       <description>link to GitHub Repository
-overview </description>
+1. Description of the values ​​from the columns KOI - Kepler Objects of Interest
+   Oznaczenie Opis     kepid Kepler Identification   kepoi_name KOI Name. A number used to identify and track a Kepler Object of Interest (KOI). A KOI is a target identified by the Kepler Project that displays at least one transit-like sequence within Kepler time-series photometry that appears to be of astrophysical origin and initially consistent with a planetary transit hypothesis.</description>
     </item>
     
     <item>

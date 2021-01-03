@@ -162,19 +162,19 @@ if (!doNotTrack) {
 </tr>
 <tr>
 <td align="left">koi_pdisposition</td>
-<td align="right">Rozpoznanie z wykorzystaniem danych Keplera</td>
+<td align="right">The pipeline flag that designates the most probable physical explanation of the KOI. Typical values are FALSE POSITIVE, NOT DISPOSITIONED, and CANDIDATE. The value of this flag may change over time as the evaluation of KOIs proceeds to deeper levels of analysis using Kepler time-series pixel and light curve data, or follow-up observations. A not dispositioned value corresponds to objects for which the disposition tests have not yet been completed.</td>
 </tr>
 <tr>
 <td align="left">koi_score</td>
-<td align="right">Wartość od 0 do 1 określa pewność identyfikacji - Im bliżej 1 tym jest wysokie prawdopodobieństwo</td>
+<td align="right">A value between 0 and 1 that indicates the confidence in the KOI disposition. For CANDIDATEs, a higher value indicates more confidence in its disposition, while for FALSE POSITIVEs, a higher value indicates less confidence in that disposition. The value is calculated from a Monte Carlo technique such that the score&rsquo;s value is equivalent to the frction of iterations where the Robovetter yields a disposition of CANDIDATE.</td>
 </tr>
 <tr>
 <td align="left">koi_fpflag_nt</td>
-<td align="right"><strong>Flaga inna niż tranzytowa</strong>  Obejmuje to między innymi artefakty instrumentalne, nie zmienne gwiazdy zmienne i fałszywe detekcje (bardzo niski SNR).</td>
+<td align="right"><strong>Not Transit-Like Flag</strong>  A KOI whose light curve is not consistent with that of a transiting planet. This includes, but is not limited to, instrumental artifacts, non-eclipsing variable stars, and spurious (very low SNR) detections.</td>
 </tr>
 <tr>
 <td align="left">koi_fpflag_ss</td>
-<td align="right"><strong>Flaga Gwiezdnego Zaćmienia</strong> zdarzenie podobne do przejścia jest najprawdopodobniej spowodowane przez binarne zaćmienie.</td>
+<td align="right"><strong>Stellar Eclipse Flag</strong> A KOI that is observed to have a significant secondary event, transit shape, or out-of-eclipse variability, which indicates that the transit-like event is most likely caused by an eclipsing binary. However, self-luminous, hot Jupiters with a visible secondary eclipse will also have this flag set, but with a disposition of PC.</td>
 </tr>
 <tr>
 <td align="left">koi_fpflag_co</td>

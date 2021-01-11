@@ -137,8 +137,226 @@ if (!doNotTrack) {
         </div>
 
         <div class="post-content" id="post-content">
-          <p><a href="https://github.com/ArminD93/Intel-Image-Classification/blob/dev/Intel_Image_Classification.ipynb">link to GitHub Repository</a></p>
-<h2 id="overview">overview</h2>
+          <p><a href="https://www.kaggle.com/puneet6060/intel-image-classification">link to data</a></p>
+<p><a href="https://github.com/ArminD93/Intel-Image-Classification/blob/dev/Intel_Image_Classification.ipynb">link to GitHub Repository</a></p>
+<h2 id="1-import-modules">1. Import modules</h2>
+<pre><code>import os
+import time
+from datetime import datetime as dt
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import shutil # Pomaga w kopiowaniu plików
+import seaborn as sns
+sns.set(style=&quot;ticks&quot;, color_codes=True)
+
+from sklearn.metrics import confusion_matrix, classification_report
+
+from tensorflow.keras.preprocessing import image
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.models import Sequential, Model
+from tensorflow.keras.models import load_model
+from tensorflow.keras.layers import Input, Dense, Flatten, Dropout, Conv2D, MaxPooling2D, concatenate, BatchNormalization, GlobalAveragePooling2D
+from tensorflow.keras.optimizers import Adam
+
+
+from tensorflow.keras import optimizers
+from tensorflow.keras.callbacks import TensorBoard
+from tensorflow.keras.callbacks import ModelCheckpoint
+from tensorflow.keras.callbacks import EarlyStopping
+
+np.set_printoptions(precision=12, suppress=True)
+</code></pre>
+<h2 id="2-przygotowanie-danych">2. Przygotowanie danych:</h2>
+<pre><code>!unzip -q &quot;/content/drive/My Drive/ColabNotebooks/intel_image/data/intel_image.zip&quot; 
+</code></pre>
+<h3 id="21-liczba-zdjęć-dla-poszczególnych-klas">2.1. Liczba zdjęć dla poszczególnych klas</h3>
+<pre><code>!rm -rf ./images
+
+base_dir = './intel_image' # Przypisujemy katalog bazowy
+
+raw_no_of_files = {}
+
+classes = ['buildings', 'forest', 'glacier', 'mountain', 'sea', 'street']
+for dir in classes: 
+    raw_no_of_files[dir] = len(os.listdir(os.path.join(base_dir, dir)))
+
+raw_no_of_files.items()
+</code></pre>
+<p>Results:</p>
+<pre><code>dict_items([('buildings', 2628), ('forest', 2745), ('glacier', 2957), ('mountain', 3037), ('sea', 2784), ('street', 2883)])
+</code></pre>
+<h3 id="22-utworzenie-katalogów-train-test-valid">2.2. Utworzenie katalogów train, test, valid</h3>
+<pre><code>data_dir = './images' # Przypisujemy katalog bazowy
+
+if not os.path.exists(data_dir):
+    os.mkdir(data_dir)
+
+train_dir = os.path.join(data_dir, 'train')    # katalog dla zbioru treningowego
+valid_dir = os.path.join(data_dir, 'valid')    # katalog dla zbioru walidacyjnego
+test_dir = os.path.join(data_dir, 'test')      # katalog dla  zbioru testowego
+
+# Wskażemy klasy
+train_buildings_dir = os.path.join(train_dir, 'buildings')
+train_forest_dir = os.path.join(train_dir, 'forest')
+train_glacier_dir = os.path.join(train_dir, 'glacier')
+train_mountain_dir = os.path.join(train_dir, 'mountain')
+train_sea_dir = os.path.join(train_dir, 'sea')
+train_street_dir = os.path.join(train_dir, 'street')
+
+valid_buildings_dir = os.path.join(valid_dir, 'buildings')
+valid_forest_dir = os.path.join(valid_dir,    'forest'  )
+valid_glacier_dir = os.path.join(valid_dir, 'glacier')
+valid_mountain_dir = os.path.join(valid_dir, 'mountain')
+valid_sea_dir = os.path.join(valid_dir, 'sea')
+valid_street_dir = os.path.join(valid_dir, 'street')
+
+test_buildings_dir = os.
+# Pętla, która przejdzie po naszych katalogach
+for i, directory in enumerate([train_dir, valid_dir, test_dir]):
+    if not os.path.exists(directory): # Jeśli takie ścieżki nie istenieją, to po prostu utowrzymy te katalogi
+        os.mkdir(directory)
+
+# To samo wykonamy z katalogami w trzecim pozimie
+dirs = [train_buildings_dir, train_forest_dir, train_glacier_dir, train_mountain_dir, train_sea_dir, train_street_dir,
+        valid_buildings_dir, valid_forest_dir, valid_glacier_dir, valid_mountain_dir, valid_sea_dir, valid_street_dir,
+        test_buildings_dir, test_forest_dir, test_glacier_dir, test_mountain_dir, test_sea_dir, test_street_dir 
+        ]
+
+for dir in dirs:
+    if not os.path.exists(dir):
+        os.mkdir(dir)       
+
+path.join(test_dir, 'buildings')
+test_forest_dir = os.path.join(test_dir, 'forest')
+test_glacier_dir = os.path.join(test_dir, 'glacier')
+test_mountain_dir = os.path.join(test_dir, 'mountain')
+test_sea_dir = os.path.join(test_dir, 'sea')
+test_street_dir = os.path.join(test_dir, 'street')
+
+# Pętla, która przejdzie po naszych katalogach
+for i, directory in enumerate([train_dir, valid_dir, test_dir]):
+    if not os.path.exists(directory): # Jeśli takie ścieżki nie istenieją, to po prostu utowrzymy te katalogi
+        os.mkdir(directory)
+
+# To samo wykonamy z katalogami w trzecim pozimie
+dirs = [train_buildings_dir, train_forest_dir, train_glacier_dir, train_mountain_dir, train_sea_dir, train_street_dir,
+        valid_buildings_dir, valid_forest_dir, valid_glacier_dir, valid_mountain_dir, valid_sea_dir, valid_street_dir,
+        test_buildings_dir, test_forest_dir, test_glacier_dir, test_mountain_dir, test_sea_dir, test_street_dir 
+        ]
+
+for dir in dirs:
+    if not os.path.exists(dir):
+        os.mkdir(dir)       
+
+
+
+
+# Teraz musimy znać pełne ścieżki do naszych plików
+base_dir = './intel_image' # Przypisujemy katalog bazowy, gdzie są zdjęcia
+
+# Do zmiennej _fnames przypisujemy wylistowanie katalogu z katalogu bazowego, tam gdzie są zdjęcia
+buildings_files_names = os.listdir(os.path.join(base_dir, 'buildings')) 
+forest_files_names = os.listdir(os.path.join(base_dir,    'forest'))
+glacier_files_names = os.listdir(os.path.join(base_dir,   'glacier'))
+mountain_files_names = os.listdir(os.path.join(base_dir,  'mountain'))
+sea_files_names = os.listdir(os.path.join(base_dir,       'sea'))
+street_files_names = os.listdir(os.path.join(base_dir,    'street'))
+
+test_files_names = os.listdir(os.path.join(base_dir,      'test'))
+</code></pre>
+<h3 id="23-określenie-rozmiaru-danych">2.3. Określenie rozmiaru danych</h3>
+<pre><code># W związku z tym, że są różne wartości danych, w różnych klasach,
+# Wybierzemy minimalną długość z tych dwóch klas i przypiszemy do zmiennej rozmiar
+size = min(len(buildings_files_names), len(forest_files_names), len(glacier_files_names), len(mountain_files_names), len(sea_files_names), len(street_files_names))
+
+train_size = int(np.floor(0.7 * size)) # rozmiar danych treningowych to 70% wszystkich zdjęć                                     
+valid_size = int(np.floor(0.28 * size)) 
+test_size = size - (train_size + valid_size) # Testowy zbiór to będzie 10%
+</code></pre>
+<h3 id="24-przekopiowanie-danych-do-wybranych-folderów">2.4. Przekopiowanie danych do wybranych folderów</h3>
+<pre><code>def filesCopy(directory_dir):
+
+    train_id = train_size
+    valid_id = train_size + valid_size
+    test_id = train_size + valid_size + test_size
+
+    for i, dictio in enumerate(directory_dir):
+        dir_name = [val for val in directory_dir.values() ][i]
+        label_name = dictio
+        
+        for i, fname in enumerate(dir_name[0]):
+            if i &lt;= train_id:                                  
+                src = os.path.join(base_dir, label_name, fname)   
+                dst = os.path.join(dir_name[1], fname)
+                shutil.copyfile(src, dst)
+            elif train_id &lt; i &lt;= valid_id:
+                src = os.path.join(base_dir, label_name, fname)
+                dst = os.path.join(dir_name[2], fname)      
+                shutil.copyfile(src, dst)
+            elif valid_id &lt; i &lt; test_id:
+                src = os.path.join(base_dir, label_name, fname)     
+                dst = os.path.join(dir_name[3], fname)
+                shutil.copyfile(src, dst)
+
+        print(f'{label_name} - zbiór treningowy:  { len(os.listdir(dir_name[1] )) } ')
+        print(f'{label_name} - zbiór walidacyjny: { len(os.listdir(dir_name[2] )) } ')
+        print(f'{label_name} - zbiór testowy:     { len(os.listdir(dir_name[3] )) } ')
+        print()
+# ----------------------------------------------------------------------------------------------------
+
+directory_dir = {
+                'buildings' : [buildings_files_names,  train_buildings_dir,  valid_buildings_dir,  test_buildings_dir ],
+                'forest'    : [forest_files_names,     train_forest_dir,     valid_forest_dir,     test_forest_dir    ],
+                'glacier'   : [glacier_files_names,    train_glacier_dir,    valid_glacier_dir,    test_glacier_dir   ],   
+                'mountain'  : [mountain_files_names,   train_mountain_dir,   valid_mountain_dir,   test_mountain_dir  ],   
+                'sea'       : [sea_files_names,        train_sea_dir,        valid_sea_dir,        test_sea_dir       ],   
+                'street'    : [street_files_names,     train_street_dir,     valid_street_dir,     test_street_dir    ]   
+                }
+
+filesCopy(directory_dir) 
+</code></pre>
+<p>Results:</p>
+<pre><code>buildings - zbiór treningowy:  1840 
+buildings - zbiór walidacyjny: 735 
+buildings - zbiór testowy:     53 
+
+forest - zbiór treningowy:  1840 
+forest - zbiór walidacyjny: 735 
+forest - zbiór testowy:     53 
+
+glacier - zbiór treningowy:  1840 
+glacier - zbiór walidacyjny: 735 
+glacier - zbiór testowy:     53 
+
+mountain - zbiór treningowy:  1840 
+mountain - zbiór walidacyjny: 735 
+mountain - zbiór testowy:     53 
+
+sea - zbiór treningowy:  1840 
+sea - zbiór walidacyjny: 735 
+sea - zbiór testowy:     53 
+
+street - zbiór treningowy:  1840 
+street - zbiór walidacyjny: 735 
+street - zbiór testowy:     53 
+</code></pre>
+<h3 id="25-prezentacja-danych">2.5. Prezentacja danych</h3>
+<h3 id="26-augmentacja-danych">2.6. Augmentacja danych</h3>
+<h2 id="3-sieci-neuronowe">3. Sieci neuronowe:</h2>
+<h3 id="31-budowa-modeli">3.1. Budowa modeli</h3>
+<h4 id="311-model-1">3.1.1. MODEL 1</h4>
+<h4 id="312-model-2">3.1.2. MODEL 2</h4>
+<h4 id="313-model-3">3.1.3. MODEL 3</h4>
+<h4 id="314-model-4">3.1.4. MODEL 4</h4>
+<h4 id="315-model-5">3.1.5. MODEL 5</h4>
+<h3 id="32-utworzenie-obiektów">3.2. Utworzenie obiektów</h3>
+<h3 id="33-trenowanie-sieci">3.3. Trenowanie sieci</h3>
+<h3 id="34-zapisanie-modeli">3.4. Zapisanie modeli</h3>
+<h3 id="35-charakterystyki-trenowanych-modeli">3.5. Charakterystyki trenowanych modeli</h3>
+<h3 id="36-testowanie-modeli">3.6. Testowanie modeli</h3>
+<h4 id="361-najlepsze-modele">3.6.1. Najlepsze modele</h4>
+<h4 id="362-wyświetlenie-błędnie-sklasyfikowanych-zdjęć">3.6.2. Wyświetlenie błędnie sklasyfikowanych zdjęć</h4>
 
         </div>
 
@@ -220,7 +438,40 @@ if (!doNotTrack) {
       <div class="toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#overview">overview</a></li>
+    <li><a href="#1-import-modules">1. Import modules</a></li>
+    <li><a href="#2-przygotowanie-danych">2. Przygotowanie danych:</a>
+      <ul>
+        <li><a href="#21-liczba-zdjęć-dla-poszczególnych-klas">2.1. Liczba zdjęć dla poszczególnych klas</a></li>
+        <li><a href="#22-utworzenie-katalogów-train-test-valid">2.2. Utworzenie katalogów train, test, valid</a></li>
+        <li><a href="#23-określenie-rozmiaru-danych">2.3. Określenie rozmiaru danych</a></li>
+        <li><a href="#24-przekopiowanie-danych-do-wybranych-folderów">2.4. Przekopiowanie danych do wybranych folderów</a></li>
+        <li><a href="#25-prezentacja-danych">2.5. Prezentacja danych</a></li>
+        <li><a href="#26-augmentacja-danych">2.6. Augmentacja danych</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-sieci-neuronowe">3. Sieci neuronowe:</a>
+      <ul>
+        <li><a href="#31-budowa-modeli">3.1. Budowa modeli</a>
+          <ul>
+            <li><a href="#311-model-1">3.1.1. MODEL 1</a></li>
+            <li><a href="#312-model-2">3.1.2. MODEL 2</a></li>
+            <li><a href="#313-model-3">3.1.3. MODEL 3</a></li>
+            <li><a href="#314-model-4">3.1.4. MODEL 4</a></li>
+            <li><a href="#315-model-5">3.1.5. MODEL 5</a></li>
+          </ul>
+        </li>
+        <li><a href="#32-utworzenie-obiektów">3.2. Utworzenie obiektów</a></li>
+        <li><a href="#33-trenowanie-sieci">3.3. Trenowanie sieci</a></li>
+        <li><a href="#34-zapisanie-modeli">3.4. Zapisanie modeli</a></li>
+        <li><a href="#35-charakterystyki-trenowanych-modeli">3.5. Charakterystyki trenowanych modeli</a></li>
+        <li><a href="#36-testowanie-modeli">3.6. Testowanie modeli</a>
+          <ul>
+            <li><a href="#361-najlepsze-modele">3.6.1. Najlepsze modele</a></li>
+            <li><a href="#362-wyświetlenie-błędnie-sklasyfikowanych-zdjęć">3.6.2. Wyświetlenie błędnie sklasyfikowanych zdjęć</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav>
       </div>

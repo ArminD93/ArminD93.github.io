@@ -342,7 +342,78 @@ street - zbiór walidacyjny: 735
 street - zbiór testowy:     53 
 </code></pre>
 <h3 id="25-prezentacja-danych">2.5. Prezentacja danych</h3>
+<pre><code>#@title Wybierz indeks przykładowego zdjęcia ze zbioru treningowego:
+buildings_idx = 371 #@param {type:'slider', min:0, max:1839}
+names_mapping = dict(enumerate(buildings_files_names))
+img_path = os.path.join(train_buildings_dir, names_mapping[buildings_idx])
+img_buildings = image.load_img(img_path)
+
+forest_idx = 1302 #@param {type:'slider', min:0, max:1839}
+names_mapping = dict(enumerate(forest_files_names))
+img_path = os.path.join(train_forest_dir, names_mapping[forest_idx])
+img_forest = image.load_img(img_path)
+
+glacier_idx = 122 #@param {type:'slider', min:0, max:1839}
+names_mapping = dict(enumerate(glacier_files_names))
+img_path = os.path.join(train_glacier_dir, names_mapping[glacier_idx])
+img_glacier = image.load_img(img_path)
+
+mountain_idx = 1437 #@param {type:'slider', min:0, max:1839}
+names_mapping = dict(enumerate(mountain_files_names))
+img_path = os.path.join(train_mountain_dir, names_mapping[mountain_idx])
+img_mountain = image.load_img(img_path)
+
+sea_idx = 980 #@param {type:'slider', min:0, max:1839}
+names_mapping = dict(enumerate(sea_files_names))
+img_path = os.path.join(train_sea_dir, names_mapping[sea_idx])
+img_sea = image.load_img(img_path)
+
+street_idx = 171 #@param {type:'slider', min:0, max:1839}
+names_mapping = dict(enumerate(street_files_names))
+img_path = os.path.join(train_street_dir, names_mapping[street_idx])
+img_street = image.load_img(img_path)
+
+fig, ax = plt.subplots(2,3,figsize=(23, 15))
+
+ax[0,0].imshow(img_buildings)
+ax[0,1].imshow(img_forest)
+ax[0,2].imshow(img_glacier)
+
+ax[1,0].imshow(img_mountain)
+ax[1,1].imshow(img_sea)
+ax[1,2].imshow(img_street)
+
+
+ax[0,0].axis(False)
+ax[0,1].axis(False)
+ax[0,2].axis(False)
+
+ax[1,0].axis(False)
+ax[1,1].axis(False)
+ax[1,2].axis(False)
+
+plt.show()
+</code></pre>
+<p><img src="/static/images/ImageClass/data_presentation.jpg" alt="image presentation"></p>
 <h3 id="26-augmentacja-danych">2.6. Augmentacja danych</h3>
+<pre><code>train_datagen = ImageDataGenerator(
+    rotation_range=10,                                        # zakres kąta o który losowo zostanie wykonany obrót obrazów
+    rescale=1./255.,                                          # przeskalowujemy wszystkie obrazy o współczynnik 1/255
+    width_shift_range=0.1,                                    # pionowe przekształcenia obrazu 
+    height_shift_range=0.1,                                   # poziome przekształcenia obrazu
+    shear_range=0.2,                                          # zares losowego przycianania obrazu
+    zoom_range=0.1,                                           # zakres losowego przybliżania obrazu
+    horizontal_flip=True,                                     # losowe odbicie połowy obrazu w płaszczyźnie poziomej
+    fill_mode='nearest'                                       # strategia wypełniania nowo utworzonych pikseli, któe mogą powstać w wyniku przekształceń
+)
+
+valid_datagen = ImageDataGenerator(rescale=1./255.) 
+
+
+# Budujemy generatory
+train_generator = train_datagen.flow_from_directory(directory=train_dir, target_size=(150, 150), batch_size=32, class_mode='categorical')  # batch size 32
+valid_generator = valid_datagen.flow_from_directory(directory=valid_dir, target_size=(150, 150), batch_size=32, class_mode='categorical')                       
+</code></pre>
 <h2 id="3-sieci-neuronowe">3. Sieci neuronowe:</h2>
 <h3 id="31-budowa-modeli">3.1. Budowa modeli</h3>
 <h4 id="311-model-1">3.1.1. MODEL 1</h4>

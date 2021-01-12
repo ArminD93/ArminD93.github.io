@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>projects on Armin&#39;s portfolio</title>
-    <link>https://hugo-toha.github.io/projects/</link>
+    <link>https://armind93.github.io/projects/</link>
     <description>Recent content in projects on Armin&#39;s portfolio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 27 Jun 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://hugo-toha.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://armind93.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Big Five Personality test - data analysis</title>
-      <link>https://hugo-toha.github.io/projects/project_bigfive/</link>
+      <link>https://armind93.github.io/projects/project_bigfive/</link>
       <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo-toha.github.io/projects/project_bigfive/</guid>
+      <guid>https://armind93.github.io/projects/project_bigfive/</guid>
       <description>link to GitHub Repository
 overview </description>
     </item>
     
     <item>
       <title>Convolutional network testing for image classification</title>
-      <link>https://hugo-toha.github.io/projects/project_imageclass/</link>
+      <link>https://armind93.github.io/projects/project_imageclass/</link>
       <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo-toha.github.io/projects/project_imageclass/</guid>
+      <guid>https://armind93.github.io/projects/project_imageclass/</guid>
       <description>link to data
 link to GitHub Repository
 1. Import modules import os import time from datetime import datetime as dt import numpy as np import pandas as pd import matplotlib.pyplot as plt import shutil # Pomaga w kopiowaniu plików import seaborn as sns sns.set(style=&amp;quot;ticks&amp;quot;, color_codes=True) from sklearn.metrics import confusion_matrix, classification_report from tensorflow.keras.preprocessing import image from tensorflow.keras.preprocessing.image import ImageDataGenerator from tensorflow.keras.models import Sequential, Model from tensorflow.keras.models import load_model from tensorflow.keras.layers import Input, Dense, Flatten, Dropout, Conv2D, MaxPooling2D, concatenate, BatchNormalization, GlobalAveragePooling2D from tensorflow.</description>
@@ -34,10 +34,10 @@ link to GitHub Repository
     
     <item>
       <title>Kepler Exoplanet Search Results - data analysis</title>
-      <link>https://hugo-toha.github.io/projects/project_kepler/</link>
+      <link>https://armind93.github.io/projects/project_kepler/</link>
       <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo-toha.github.io/projects/project_kepler/</guid>
+      <guid>https://armind93.github.io/projects/project_kepler/</guid>
       <description>link to GitHub Repository
 1. Description of the values ​​from the columns KOI - Kepler Objects of Interest
    Oznaczenie Opis     kepid Kepler Identification   kepoi_name KOI Name. A number used to identify and track a Kepler Object of Interest (KOI). A KOI is a target identified by the Kepler Project that displays at least one transit-like sequence within Kepler time-series photometry that appears to be of astrophysical origin and initially consistent with a planetary transit hypothesis.</description>
@@ -45,10 +45,10 @@ link to GitHub Repository
     
     <item>
       <title>World happiness report - data analysis</title>
-      <link>https://hugo-toha.github.io/projects/project_worldhappiness/</link>
+      <link>https://armind93.github.io/projects/project_worldhappiness/</link>
       <pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo-toha.github.io/projects/project_worldhappiness/</guid>
+      <guid>https://armind93.github.io/projects/project_worldhappiness/</guid>
       <description>link to data
 link to GitHub Repository
 1. Data presentation: The data contain informations which might have influence for people&amp;rsquo;s happiness score in the selected country. We have 5 reports divided by years, from 2015 to 2019.
@@ -57,10 +57,10 @@ Acording to data, the happiness score can be estimated from six factors - econom
     
     <item>
       <title>Project of an automated system for selecting wooden blocks from a rack using Raspberry Pi</title>
-      <link>https://hugo-toha.github.io/projects/project_library/</link>
+      <link>https://armind93.github.io/projects/project_library/</link>
       <pubDate>Fri, 05 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo-toha.github.io/projects/project_library/</guid>
+      <guid>https://armind93.github.io/projects/project_library/</guid>
       <description>link to GitHub Repository
 Introduction The device was built using elements from a 3D printer (frame, stepper motors). Three randomly placed wooden blocks on the shelves of the rack are picked up by the gripper and stored in one of the cells in the bottom row of this rack. The place on the bottom shelf is chosen, where the path from these blocks to this place is the shortest
 Overview   Device control through a graphical user interface:</description>
@@ -68,10 +68,10 @@ Overview   Device control through a graphical user interface:</description>
     
     <item>
       <title>Books prices project</title>
-      <link>https://hugo-toha.github.io/projects/project_booksprices/</link>
+      <link>https://armind93.github.io/projects/project_booksprices/</link>
       <pubDate>Mon, 08 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo-toha.github.io/projects/project_booksprices/</guid>
+      <guid>https://armind93.github.io/projects/project_booksprices/</guid>
       <description>link to GitHub repository
 Introduction I wanted to get informations about books prices, which I&amp;rsquo;d like to buy in the future. Additionally, it would be nice to see the price curve on the chart.
 Functions:  Downloading informations about books (title, price, date) from the acount on the website: ebooki.swiatczytnikow.pl. Saving data to the database. Displaying charts - how the price has changed over time for a specific title.  </description>

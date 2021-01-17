@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Armin&#39;s portfolio</title>
-    <link>https://hugo-toha.github.io/pl/</link>
+    <link>https://armind93.github.io/pl/</link>
     <description>Recent content on Armin&#39;s portfolio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://hugo-toha.github.io/pl/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://armind93.github.io/pl/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

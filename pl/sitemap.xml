@@ -3,44 +3,44 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://hugo-toha.github.io/pl/</loc>
+    <loc>https://armind93.github.io/pl/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo-toha.github.io/"
+                href="https://armind93.github.io/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pl"
-                href="https://hugo-toha.github.io/pl/"
+                href="https://armind93.github.io/pl/"
                 />
   </url>
   
   <url>
-    <loc>https://hugo-toha.github.io/pl/categories/</loc>
+    <loc>https://armind93.github.io/pl/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo-toha.github.io/categories/"
+                href="https://armind93.github.io/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pl"
-                href="https://hugo-toha.github.io/pl/categories/"
+                href="https://armind93.github.io/pl/categories/"
                 />
   </url>
   
   <url>
-    <loc>https://hugo-toha.github.io/pl/tags/</loc>
+    <loc>https://armind93.github.io/pl/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo-toha.github.io/tags/"
+                href="https://armind93.github.io/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pl"
-                href="https://hugo-toha.github.io/pl/tags/"
+                href="https://armind93.github.io/pl/tags/"
                 />
   </url>
   

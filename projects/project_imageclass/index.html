@@ -167,10 +167,10 @@ from tensorflow.keras.callbacks import EarlyStopping
 
 np.set_printoptions(precision=12, suppress=True)
 </code></pre>
-<h2 id="2-przygotowanie-danych"><strong>2. Przygotowanie danych:</strong></h2>
+<h2 id="2-data-preparing"><strong>2. Data preparing:</strong></h2>
 <pre><code>!unzip -q &quot;/content/drive/My Drive/ColabNotebooks/intel_image/data/intel_image.zip&quot; 
 </code></pre>
-<h3 id="21-liczba-zdjęć-dla-poszczególnych-klas">2.1. Liczba zdjęć dla poszczególnych klas</h3>
+<h3 id="21-number-of-photos-for-each-class">2.1. Number of photos for each class</h3>
 <pre><code>!rm -rf ./images
 
 base_dir = './intel_image' # Przypisujemy katalog bazowy
@@ -186,7 +186,7 @@ raw_no_of_files.items()
 <p>Results:</p>
 <pre><code>dict_items([('buildings', 2628), ('forest', 2745), ('glacier', 2957), ('mountain', 3037), ('sea', 2784), ('street', 2883)])
 </code></pre>
-<h3 id="22-utworzenie-katalogów-train-test-valid">2.2. Utworzenie katalogów train, test, valid</h3>
+<h3 id="22-catalogues-creating-train-test-valid">2.2. Catalogues creating: train, test, valid</h3>
 <pre><code>data_dir = './images' # Przypisujemy katalog bazowy
 
 if not os.path.exists(data_dir):
@@ -263,7 +263,7 @@ street_files_names = os.listdir(os.path.join(base_dir,    'street'))
 
 test_files_names = os.listdir(os.path.join(base_dir,      'test'))
 </code></pre>
-<h3 id="23-określenie-rozmiaru-danych">2.3. Określenie rozmiaru danych</h3>
+<h3 id="23-choosing-data-size">2.3. Choosing data size</h3>
 <pre><code># W związku z tym, że są różne wartości danych, w różnych klasach,
 # Wybierzemy minimalną długość z tych dwóch klas i przypiszemy do zmiennej rozmiar
 size = min(len(buildings_files_names), len(forest_files_names), len(glacier_files_names), len(mountain_files_names), len(sea_files_names), len(street_files_names))
@@ -272,7 +272,7 @@ train_size = int(np.floor(0.7 * size)) # rozmiar danych treningowych to 70% wszy
 valid_size = int(np.floor(0.28 * size)) 
 test_size = size - (train_size + valid_size) # Testowy zbiór to będzie 10%
 </code></pre>
-<h3 id="24-przekopiowanie-danych-do-wybranych-folderów">2.4. Przekopiowanie danych do wybranych folderów</h3>
+<h3 id="24-copying-data-to-selected-folders">2.4. Copying data to selected folders</h3>
 <pre><code>def filesCopy(directory_dir):
 
     train_id = train_size
@@ -339,7 +339,7 @@ street - zbiór treningowy:  1840
 street - zbiór walidacyjny: 735 
 street - zbiór testowy:     53 
 </code></pre>
-<h3 id="25-prezentacja-danych">2.5. Prezentacja danych</h3>
+<h3 id="25-data-presentation">2.5. Data presentation</h3>
 <pre><code>#@title Wybierz indeks przykładowego zdjęcia ze zbioru treningowego:
 buildings_idx = 371 #@param {type:'slider', min:0, max:1839}
 names_mapping = dict(enumerate(buildings_files_names))
@@ -393,7 +393,7 @@ ax[1,2].axis(False)
 plt.show()
 </code></pre>
 <p><img src="/static/images/ImageClass/data_presentation.jpg" alt="image presentation"></p>
-<h3 id="26-augmentacja-danych">2.6. Augmentacja danych</h3>
+<h3 id="26-data-augmentation">2.6. Data augmentation</h3>
 <pre><code>train_datagen = ImageDataGenerator(
     rotation_range=10,                                        # zakres kąta o który losowo zostanie wykonany obrót obrazów
     rescale=1./255.,                                          # przeskalowujemy wszystkie obrazy o współczynnik 1/255
@@ -412,7 +412,7 @@ valid_datagen = ImageDataGenerator(rescale=1./255.)
 train_generator = train_datagen.flow_from_directory(directory=train_dir, target_size=(150, 150), batch_size=32, class_mode='categorical')  # batch size 32
 valid_generator = valid_datagen.flow_from_directory(directory=valid_dir, target_size=(150, 150), batch_size=32, class_mode='categorical')                       
 </code></pre>
-<h2 id="3-sieci-neuronowe"><strong>3. Sieci neuronowe:</strong></h2>
+<h2 id="3-neural-networks"><strong>3. Neural networks:</strong></h2>
 <pre><code>class Network:
 
 def __init__(self, model_name, epochs, optimizer):
@@ -484,7 +484,7 @@ batch_size = 32
 steps_per_epoch = train_size // batch_size
 validation_steps = valid_size // batch_size
 </code></pre>
-<h3 id="31-budowa-modeli">3.1. Budowa modeli</h3>
+<h3 id="31-creating-models">3.1. Creating models</h3>
 <pre><code>def Conv2D_block(y, number_of_layers, filters, kernel_size):
 
 for i in range(number_of_layers):
@@ -1640,14 +1640,14 @@ Total params: 751,142
 Trainable params: 747,046
 Non-trainable params: 4,096
 </code></pre>
-<h3 id="32-utworzenie-obiektów"><strong>3.2. Utworzenie obiektów</strong></h3>
+<h3 id="32-creating-objects"><strong>3.2. Creating objects</strong></h3>
 <pre><code>modelObj_1 = Network(model_1, epochs=100, optimizer=Adam(lr=1e-4))
 modelObj_2 = Network(model_2, epochs=100, optimizer=Adam(lr=1e-4))
 modelObj_3 = Network(model_3, epochs=100, optimizer=Adam(lr=1e-4))
 modelObj_4 = Network(model_4, epochs=100, optimizer=Adam(lr=1e-4))
 modelObj_5 = Network(model_5, epochs=100, optimizer=Adam(lr=1e-4))
 </code></pre>
-<h3 id="33-trenowanie-sieci"><strong>3.3. Trenowanie sieci</strong></h3>
+<h3 id="33-networks-training"><strong>3.3. Networks training</strong></h3>
 <p>Model 1:</p>
 <pre><code>modelObj_1.train(verbose=0)
 
@@ -1683,14 +1683,14 @@ Czas trenowania sieci: 2113.3248126506805 sek
 Loss: 0.6122
 Accuracy: 0.7827
 </code></pre>
-<h3 id="34-zapisanie-modeli"><strong>3.4. Zapisanie modeli</strong></h3>
+<h3 id="34-models-saving"><strong>3.4. Models saving</strong></h3>
 <pre><code># modelObj_1.save_model('model_1_L0.43_A0.85')
 # modelObj_2.save_model('model_2_L0.43_A0.85')
 # modelObj_3.save_model('model_3_L0.33_A0.88')
 # modelObj_4.save_model('model_4_L0.51_A0.82')
 # modelObj_5.save_model('model_5_L0.46_A0.86')
 </code></pre>
-<h3 id="35-charakterystyki-trenowanych-modeli"><strong>3.5. Charakterystyki trenowanych modeli</strong></h3>
+<h3 id="35-the-characteristics-of-the-trained-models"><strong>3.5. The characteristics of the trained models</strong></h3>
 <pre><code>modelObj_1.plot_hist(title='MODEL 1')
 modelObj_2.plot_hist(title='MODEL 2')
 modelObj_3.plot_hist(title='MODEL 3')
@@ -1702,7 +1702,7 @@ modelObj_5.plot_hist(title='MODEL 5')
 <img src="/static/images/ImageClass/plots/model_3_plot_result.jpg" alt="model 3 train result">
 <img src="/static/images/ImageClass/plots/model_4_plot_result.jpg" alt="model 4 train result">
 <img src="/static/images/ImageClass/plots/model_5_plot_result.jpg" alt="model 5 train result"></p>
-<h3 id="36-testowanie-modeli"><strong>3.6. Testowanie modeli:</strong></h3>
+<h3 id="36-models-testing"><strong>3.6. Models testing:</strong></h3>
 <p>Load best model:</p>
 <pre><code>best_model = load_model('/content/drive/My Drive/ColabNotebooks/intel_image/models/2020-06-05/model_3_L0.36_A0.86.h5') 
 # best_model.summary()
@@ -1857,9 +1857,9 @@ TestModel_obj = TestModel( model_dict= model_dict)
 <pre><code>TestModel_obj.create_matrix() 
 </code></pre>
 <p><img src="/static/images/ImageClass/matrices/models_matrices.jpg" alt="models_matrices"></p>
-<h4 id="362-najlepsze-modele">3.6.2. Najlepsze modele</h4>
+<h4 id="362-best-models">3.6.2. Best models</h4>
 <p><img src="/static/images/ImageClass/matrices/models_best_matrices.jpg" alt="models_best_matrices"></p>
-<h4 id="363-wyświetlenie-błędnie-sklasyfikowanych-zdjęć">3.6.3. Wyświetlenie błędnie sklasyfikowanych zdjęć</h4>
+<h4 id="363-presentation-of-incorrect-image-classification">3.6.3. Presentation of incorrect image classification</h4>
 <pre><code>TestModel_obj.show_incorrect_images(model_name= 'model 3', amount= 25)
 </code></pre>
 <p><img src="/static/images/ImageClass/incorrect_results/model_3.jpg" alt="model_3"></p>
@@ -1948,19 +1948,19 @@ TestModel_obj = TestModel( model_dict= model_dict)
         <nav id="TableOfContents">
   <ul>
     <li><a href="#1-import-modules"><strong>1. Import modules</strong></a></li>
-    <li><a href="#2-przygotowanie-danych"><strong>2. Przygotowanie danych:</strong></a>
+    <li><a href="#2-data-preparing"><strong>2. Data preparing:</strong></a>
       <ul>
-        <li><a href="#21-liczba-zdjęć-dla-poszczególnych-klas">2.1. Liczba zdjęć dla poszczególnych klas</a></li>
-        <li><a href="#22-utworzenie-katalogów-train-test-valid">2.2. Utworzenie katalogów train, test, valid</a></li>
-        <li><a href="#23-określenie-rozmiaru-danych">2.3. Określenie rozmiaru danych</a></li>
-        <li><a href="#24-przekopiowanie-danych-do-wybranych-folderów">2.4. Przekopiowanie danych do wybranych folderów</a></li>
-        <li><a href="#25-prezentacja-danych">2.5. Prezentacja danych</a></li>
-        <li><a href="#26-augmentacja-danych">2.6. Augmentacja danych</a></li>
+        <li><a href="#21-number-of-photos-for-each-class">2.1. Number of photos for each class</a></li>
+        <li><a href="#22-catalogues-creating-train-test-valid">2.2. Catalogues creating: train, test, valid</a></li>
+        <li><a href="#23-choosing-data-size">2.3. Choosing data size</a></li>
+        <li><a href="#24-copying-data-to-selected-folders">2.4. Copying data to selected folders</a></li>
+        <li><a href="#25-data-presentation">2.5. Data presentation</a></li>
+        <li><a href="#26-data-augmentation">2.6. Data augmentation</a></li>
       </ul>
     </li>
-    <li><a href="#3-sieci-neuronowe"><strong>3. Sieci neuronowe:</strong></a>
+    <li><a href="#3-neural-networks"><strong>3. Neural networks:</strong></a>
       <ul>
-        <li><a href="#31-budowa-modeli">3.1. Budowa modeli</a>
+        <li><a href="#31-creating-models">3.1. Creating models</a>
           <ul>
             <li><a href="#311-model-1"><strong>3.1.1. MODEL 1:</strong></a>
               <ul>
@@ -1989,15 +1989,15 @@ TestModel_obj = TestModel( model_dict= model_dict)
             </li>
           </ul>
         </li>
-        <li><a href="#32-utworzenie-obiektów"><strong>3.2. Utworzenie obiektów</strong></a></li>
-        <li><a href="#33-trenowanie-sieci"><strong>3.3. Trenowanie sieci</strong></a></li>
-        <li><a href="#34-zapisanie-modeli"><strong>3.4. Zapisanie modeli</strong></a></li>
-        <li><a href="#35-charakterystyki-trenowanych-modeli"><strong>3.5. Charakterystyki trenowanych modeli</strong></a></li>
-        <li><a href="#36-testowanie-modeli"><strong>3.6. Testowanie modeli:</strong></a>
+        <li><a href="#32-creating-objects"><strong>3.2. Creating objects</strong></a></li>
+        <li><a href="#33-networks-training"><strong>3.3. Networks training</strong></a></li>
+        <li><a href="#34-models-saving"><strong>3.4. Models saving</strong></a></li>
+        <li><a href="#35-the-characteristics-of-the-trained-models"><strong>3.5. The characteristics of the trained models</strong></a></li>
+        <li><a href="#36-models-testing"><strong>3.6. Models testing:</strong></a>
           <ul>
             <li><a href="#361-testmodel-class">3.6.1. TestModel class</a></li>
-            <li><a href="#362-najlepsze-modele">3.6.2. Najlepsze modele</a></li>
-            <li><a href="#363-wyświetlenie-błędnie-sklasyfikowanych-zdjęć">3.6.3. Wyświetlenie błędnie sklasyfikowanych zdjęć</a></li>
+            <li><a href="#362-best-models">3.6.2. Best models</a></li>
+            <li><a href="#363-presentation-of-incorrect-image-classification">3.6.3. Presentation of incorrect image classification</a></li>
           </ul>
         </li>
       </ul>

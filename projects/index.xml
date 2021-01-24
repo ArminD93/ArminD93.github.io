@@ -17,8 +17,9 @@
       <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://armind93.github.io/projects/project_bigfive/</guid>
-      <description>link to GitHub Repository
-overview </description>
+      <description>&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;
+link to GitHub Repository
+1. Description of the values ​​from the columns 2. Import modules 3. Data preparation: 3.1. Data presentation 3.2. Changing the type from object to type category andi datetime 3.3. Missing values 3.4. Choosing rows where IPC != 1 3.5. Are there any null values? 4. Data analysis: 4.1. Preparation of groups based on the name of the country 4.2. The number of times each response occurs for each issue 4.</description>
     </item>
     
     <item>
@@ -27,9 +28,10 @@ overview </description>
       <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://armind93.github.io/projects/project_imageclass/</guid>
-      <description>link to data
+      <description>&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;
+link to data
 link to GitHub Repository
-1. Import modules import os import time from datetime import datetime as dt import numpy as np import pandas as pd import matplotlib.pyplot as plt import shutil # Pomaga w kopiowaniu plików import seaborn as sns sns.set(style=&amp;quot;ticks&amp;quot;, color_codes=True) from sklearn.metrics import confusion_matrix, classification_report from tensorflow.keras.preprocessing import image from tensorflow.keras.preprocessing.image import ImageDataGenerator from tensorflow.keras.models import Sequential, Model from tensorflow.keras.models import load_model from tensorflow.keras.layers import Input, Dense, Flatten, Dropout, Conv2D, MaxPooling2D, concatenate, BatchNormalization, GlobalAveragePooling2D from tensorflow.</description>
+1. Import modules import os import time from datetime import datetime as dt import numpy as np import pandas as pd import matplotlib.pyplot as plt import shutil # Pomaga w kopiowaniu plików import seaborn as sns sns.set(style=&amp;quot;ticks&amp;quot;, color_codes=True) from sklearn.metrics import confusion_matrix, classification_report from tensorflow.keras.preprocessing import image from tensorflow.keras.preprocessing.image import ImageDataGenerator from tensorflow.keras.models import Sequential, Model from tensorflow.</description>
     </item>
     
     <item>
@@ -38,7 +40,8 @@ link to GitHub Repository
       <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://armind93.github.io/projects/project_kepler/</guid>
-      <description>link to GitHub Repository
+      <description>&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;
+link to GitHub Repository
 1. Description of the values ​​from the columns KOI - Kepler Objects of Interest
    Oznaczenie Opis     kepid Kepler Identification   kepoi_name KOI Name. A number used to identify and track a Kepler Object of Interest (KOI). A KOI is a target identified by the Kepler Project that displays at least one transit-like sequence within Kepler time-series photometry that appears to be of astrophysical origin and initially consistent with a planetary transit hypothesis.</description>
     </item>
@@ -49,9 +52,7 @@ link to GitHub Repository
       <pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://armind93.github.io/projects/project_worldhappiness/</guid>
-      <description>link to data
-link to GitHub Repository
-1. Data presentation: The data contain informations which might have influence for people&amp;rsquo;s happiness score in the selected country. We have 5 reports divided by years, from 2015 to 2019.
+      <description>The data contain informations which might have influence for people&amp;rsquo;s happiness score in the selected country. We have 5 reports divided by years, from 2015 to 2019.
 Acording to data, the happiness score can be estimated from six factors - economic production, social support, life expectancy, freedom, absence of corruption, and generosity. These factors contribute to making life evaluations higher in each country than they are in Dystopia, a hypothetical country that has values equal to the world’s lowest national averages for each of the six factors.</description>
     </item>
     

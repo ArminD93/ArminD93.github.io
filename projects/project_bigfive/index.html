@@ -1120,6 +1120,66 @@ BigFive.head()
 3 	2.0 	2.0 	2.0 	3.0 	4.0 	2.0 	2.0 	4.0 	1.0 	4.0 	3.0 	3.0 	3.0 	2.0 	3.0 	2.0 	2.0 	2.0 	4.0 	3.0 	2.0 	4.0 	3.0 	4.0 	2.0 	4.0 	2.0 	4.0 	3.0 	4.0 	2.0 	4.0 	4.0 	4.0 	1.0 	2.0 	2.0 	3.0 	1.0 	4.0 	4.0 	2.0 	5.0 	2.0 	3.0 	1.0 	4.0 	4.0 	3.0 	3.0 	2016-03-03 02:02:02 	186.0 	            219.0 	    7 	           GB 	            51.75 	            -1.25
 5 	3.0 	3.0 	4.0 	2.0 	4.0 	2.0 	2.0 	3.0 	3.0 	4.0 	3.0 	4.0 	3.0 	2.0 	2.0 	1.0 	2.0 	1.0 	2.0 	2.0 	2.0 	3.0 	1.0 	4.0 	2.0 	3.0 	2.0 	3.0 	4.0 	4.0 	3.0 	2.0 	4.0 	1.0 	3.0 	2.0 	4.0 	3.0 	4.0 	3.0 	5.0 	1.0 	5.0 	1.0 	3.0 	1.0 	5.0 	4.0 	5.0 	2.0 	2016-03-03 02:03:12 	  4.0 	            196.0 	    3 	           SE 	            59.3333 	            18.05
 </code></pre>
+<h3 id="36-renaming-column-country-to-alpha2_code">3.6. Renaming column &lsquo;country&rsquo; to &lsquo;alpha2_code&rsquo;</h3>
+<pre><code>BigFive = BigFive.rename(columns={'country' : 'alpha2_code'})
+BigFive.head()
+</code></pre>
+<hr>
+<pre><code>        EXT1 	EXT2 	EXT3 	EXT4 	EXT5 	EXT6 	EXT7 	EXT8 	EXT9 	EXT10 	EST1 	EST2 	EST3 	EST4 	EST5 	EST6 	EST7 	EST8 	EST9 	EST10 	AGR1 	AGR2 	AGR3 	AGR4 	AGR5 	AGR6 	AGR7 	AGR8 	AGR9 	AGR10 	CSN1 	CSN2 	CSN3 	CSN4 	CSN5 	CSN6 	CSN7 	CSN8 	CSN9 	CSN10 	OPN1 	OPN2 	OPN3 	OPN4 	OPN5 	OPN6 	OPN7 	OPN8 	OPN9 	OPN10 	dateload 	        introelapse 	testelapse 	endelapse 	alpha2_code 	lat_appx_lots_of_err 	long_appx_lots_of_err
+0 	4.0 	1.0 	5.0 	2.0 	5.0 	1.0 	5.0 	2.0 	4.0 	1.0 	1.0 	4.0 	4.0 	2.0 	2.0 	2.0 	2.0 	2.0 	3.0 	2.0 	2.0 	5.0 	2.0 	4.0 	2.0 	3.0 	2.0 	4.0 	3.0 	4.0 	3.0 	4.0 	3.0 	2.0 	2.0 	4.0 	4.0 	2.0 	4.0 	4.0 	5.0 	1.0 	4.0 	1.0 	4.0 	1.0 	5.0 	3.0 	4.0 	5.0 	2016-03-03 02:01:01 	    9.0 	    234.0 	    6 	            GB 	                51.5448 	         0.1991
+1 	3.0 	5.0 	3.0 	4.0 	3.0 	3.0 	2.0 	5.0 	1.0 	5.0 	2.0 	3.0 	4.0 	1.0 	3.0 	1.0 	2.0 	1.0 	3.0 	1.0 	1.0 	4.0 	1.0 	5.0 	1.0 	5.0 	3.0 	4.0 	5.0 	3.0 	3.0 	2.0 	5.0 	3.0 	3.0 	1.0 	3.0 	3.0 	5.0 	3.0 	1.0 	2.0 	4.0 	2.0 	3.0 	1.0 	4.0 	2.0 	5.0 	3.0 	2016-03-03 02:01:20 	   12.0 	    179.0 	    11 	            MY 	                 3.1698 	       101.706
+2 	2.0 	3.0 	4.0 	4.0 	3.0 	2.0 	1.0 	3.0 	2.0 	5.0 	4.0 	4.0 	4.0 	2.0 	2.0 	2.0 	2.0 	2.0 	1.0 	3.0 	1.0 	4.0 	1.0 	4.0 	2.0 	4.0 	1.0 	4.0 	4.0 	3.0 	4.0 	2.0 	2.0 	2.0 	3.0 	3.0 	4.0 	2.0 	4.0 	2.0 	5.0 	1.0 	2.0 	1.0 	4.0 	2.0 	5.0 	3.0 	4.0 	4.0 	2016-03-03 02:01:56 	    3.0 	    186.0 	    7 	            GB 	                54.9119 	        -1.3833
+3 	2.0 	2.0 	2.0 	3.0 	4.0 	2.0 	2.0 	4.0 	1.0 	4.0 	3.0 	3.0 	3.0 	2.0 	3.0 	2.0 	2.0 	2.0 	4.0 	3.0 	2.0 	4.0 	3.0 	4.0 	2.0 	4.0 	2.0 	4.0 	3.0 	4.0 	2.0 	4.0 	4.0 	4.0 	1.0 	2.0 	2.0 	3.0 	1.0 	4.0 	4.0 	2.0 	5.0 	2.0 	3.0 	1.0 	4.0 	4.0 	3.0 	3.0 	2016-03-03 02:02:02 	  186.0 	    219.0 	    7 	            GB 	                51.75 	                -1.25
+5 	3.0 	3.0 	4.0 	2.0 	4.0 	2.0 	2.0 	3.0 	3.0 	4.0 	3.0 	4.0 	3.0 	2.0 	2.0 	1.0 	2.0 	1.0 	2.0 	2.0 	2.0 	3.0 	1.0 	4.0 	2.0 	3.0 	2.0 	3.0 	4.0 	4.0 	3.0 	2.0 	4.0 	1.0 	3.0 	2.0 	4.0 	3.0 	4.0 	3.0 	5.0 	1.0 	5.0 	1.0 	3.0 	1.0 	5.0 	4.0 	5.0 	2.0 	2016-03-03 02:03:12 	    4.0 	    196.0 	    3 	            SE 	                59.3333 	        18.05
+</code></pre>
+<hr>
+<pre><code>BigFive['alpha2_code'].unique()
+
+['GB', 'MY', 'SE', 'US', 'FI', ..., 'DJ', 'ML', 'GN', 'AS', 'SH']
+Length: 221
+Categories (221, object): ['GB', 'MY', 'SE', 'US', ..., 'ML', 'GN', 'AS', 'SH']
+</code></pre>
+<hr>
+<pre><code># Według normy ISO 3166-1 alfa-2 kod dla każdego panstwa składa się z dwóch liter,
+# zatem zobaczymy, czy występuje jakiś składający się z trzech lub więcej znaków?
+
+for code in BigFive['alpha2_code'].unique():
+if (len(code) &gt; 3):
+    print(code)
+
+NONE
+</code></pre>
+<hr>
+<pre><code># Ile jest takich wierszy z zawartością NONE ?
+len(BigFive.loc[(BigFive['alpha2_code']=='NONE')])
+
+9580
+
+len(BigFive['alpha2_code'])
+
+693694
+</code></pre>
+<hr>
+<pre><code># Decoding of country names 
+def check_country_code(df):
+if len(df['alpha2_code']) == 2:
+    if df['alpha2_code'] == 'XK':
+    return 'Kosovo'
+    else:
+    return  pc.country_alpha2_to_country_name( country_2_code= df['alpha2_code'])   
+else:
+    return 'NONE'
+
+BigFive['country'] = BigFive.apply( check_country_code, axis=1)   
+
+BigFive.head(3)
+</code></pre>
+<hr>
+<pre><code>        EXT1 	EXT2 	EXT3 	EXT4 	EXT5 	EXT6 	EXT7 	EXT8 	EXT9 	EXT10 	EST1 	EST2 	EST3 	EST4 	EST5 	EST6 	EST7 	EST8 	EST9 	EST10 	AGR1 	AGR2 	AGR3 	AGR4 	AGR5 	AGR6 	AGR7 	AGR8 	AGR9 	AGR10 	CSN1 	CSN2 	CSN3 	CSN4 	CSN5 	CSN6 	CSN7 	CSN8 	CSN9 	CSN10 	OPN1 	OPN2 	OPN3 	OPN4 	OPN5 	OPN6 	OPN7 	OPN8 	OPN9 	OPN10 	dateload 	    introelapse 	testelapse 	endelapse 	alpha2_code 	lat_appx_lots_of_err 	long_appx_lots_of_err 	country
+0 	4.0 	1.0 	5.0 	2.0 	5.0 	1.0 	5.0 	2.0 	4.0 	1.0 	1.0 	4.0 	4.0 	2.0 	2.0 	2.0 	2.0 	2.0 	3.0 	2.0 	2.0 	5.0 	2.0 	4.0 	2.0 	3.0 	2.0 	4.0 	3.0 	4.0 	3.0 	4.0 	3.0 	2.0 	2.0 	4.0 	4.0 	2.0 	4.0 	4.0 	5.0 	1.0 	4.0 	1.0 	4.0 	1.0 	5.0 	3.0 	4.0 	5.0 	2016-03-03 02:01:01 	 9.0 	        234.0 	        6 	        GB 	            51.5448 	            0.1991 	     United Kingdom
+1 	3.0 	5.0 	3.0 	4.0 	3.0 	3.0 	2.0 	5.0 	1.0 	5.0 	2.0 	3.0 	4.0 	1.0 	3.0 	1.0 	2.0 	1.0 	3.0 	1.0 	1.0 	4.0 	1.0 	5.0 	1.0 	5.0 	3.0 	4.0 	5.0 	3.0 	3.0 	2.0 	5.0 	3.0 	3.0 	1.0 	3.0 	3.0 	5.0 	3.0 	1.0 	2.0 	4.0 	2.0 	3.0 	1.0 	4.0 	2.0 	5.0 	3.0 	2016-03-03 02:01:20 	12.0 	        179.0 	        11 	        MY 	             3.1698 	          101.706 	     Malaysia
+2 	2.0 	3.0 	4.0 	4.0 	3.0 	2.0 	1.0 	3.0 	2.0 	5.0 	4.0 	4.0 	4.0 	2.0 	2.0 	2.0 	2.0 	2.0 	1.0 	3.0 	1.0 	4.0 	1.0 	4.0 	2.0 	4.0 	1.0 	4.0 	4.0 	3.0 	4.0 	2.0 	2.0 	2.0 	3.0 	3.0 	4.0 	2.0 	4.0 	2.0 	5.0 	1.0 	2.0 	1.0 	4.0 	2.0 	5.0 	3.0 	4.0 	4.0 	2016-03-03 02:01:56 	 3.0 	        186.0 	        7 	        GB 	            54.9119 	           -1.3833 	     United Kingdom
+</code></pre>
 <h2 id="4-data-analysis">4. <strong>Data analysis:</strong></h2>
 <h3 id="41-preparation-of-groups-based-on-the-name-of-the-country">4.1. Preparation of groups based on the name of the country</h3>
 <h3 id="42-the-number-of-times-each-response-occurs-for-each-issue">4.2. The number of times each response occurs for each issue</h3>
@@ -1216,6 +1276,7 @@ BigFive.head()
         <li><a href="#33-missing-values">3.3. Missing values</a></li>
         <li><a href="#34-choosing-rows-where-ipc--1">3.4. Choosing rows where IPC != 1</a></li>
         <li><a href="#35-are-there-any-null-values">3.5. Are there any null values?</a></li>
+        <li><a href="#36-renaming-column-country-to-alpha2_code">3.6. Renaming column &lsquo;country&rsquo; to &lsquo;alpha2_code&rsquo;</a></li>
       </ul>
     </li>
     <li><a href="#4-data-analysis">4. <strong>Data analysis:</strong></a>

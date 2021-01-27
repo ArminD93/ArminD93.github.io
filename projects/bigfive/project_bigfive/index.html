@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Big Five Personality test - data analysis</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/assets/css/layouts/main.css"/>
+<link rel="stylesheet" href="/assets/css/style.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L5C2B8SPR2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L5C2B8SPR2');
+</script>
+
+
+
+<link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+
+
+<link rel="stylesheet" href="/assets/css/style.css"/>
+
+    
+<meta name="description" content="Big Five Personality test - data analysis" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/assets/css/layouts/single.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/sidebar.css">
+
+
+    
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-L5C2B8SPR2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/assets/images/main-logo.png">Armin&#39;s portfolio</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/assets/images/main-logo.png" class="d-none" id="main-logo">
+  <img src="/assets/images/inverted-logo.png" class="d-none" id="inverted-logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/projects" data-filter="all">All projects</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bookprices/project_booksprices/">Books Prices</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="">Big Five Personality test</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bigfive/bigfive_col_names/">Columns description</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bigfive/bigfive_modules/">Import modules</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bigfive/bigfive_data_prepare/">Data preparation</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/projects/bigfive/project_bigfive/">Data analysis</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="">World Happiness projects</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/worldhappiness/project_worldhappiness/">World Happiness project</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://armind93.github.io/assets/images/default-hero.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/static/images/A85.jpg'/>
+          <h5 class="author-name">Armin Derencz</h5>
+          <p>June 27, 2020</p>
+        </div>
+
+        <div class="title">
+          <h1>Big Five Personality test - data analysis</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+          <h2 id="4-data-analysis">4. <strong>Data analysis:</strong></h2>
+<h3 id="41-preparation-of-groups-based-on-the-name-of-the-country">4.1. Preparation of groups based on the name of the country</h3>
+<h3 id="42-the-number-of-times-each-response-occurs-for-each-issue">4.2. The number of times each response occurs for each issue</h3>
+<h3 id="43-correlation-analysis-in-individual-traits">4.3. Correlation analysis in individual traits</h3>
+<h4 id="431-description-and-classification-of-markings">4.3.1. Description and classification of markings</h4>
+<h4 id="432-data-preparation">4.3.2. Data preparation</h4>
+<h4 id="433-correlation-maps-for-individual-traits">4.3.3. Correlation maps for individual traits</h4>
+<h3 id="44-countries-with-the-highest-extraversion-level">4.4. Countries with the highest Extraversion level</h3>
+<h3 id="45-radar-diagram-for-the-selected-row">4.5. Radar diagram for the selected row</h3>
+<h4 id="451-preparing-the-radarchart-class">4.5.1. Preparing the RadarChart class</h4>
+<h4 id="452-preparation-of-objects">4.5.2. Preparation of objects</h4>
+<h3 id="46-presentation-of-the-results-for-each-personality-trait-for-the-selected-row">4.6. Presentation of the results for each personality trait for the selected row</h3>
+<h3 id="47-calculating-points-for-individual-features">4.7. Calculating points for individual features</h3>
+<h4 id="471-preparation-of-additional-columns">4.7.1. Preparation of additional columns</h4>
+<h4 id="472-enter-the-calculated-results-into-the-data-frame">4.7.2. Enter the calculated results into the data frame</h4>
+<h3 id="48-personality-summary-for-the-selected-row-in-the-radar-diagram">4.8. Personality summary for the selected row in the radar diagram</h3>
+<h3 id="49presentation-of-approximate-locations-in-a-scatterplot-diagram">4.9.Presentation of approximate locations in a scatterplot diagram</h3>
+
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/hugo-toha/hugo-toha.github.io/edit/master/content/projects/BigFive/project_BigFive.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/projects/bigfive/bigfive_modules/" class="btn btn-outline-info">
+          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+          <br />
+          <span>Big Five Personality test - data analysis</span>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/projects/imageclassproject/project_imageclass/" class="btn btn-outline-info">
+            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
+            <br />
+            <span>Convolutional network testing for image classification</span>
+          </a>
+        </div>
+      
+    
+  
+
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#4-data-analysis">4. <strong>Data analysis:</strong></a>
+      <ul>
+        <li><a href="#41-preparation-of-groups-based-on-the-name-of-the-country">4.1. Preparation of groups based on the name of the country</a></li>
+        <li><a href="#42-the-number-of-times-each-response-occurs-for-each-issue">4.2. The number of times each response occurs for each issue</a></li>
+        <li><a href="#43-correlation-analysis-in-individual-traits">4.3. Correlation analysis in individual traits</a>
+          <ul>
+            <li><a href="#431-description-and-classification-of-markings">4.3.1. Description and classification of markings</a></li>
+            <li><a href="#432-data-preparation">4.3.2. Data preparation</a></li>
+            <li><a href="#433-correlation-maps-for-individual-traits">4.3.3. Correlation maps for individual traits</a></li>
+          </ul>
+        </li>
+        <li><a href="#44-countries-with-the-highest-extraversion-level">4.4. Countries with the highest Extraversion level</a></li>
+        <li><a href="#45-radar-diagram-for-the-selected-row">4.5. Radar diagram for the selected row</a>
+          <ul>
+            <li><a href="#451-preparing-the-radarchart-class">4.5.1. Preparing the RadarChart class</a></li>
+            <li><a href="#452-preparation-of-objects">4.5.2. Preparation of objects</a></li>
+          </ul>
+        </li>
+        <li><a href="#46-presentation-of-the-results-for-each-personality-trait-for-the-selected-row">4.6. Presentation of the results for each personality trait for the selected row</a></li>
+        <li><a href="#47-calculating-points-for-individual-features">4.7. Calculating points for individual features</a>
+          <ul>
+            <li><a href="#471-preparation-of-additional-columns">4.7.1. Preparation of additional columns</a></li>
+            <li><a href="#472-enter-the-calculated-results-into-the-data-frame">4.7.2. Enter the calculated results into the data frame</a></li>
+          </ul>
+        </li>
+        <li><a href="#48-personality-summary-for-the-selected-row-in-the-radar-diagram">4.8. Personality summary for the selected row in the radar diagram</a></li>
+        <li><a href="#49presentation-of-approximate-locations-in-a-scatterplot-diagram">4.9.Presentation of approximate locations in a scatterplot diagram</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">Armin Derencz</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#projects">Projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent projects</a>
+              </li>
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>armin.derencz@gmail.com</span></li>
+          
+        </ul>
+      </div>
+      
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/assets/images/inverted-logo.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/assets/images/hugo-logo-wide.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/assets/js/jquery-3.4.1.min.js"></script>
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+
+<script src="/assets/js/navbar.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/assets/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>

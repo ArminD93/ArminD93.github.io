@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Categories</title>
+    <title>Big Five Personality test - data analysis</title>
     <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -36,8 +36,13 @@
 <link rel="stylesheet" href="/assets/css/style.css"/>
 
     
-    <link rel="stylesheet" href="/assets/css/layouts/list.css">
-    <link rel="stylesheet" href="/assets/css/navigators/sidebar.css">
+<meta name="description" content="Big Five Personality test - data analysis" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/assets/css/layouts/single.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/sidebar.css">
 
 
     
@@ -71,7 +76,7 @@ if (!doNotTrack) {
       <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="/pl">
+    <a class="navbar-brand" href="/">
       <img src="/assets/images/main-logo.png">Armin&#39;s portfolio</a>
     <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
       <span class="navbar-toggler-icon"></span>
@@ -79,26 +84,6 @@ if (!doNotTrack) {
 
     <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
       <ul class="navbar-nav ml-auto">
-      
-        
-
-  
-
-
-<li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="languageSelector" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <img class="flag" src="https://www.countryflags.io/pl/flat/16.png">
-      polish
-    </a>
-    <div class="dropdown-menu" aria-labelledby="languageSelector">
-      
-        <a class="dropdown-item nav-link languages-item" href="/categories">
-          <img class="flag" src="https://www.countryflags.io/gb/flat/24.png">
-          English
-        </a>
-      
-    </div>
-</li>
       
       </ul>
     </div>
@@ -112,20 +97,107 @@ if (!doNotTrack) {
 
       
       
-  
-  
-    
-  
-
   <section class="sidebar-section" id="sidebar-section">
     <div class="sidebar-holder">
       <div class="sidebar" id="sidebar">
         <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
         <div class="sidebar-tree">
           <ul class="tree" id="tree">
-            <li id="list-heading"><a href="/pl/projects" data-filter="all">All projects</a></li>
+            <li id="list-heading"><a href="/projects" data-filter="all">All projects</a></li>
             <div class="subtree">
                 
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bookprices/project_booksprices/">Books Prices</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="">Big Five Personality test</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bigfive/bigfive_col_names/">Columns description</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/projects/bigfive/bigfive_modules/">Import modules</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bigfive/bigfive_data_prepare/">Data preparation</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bigfive/project_bigfive/">Data analysis</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="">World Happiness projects</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/worldhappiness/project_worldhappiness/">World Happiness project</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
 
             </div>
           </ul>
@@ -138,22 +210,142 @@ if (!doNotTrack) {
       
       
 <section class="content-section" id="content-section">
-  <div class="content container-fluid" id="content">
-    <div class="container-fluid post-card-holder" id="post-card-holder">
+  <div class="content">
+    <div class="container p-0 read-area">
       
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://armind93.github.io/assets/images/default-hero.jpg);'>
+      </div>
+
       
-    </div>
-    <div class="paginator">
-      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/static/images/A85.jpg'/>
+          <h5 class="author-name">Armin Derencz</h5>
+          <p>June 27, 2020</p>
+        </div>
+
+        <div class="title">
+          <h1>Big Five Personality test - data analysis</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+          <p><a href="https://github.com/ArminD93/BigFivePersonalityTest/blob/dev/BigFivePersonality.ipynb">link to GitHub Repository</a></p>
+<h2 id="2-import-modules">2. <strong>Import modules</strong></h2>
+<pre><code>try:
+    import pandas as pd
+    import numpy as np
+    import matplotlib.pyplot as plt
+    import plotly.figure_factory as ff
+    import plotly.express as px
+    from plotly.subplots import make_subplots
+    import seaborn as sns
+    from itertools import islice
+    import pycountry_convert as pc
+    import squarify
+except:
+    !pip install pycountry_convert
+    !pip install squarify
+    import pycountry_convert as pc
+    import squarify
 
 
+%matplotlib inline
+</code></pre>
+
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/hugo-toha/hugo-toha.github.io/edit/master/content/projects/BigFive/BigFive_modules.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/projects/bigfive/bigfive_data_prepare/" class="btn btn-outline-info">
+          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+          <br />
+          <span>Big Five Personality test - data analysis</span>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/projects/bigfive/project_bigfive/" class="btn btn-outline-info">
+            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
+            <br />
+            <span>Big Five Personality test - data analysis</span>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+      </div>
     </div>
   </div>
+  
 </section>
 
 
       
-       
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#2-import-modules">2. <strong>Import modules</strong></a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
     </div>
 
     
@@ -196,7 +388,7 @@ if (!doNotTrack) {
                 
               
               <li class="nav-item">
-                <a class="smooth-scroll" href="#skills">Umiejętności</a>
+                <a class="smooth-scroll" href="#skills">Skills</a>
               </li>
             
             
@@ -205,7 +397,7 @@ if (!doNotTrack) {
                 
               
               <li class="nav-item">
-                <a class="smooth-scroll" href="#projects">Projekty</a>
+                <a class="smooth-scroll" href="#projects">Projects</a>
               </li>
             
             
@@ -214,7 +406,7 @@ if (!doNotTrack) {
                 
               
               <li class="nav-item">
-                <a class="smooth-scroll" href="#recent-posts">Ostatnie projekty</a>
+                <a class="smooth-scroll" href="#recent-posts">Recent projects</a>
               </li>
             
         </ul>
@@ -267,7 +459,12 @@ if (!doNotTrack) {
 
     
     
-    <script src="/assets/js/list.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/assets/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
 
   </body>
 </html>

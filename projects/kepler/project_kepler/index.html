@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kepler Exoplanet Search Results - data analysis</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/assets/css/layouts/main.css"/>
+<link rel="stylesheet" href="/assets/css/style.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L5C2B8SPR2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L5C2B8SPR2');
+</script>
+
+
+
+<link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+
+
+<link rel="stylesheet" href="/assets/css/style.css"/>
+
+    
+<meta name="description" content="Kepler Exoplanet Search Results - data analysis" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/assets/css/layouts/single.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/sidebar.css">
+
+
+    
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-L5C2B8SPR2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/assets/images/main-logo.png">Armin&#39;s portfolio</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/assets/images/main-logo.png" class="d-none" id="main-logo">
+  <img src="/assets/images/inverted-logo.png" class="d-none" id="inverted-logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/projects" data-filter="all">All projects</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bookprices/project_booksprices/">Books Prices</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="">Big Five Personality test</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bigfive/bigfive_col_names/">Columns description</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bigfive/bigfive_modules/">Import modules</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bigfive/bigfive_data_prepare/">Data preparation</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bigfive/project_bigfive/">Data analysis</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="">World Happiness projects</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/worldhappiness/project_worldhappiness/">World Happiness project</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://armind93.github.io/assets/images/default-hero.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/static/images/A85.jpg'/>
+          <h5 class="author-name">Armin Derencz</h5>
+          <p>April 2, 2020</p>
+        </div>
+
+        <div class="title">
+          <h1>Kepler Exoplanet Search Results - data analysis</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+          <p>&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;
+&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;
+&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;
+&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;
+&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;
+&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;</p>
+<p><a href="https://github.com/ArminD93/KeplerExoplanetSearchResults/blob/dev/KeplerExoplanetSearchResults.ipynb">link to GitHub Repository</a></p>
+<h2 id="1-description-of-the-values-from-the-columns"><strong>1. Description of the values ​​from the columns</strong></h2>
+<p><strong>KOI</strong> - Kepler Objects of Interest</p>
+<table>
+<thead>
+<tr>
+<th align="left">Oznaczenie</th>
+<th align="right">Opis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">kepid</td>
+<td align="right">Kepler Identification</td>
+</tr>
+<tr>
+<td align="left">kepoi_name</td>
+<td align="right"><strong>KOI Name</strong>. A number used to identify and track a Kepler Object of Interest (KOI). A KOI is a target identified by the Kepler Project that displays at least one transit-like sequence within Kepler time-series photometry that appears to be of astrophysical origin and initially consistent with a planetary transit hypothesis.</td>
+</tr>
+<tr>
+<td align="left">kepler_name</td>
+<td align="right"><strong>Kepler Name</strong>. Kepler number name in the form &ldquo;Kepler-N,&rdquo; plus a lower-case letter, identifying the planet. In general, these numbers are easier to remember than the corresponding KOI or KIC/KepID designations and are intended to clearly indicate a class of objects that have been confirmed or validated as planets—a step up from the planet candidate designation.</td>
+</tr>
+<tr>
+<td align="left">koi_pdisposition</td>
+<td align="right">The pipeline flag that designates the most probable physical explanation of the KOI. Typical values are FALSE POSITIVE, NOT DISPOSITIONED, and CANDIDATE. The value of this flag may change over time as the evaluation of KOIs proceeds to deeper levels of analysis using Kepler time-series pixel and light curve data, or follow-up observations. A not dispositioned value corresponds to objects for which the disposition tests have not yet been completed.</td>
+</tr>
+<tr>
+<td align="left">koi_score</td>
+<td align="right">A value between 0 and 1 that indicates the confidence in the KOI disposition. For CANDIDATEs, a higher value indicates more confidence in its disposition, while for FALSE POSITIVEs, a higher value indicates less confidence in that disposition. The value is calculated from a Monte Carlo technique such that the score&rsquo;s value is equivalent to the frction of iterations where the Robovetter yields a disposition of CANDIDATE.</td>
+</tr>
+<tr>
+<td align="left">koi_fpflag_nt</td>
+<td align="right"><strong>Not Transit-Like Flag</strong>  A KOI whose light curve is not consistent with that of a transiting planet. This includes, but is not limited to, instrumental artifacts, non-eclipsing variable stars, and spurious (very low SNR) detections.</td>
+</tr>
+<tr>
+<td align="left">koi_fpflag_ss</td>
+<td align="right"><strong>Stellar Eclipse Flag</strong> A KOI that is observed to have a significant secondary event, transit shape, or out-of-eclipse variability, which indicates that the transit-like event is most likely caused by an eclipsing binary. However, self-luminous, hot Jupiters with a visible secondary eclipse will also have this flag set, but with a disposition of PC.</td>
+</tr>
+<tr>
+<td align="left">koi_fpflag_co</td>
+<td align="right"><strong>Centroid Offset Flag</strong> The source of the signal is from a nearby star, as inferred by measuring the centroid location of the image both in and out of transit, or by the strength of the transit signal in the target&rsquo;s outer (halo) pixels as compared to the transit signal from the pixels in the optimal (or core) aperture.</td>
+</tr>
+<tr>
+<td align="left">koi_fpflag_ec</td>
+<td align="right"><strong>Ephemeris Match Indicates Contamination Flag</strong> The KOI shares the same period and epoch as another object and is judged to be the result of flux contamination in the aperture or electronic crosstalk.</td>
+</tr>
+<tr>
+<td align="left">koi_period</td>
+<td align="right"><strong>Orbital Period (days)</strong> The interval between consecutive planetary transits.</td>
+</tr>
+<tr>
+<td align="left">koi_time0bk</td>
+<td align="right"><strong>Transit Epoch (BJD - 2 454 833,0))</strong> The time corresponding to the center of the first detected transit in Barycentric Julian Day (BJD) minus a constant offset of 2,454,833.0 days. The offset corresponds to 12:00 on Jan 1, 2009 UTC.</td>
+</tr>
+<tr>
+<td align="left">koi_impact</td>
+<td align="right">The sky-projected distance between the center of the stellar disc and the center of the planet disc at conjunction, normalized by the stellar radius.</td>
+</tr>
+<tr>
+<td align="left">koi_duration</td>
+<td align="right"><strong>Transit Duration (hours)</strong> The duration of the observed transits. Duration is measured from first contact between the planet and star until last contact. Contact times are typically computed from a best-fit model produced by a Mandel-Agol (2002) model fit to a multi-quarter Kepler light curve, assuming a linear orbital ephemeris.</td>
+</tr>
+<tr>
+<td align="left">koi_depth</td>
+<td align="right"><strong>Transit Depth (parts per million)</strong> The fraction of stellar flux lost at the minimum of the planetary transit. Transit depths are typically computed from a best-fit model produced by a Mandel-Agol (2002) model fit to a multi-quarter Kepler light curve, assuming a linear orbital ephemeris.</td>
+</tr>
+<tr>
+<td align="left">koi_prad</td>
+<td align="right"><strong>Planetary Radius (Earth radii)</strong> The radius of the planet. Planetary radius is the product of the planet star radius ratio and the stellar radius.</td>
+</tr>
+<tr>
+<td align="left">koi_teq</td>
+<td align="right"><strong>Equilibrium Temperature (Kelvin)</strong> Approximation for the temperature of the planet.</td>
+</tr>
+<tr>
+<td align="left">koi_insol</td>
+<td align="right"><strong>Insolation Flux [Earth flux]</strong> Insolation flux is another way to give the equilibrium temperature. It depends on the stellar parameters (specifically the stellar radius and temperature), and on the semi-major axis of the planet. It&rsquo;s given in units relative to those measured for the Earth from the Sun.</td>
+</tr>
+<tr>
+<td align="left">koi_model_snr</td>
+<td align="right"><strong>Transit Signal-to-Noise</strong> Transit depth normalized by the mean uncertainty in the flux during the transits.</td>
+</tr>
+<tr>
+<td align="left">koi_tce_plnt_num</td>
+<td align="right">TCE Planet Number federated to the KOI.</td>
+</tr>
+<tr>
+<td align="left">koi_tce_delivname</td>
+<td align="right">TCE delivery name corresponding to the TCE data federated to the KOI.</td>
+</tr>
+<tr>
+<td align="left">koi_steff</td>
+<td align="right"><strong>Stellar Effective Temperature (Kelvin)</strong> The photospheric temperature of the star.</td>
+</tr>
+<tr>
+<td align="left">koi_slogg</td>
+<td align="right"><strong>Stellar Surface Gravity (log10(cm s-2)</strong> The base-10 logarithm of the acceleration due to gravity at the surface of the star.</td>
+</tr>
+<tr>
+<td align="left">koi_srad</td>
+<td align="right"><strong>Promieś gwiezdny</strong> Fotosferyczny promień gwiazdy.</td>
+</tr>
+<tr>
+<td align="left">ra</td>
+<td align="right"><strong>RA (deg). Rektascensja</strong>, α (łac. recta ascensio – &ldquo;wznoszenie proste&rdquo;) – jedna ze współrzędnych astronomicznych, określających położenie ciała niebieskiego na sferze niebieskiej w układzie współrzędnych astronomicznych zwanym układem równikowym równonocnym.</td>
+</tr>
+<tr>
+<td align="left">dec</td>
+<td align="right"><strong>Dec (deg). Deklinacja</strong> (łac. declinatio – „odchylenie”, oznaczana symbolem δ) – jedna ze współrzędnych określających położenie ciała w obydwu układach równikowych: równonocnym i godzinnym. Definiujemy ją jako kąt pomiędzy kierunkiem poprowadzonym od obserwatora do obiektu a płaszczyzną równika niebieskiego.</td>
+</tr>
+<tr>
+<td align="left">koi_kepmag</td>
+<td align="right">Kepler-band (mag)</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://exoplanetarchive.ipac.caltech.edu/docs/API_kepcandidate_columns.html">link to identification columns</a></p>
+<h2 id="2-import-modules"><strong>2. Import modules</strong></h2>
+<pre><code>import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import plotly.figure_factory as ff
+import plotly.express as px
+from plotly.subplots import make_subplots
+import seaborn as sns
+sns.set(style=&quot;ticks&quot;, color_codes=True)
+
+from sklearn.linear_model import LogisticRegression
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.svm import SVC
+from sklearn.naive_bayes import GaussianNB
+
+from sklearn.model_selection import train_test_split
+from sklearn.model_selection import cross_val_score
+
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import LabelEncoder
+
+from sklearn.metrics import confusion_matrix
+from sklearn.metrics import accuracy_score
+from sklearn.metrics import classification_report
+
+from mlxtend.plotting import plot_confusion_matrix
+</code></pre>
+<h2 id="3-data-preparation"><strong>3. Data preparation:</strong></h2>
+<h3 id="31-data-presentation">3.1. Data presentation</h3>
+<pre><code>kepler_raw = pd.read_csv('/content/drive/My Drive/ColabNotebooks/KeplerExoplanetSearchResults/datasets/cumulative.csv', low_memory=False)
+
+# Kopia danych
+kepler = kepler_raw.copy()                         
+                            
+kepler.head()
+</code></pre>
+<p><img src="/static/images/Kepler/data/data_head_v1.jpg" alt="data_head_v1.jpg"><img src="/static/images/Kepler/data/data_head_v2.jpg" alt="data_head_v2.jpg">
+<img src="/static/images/Kepler/data/data_head_v3.jpg" alt="data_head_v3.jpg"><img src="/static/images/Kepler/data/data_head_v4.jpg" alt="data_head_v4.jpg"><img src="/static/images/Kepler/data/data_head_v5.jpg" alt="data_head_v5.jpg"></p>
+<pre><code>kepler.info(memory_usage='Deep')
+
+&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 9564 entries, 0 to 9563
+Data columns (total 50 columns):
+#   Column             Non-Null Count  Dtype  
+---  ------             --------------  -----  
+0   rowid              9564 non-null   int64  
+1   kepid              9564 non-null   int64  
+2   kepoi_name         9564 non-null   object 
+3   kepler_name        2294 non-null   object 
+4   koi_disposition    9564 non-null   object 
+5   koi_pdisposition   9564 non-null   object 
+6   koi_score          8054 non-null   float64
+7   koi_fpflag_nt      9564 non-null   int64  
+8   koi_fpflag_ss      9564 non-null   int64  
+9   koi_fpflag_co      9564 non-null   int64  
+10  koi_fpflag_ec      9564 non-null   int64  
+11  koi_period         9564 non-null   float64
+12  koi_period_err1    9110 non-null   float64
+13  koi_period_err2    9110 non-null   float64
+14  koi_time0bk        9564 non-null   float64
+15  koi_time0bk_err1   9110 non-null   float64
+16  koi_time0bk_err2   9110 non-null   float64
+17  koi_impact         9201 non-null   float64
+18  koi_impact_err1    9110 non-null   float64
+19  koi_impact_err2    9110 non-null   float64
+20  koi_duration       9564 non-null   float64
+21  koi_duration_err1  9110 non-null   float64
+22  koi_duration_err2  9110 non-null   float64
+23  koi_depth          9201 non-null   float64
+24  koi_depth_err1     9110 non-null   float64
+25  koi_depth_err2     9110 non-null   float64
+26  koi_prad           9201 non-null   float64
+27  koi_prad_err1      9201 non-null   float64
+28  koi_prad_err2      9201 non-null   float64
+29  koi_teq            9201 non-null   float64
+30  koi_teq_err1       0 non-null      float64
+31  koi_teq_err2       0 non-null      float64
+32  koi_insol          9243 non-null   float64
+33  koi_insol_err1     9243 non-null   float64
+34  koi_insol_err2     9243 non-null   float64
+35  koi_model_snr      9201 non-null   float64
+36  koi_tce_plnt_num   9218 non-null   float64
+37  koi_tce_delivname  9218 non-null   object 
+38  koi_steff          9201 non-null   float64
+39  koi_steff_err1     9096 non-null   float64
+40  koi_steff_err2     9081 non-null   float64
+41  koi_slogg          9201 non-null   float64
+42  koi_slogg_err1     9096 non-null   float64
+43  koi_slogg_err2     9096 non-null   float64
+44  koi_srad           9201 non-null   float64
+45  koi_srad_err1      9096 non-null   float64
+46  koi_srad_err2      9096 non-null   float64
+47  ra                 9564 non-null   float64
+48  dec                9564 non-null   float64
+49  koi_kepmag         9563 non-null   float64
+dtypes: float64(39), int64(6), object(5)
+memory usage: 3.6+ MB
+</code></pre>
+<h3 id="32-ridding-of-unnecessary-columns">3.2. Ridding of unnecessary columns</h3>
+<pre><code>for i, column in enumerate(kepler.columns):
+
+if column.endswith('_err1') or column.endswith('_err2'): 
+    kepler.drop([column], 1, inplace=True)
+
+for i, name in enumerate(['kepid', 'rowid', 'kepoi_name', 'kepler_name', 'koi_pdisposition','koi_tce_plnt_num', 'koi_tce_delivname', 'koi_score']):
+kepler.drop([name], 1, inplace=True)
+
+kepler.info(memory_usage='Deep')
+
+
+&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 9564 entries, 0 to 9563
+Data columns (total 20 columns):
+#   Column           Non-Null Count  Dtype  
+---  ------           --------------  -----  
+0   koi_disposition  9564 non-null   object 
+1   koi_fpflag_nt    9564 non-null   int64  
+2   koi_fpflag_ss    9564 non-null   int64  
+3   koi_fpflag_co    9564 non-null   int64  
+4   koi_fpflag_ec    9564 non-null   int64  
+5   koi_period       9564 non-null   float64
+6   koi_time0bk      9564 non-null   float64
+7   koi_impact       9201 non-null   float64
+8   koi_duration     9564 non-null   float64
+9   koi_depth        9201 non-null   float64
+10  koi_prad         9201 non-null   float64
+11  koi_teq          9201 non-null   float64
+12  koi_insol        9243 non-null   float64
+13  koi_model_snr    9201 non-null   float64
+14  koi_steff        9201 non-null   float64
+15  koi_slogg        9201 non-null   float64
+16  koi_srad         9201 non-null   float64
+17  ra               9564 non-null   float64
+18  dec              9564 non-null   float64
+19  koi_kepmag       9563 non-null   float64
+dtypes: float64(15), int64(4), object(1)
+memory usage: 1.5+ MB
+</code></pre>
+<h3 id="33-changing-the-type-from-object-to-type-category">3.3. Changing the type from object to type category</h3>
+<pre><code>kepler['koi_disposition'] = kepler['koi_disposition'].astype('category')
+kepler.info(memory_usage='Deep')
+
+&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 9564 entries, 0 to 9563
+Data columns (total 20 columns):
+#   Column           Non-Null Count  Dtype   
+---  ------           --------------  -----   
+0   koi_disposition  9564 non-null   category
+1   koi_fpflag_nt    9564 non-null   int64   
+2   koi_fpflag_ss    9564 non-null   int64   
+3   koi_fpflag_co    9564 non-null   int64   
+4   koi_fpflag_ec    9564 non-null   int64   
+5   koi_period       9564 non-null   float64 
+6   koi_time0bk      9564 non-null   float64 
+7   koi_impact       9201 non-null   float64 
+8   koi_duration     9564 non-null   float64 
+9   koi_depth        9201 non-null   float64 
+10  koi_prad         9201 non-null   float64 
+11  koi_teq          9201 non-null   float64 
+12  koi_insol        9243 non-null   float64 
+13  koi_model_snr    9201 non-null   float64 
+14  koi_steff        9201 non-null   float64 
+15  koi_slogg        9201 non-null   float64 
+16  koi_srad         9201 non-null   float64 
+17  ra               9564 non-null   float64 
+18  dec              9564 non-null   float64 
+19  koi_kepmag       9563 non-null   float64 
+dtypes: category(1), float64(15), int64(4)
+memory usage: 1.4 MB
+</code></pre>
+<h3 id="34-missing-values">3.4. Missing values</h3>
+<pre><code>kepler.isnull().sum()
+</code></pre>
+<p>Result:</p>
+<pre><code>koi_disposition      0
+koi_fpflag_nt        0
+koi_fpflag_ss        0
+koi_fpflag_co        0
+koi_fpflag_ec        0
+koi_period           0
+koi_time0bk          0
+koi_impact         363
+koi_duration         0
+koi_depth          363
+koi_prad           363
+koi_teq            363
+koi_insol          321
+koi_model_snr      363
+koi_steff          363
+koi_slogg          363
+koi_srad           363
+ra                   0
+dec                  0
+koi_kepmag           1
+dtype: int64   
+</code></pre>
+<p>Showing missing values.
+Where are missing values in the data frame?</p>
+<pre><code>kepler[pd.isnull(kepler['koi_impact'])].head()
+</code></pre>
+<p><img src="/static/images/Kepler/data/missing_values_v1.jpg" alt="missing_values_v1.jpg"><img src="/static/images/Kepler/data/missing_values_v2.jpg" alt="missing_values_v2.jpg"></p>
+<p>Dropping missing values:</p>
+<pre><code>kepler = kepler.dropna()
+kepler.info(memory_usage='Deep')
+
+&lt;class 'pandas.core.frame.DataFrame'&gt;
+Int64Index: 9200 entries, 0 to 9563
+Data columns (total 20 columns):
+#   Column           Non-Null Count  Dtype   
+---  ------           --------------  -----   
+0   koi_disposition  9200 non-null   category
+1   koi_fpflag_nt    9200 non-null   int64   
+2   koi_fpflag_ss    9200 non-null   int64   
+3   koi_fpflag_co    9200 non-null   int64   
+4   koi_fpflag_ec    9200 non-null   int64   
+5   koi_period       9200 non-null   float64 
+6   koi_time0bk      9200 non-null   float64 
+7   koi_impact       9200 non-null   float64 
+8   koi_duration     9200 non-null   float64 
+9   koi_depth        9200 non-null   float64 
+10  koi_prad         9200 non-null   float64 
+11  koi_teq          9200 non-null   float64 
+12  koi_insol        9200 non-null   float64 
+13  koi_model_snr    9200 non-null   float64 
+14  koi_steff        9200 non-null   float64 
+15  koi_slogg        9200 non-null   float64 
+16  koi_srad         9200 non-null   float64 
+17  ra               9200 non-null   float64 
+18  dec              9200 non-null   float64 
+19  koi_kepmag       9200 non-null   float64 
+dtypes: category(1), float64(15), int64(4)
+memory usage: 1.4 MB
+</code></pre>
+<h2 id="5-data-analysis"><strong>5. Data analysis</strong></h2>
+<h3 id="columns-names">Columns names:</h3>
+<h3 id="oznaczenia">Oznaczenia:</h3>
+<p>KOI - Kepler Objects of Interest</p>
+<table>
+<thead>
+<tr>
+<th align="left">Oznaczenie</th>
+<th align="right">Opis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">koi_period</td>
+<td align="right"><strong>Orbital Period (days)</strong> The interval between consecutive planetary transits.</td>
+</tr>
+<tr>
+<td align="left">koi_time0bk</td>
+<td align="right"><strong>Transit Epoch (BJD - 2 454 833,0))</strong> The time corresponding to the center of the first detected transit in Barycentric Julian Day (BJD) minus a constant offset of 2,454,833.0 days. The offset corresponds to 12:00 on Jan 1, 2009 UTC.</td>
+</tr>
+<tr>
+<td align="left">koi_impact</td>
+<td align="right">The sky-projected distance between the center of the stellar disc and the center of the planet disc at conjunction, normalized by the stellar radius.</td>
+</tr>
+<tr>
+<td align="left">koi_duration</td>
+<td align="right"><strong>Transit Duration (hours)</strong> The duration of the observed transits. Duration is measured from first contact between the planet and star until last contact. Contact times are typically computed from a best-fit model produced by a Mandel-Agol (2002) model fit to a multi-quarter Kepler light curve, assuming a linear orbital ephemeris.</td>
+</tr>
+<tr>
+<td align="left">koi_depth</td>
+<td align="right"><strong>Transit Depth (parts per million)</strong> The fraction of stellar flux lost at the minimum of the planetary transit. Transit depths are typically computed from a best-fit model produced by a Mandel-Agol (2002) model fit to a multi-quarter Kepler light curve, assuming a linear orbital ephemeris.</td>
+</tr>
+<tr>
+<td align="left">koi_prad</td>
+<td align="right"><strong>Planetary Radius (Earth radii)</strong> The radius of the planet. Planetary radius is the product of the planet star radius ratio and the stellar radius.</td>
+</tr>
+<tr>
+<td align="left">koi_teq</td>
+<td align="right"><strong>Equilibrium Temperature (Kelvin)</strong> Approximation for the temperature of the planet.</td>
+</tr>
+<tr>
+<td align="left">koi_insol</td>
+<td align="right">**Insolation Flux [Earth flux]**Insolation flux is another way to give the equilibrium temperature. It depends on the stellar parameters (specifically the stellar radius and temperature), and on the semi-major axis of the planet. It’s given in units relative to those measured for the Earth from the Sun.</td>
+</tr>
+<tr>
+<td align="left">koi_model_snr</td>
+<td align="right"><strong>Transit Signal-to-Noise</strong> Transit depth normalized by the mean uncertainty in the flux during the transits.</td>
+</tr>
+<tr>
+<td align="left">koi_tce_delivname</td>
+<td align="right">TCE delivery name corresponding to the TCE data federated to the KOI.</td>
+</tr>
+<tr>
+<td align="left">koi_steff</td>
+<td align="right">**Stellar Effective Temperature (Kelvin)**The photospheric temperature of the star.</td>
+</tr>
+<tr>
+<td align="left">koi_slogg</td>
+<td align="right"><strong>Stellar Surface Gravity (log10(cm s-2)</strong> The base-10 logarithm of the acceleration due to gravity at the surface of the star.</td>
+</tr>
+<tr>
+<td align="left">koi_srad</td>
+<td align="right"><strong>Stellar Radius (solar radii)</strong> The photospheric radius of the star</td>
+</tr>
+<tr>
+<td align="left">ra</td>
+<td align="right"><strong>RA (deg). Rektascensja</strong>, KIC Right Ascension / α (łac. recta ascensio – &ldquo;wznoszenie proste&rdquo;) – jedna ze współrzędnych astronomicznych, określających położenie ciała niebieskiego na sferze niebieskiej w układzie współrzędnych astronomicznych zwanym układem równikowym równonocnym.</td>
+</tr>
+<tr>
+<td align="left">dec</td>
+<td align="right"><strong>Dec (deg). Deklinacja</strong>, KIC Declination /  (łac. declinatio – „odchylenie”, oznaczana symbolem δ) – jedna ze współrzędnych określających położenie ciała w obydwu układach równikowych: równonocnym i godzinnym. Definiujemy ją jako kąt pomiędzy kierunkiem poprowadzonym od obserwatora do obiektu a płaszczyzną równika niebieskiego.</td>
+</tr>
+<tr>
+<td align="left">koi_kepmag</td>
+<td align="right">Kepler-band (mag)</td>
+</tr>
+</tbody>
+</table>
+<pre><code>kepler['koi_disposition'].value_counts()
+
+FALSE POSITIVE    4723
+CONFIRMED         2292
+CANDIDATE         2185
+Name: koi_disposition, dtype: int64
+
+
+kepler_CONFIRMED = kepler.where(kepler['koi_disposition'] == 'CONFIRMED').dropna()
+kepler_CANDIDATE = kepler.where(kepler['koi_disposition'] == 'CANDIDATE').dropna()
+kepler_FALSE_POSITIVE = kepler.where(kepler['koi_disposition'] == 'FALSE POSITIVE').dropna()
+
+kepler_CONFIRMED.head()
+</code></pre>
+<p><img src="/static/images/Kepler/data/koi_disposition_v1.jpg" alt="koi_disposition_v1.jpg"><img src="/static/images/Kepler/data/koi_disposition_v2.jpg" alt="koi_disposition_v2.jpg"></p>
+<h3 id="51-determination-of-statistical-values"><strong>5.1 Determination of statistical values</strong></h3>
+<p><img src="/static/images/Kepler/data/statistical_values.jpg" alt="statistical_values.jpg"></p>
+<h3 id="52-grouping-of-data">5.2. Grouping of data</h3>
+<pre><code>kepler_groupby_disposition = kepler.groupby(by='koi_disposition')
+
+kepler_groupby_disposition.groups
+
+{'CANDIDATE': Int64Index([  37,   58,   62,   63,   72,   84,   92,   94,  103,  112,
+            ...
+            9533, 9539, 9542, 9544, 9546, 9550, 9551, 9557, 9558, 9561],
+            dtype='int64', length=2185),
+'CONFIRMED': Int64Index([   0,    1,    4,    5,    6,    7,    9,   10,   11,   12,
+            ...
+            9178, 9219, 9221, 9264, 9305, 9309, 9353, 9355, 9479, 9540],
+            dtype='int64', length=2292),
+'FALSE POSITIVE': Int64Index([   2,    3,    8,   14,   15,   16,   17,   20,   24,   28,
+            ...
+            9549, 9552, 9553, 9554, 9555, 9556, 9559, 9560, 9562, 9563],
+            dtype='int64', length=4723)}
+
+[col for col in kepler.columns[5:]]
+
+['koi_period',
+'koi_time0bk',
+'koi_impact',
+'koi_duration',
+'koi_depth',
+'koi_prad',
+'koi_teq',
+'koi_insol',
+'koi_model_snr',
+'koi_steff',
+'koi_slogg',
+'koi_srad',
+'ra',
+'dec',
+'koi_kepmag']
+
+
+
+kepler_groupby_disposition_mean_std = kepler_groupby_disposition.agg(
+                                                                    {
+                                                                        'koi_period'    : ['mean', 'std'],
+                                                                        'koi_time0bk'   : ['mean', 'std'],
+                                                                        'koi_impact'    : ['mean', 'std'],
+                                                                        'koi_duration'  : ['mean', 'std'],
+                                                                        'koi_depth'     : ['mean', 'std'],
+                                                                        'koi_prad'      : ['mean', 'std'],
+                                                                        'koi_teq'       : ['mean', 'std'],
+                                                                        'koi_insol'     : ['mean', 'std'],
+                                                                        'koi_model_snr' : ['mean', 'std'],
+                                                                        'koi_steff'     : ['mean', 'std'],
+                                                                        'koi_slogg'     : ['mean', 'std'],
+                                                                        'koi_srad'      : ['mean', 'std'],
+                                                                        'ra'            : ['mean', 'std'],
+                                                                        'dec'           : ['mean', 'std'],
+                                                                        'koi_kepmag'    : ['mean', 'std']
+                                                                    }
+                                                                    ).apply(lambda x: round(x, 3))
+
+
+kepler_groupby_disposition_mean_std.T
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="right">koi_disposition</th>
+<th align="right">CANDIDATE</th>
+<th align="right">CONFIRMED</th>
+<th align="right">FALSE POSITIVE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>koi_period</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">131.283</td>
+<td align="right">27.053</td>
+<td align="right">70.897</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">2783.360</td>
+<td align="right">54.028</td>
+<td align="right">138.975</td>
+</tr>
+<tr>
+<td align="left"><strong>koi_time0bk</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">170.316</td>
+<td align="right">157.246</td>
+<td align="right">167.210</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">75.209</td>
+<td align="right">42.481</td>
+<td align="right">72.731</td>
+</tr>
+<tr>
+<td align="left"><strong>koi_impact</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">0.537</td>
+<td align="right">0.427</td>
+<td align="right">0.976</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">1.990</td>
+<td align="right">0.332</td>
+<td align="right">4.454</td>
+</tr>
+<tr>
+<td align="left"><strong>koi_duration</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">4.814</td>
+<td align="right">4.307</td>
+<td align="right">6.698</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">4.421</td>
+<td align="right">2.720</td>
+<td align="right">8.209</td>
+</tr>
+<tr>
+<td align="left"><strong>koi_depth</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">1864.239</td>
+<td align="right">1141.446</td>
+<td align="right">44924.240</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">12502.100</td>
+<td align="right">2686.208</td>
+<td align="right">110382.027</td>
+</tr>
+<tr>
+<td align="left"><strong>koi_prad</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">15.931</td>
+<td align="right">2.872</td>
+<td align="right">191.672</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">316.937</td>
+<td align="right">3.361</td>
+<td align="right">4288.541</td>
+</tr>
+<tr>
+<td align="left"><strong>koi_teq</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">882.420</td>
+<td align="right">839.126</td>
+<td align="right">1298.734</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">665.620</td>
+<td align="right">386.741</td>
+<td align="right">1028.230</td>
+</tr>
+<tr>
+<td align="left"><strong>koi_insol</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">5359.428</td>
+<td align="right">350.666</td>
+<td align="right">12383.162</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">155923.364</td>
+<td align="right">1223.676</td>
+<td align="right">195698.944</td>
+</tr>
+<tr>
+<td align="left"><strong>koi_model_snr</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">45.596</td>
+<td align="right">87.923</td>
+<td align="right">442.498</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">231.866</td>
+<td align="right">284.086</td>
+<td align="right">1049.244</td>
+</tr>
+<tr>
+<td align="left"><strong>koi_steff</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">5639.767</td>
+<td align="right">5477.974</td>
+<td align="right">5848.887</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">693.971</td>
+<td align="right">677.133</td>
+<td align="right">862.706</td>
+</tr>
+<tr>
+<td align="left"><strong>koi_slogg</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">4.331</td>
+<td align="right">4.411</td>
+<td align="right">4.251</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">0.391</td>
+<td align="right">0.235</td>
+<td align="right">0.508</td>
+</tr>
+<tr>
+<td align="left"><strong>koi_srad</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">1.566</td>
+<td align="right">1.067</td>
+<td align="right">2.125</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">5.875</td>
+<td align="right">0.643</td>
+<td align="right">7.523</td>
+</tr>
+<tr>
+<td align="left"><strong>ra</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">291.790</td>
+<td align="right">290.943</td>
+<td align="right">292.733</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">4.835</td>
+<td align="right">4.757</td>
+<td align="right">4.612</td>
+</tr>
+<tr>
+<td align="left"><strong>dec</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">43.928</td>
+<td align="right">44.366</td>
+<td align="right">43.484</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">3.606</td>
+<td align="right">3.569</td>
+<td align="right">3.581</td>
+</tr>
+<tr>
+<td align="left"><strong>koi_kepmag</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">14.348</td>
+<td align="right">14.339</td>
+<td align="right">14.212</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">1.303</td>
+<td align="right">1.224</td>
+<td align="right">1.477</td>
+</tr>
+</tbody>
+</table>
+<h3 id="53-value-distribution-analysis">5.3. Value distribution analysis</h3>
+<pre><code>cols = kepler.columns[5:]
+
+fig = plt.figure(figsize=(25,10))
+fig.subplots_adjust(hspace=0.5, wspace=0.3)
+
+col_idx = 0
+for i in range(1, 16):
+fig.add_subplot(4, 4, i) 
+sns.distplot(kepler[cols[col_idx]])
+col_idx += 1
+
+plt.show()
+</code></pre>
+<h3 id="54-correlation-analysis">5.4. Correlation analysis</h3>
+<h2 id="6-machine-learning"><strong>6. Machine learning:</strong></h2>
+<h3 id="61-preparing-data-for-machine-learning">6.1. Preparing data for machine learning:</h3>
+<h4 id="611-the-number-of-occurrences-for-each-label">6.1.1. The number of occurrences for each label</h4>
+<h4 id="612-coding-the-label-values">6.1.2. Coding the label values</h4>
+<h4 id="613-division-of-data-into-training-and-test-sets">6.1.3. Division of data into training and test sets</h4>
+<h4 id="614-scaling-features">6.1.4. Scaling features</h4>
+<h3 id="62-model-testing">6.2. Model testing:</h3>
+<h4 id="621-logistic-regression-model">6.2.1. Logistic regression model</h4>
+<h4 id="622-k-nearest-neighbors-model">6.2.2. K-nearest neighbors model</h4>
+<h4 id="623-decision-tree-model">6.2.3. Decision tree model</h4>
+<h4 id="624-random-forest-model">6.2.4. Random forest model</h4>
+<h4 id="625-support-vector-machine-model">6.2.5. Support vector machine model</h4>
+<h4 id="626-naive-bayesian-classifier">6.2.6. Naive Bayesian classifier</h4>
+<h3 id="63-comparison-of-the-obtained-results">6.3. Comparison of the obtained results</h3>
+<h3 id="64-performing-cross-validation">6.4. Performing cross-validation</h3>
+<h3 id="65-preview-on-error-matrices-for-individual-models">6.5. Preview on error matrices for individual models</h3>
+<h3 id="66-testing-the-neural-network">6.6. Testing the neural network</h3>
+<h3 id="67-application-of-dimensionality-reduction---pca-algorithm">6.7. Application of dimensionality reduction - PCA algorithm</h3>
+<h3 id="68-kmeans-algorithm">6.8. KMeans algorithm</h3>
+<p><img src="/static/images/Kepler/pca_2.jpg" alt="pca_2"><img src="/static/images/Kepler/pca_3.jpg" alt="pca_3"><img src="/static/images/Kepler/pca_opis.jpg" alt="pca_opis"></p>
+
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/hugo-toha/hugo-toha.github.io/edit/master/content/projects/Kepler/project_Kepler.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/projects/imageclassproject/project_imageclass/" class="btn btn-outline-info">
+          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+          <br />
+          <span>Convolutional network testing for image classification</span>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/projects/worldhappiness/project_worldhappiness/" class="btn btn-outline-info">
+            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
+            <br />
+            <span>World happiness report - data analysis</span>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-description-of-the-values-from-the-columns"><strong>1. Description of the values ​​from the columns</strong></a></li>
+    <li><a href="#2-import-modules"><strong>2. Import modules</strong></a></li>
+    <li><a href="#3-data-preparation"><strong>3. Data preparation:</strong></a>
+      <ul>
+        <li><a href="#31-data-presentation">3.1. Data presentation</a></li>
+        <li><a href="#32-ridding-of-unnecessary-columns">3.2. Ridding of unnecessary columns</a></li>
+        <li><a href="#33-changing-the-type-from-object-to-type-category">3.3. Changing the type from object to type category</a></li>
+        <li><a href="#34-missing-values">3.4. Missing values</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-data-analysis"><strong>5. Data analysis</strong></a>
+      <ul>
+        <li><a href="#columns-names">Columns names:</a></li>
+        <li><a href="#oznaczenia">Oznaczenia:</a></li>
+        <li><a href="#51-determination-of-statistical-values"><strong>5.1 Determination of statistical values</strong></a></li>
+        <li><a href="#52-grouping-of-data">5.2. Grouping of data</a></li>
+        <li><a href="#53-value-distribution-analysis">5.3. Value distribution analysis</a></li>
+        <li><a href="#54-correlation-analysis">5.4. Correlation analysis</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-machine-learning"><strong>6. Machine learning:</strong></a>
+      <ul>
+        <li><a href="#61-preparing-data-for-machine-learning">6.1. Preparing data for machine learning:</a>
+          <ul>
+            <li><a href="#611-the-number-of-occurrences-for-each-label">6.1.1. The number of occurrences for each label</a></li>
+            <li><a href="#612-coding-the-label-values">6.1.2. Coding the label values</a></li>
+            <li><a href="#613-division-of-data-into-training-and-test-sets">6.1.3. Division of data into training and test sets</a></li>
+            <li><a href="#614-scaling-features">6.1.4. Scaling features</a></li>
+          </ul>
+        </li>
+        <li><a href="#62-model-testing">6.2. Model testing:</a>
+          <ul>
+            <li><a href="#621-logistic-regression-model">6.2.1. Logistic regression model</a></li>
+            <li><a href="#622-k-nearest-neighbors-model">6.2.2. K-nearest neighbors model</a></li>
+            <li><a href="#623-decision-tree-model">6.2.3. Decision tree model</a></li>
+            <li><a href="#624-random-forest-model">6.2.4. Random forest model</a></li>
+            <li><a href="#625-support-vector-machine-model">6.2.5. Support vector machine model</a></li>
+            <li><a href="#626-naive-bayesian-classifier">6.2.6. Naive Bayesian classifier</a></li>
+          </ul>
+        </li>
+        <li><a href="#63-comparison-of-the-obtained-results">6.3. Comparison of the obtained results</a></li>
+        <li><a href="#64-performing-cross-validation">6.4. Performing cross-validation</a></li>
+        <li><a href="#65-preview-on-error-matrices-for-individual-models">6.5. Preview on error matrices for individual models</a></li>
+        <li><a href="#66-testing-the-neural-network">6.6. Testing the neural network</a></li>
+        <li><a href="#67-application-of-dimensionality-reduction---pca-algorithm">6.7. Application of dimensionality reduction - PCA algorithm</a></li>
+        <li><a href="#68-kmeans-algorithm">6.8. KMeans algorithm</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">Armin Derencz</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#projects">Projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent projects</a>
+              </li>
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>armin.derencz@gmail.com</span></li>
+          
+        </ul>
+      </div>
+      
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/assets/images/inverted-logo.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/assets/images/hugo-logo-wide.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/assets/js/jquery-3.4.1.min.js"></script>
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+
+<script src="/assets/js/navbar.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/assets/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Categories</title>
+    <title>Books prices project</title>
     <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -36,8 +36,13 @@
 <link rel="stylesheet" href="/assets/css/style.css"/>
 
     
-    <link rel="stylesheet" href="/assets/css/layouts/list.css">
-    <link rel="stylesheet" href="/assets/css/navigators/sidebar.css">
+<meta name="description" content="Books prices project" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/assets/css/layouts/single.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/sidebar.css">
 
 
     
@@ -71,7 +76,7 @@ if (!doNotTrack) {
       <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="/pl">
+    <a class="navbar-brand" href="/">
       <img src="/assets/images/main-logo.png">Armin&#39;s portfolio</a>
     <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
       <span class="navbar-toggler-icon"></span>
@@ -79,26 +84,6 @@ if (!doNotTrack) {
 
     <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
       <ul class="navbar-nav ml-auto">
-      
-        
-
-  
-
-
-<li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="languageSelector" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <img class="flag" src="https://www.countryflags.io/pl/flat/16.png">
-      polish
-    </a>
-    <div class="dropdown-menu" aria-labelledby="languageSelector">
-      
-        <a class="dropdown-item nav-link languages-item" href="/categories">
-          <img class="flag" src="https://www.countryflags.io/gb/flat/24.png">
-          English
-        </a>
-      
-    </div>
-</li>
       
       </ul>
     </div>
@@ -112,20 +97,104 @@ if (!doNotTrack) {
 
       
       
-  
-  
-    
-  
-
   <section class="sidebar-section" id="sidebar-section">
     <div class="sidebar-holder">
       <div class="sidebar" id="sidebar">
         <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
         <div class="sidebar-tree">
           <ul class="tree" id="tree">
-            <li id="list-heading"><a href="/pl/projects" data-filter="all">All projects</a></li>
+            <li id="list-heading"><a href="/projects" data-filter="all">All projects</a></li>
             <div class="subtree">
                 
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/projects/bookprices/project_booksprices/">Books Prices</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="">Big Five Personality test</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bigfive/bigfive_col_names/">Columns description</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bigfive/bigfive_modules/">Import modules</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bigfive/bigfive_data_prepare/">Data preparation</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bigfive/project_bigfive/">Data analysis</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="">World Happiness projects</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/worldhappiness/project_worldhappiness/">World Happiness project</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
 
             </div>
           </ul>
@@ -138,22 +207,120 @@ if (!doNotTrack) {
       
       
 <section class="content-section" id="content-section">
-  <div class="content container-fluid" id="content">
-    <div class="container-fluid post-card-holder" id="post-card-holder">
+  <div class="content">
+    <div class="container p-0 read-area">
       
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://armind93.github.io/assets/images/default-hero.jpg);'>
+      </div>
+
       
-    </div>
-    <div class="paginator">
-      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/static/images/A85.jpg'/>
+          <h5 class="author-name">Armin Derencz</h5>
+          <p>October 8, 2018</p>
+        </div>
+
+        <div class="title">
+          <h1>Books prices project</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+          <p><a href="https://github.com/ArminD93/CenyKsiazek">link to GitHub repository</a></p>
+<h3 id="introduction">Introduction</h3>
+<p>I wanted to get informations about books prices, which I&rsquo;d like to buy in the future. Additionally, it would be nice to see the price curve on the chart.</p>
+<h3 id="functions">Functions:</h3>
+<ol>
+<li>Downloading informations about books (title, price, date) from the acount on the website: ebooki.swiatczytnikow.pl.</li>
+<li>Saving data to the database.</li>
+<li>Displaying charts - how the price has changed over time for a specific title.</li>
+</ol>
+
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/hugo-toha/hugo-toha.github.io/edit/master/content/projects/BookPrices/project_BooksPrices.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
 
 
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/projects/libraryproject/project_library/" class="btn btn-outline-info">
+          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+          <br />
+          <span>Project of an automated system for selecting wooden blocks from a rack using Raspberry Pi</span>
+        </a>
+      </div>
+      
+    
+    
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+      </div>
     </div>
   </div>
+  
 </section>
 
 
       
-       
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#functions">Functions:</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
     </div>
 
     
@@ -196,7 +363,7 @@ if (!doNotTrack) {
                 
               
               <li class="nav-item">
-                <a class="smooth-scroll" href="#skills">Umiejętności</a>
+                <a class="smooth-scroll" href="#skills">Skills</a>
               </li>
             
             
@@ -205,7 +372,7 @@ if (!doNotTrack) {
                 
               
               <li class="nav-item">
-                <a class="smooth-scroll" href="#projects">Projekty</a>
+                <a class="smooth-scroll" href="#projects">Projects</a>
               </li>
             
             
@@ -214,7 +381,7 @@ if (!doNotTrack) {
                 
               
               <li class="nav-item">
-                <a class="smooth-scroll" href="#recent-posts">Ostatnie projekty</a>
+                <a class="smooth-scroll" href="#recent-posts">Recent projects</a>
               </li>
             
         </ul>
@@ -267,7 +434,12 @@ if (!doNotTrack) {
 
     
     
-    <script src="/assets/js/list.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/assets/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
 
   </body>
 </html>

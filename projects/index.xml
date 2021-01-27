@@ -13,23 +13,50 @@
     
     <item>
       <title>Big Five Personality test - data analysis</title>
-      <link>https://armind93.github.io/projects/project_bigfive/</link>
+      <link>https://armind93.github.io/projects/bigfive/bigfive_col_names/</link>
       <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/project_bigfive/</guid>
-      <description>&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;
-link to GitHub Repository
+      <guid>https://armind93.github.io/projects/bigfive/bigfive_col_names/</guid>
+      <description>link to GitHub Repository
 1. Description of the values ​​from the columns The following items were presented on one page and each was rated on a five point scale using radio buttons. The order on page was was EXT1, AGR1, CSN1, EST1, OPN1, EXT2, etc. The scale was labeled 1=Disagree, 3=Neutral, 5=Agree
 5 major dimensions of personality: Openness, Conscientiousness, Agreeableness, Extraversion, and Neuroticism.
  EXT - Extraversion, EST - Neuroticism, AGR - Agreeableness (Zgodność), CSN - Conscientiousness (sumienność), OPN - Openness     indication Description indication Description indication Description     EXT1 I am the life of the party.</description>
     </item>
     
     <item>
+      <title>Big Five Personality test - data analysis</title>
+      <link>https://armind93.github.io/projects/bigfive/bigfive_data_prepare/</link>
+      <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/bigfive/bigfive_data_prepare/</guid>
+      <description>3. Data preparation: 3.1. Data presentation BigFive_raw = pd.read_csv( &#39;/content/drive/My Drive/ColabNotebooks/BigFivePersonality/data-final.csv&#39;, low_memory=False, sep=&#39;\t&#39;, usecols=[&#39;EXT1&#39;, &#39;EXT2&#39;, &#39;EXT3&#39;, &#39;EXT4&#39;, &#39;EXT5&#39;, &#39;EXT6&#39;, &#39;EXT7&#39;, &#39;EXT8&#39;, &#39;EXT9&#39;, &#39;EXT10&#39;, &#39;EST1&#39;, &#39;EST2&#39;, &#39;EST3&#39;, &#39;EST4&#39;, &#39;EST5&#39;, &#39;EST6&#39;, &#39;EST7&#39;, &#39;EST8&#39;, &#39;EST9&#39;, &#39;EST10&#39;, &#39;AGR1&#39;, &#39;AGR2&#39;, &#39;AGR3&#39;, &#39;AGR4&#39;, &#39;AGR5&#39;, &#39;AGR6&#39;, &#39;AGR7&#39;, &#39;AGR8&#39;, &#39;AGR9&#39;, &#39;AGR10&#39;, &#39;CSN1&#39;, &#39;CSN2&#39;, &#39;CSN3&#39;, &#39;CSN4&#39;, &#39;CSN5&#39;, &#39;CSN6&#39;, &#39;CSN7&#39;, &#39;CSN8&#39;, &#39;CSN9&#39;, &#39;CSN10&#39;, &#39;OPN1&#39;, &#39;OPN2&#39;, &#39;OPN3&#39;, &#39;OPN4&#39;, &#39;OPN5&#39;, &#39;OPN6&#39;, &#39;OPN7&#39;, &#39;OPN8&#39;, &#39;OPN9&#39;, &#39;OPN10&#39;, # &#39;EXT1_E&#39;, &#39;EXT2_E&#39;, &#39;EXT3_E&#39;, &#39;EXT4_E&#39;, &#39;EXT5_E&#39;, &#39;EXT6_E&#39;, &#39;EXT7_E&#39;, &#39;EXT8_E&#39;, &#39;EXT9_E&#39;, &#39;EXT10_E&#39;, # &#39;EST1_E&#39;, &#39;EST2_E&#39;, &#39;EST3_E&#39;, &#39;EST4_E&#39;, &#39;EST5_E&#39;, &#39;EST6_E&#39;, &#39;EST7_E&#39;, &#39;EST8_E&#39;, &#39;EST9_E&#39;, &#39;EST10_E&#39;, # &#39;AGR1_E&#39;, &#39;AGR2_E&#39;, &#39;AGR3_E&#39;, &#39;AGR4_E&#39;, &#39;AGR5_E&#39;, &#39;AGR6_E&#39;, &#39;AGR7_E&#39;, &#39;AGR8_E&#39;, &#39;AGR9_E&#39;, &#39;AGR10_E&#39;, # &#39;CSN1_E&#39;, &#39;CSN2_E&#39;, &#39;CSN3_E&#39;, &#39;CSN4_E&#39;, &#39;CSN5_E&#39;, &#39;CSN6_E&#39;, &#39;CSN7_E&#39;, &#39;CSN8_E&#39;, &#39;CSN9_E&#39;, &#39;CSN10_E&#39;, # &#39;OPN1_E&#39;, &#39;OPN2_E&#39;, &#39;OPN3_E&#39;, &#39;OPN4_E&#39;, &#39;OPN5_E&#39;, &#39;OPN6_E&#39;, &#39;OPN7_E&#39;, &#39;OPN8_E&#39;, &#39;OPN9_E&#39;, &#39;OPN10_E&#39;, &#39;dateload&#39;, &#39;introelapse&#39;, &#39;testelapse&#39;, &#39;endelapse&#39;, &#39;IPC&#39;, &#39;country&#39;, &#39;lat_appx_lots_of_err&#39;, &#39;long_appx_lots_of_err&#39; ] ) # Kopia danych BigFive = BigFive_raw.</description>
+    </item>
+    
+    <item>
+      <title>Big Five Personality test - data analysis</title>
+      <link>https://armind93.github.io/projects/bigfive/bigfive_modules/</link>
+      <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/bigfive/bigfive_modules/</guid>
+      <description>link to GitHub Repository
+2. Import modules try: import pandas as pd import numpy as np import matplotlib.pyplot as plt import plotly.figure_factory as ff import plotly.express as px from plotly.subplots import make_subplots import seaborn as sns from itertools import islice import pycountry_convert as pc import squarify except: !pip install pycountry_convert !pip install squarify import pycountry_convert as pc import squarify %matplotlib inline  </description>
+    </item>
+    
+    <item>
+      <title>Big Five Personality test - data analysis</title>
+      <link>https://armind93.github.io/projects/bigfive/project_bigfive/</link>
+      <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/bigfive/project_bigfive/</guid>
+      <description>4. Data analysis: 4.1. Preparation of groups based on the name of the country 4.2. The number of times each response occurs for each issue 4.3. Correlation analysis in individual traits 4.3.1. Description and classification of markings 4.3.2. Data preparation 4.3.3. Correlation maps for individual traits 4.4. Countries with the highest Extraversion level 4.5. Radar diagram for the selected row 4.5.1. Preparing the RadarChart class 4.5.2. Preparation of objects 4.6. Presentation of the results for each personality trait for the selected row 4.</description>
+    </item>
+    
+    <item>
       <title>Convolutional network testing for image classification</title>
-      <link>https://armind93.github.io/projects/project_imageclass/</link>
+      <link>https://armind93.github.io/projects/imageclassproject/project_imageclass/</link>
       <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/project_imageclass/</guid>
+      <guid>https://armind93.github.io/projects/imageclassproject/project_imageclass/</guid>
       <description>&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;
 link to data
 link to GitHub Repository
@@ -38,10 +65,10 @@ link to GitHub Repository
     
     <item>
       <title>Kepler Exoplanet Search Results - data analysis</title>
-      <link>https://armind93.github.io/projects/project_kepler/</link>
+      <link>https://armind93.github.io/projects/kepler/project_kepler/</link>
       <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/project_kepler/</guid>
+      <guid>https://armind93.github.io/projects/kepler/project_kepler/</guid>
       <description>&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;
 link to GitHub Repository
 1. Description of the values ​​from the columns KOI - Kepler Objects of Interest
@@ -50,20 +77,20 @@ link to GitHub Repository
     
     <item>
       <title>World happiness report - data analysis</title>
-      <link>https://armind93.github.io/projects/project_worldhappiness/</link>
+      <link>https://armind93.github.io/projects/worldhappiness/project_worldhappiness/</link>
       <pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/project_worldhappiness/</guid>
+      <guid>https://armind93.github.io/projects/worldhappiness/project_worldhappiness/</guid>
       <description>The data contain informations which might have influence for people&amp;rsquo;s happiness score in the selected country. We have 5 reports divided by years, from 2015 to 2019.
 Acording to data, the happiness score can be estimated from six factors - economic production, social support, life expectancy, freedom, absence of corruption, and generosity. These factors contribute to making life evaluations higher in each country than they are in Dystopia, a hypothetical country that has values equal to the world’s lowest national averages for each of the six factors.</description>
     </item>
     
     <item>
       <title>Project of an automated system for selecting wooden blocks from a rack using Raspberry Pi</title>
-      <link>https://armind93.github.io/projects/project_library/</link>
+      <link>https://armind93.github.io/projects/libraryproject/project_library/</link>
       <pubDate>Fri, 05 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/project_library/</guid>
+      <guid>https://armind93.github.io/projects/libraryproject/project_library/</guid>
       <description>link to GitHub Repository
 Introduction The device was built using elements from a 3D printer (frame, stepper motors). Three randomly placed wooden blocks on the shelves of the rack are picked up by the gripper and stored in one of the cells in the bottom row of this rack. The place on the bottom shelf is chosen, where the path from these blocks to this place is the shortest
 Overview   Device control through a graphical user interface:</description>
@@ -71,10 +98,10 @@ Overview   Device control through a graphical user interface:</description>
     
     <item>
       <title>Books prices project</title>
-      <link>https://armind93.github.io/projects/project_booksprices/</link>
+      <link>https://armind93.github.io/projects/bookprices/project_booksprices/</link>
       <pubDate>Mon, 08 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/project_booksprices/</guid>
+      <guid>https://armind93.github.io/projects/bookprices/project_booksprices/</guid>
       <description>link to GitHub repository
 Introduction I wanted to get informations about books prices, which I&amp;rsquo;d like to buy in the future. Additionally, it would be nice to see the price curve on the chart.
 Functions:  Downloading informations about books (title, price, date) from the acount on the website: ebooki.swiatczytnikow.pl. Saving data to the database. Displaying charts - how the price has changed over time for a specific title.  </description>

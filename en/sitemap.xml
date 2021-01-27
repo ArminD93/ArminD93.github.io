@@ -18,7 +18,22 @@
   </url>
   
   <url>
-    <loc>https://armind93.github.io/projects/project_bigfive/</loc>
+    <loc>https://armind93.github.io/projects/bigfive/bigfive_col_names/</loc>
+    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://armind93.github.io/projects/bigfive/bigfive_data_prepare/</loc>
+    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://armind93.github.io/projects/bigfive/bigfive_modules/</loc>
+    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://armind93.github.io/projects/bigfive/project_bigfive/</loc>
     <lastmod>2020-06-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -28,27 +43,27 @@
   </url>
   
   <url>
-    <loc>https://armind93.github.io/projects/project_imageclass/</loc>
+    <loc>https://armind93.github.io/projects/imageclassproject/project_imageclass/</loc>
     <lastmod>2020-04-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://armind93.github.io/projects/project_kepler/</loc>
+    <loc>https://armind93.github.io/projects/kepler/project_kepler/</loc>
     <lastmod>2020-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://armind93.github.io/projects/project_worldhappiness/</loc>
+    <loc>https://armind93.github.io/projects/worldhappiness/project_worldhappiness/</loc>
     <lastmod>2020-02-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://armind93.github.io/projects/project_library/</loc>
+    <loc>https://armind93.github.io/projects/libraryproject/project_library/</loc>
     <lastmod>2019-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://armind93.github.io/projects/project_booksprices/</loc>
+    <loc>https://armind93.github.io/projects/bookprices/project_booksprices/</loc>
     <lastmod>2018-10-08T00:00:00+00:00</lastmod>
   </url>
   

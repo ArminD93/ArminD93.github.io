@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>World happiness report - data analysis</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/assets/css/layouts/main.css"/>
+<link rel="stylesheet" href="/assets/css/style.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L5C2B8SPR2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L5C2B8SPR2');
+</script>
+
+
+
+<link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+
+
+<link rel="stylesheet" href="/assets/css/style.css"/>
+
+    
+<meta name="description" content="World happiness report - data analysis" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/assets/css/layouts/single.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/sidebar.css">
+
+
+    
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-L5C2B8SPR2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/assets/images/main-logo.png">Armin&#39;s portfolio</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/assets/images/main-logo.png" class="d-none" id="main-logo">
+  <img src="/assets/images/inverted-logo.png" class="d-none" id="inverted-logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/projects" data-filter="all">All projects</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bookprices/project_booksprices/">Books Prices</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="">Big Five Personality test</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bigfive/bigfive_col_names/">Columns description</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bigfive/bigfive_modules/">Import modules</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bigfive/bigfive_data_prepare/">Data preparation</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bigfive/project_bigfive/">Data analysis</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="">World Happiness projects</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/projects/worldhappiness/project_worldhappiness/">World Happiness project</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://armind93.github.io/assets/images/default-hero.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/static/images/A85.jpg'/>
+          <h5 class="author-name">Armin Derencz</h5>
+          <p>February 19, 2020</p>
+        </div>
+
+        <div class="title">
+          <h1>World happiness report - data analysis</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+          <p>The data contain informations which might have influence for people&rsquo;s happiness score in the selected country.
+We have 5 reports divided by years, from 2015 to 2019.</p>
+<p>Acording to data, the happiness score can be estimated from six factors - economic production, social support, life expectancy, freedom, absence of corruption, and generosity. These factors contribute to making life evaluations higher in each country than they are in Dystopia, a hypothetical country that has values equal to the world’s lowest national averages for each of the six factors. They have no impact on the total score reported for each country, but they do explain why some countries rank higher than others.</p>
+<p><a href="https://www.kaggle.com/unsdsn/world-happiness">link to data</a></p>
+<p><a href="https://github.com/ArminD93/WorldHappinessReport">link to GitHub Repository</a></p>
+<h2 id="1-data-presentation"><strong>1. Data presentation</strong>:</h2>
+<p>Data downloaded from kaggle was splitted into years, which means in one file we have all factors from one year and we&rsquo;ve 5 data files.:</p>
+<ol>
+<li>
+<p>Data from 2015:
+<img src="/static/images/WorldHappinessReport/dataFrom2015.png" alt="data2015"></p>
+</li>
+<li>
+<p>Data from 2016:
+<img src="/static/images/WorldHappinessReport/dataFrom2016.jpg" alt="data2015"></p>
+</li>
+<li>
+<p>Data from 2017:</p>
+<p><img src="/static/images/WorldHappinessReport/dataFrom2017.jpg" alt="data2015"></p>
+</li>
+<li>
+<p>Data from 2018:
+<img src="/static/images/WorldHappinessReport/dataFrom2018.jpg" alt="data2015"></p>
+</li>
+<li>
+<p>Data from 2019:
+<img src="/static/images/WorldHappinessReport/dataFrom2019.jpg" alt="data2015"></p>
+</li>
+</ol>
+<p>At the beginning, I considered each report separately, and then sum up my analysis into one report - summary report.</p>
+<h2 id="2-data-reviewing"><strong>2. Data reviewing</strong>:</h2>
+<p>I checked if data are completed and if there is no NaN values.</p>
+<h3 id="21-correlation-maps">2.1. Correlation maps:</h3>
+<p>On the correlation maps below, we see which factor has the highest influence on happiness score and which of them has lowest. Regardless the years, the highest influence on happiness score of the country has economy level of this country. On the opposite side, the generosity factor has little effect on happiness score.</p>
+<p><img src="/static/images/WorldHappinessReport/corr_maps.jpg" alt="corr_maps"></p>
+<h3 id="22-countries-with-the-highest-happiness-score">2.2. Countries with the highest happiness score</h3>
+<p>In 2015, Switzerland was the country with the highest happiness score their citizens, but in 2016 this country took the second position in the ranking. Through the next years, Switzerland fell on the fourth, the fifth and the sixth place. In 2016, Denmark took the first place in this ranking. Unfortunately, in 2017 came on the second place, and Norway won the competion. In 2018 and 2019, Finland led in the happiness score ranking.</p>
+<p><img src="/static/images/WorldHappinessReport/countries_with_highest_happiness_score.jpg" alt="highest happiness score count plots"></p>
+<h2 id="3-preparing-report-for-one-trait-including-all-years"><strong>3. Preparing report for one trait including all years</strong>:</h2>
+<p>I wanted to transform data into one file which would be contain all factors for only one year. To do this, I prepared two functions:</p>
+<pre><code>def create_report_for_one_feature(report, col1, col2):
+    '''
+    create_report_for_one_feature - Create report which consist only two columns
+    report - set data frame
+    col1 - name of first column from chosen data frame
+    col2 - name of second column from chosen data frame
+
+    '''
+    one_feature_report = report[[col1, col2]]
+    return one_feature_report
+
+
+def create_ALLYears_report(report1, report2, report3, report4, report5, merge_on):
+    '''
+    create_ALLYears_report - merging few data frames together
+    report1, report2, report3, report4, report5  - names of data frames
+    merge_on - set a common column for all data frames
+    '''
+    report_AllYears = pd.merge(report1, report2,  on= merge_on, suffixes=['_2015', '_2016'])
+    report_AllYears = report_AllYears.merge(report3, on= merge_on                             )
+    report_AllYears = report_AllYears.merge(report4, on= merge_on, suffixes=['_2017','_2018'] )
+    report_AllYears = report_AllYears.merge(report5, on= merge_on                             )
+
+    report_AllYears.set_index('Country or region', inplace=True)  
+    return report_AllYears 
+</code></pre>
+<p>First, I run function &ldquo;create_report_for_one_feature()&rdquo; for all 5 reports to extract one factor from all years.</p>
+<pre><code>happy_report2015 = create_report_for_one_feature(report2015, 'Country or region', 'HappinessScore')
+happy_report2016 = create_report_for_one_feature(report2016, 'Country or region', 'HappinessScore')
+happy_report2017 = create_report_for_one_feature(report2017, 'Country or region', 'HappinessScore')
+happy_report2018 = create_report_for_one_feature(report2018, 'Country or region', 'HappinessScore')
+happy_report2019 = create_report_for_one_feature(report2019, 'Country or region', 'HappinessScore')
+
+economy_report2015 = create_report_for_one_feature(report2015, 'Country or region', 'Economy')
+economy_report2016 = create_report_for_one_feature(report2016, 'Country or region', 'Economy')
+economy_report2017 = create_report_for_one_feature(report2017, 'Country or region', 'Economy')
+economy_report2018 = create_report_for_one_feature(report2018, 'Country or region', 'Economy')
+economy_report2019 = create_report_for_one_feature(report2019, 'Country or region', 'Economy')
+
+healthy_report2015 = create_report_for_one_feature(report2015, 'Country or region', 'Healthy_life_expectancy')
+healthy_report2016 = create_report_for_one_feature(report2016, 'Country or region', 'Healthy_life_expectancy')
+healthy_report2017 = create_report_for_one_feature(report2017, 'Country or region', 'Healthy_life_expectancy')
+healthy_report2018 = create_report_for_one_feature(report2018, 'Country or region', 'Healthy_life_expectancy')
+healthy_report2019 = create_report_for_one_feature(report2019, 'Country or region', 'Healthy_life_expectancy')
+
+social_support_report2015 = create_report_for_one_feature(report2015, 'Country or region', 'Social_support')
+social_support_report2016 = create_report_for_one_feature(report2016, 'Country or region', 'Social_support')
+social_support_report2017 = create_report_for_one_feature(report2017, 'Country or region', 'Social_support')
+social_support_report2018 = create_report_for_one_feature(report2018, 'Country or region', 'Social_support')
+social_support_report2019 = create_report_for_one_feature(report2019, 'Country or region', 'Social_support')
+</code></pre>
+<p>Then, using function &ldquo;create_ALL Years report&rdquo;, I merged all years into into one file.</p>
+<pre><code>happy_AllYears = create_ALLYears_report(happy_report2015, happy_report2016, happy_report2017, happy_report2018, happy_report2019, merge_on='Country or region')
+happy_AllYears.head()
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/happyAllYears.jpg" alt="happiness2015"></p>
+<pre><code>economy_AllYears = create_ALLYears_report(economy_report2015, economy_report2016, economy_report2017, economy_report2018, economy_report2019, merge_on='Country or region')
+economy_AllYears.head()
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/economyAllYears.jpg" alt="economyAllYears"></p>
+<pre><code>healthy_AllYears = create_ALLYears_report(healthy_report2015, healthy_report2016, healthy_report2017, healthy_report2018, healthy_report2019, merge_on='Country or region')
+healthy_AllYears.head()
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/healthAllYears.jpg" alt="healthAllYears"></p>
+<pre><code>social_support_AllYears = create_ALLYears_report(social_support_report2015, social_support_report2016, social_support_report2017, social_support_report2018, social_support_report2019, merge_on='Country or region')
+social_support_AllYears.head()
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/socialAllYears.jpg" alt="socialAllYears"></p>
+<h3 id="31-setting-all-years-in-one-column">3.1. Setting all years in one column</h3>
+<p>I wanted to set all years in one column of data frame. To do this, I use pandas method called stack(). Next, I have to use additional method - to_frame() which helps convert result of stack() method to data frame.</p>
+<pre><code>happy_AllYears_stacked = happy_AllYears.stack().to_frame()
+economy_AllYears_stacked = economy_AllYears.stack().to_frame()
+healthy_AllYears_stacked = healthy_AllYears.stack().to_frame()
+social_support_AllYears_stacked = social_support_AllYears.stack().to_frame()
+</code></pre>
+<p>It&rsquo;s a good idea to reset the index:</p>
+<pre><code>happy_AllYears_stacked.reset_index(inplace=True)
+economy_AllYears_stacked.reset_index(inplace=True)
+healthy_AllYears_stacked.reset_index(inplace=True)
+social_support_AllYears_stacked.reset_index(inplace=True)
+</code></pre>
+<p>Result of used above methods:</p>
+<pre><code>happy_AllYears_stacked.head()
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/AllYearsInOneColumn_1.jpg" alt="AllYearsInOneColumn_1"></p>
+<p>It&rsquo;s good to rename columns names in oder to better recognize them. I used builded in pandas method rename()</p>
+<pre><code>newHappyColNames   = { 'level_1'  :   'Year',
+                             0    :   'HappinessScore'}
+
+newEconomyColNames = { 'level_1'  :   'Year',
+                               0  :   'Economy'}
+
+newHealthyColNames = { 'level_1'  :   'Year',
+                               0  :   'Health (LifeExpectancy)'}
+
+newSocialColNames  = { 'level_1'  :   'Year',
+                               0  :   'socialSupport'}
+                               
+happy_AllYears_stacked.rename(columns=newHappyColNames, inplace=True)
+economy_AllYears_stacked.rename(columns=newEconomyColNames, inplace=True)
+healthy_AllYears_stacked.rename(columns=newHealthyColNames, inplace=True)
+social_support_AllYears_stacked.rename(columns=newSocialColNames, inplace=True)
+
+happy_AllYears_stacked.head()
+economy_AllYears_stacked.head()
+healthy_AllYears_stacked.head()
+social_support_AllYears_stacked.head()
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/happy_AllYears_stacked.jpg" alt="happy_AllYears_stacked"><img src="/static/images/WorldHappinessReport/economy_AllYears_stacked.jpg" alt="economy_AllYears_stacked"></p>
+<p><img src="/static/images/WorldHappinessReport/healthy_AllYears_stacked.jpg" alt="healthy_AllYears_stacked">
+<img src="/static/images/WorldHappinessReport/social_AllYears_stacked.jpg" alt="social_AllYears_stacked"></p>
+<h3 id="32-changes-of-happiness-levels-in-2015-2019-on-line-plot">3.2. Changes of happiness levels in 2015-2019 on line plot</h3>
+<p>Here below, we can see how the citizens happiness score has changed from 2015 to 2019. The largest increase from 2015 to 2019 had Finland. An interesting case is Austria. From 2015 to 2017, score of this country was decreasing, but in 2017 to 2019, it was start to rising. From 2015 Norway and Denmark are the countries with the highest happiness score, which hasn&rsquo;t changed rapidly to 2019.</p>
+<p><img src="/static/images/WorldHappinessReport/img1.png" alt="alt"></p>
+<h3 id="33-presentation-of-changes-in-the-level-of-traits-that-have-the-greatest-impact-on-the-level-of-happiness-in-2015-2019">3.3. Presentation of changes in the level of traits that have the greatest impact on the level of happiness in 2015-2019</h3>
+<p><img src="/static/images/WorldHappinessReport/countries_corr_maps.jpg" alt="countries corr maps"></p>
+<p>This time, I use heat map to show how factors has changed during next years for chosen countries, from 2015 to 2019. From this heat maps we can got to know that:</p>
+<ul>
+<li>in <strong>2015</strong> country with the highest:
+<ul>
+<li><strong>happiness</strong> score was <strong>Switzerland</strong>,</li>
+<li><strong>economy</strong> score was <strong>Qatar</strong>,</li>
+<li><strong>life expectancy (health)</strong> score was <strong>Singapore</strong>,</li>
+<li><strong>social support</strong> score was <strong>Iceland</strong>,</li>
+</ul>
+</li>
+<li>in <strong>2016</strong> country with the highest:
+<ul>
+<li><strong>happiness</strong> score was <strong>Denmark</strong>,</li>
+<li><strong>economy</strong> score was <strong>Qatar</strong>  (score has increased from 1.69 to 1.82 points),</li>
+<li><strong>life expectancy (health)</strong> score was <strong>Singapore</strong> (score has decreased from 1.03 to 0.95 points),</li>
+<li><strong>social support</strong> score was <strong>Iceland</strong> (score has decreased from 1.40 to 1.18 points),</li>
+</ul>
+</li>
+<li>in <strong>2017</strong> country with the highest:
+<ul>
+<li><strong>happiness</strong> score was <strong>Norway</strong>,</li>
+<li><strong>economy</strong> score was <strong>Qatar</strong> (score has increased from 1.82 to 1.87 points),</li>
+<li><strong>life expectancy (health)</strong> score was <strong>Singapore</strong> (score hasn&rsquo;t changed, still equal 0.95 points),</li>
+<li><strong>social support</strong> score was <strong>Iceland</strong> (score has increased from 1.18 to 1.61 points),</li>
+</ul>
+</li>
+<li>in <strong>2018</strong> country with the highest:
+<ul>
+<li><strong>happiness</strong> score was <strong>Finland</strong>,</li>
+<li><strong>economy</strong> score was <strong>United Arab Emirates</strong> (score has increased from 1.63 to 2.10 points),</li>
+<li><strong>life expectancy (health)</strong> score was <strong>Singapore</strong> (score has increased from 0.95 to 1.01 points),</li>
+<li><strong>social support</strong> score was <strong>Iceland</strong> (score has increased from 1.61 to 1.64 points),</li>
+</ul>
+</li>
+<li>in <strong>2019</strong> country with the highest:
+<ul>
+<li><strong>happiness</strong> score was <strong>Finland</strong> (score has increased from 7.63 to 7.77 points),</li>
+<li><strong>economy</strong> score was <strong>Qatar</strong> (score has increased from 1.65 to 1.68 points),</li>
+<li><strong>life expectancy (health)</strong> score was <strong>Singapore</strong> (score has increased from 1.01 to 1.14 points),</li>
+<li><strong>social support</strong> score was <strong>Iceland</strong> (score has decreased from 1.64 to 1.62 points).</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-preparing-data-to-machine-learning">4. <strong>Preparing data to machine learning:</strong></h2>
+<p>I wanted to link all factors into one dataframe, where all years were located in one column. I used merge() method, where I chose merging on columns &lsquo;Country or region&rsquo; and &lsquo;Year&rsquo;.</p>
+<pre><code>AllFeatures = pd.merge(happy_AllYears_stacked, economy_AllYears_stacked, on= ['Country or region', 'Year'] )
+AllFeatures = AllFeatures.merge(healthy_AllYears_stacked,                on= ['Country or region', 'Year'] )
+AllFeatures = AllFeatures.merge(social_support_AllYears_stacked,         on= ['Country or region', 'Year'] )      
+
+AllFeatures.head()       
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/allFeatures_df.jpg" alt="allFeatures_df"></p>
+<p>Next, I wished to find out what the descibe() method returns for column &lsquo;happinessScore&rsquo; in this &lsquo;AllYears&rsquo; data frame. I received count of values, mean and standard deviation of them. Moreover there is min and max values and quantiles.
+Technically speaking, the median is 0.5 quantile (50% quantile), which split data into equal sized groups. Another quantiles are 0.25 quantile and 0.75 quantile. They are are called quartiles. Quartiles and median split data into four equal sized groups.</p>
+<pre><code>AllFeatures.groupby(by='Year')['HappinessScore'].describe()
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/AllFeaturesGrouped_describe.jpg" alt="AllFeaturesGrouped_describe"></p>
+<h3 id="41-visualization-of-the-factors-that-had-the-greatest-impact-on-the-level-of-happiness-in-2015-2019">4.1. Visualization of the factors that had the greatest impact on the level of happiness in 2015-2019</h3>
+<p><img src="/static/images/WorldHappinessReport/pairPlot.jpg" alt="pairPlot"></p>
+<p><img src="/static/images/WorldHappinessReport/box_swarm_violin_plots.jpg" alt="box_swarm_violin_plots"></p>
+<h3 id="42-ridding-of-outliers-values">4.2. Ridding of outliers values</h3>
+<pre><code>cols = ['HappinessScore', 'Economy', 	'Health (LifeExpectancy)', 'socialSupport']
+colors = ['y', 'b', 'r', 'g']
+
+
+fig, ax = plt.subplots(1, 4, figsize=(20,2), constrained_layout=True)
+for i, col in enumerate(cols):
+sns.boxplot(  x=col, data=AllFeatures, ax=ax[i], color=colors[i])
+
+plt.show()
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/boxPlots.jpg" alt="boxPlots"></p>
+<pre><code># wyznaczamy dolną część pudełka (lewa część)
+Q1 = AllFeatures[cols].quantile(0.25)
+
+# wyznaczamy górną część pudełka (prawa część)
+Q3 =  AllFeatures[cols].quantile(0.75)
+
+# IQR - rozstęp kwartylowy
+IQR = Q3 - Q1
+
+outlier_condit =  ((AllFeatures[cols] &lt; (Q1 - 1.5*IQR)) | (AllFeatures[cols] &gt; (Q3 + 1.5*IQR)) ) 
+AllFeatures_iqr = AllFeatures[cols][~outlier_condit.any(axis=1)]
+
+
+fig, ax = plt.subplots(1, 4, figsize=(20,2), constrained_layout=True)
+
+for i, col in enumerate(cols):
+sns.boxplot(  x=col, data=AllFeatures_iqr, ax=ax[i], color=colors[i])
+
+
+plt.show()
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/BoxPlots_iqr.jpg" alt="BoxPlots_iqr"></p>
+<pre><code>fig, ax = plt.subplots(1,4, figsize=(20,4))
+
+for i, col in enumerate(cols):
+sns.distplot(AllFeatures[col], ax=ax[i])
+
+for i, col in enumerate(cols):
+sns.distplot(AllFeatures_iqr[col], ax=ax[i])
+
+plt.show()
+</code></pre>
+<p><strong>Without IQR:</strong>
+<img src="/static/images/WorldHappinessReport/hist.jpg" alt="hist"></p>
+<p><strong>With IQR:</strong>
+<img src="/static/images/WorldHappinessReport/hist_iqr.jpg" alt="hist_iqr"></p>
+<pre><code>AllFeatures.info()
+
+&lt;class 'pandas.core.frame.DataFrame'&gt;
+Int64Index: 705 entries, 0 to 704
+Data columns (total 6 columns):
+#   Column                   Non-Null Count  Dtype  
+---  ------                   --------------  -----  
+0   Country or region        705 non-null    object 
+1   Year                     705 non-null    object 
+2   HappinessScore           705 non-null    float64
+3   Economy                  705 non-null    float64
+4   Health (LifeExpectancy)  705 non-null    float64
+5   socialSupport            705 non-null    float64
+dtypes: float64(4), object(2)
+memory usage: 58.6+ KB
+</code></pre>
+<p>Tekst</p>
+<pre><code>for col in ['Country or region', 'Year']:
+AllFeatures[col] = AllFeatures[col].astype('category')
+
+AllFeatures.info()
+
+&lt;class 'pandas.core.frame.DataFrame'&gt;
+Int64Index: 705 entries, 0 to 704
+Data columns (total 6 columns):
+#   Column                   Non-Null Count  Dtype   
+---  ------                   --------------  -----   
+0   Country or region        705 non-null    category
+1   Year                     705 non-null    category
+2   HappinessScore           705 non-null    float64 
+3   Economy                  705 non-null    float64 
+4   Health (LifeExpectancy)  705 non-null    float64 
+5   socialSupport            705 non-null    float64 
+dtypes: category(2), float64(4)
+memory usage: 55.9 KB
+</code></pre>
+<p>Tekst</p>
+<pre><code>AllFeatures.describe().T
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/AllFeature_describe.jpg" alt="AllFeature_describe"></p>
+<p>Po pozbyciu się wartości odstających</p>
+<pre><code>AllFeatures_iqr.describe().T
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/AllFeature_iqr_describe.jpg" alt="AllFeature_iqr_describe"></p>
+<pre><code>AllFeatures.describe(include=['category']).T
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/AllFeatures_describe_category.jpg" alt="AllFeatures_describe_category"></p>
+<p>Tekst</p>
+<pre><code>AllFeatures.isnull().sum()
+
+Country or region          0
+Year                       0
+HappinessScore             0
+Economy                    0
+Health (LifeExpectancy)    0
+socialSupport              0
+dtype: int64
+
+
+AllFeatures_iqr.isnull().sum()
+
+HappinessScore             0
+Economy                    0
+Health (LifeExpectancy)    0
+socialSupport              0
+dtype: int64
+</code></pre>
+<h3 id="43-visualization-of-the-influence-of-the-analyzed-factors-on-the-level-of-happiness-score">4.3. Visualization of the influence of the analyzed factors on the level of happiness score</h3>
+<p><img src="/static/images/WorldHappinessReport/scatterPlot1.png" alt="scatterPlot1"></p>
+<h3 id="44-splitting-data-into-training-and-test-sets">4.4. Splitting data into training and test sets</h3>
+<pre><code>features = ['Economy', 'Health (LifeExpectancy)', 'socialSupport']
+label = 'HappinessScore'
+
+X = AllFeatures[features].values
+y = AllFeatures[label].values.reshape(-1,1)
+
+# Bez wartości odstających:
+X_iqr = AllFeatures_iqr[features].values
+y_iqr = AllFeatures_iqr[label].values.reshape(-1,1)
+
+print(f'X: {X.shape},   X_iqr: {X_iqr.shape}')
+print(f'y: {y.shape},   y_iqr: {y_iqr.shape}')
+
+
+
+
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+X_iqr_train, X_iqr_test, y_iqr_train, y_iqr_test = train_test_split(X_iqr, y_iqr, test_size=0.2)
+
+
+print(f'X_train shape:  {X_train.shape},    X_iqr_train shape: {X_iqr_train.shape}')
+print(f'X_test shape:   {X_test.shape},     X_iqr_test shape: {X_iqr_test.shape}')
+
+print(f'y_train shape:  {y_train.shape},    y_iqr_train shape: {y_iqr_train.shape}')
+print(f'y_test shape:   {y_test.shape},     y_iqr_test shape: {y_iqr_test.shape}')
+</code></pre>
+<h3 id="45-scaling-the-values">4.5. Scaling the values</h3>
+<pre><code>scaler = StandardScaler()
+scaler.fit(X_train)
+
+X_train = scaler.transform(X_train)
+X_test = scaler.transform(X_test)
+
+
+scaler_iqr = StandardScaler()
+scaler_iqr.fit(X_iqr_train)
+
+X_iqr_train = scaler.transform(X_iqr_train)
+X_iqr_test = scaler.transform(X_iqr_test)
+</code></pre>
+<h3 id="46-linear-regression-model-testing">4.6. Linear regression model testing</h3>
+<pre><code>metric_cols =[('SCORES', 'SCORE[%]'), ('SCORES', 'SCORE(IQR)[%]'),
+            
+            ('R2','Train[%]'), ('R2','Test[%]'),
+            ('R2(IQR)','Train[%]'), ('R2(IQR)','Test[%]'),
+
+            ('MSE','Train'), ('MSE','Test'),
+            ('MSE(IQR)','Train'), ('MSE(IQR)','Test'), 
+
+            ('RMSE','Train'), ('RMSE','Test'),
+            ('RMSE(IQR)','Train'), ('RMSE(IQR)','Test'),                            
+            
+            ]
+
+metrics_df = pd.DataFrame(columns=metric_cols )
+metrics_df.columns = pd.MultiIndex.from_tuples(metrics_df.columns)
+
+index = 0
+
+for i in range(150):  
+# podzielimy dane na zbiory uczące i testowe:
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+X_iqr_train, X_iqr_test, y_iqr_train, y_iqr_test = train_test_split(X_iqr, y_iqr, test_size=0.2)
+
+lr                  = LinearRegression()
+lr.fit(X_train, y_train)
+
+lin_reg_iqr         = LinearRegression()
+lin_reg_iqr.fit(X_iqr_train, y_iqr_train)
+
+y_pred_test         = lr.predict(X_test)
+y_pred_iqr_sc_test  = lin_reg_iqr.predict(X_iqr_test)
+
+y_pred_train        = lr.predict(X_train)
+y_pred_iqr_sc_train = lin_reg_iqr.predict(X_iqr_train)
+
+
+# ---------------------------------------------------------------------------
+score          = lr.score(X_test, y_test)
+score_iqr      = lr.score(X_iqr_test, y_iqr_test)
+
+r2_train       =  r2_score(y_train, y_pred_train)
+r2_train_iqr   = r2_score(y_iqr_train, y_pred_iqr_sc_train)
+
+r2_test        =  r2_score(y_test, y_pred_test)
+r2_test_iqr    = r2_score(y_iqr_test, y_pred_iqr_sc_test)
+
+
+mse_train      = mean_squared_error(y_train, y_pred_train)
+mse_train_iqr  = mean_squared_error(y_iqr_train, y_pred_iqr_sc_train)
+
+mse_test       = mean_squared_error(y_test, y_pred_test)
+mse_test_iqr   = mean_squared_error(y_iqr_test, y_pred_iqr_sc_test)
+
+rmse_train     = mean_squared_error(y_train, y_pred_train, squared=False)
+rmse_train_iqr = mean_squared_error(y_iqr_train, y_pred_iqr_sc_train, squared=False)
+
+rmse_test      = mean_squared_error(y_test, y_pred_test, squared=False)
+rmse_test_iqr  = mean_squared_error(y_iqr_test, y_pred_iqr_sc_test, squared=False)  
+
+# -----------------------------------------------------------------------------
+
+SCORE, SCORE_IQR              = round(score*100, 2), round(score_iqr*100, 2) 
+
+R2_train, R2_test             = round(r2_train*100, 2), round(r2_test*100,2)
+R2_IQR_train, R2_IQR_test     = round(r2_train_iqr*100, 2), round(r2_test_iqr*100, 2)
+
+mse_train, mse_test           = round(mse_train, 4), round(mse_test, 4)
+mse_IQR_train, mse_IQR_test   = round(mse_train_iqr, 4), round(mse_test_iqr, 4)
+
+rmse_train, rmse_test         = round(rmse_train, 4), round(rmse_test, 4)
+rmse_IQR_train, rmse_IQR_test = round(rmse_train_iqr, 4), round(rmse_test_iqr, 4)
+
+
+# #############################################################################
+
+metrics_df.loc[index] = [
+                        SCORE, SCORE_IQR,
+                        R2_train, R2_test, R2_IQR_train, R2_IQR_test,
+                        mse_train, mse_test, mse_IQR_train, mse_IQR_test,
+                        rmse_train, rmse_test, rmse_IQR_train, rmse_IQR_test                           
+                        ]
+
+index +=1
+
+metrics_df.tail()
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/metric_df.jpg" alt="metric_df"></p>
+<pre><code>def highlight_best(s):
+
+        index = {index: '' for index in s.index}
+
+        if s[('R2','Test[%]')] &gt; s[('R2','Train[%]')]: 
+            index[('R2','Test[%]')] = 'background-color: green'
+        if s[('R2(IQR)','Test[%]')] &gt; s[('R2(IQR)','Train[%]')]: 
+            index[('R2(IQR)','Test[%]')] = 'background-color: green'        
+        if s[('MSE','Test')] &lt; s[('MSE','Train')]: 
+            index[('MSE','Test')] = 'background-color: green'
+        if s[('MSE(IQR)','Test')]&lt; s[('MSE(IQR)','Train')]: 
+            index[('MSE(IQR)','Test')] = 'background-color: green'
+        if s[('RMSE','Test')] &lt; s[('RMSE','Train')]: 
+            index[('RMSE','Test')] = 'background-color: green'
+        if s[('RMSE(IQR)','Test')] &lt; s[('RMSE(IQR)','Train')]: 
+            index[('RMSE(IQR)','Test')] = 'background-color: green'
+        return index
+
+metrics_df.tail().style.apply( highlight_best, axis=1)
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/metric_df_tail_v2.jpg" alt="metric_df_tail_v2"></p>
+<pre><code># Jak poszło przewidywanie danych
+fig, ax = plt.subplots(1, 2, figsize=(10,5), constrained_layout=True)
+
+y_list = [
+        { 'b' : [  y_test      , y_pred_test        ]  },
+        { 'g' : [  y_iqr_test  , y_pred_iqr_sc_test ]  }
+        ]
+
+labels_dict = [
+                {'Z wartościami odstającymi' : [  'y_test' , 'y_pred' ] },
+                {'bez wartości odstających'  : [  'y_test'  , 'y_pred'  ] }                 
+            ]
+index = 0
+for col in range(2):
+    yTestAndPred = [val for val in y_list[index].values() ][0] 
+    color = [key for key in y_list[index].keys() ] 
+
+    xyLabels = [val for val in labels_dict[index].values() ][0]
+    title = [key for key in labels_dict[index].keys() ] 
+
+    ax[col].scatter(yTestAndPred[0], yTestAndPred[1], s=80, facecolors='none', edgecolors= color)
+    ax[col].set_xlabel(xyLabels[0])
+    ax[col].set_ylabel(xyLabels[1])
+    ax[col].set_title(title[0])
+    index+=1   
+
+plt.show()
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/HowGoodLearning.jpg" alt="HowGoodLearning"></p>
+<pre><code># Wykresy wartości resztowych:
+fig, ax = plt.subplots(2, 2, figsize=(10,9), constrained_layout=True)
+
+error_train = y_pred_train - y_train # ta wartość mówi nam, jak bardzo pomyliliśmy się w trakcie przewidywania wartości
+error_test =  y_pred_test - y_test
+
+error_iqr_train = y_pred_iqr_sc_train - y_iqr_train
+error_iqr_test =  y_pred_iqr_sc_test - y_iqr_test
+
+y_list = [
+        { 'b' : [  y_train     , error_train     ]  },
+        { 'g' : [  y_test      , error_test      ]  },
+        { 'b' : [  y_iqr_train , error_iqr_train ]  },
+        { 'g' : [  y_iqr_test  , error_iqr_test  ]  }
+        ]
+
+labels_dict = [
+                {'Z wartościami odstającymi' : [  'y_train' , 'error_train' ] },
+                {'Z wartościami odstającymi' : [  'y_test'  , 'error_test'  ] },              
+                {'bez wartości odstających'  : [  'y_train' , 'error_train' ] },
+                {'bez wartości odstających'  : [  'y_test'  , 'error_test'  ] }                 
+            ]
+
+index = 0
+for row in range(2):
+for col in range(2):
+    yAndError= [val for val in y_list[index].values() ][0] 
+    color = [key for key in y_list[index].keys() ] 
+
+    xyLabels = [val for val in labels_dict[index].values() ][0]
+    title = [key for key in labels_dict[index].keys() ] 
+
+    ax[row,col].scatter(yAndError[0], yAndError[1], s=80, facecolors='none', edgecolors= color)
+
+    ax[row,col].hlines(y=1, xmin=3, xmax=8, colors='r', linestyles='--', lw=1.5)
+    ax[row,col].hlines(y=-1, xmin=3, xmax=8, colors='r', linestyles='--', lw=1.5)
+    
+    ax[row,col].set_xlabel(xyLabels[0])
+    ax[row,col].set_ylabel(xyLabels[1])
+    ax[row,col].set_title(title[0])
+
+    index+=1   
+
+plt.show()   
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/RestValuesPlots.jpg" alt="RestValuesPlots"></p>
+
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/hugo-toha/hugo-toha.github.io/edit/master/content/projects/WorldHappiness/project_WorldHappiness.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/projects/kepler/project_kepler/" class="btn btn-outline-info">
+          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+          <br />
+          <span>Kepler Exoplanet Search Results - data analysis</span>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/projects/libraryproject/project_library/" class="btn btn-outline-info">
+            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
+            <br />
+            <span>Project of an automated system for selecting wooden blocks from a rack using Raspberry Pi</span>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-data-presentation"><strong>1. Data presentation</strong>:</a></li>
+    <li><a href="#2-data-reviewing"><strong>2. Data reviewing</strong>:</a>
+      <ul>
+        <li><a href="#21-correlation-maps">2.1. Correlation maps:</a></li>
+        <li><a href="#22-countries-with-the-highest-happiness-score">2.2. Countries with the highest happiness score</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-preparing-report-for-one-trait-including-all-years"><strong>3. Preparing report for one trait including all years</strong>:</a>
+      <ul>
+        <li><a href="#31-setting-all-years-in-one-column">3.1. Setting all years in one column</a></li>
+        <li><a href="#32-changes-of-happiness-levels-in-2015-2019-on-line-plot">3.2. Changes of happiness levels in 2015-2019 on line plot</a></li>
+        <li><a href="#33-presentation-of-changes-in-the-level-of-traits-that-have-the-greatest-impact-on-the-level-of-happiness-in-2015-2019">3.3. Presentation of changes in the level of traits that have the greatest impact on the level of happiness in 2015-2019</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-preparing-data-to-machine-learning">4. <strong>Preparing data to machine learning:</strong></a>
+      <ul>
+        <li><a href="#41-visualization-of-the-factors-that-had-the-greatest-impact-on-the-level-of-happiness-in-2015-2019">4.1. Visualization of the factors that had the greatest impact on the level of happiness in 2015-2019</a></li>
+        <li><a href="#42-ridding-of-outliers-values">4.2. Ridding of outliers values</a></li>
+        <li><a href="#43-visualization-of-the-influence-of-the-analyzed-factors-on-the-level-of-happiness-score">4.3. Visualization of the influence of the analyzed factors on the level of happiness score</a></li>
+        <li><a href="#44-splitting-data-into-training-and-test-sets">4.4. Splitting data into training and test sets</a></li>
+        <li><a href="#45-scaling-the-values">4.5. Scaling the values</a></li>
+        <li><a href="#46-linear-regression-model-testing">4.6. Linear regression model testing</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">Armin Derencz</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#projects">Projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent projects</a>
+              </li>
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>armin.derencz@gmail.com</span></li>
+          
+        </ul>
+      </div>
+      
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/assets/images/inverted-logo.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/assets/images/hugo-logo-wide.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/assets/js/jquery-3.4.1.min.js"></script>
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+
+<script src="/assets/js/navbar.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/assets/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>

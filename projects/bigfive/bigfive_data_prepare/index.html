@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Big Five Personality test - data analysis</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/assets/css/layouts/main.css"/>
+<link rel="stylesheet" href="/assets/css/style.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L5C2B8SPR2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L5C2B8SPR2');
+</script>
+
+
+
+<link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+
+
+<link rel="stylesheet" href="/assets/css/style.css"/>
+
+    
+<meta name="description" content="Big Five Personality test - data analysis" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/assets/css/layouts/single.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/sidebar.css">
+
+
+    
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-L5C2B8SPR2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/assets/images/main-logo.png">Armin&#39;s portfolio</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/assets/images/main-logo.png" class="d-none" id="main-logo">
+  <img src="/assets/images/inverted-logo.png" class="d-none" id="inverted-logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/projects" data-filter="all">All projects</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bookprices/project_booksprices/">Books Prices</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="">Big Five Personality test</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bigfive/bigfive_col_names/">Columns description</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bigfive/bigfive_modules/">Import modules</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/projects/bigfive/bigfive_data_prepare/">Data preparation</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bigfive/project_bigfive/">Data analysis</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="">World Happiness projects</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/worldhappiness/project_worldhappiness/">World Happiness project</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://armind93.github.io/assets/images/default-hero.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/static/images/A85.jpg'/>
+          <h5 class="author-name">Armin Derencz</h5>
+          <p>June 27, 2020</p>
+        </div>
+
+        <div class="title">
+          <h1>Big Five Personality test - data analysis</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+          <h2 id="3-data-preparation">3. <strong>Data preparation:</strong></h2>
+<h3 id="31-data-presentation">3.1. Data presentation</h3>
+<pre><code>BigFive_raw = pd.read_csv(
+                        '/content/drive/My Drive/ColabNotebooks/BigFivePersonality/data-final.csv', low_memory=False, sep='\t',
+                        
+                        usecols=['EXT1', 'EXT2', 'EXT3', 'EXT4', 'EXT5', 'EXT6', 'EXT7', 'EXT8', 'EXT9', 'EXT10',
+                                'EST1', 'EST2', 'EST3', 'EST4', 'EST5', 'EST6', 'EST7', 'EST8', 'EST9', 'EST10',
+                                'AGR1', 'AGR2', 'AGR3', 'AGR4', 'AGR5', 'AGR6', 'AGR7', 'AGR8', 'AGR9', 'AGR10',
+                                'CSN1', 'CSN2', 'CSN3', 'CSN4', 'CSN5', 'CSN6', 'CSN7', 'CSN8', 'CSN9', 'CSN10',
+                                'OPN1', 'OPN2', 'OPN3', 'OPN4', 'OPN5', 'OPN6', 'OPN7', 'OPN8', 'OPN9', 'OPN10',
+
+                                #  'EXT1_E', 'EXT2_E', 'EXT3_E', 'EXT4_E', 'EXT5_E', 'EXT6_E', 'EXT7_E', 'EXT8_E', 'EXT9_E', 'EXT10_E',
+                                #  'EST1_E', 'EST2_E', 'EST3_E', 'EST4_E', 'EST5_E', 'EST6_E', 'EST7_E', 'EST8_E', 'EST9_E', 'EST10_E',
+                                #  'AGR1_E', 'AGR2_E', 'AGR3_E', 'AGR4_E', 'AGR5_E', 'AGR6_E', 'AGR7_E', 'AGR8_E', 'AGR9_E', 'AGR10_E',
+                                #  'CSN1_E', 'CSN2_E', 'CSN3_E', 'CSN4_E', 'CSN5_E', 'CSN6_E', 'CSN7_E', 'CSN8_E', 'CSN9_E', 'CSN10_E',
+                                #  'OPN1_E', 'OPN2_E', 'OPN3_E', 'OPN4_E', 'OPN5_E', 'OPN6_E', 'OPN7_E', 'OPN8_E', 'OPN9_E', 'OPN10_E',
+
+                                'dateload', 'introelapse', 'testelapse', 'endelapse', 'IPC', 'country', 'lat_appx_lots_of_err', 'long_appx_lots_of_err'
+                        
+                                ]
+                        )
+
+# Kopia danych
+BigFive = BigFive_raw.copy()                         
+                            
+BigFive.head()
+</code></pre>
+<p>Result:</p>
+<pre><code>        EXT1 	EXT2 	EXT3 	EXT4 	EXT5 	EXT6 	EXT7 	EXT8 	EXT9 	EXT10 	EST1 	EST2 	EST3 	EST4 	EST5 	EST6 	EST7 	EST8 	EST9 	EST10 	AGR1 	AGR2 	AGR3 	AGR4 	AGR5 	AGR6 	AGR7 	AGR8 	AGR9 	AGR10 	CSN1 	CSN2 	CSN3 	CSN4 	CSN5 	CSN6 	CSN7 	CSN8 	CSN9 	CSN10 	OPN1 	OPN2 	OPN3 	OPN4 	OPN5 	OPN6 	OPN7 	OPN8 	OPN9 	OPN10 	dateload 	    introelapse 	testelapse 	endelapse 	IPC 	country 	lat_appx_lots_of_err 	long_appx_lots_of_err
+0 	4.0 	1.0 	5.0 	2.0 	5.0 	1.0 	5.0 	2.0 	4.0 	1.0 	1.0 	4.0 	4.0 	2.0 	2.0 	2.0 	2.0 	2.0 	3.0 	2.0 	2.0 	5.0 	2.0 	4.0 	2.0 	3.0 	2.0 	4.0 	3.0 	4.0 	3.0 	4.0 	3.0 	2.0 	2.0 	4.0 	4.0 	2.0 	4.0 	4.0 	5.0 	1.0 	4.0 	1.0 	4.0 	1.0 	5.0 	3.0 	4.0 	5.0 	2016-03-03 02:01:01 	9.0 	         234.0 	            6 	        1 	 GB 	               51.5448 	                 0.1991
+1 	3.0 	5.0 	3.0 	4.0 	3.0 	3.0 	2.0 	5.0 	1.0 	5.0 	2.0 	3.0 	4.0 	1.0 	3.0 	1.0 	2.0 	1.0 	3.0 	1.0 	1.0 	4.0 	1.0 	5.0 	1.0 	5.0 	3.0 	4.0 	5.0 	3.0 	3.0 	2.0 	5.0 	3.0 	3.0 	1.0 	3.0 	3.0 	5.0 	3.0 	1.0 	2.0 	4.0 	2.0 	3.0 	1.0 	4.0 	2.0 	5.0 	3.0 	2016-03-03 02:01:20 	12.0 	         179.0 	            11 	        1 	 MY 	                3.1698 	               101.706
+2 	2.0 	3.0 	4.0 	4.0 	3.0 	2.0 	1.0 	3.0 	2.0 	5.0 	4.0 	4.0 	4.0 	2.0 	2.0 	2.0 	2.0 	2.0 	1.0 	3.0 	1.0 	4.0 	1.0 	4.0 	2.0 	4.0 	1.0 	4.0 	4.0 	3.0 	4.0 	2.0 	2.0 	2.0 	3.0 	3.0 	4.0 	2.0 	4.0 	2.0 	5.0 	1.0 	2.0 	1.0 	4.0 	2.0 	5.0 	3.0 	4.0 	4.0 	2016-03-03 02:01:56 	3.0 	         186.0 	            7 	        1 	 GB 	               54.9119 	                -1.3833
+3 	2.0 	2.0 	2.0 	3.0 	4.0 	2.0 	2.0 	4.0 	1.0 	4.0 	3.0 	3.0 	3.0 	2.0 	3.0 	2.0 	2.0 	2.0 	4.0 	3.0 	2.0 	4.0 	3.0 	4.0 	2.0 	4.0 	2.0 	4.0 	3.0 	4.0 	2.0 	4.0 	4.0 	4.0 	1.0 	2.0 	2.0 	3.0 	1.0 	4.0 	4.0 	2.0 	5.0 	2.0 	3.0 	1.0 	4.0 	4.0 	3.0 	3.0 	2016-03-03 02:02:02 	186.0 	         219.0 	            7 	        1 	 GB 	               51.75 	                -1.25
+4 	3.0 	3.0 	3.0 	3.0 	5.0 	3.0 	3.0 	5.0 	3.0 	4.0 	1.0 	5.0 	5.0 	3.0 	1.0 	1.0 	1.0 	1.0 	3.0 	2.0 	1.0 	5.0 	1.0 	5.0 	1.0 	3.0 	1.0 	5.0 	5.0 	3.0 	5.0 	1.0 	5.0 	1.0 	3.0 	1.0 	5.0 	1.0 	5.0 	5.0 	5.0 	1.0 	5.0 	1.0 	5.0 	1.0 	5.0 	3.0 	5.0 	5.0 	2016-03-03 02:02:57 	8.0 	         315.0 	            17 	        2 	 KE 	                1.0 	                38.0
+</code></pre>
+<hr>
+<pre><code>BigFive.info(memory_usage='Deep')
+
+&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 1015341 entries, 0 to 1015340
+Data columns (total 58 columns):
+#   Column                 Non-Null Count    Dtype  
+---  ------                 --------------    -----  
+0   EXT1                   1013558 non-null  float64
+1   EXT2                   1013558 non-null  float64
+2   EXT3                   1013558 non-null  float64
+3   EXT4                   1013558 non-null  float64
+4   EXT5                   1013558 non-null  float64
+5   EXT6                   1013558 non-null  float64
+6   EXT7                   1013558 non-null  float64
+7   EXT8                   1013558 non-null  float64
+8   EXT9                   1013558 non-null  float64
+9   EXT10                  1013558 non-null  float64
+10  EST1                   1013558 non-null  float64
+11  EST2                   1013558 non-null  float64
+12  EST3                   1013558 non-null  float64
+13  EST4                   1013558 non-null  float64
+14  EST5                   1013558 non-null  float64
+15  EST6                   1013558 non-null  float64
+16  EST7                   1013558 non-null  float64
+17  EST8                   1013558 non-null  float64
+18  EST9                   1013558 non-null  float64
+19  EST10                  1013558 non-null  float64
+20  AGR1                   1013558 non-null  float64
+21  AGR2                   1013558 non-null  float64
+22  AGR3                   1013558 non-null  float64
+23  AGR4                   1013558 non-null  float64
+24  AGR5                   1013558 non-null  float64
+25  AGR6                   1013558 non-null  float64
+26  AGR7                   1013558 non-null  float64
+27  AGR8                   1013558 non-null  float64
+28  AGR9                   1013558 non-null  float64
+29  AGR10                  1013558 non-null  float64
+30  CSN1                   1013558 non-null  float64
+31  CSN2                   1013558 non-null  float64
+32  CSN3                   1013558 non-null  float64
+33  CSN4                   1013558 non-null  float64
+34  CSN5                   1013558 non-null  float64
+35  CSN6                   1013558 non-null  float64
+36  CSN7                   1013558 non-null  float64
+37  CSN8                   1013558 non-null  float64
+38  CSN9                   1013558 non-null  float64
+39  CSN10                  1013558 non-null  float64
+40  OPN1                   1013558 non-null  float64
+41  OPN2                   1013558 non-null  float64
+42  OPN3                   1013558 non-null  float64
+43  OPN4                   1013558 non-null  float64
+44  OPN5                   1013558 non-null  float64
+45  OPN6                   1013558 non-null  float64
+46  OPN7                   1013558 non-null  float64
+47  OPN8                   1013558 non-null  float64
+48  OPN9                   1013558 non-null  float64
+49  OPN10                  1013558 non-null  float64
+50  dateload               1015341 non-null  object 
+51  introelapse            1013275 non-null  float64
+52  testelapse             1013558 non-null  float64
+53  endelapse              1015341 non-null  int64  
+54  IPC                    1015341 non-null  int64  
+55  country                1015264 non-null  object 
+56  lat_appx_lots_of_err   1015341 non-null  object 
+57  long_appx_lots_of_err  1015341 non-null  object 
+dtypes: float64(52), int64(2), object(4)
+memory usage: 449.3+ MB
+</code></pre>
+<h3 id="32-changing-the-type-from-object-to-type-category-and-datetime">3.2. Changing the type from object to type category and datetime</h3>
+<pre><code>BigFive.columns[:50]
+</code></pre>
+<p>Result:</p>
+<pre><code>Index(['EXT1', 'EXT2', 'EXT3', 'EXT4', 'EXT5', 'EXT6', 'EXT7', 'EXT8', 'EXT9',
+    'EXT10', 'EST1', 'EST2', 'EST3', 'EST4', 'EST5', 'EST6', 'EST7', 'EST8',
+    'EST9', 'EST10', 'AGR1', 'AGR2', 'AGR3', 'AGR4', 'AGR5', 'AGR6', 'AGR7',
+    'AGR8', 'AGR9', 'AGR10', 'CSN1', 'CSN2', 'CSN3', 'CSN4', 'CSN5', 'CSN6',
+    'CSN7', 'CSN8', 'CSN9', 'CSN10', 'OPN1', 'OPN2', 'OPN3', 'OPN4', 'OPN5',
+    'OPN6', 'OPN7', 'OPN8', 'OPN9', 'OPN10'],
+    dtype='object')
+</code></pre>
+<hr>
+<pre><code>cols_name_list = ['country', 'lat_appx_lots_of_err', 'long_appx_lots_of_err', 'dateload']
+
+for i, col_name in enumerate(cols_name_list):
+
+if col_name == 'dateload':
+    BigFive['dateload'] = pd.to_datetime(BigFive['dateload'])
+else:
+    BigFive[col_name] = BigFive[col_name].astype('category')
+
+# BigFive['long_appx_lots_of_err'] = BigFive['long_appx_lots_of_err'].astype('float')
+# BigFive['lat_appx_lots_of_err'] = BigFive['lat_appx_lots_of_err'].astype('float')
+
+BigFive.info(memory_usage='Deep')
+</code></pre>
+<p>Results</p>
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 1015341 entries, 0 to 1015340
+Data columns (total 58 columns):
+#   Column                 Non-Null Count    Dtype         
+---  ------                 --------------    -----         
+0   EXT1                   1013558 non-null  float64       
+1   EXT2                   1013558 non-null  float64       
+2   EXT3                   1013558 non-null  float64       
+3   EXT4                   1013558 non-null  float64       
+4   EXT5                   1013558 non-null  float64       
+5   EXT6                   1013558 non-null  float64       
+6   EXT7                   1013558 non-null  float64       
+7   EXT8                   1013558 non-null  float64       
+8   EXT9                   1013558 non-null  float64       
+9   EXT10                  1013558 non-null  float64       
+10  EST1                   1013558 non-null  float64       
+11  EST2                   1013558 non-null  float64       
+12  EST3                   1013558 non-null  float64       
+13  EST4                   1013558 non-null  float64       
+14  EST5                   1013558 non-null  float64       
+15  EST6                   1013558 non-null  float64       
+16  EST7                   1013558 non-null  float64       
+17  EST8                   1013558 non-null  float64       
+18  EST9                   1013558 non-null  float64       
+19  EST10                  1013558 non-null  float64       
+20  AGR1                   1013558 non-null  float64       
+21  AGR2                   1013558 non-null  float64       
+22  AGR3                   1013558 non-null  float64       
+23  AGR4                   1013558 non-null  float64       
+24  AGR5                   1013558 non-null  float64       
+25  AGR6                   1013558 non-null  float64       
+26  AGR7                   1013558 non-null  float64       
+27  AGR8                   1013558 non-null  float64       
+28  AGR9                   1013558 non-null  float64       
+29  AGR10                  1013558 non-null  float64       
+30  CSN1                   1013558 non-null  float64       
+31  CSN2                   1013558 non-null  float64       
+32  CSN3                   1013558 non-null  float64       
+33  CSN4                   1013558 non-null  float64       
+34  CSN5                   1013558 non-null  float64       
+35  CSN6                   1013558 non-null  float64       
+36  CSN7                   1013558 non-null  float64       
+37  CSN8                   1013558 non-null  float64       
+38  CSN9                   1013558 non-null  float64       
+39  CSN10                  1013558 non-null  float64       
+40  OPN1                   1013558 non-null  float64       
+41  OPN2                   1013558 non-null  float64       
+42  OPN3                   1013558 non-null  float64       
+43  OPN4                   1013558 non-null  float64       
+44  OPN5                   1013558 non-null  float64       
+45  OPN6                   1013558 non-null  float64       
+46  OPN7                   1013558 non-null  float64       
+47  OPN8                   1013558 non-null  float64       
+48  OPN9                   1013558 non-null  float64       
+49  OPN10                  1013558 non-null  float64       
+50  dateload               1015341 non-null  datetime64[ns]
+51  introelapse            1013275 non-null  float64       
+52  testelapse             1013558 non-null  float64       
+53  endelapse              1015341 non-null  int64         
+54  IPC                    1015341 non-null  int64         
+55  country                1015264 non-null  category      
+56  lat_appx_lots_of_err   1015341 non-null  category      
+57  long_appx_lots_of_err  1015341 non-null  category      
+dtypes: category(3), datetime64[ns](1), float64(52), int64(2)
+memory usage: 434.9 MB
+</code></pre>
+<h3 id="33-missing-values">3.3. Missing values</h3>
+<pre><code>BigFive.isnull().sum()
+</code></pre>
+<hr>
+<pre><code>EXT1                     1783
+EXT2                     1783
+EXT3                     1783
+EXT4                     1783
+EXT5                     1783
+EXT6                     1783
+EXT7                     1783
+EXT8                     1783
+EXT9                     1783
+EXT10                    1783
+EST1                     1783
+EST2                     1783
+EST3                     1783
+EST4                     1783
+EST5                     1783
+EST6                     1783
+EST7                     1783
+EST8                     1783
+EST9                     1783
+EST10                    1783
+AGR1                     1783
+AGR2                     1783
+AGR3                     1783
+AGR4                     1783
+AGR5                     1783
+AGR6                     1783
+AGR7                     1783
+AGR8                     1783
+AGR9                     1783
+AGR10                    1783
+CSN1                     1783
+CSN2                     1783
+CSN3                     1783
+CSN4                     1783
+CSN5                     1783
+CSN6                     1783
+CSN7                     1783
+CSN8                     1783
+CSN9                     1783
+CSN10                    1783
+OPN1                     1783
+OPN2                     1783
+OPN3                     1783
+OPN4                     1783
+OPN5                     1783
+OPN6                     1783
+OPN7                     1783
+OPN8                     1783
+OPN9                     1783
+OPN10                    1783
+dateload                    0
+introelapse              2066
+testelapse               1783
+endelapse                   0
+IPC                         0
+country                    77
+lat_appx_lots_of_err        0
+long_appx_lots_of_err       0
+dtype: int64
+</code></pre>
+<hr>
+<pre><code>BigFive[pd.isnull(BigFive['EXT1'])].head()
+</code></pre>
+<hr>
+<pre><code>        EXT1 	EXT2 	EXT3 	EXT4 	EXT5 	EXT6 	EXT7 	EXT8 	EXT9 	EXT10 	EST1 	EST2 	EST3 	EST4 	EST5 	EST6 	EST7 	EST8 	EST9 	EST10 	AGR1 	AGR2 	AGR3 	AGR4 	AGR5 	AGR6 	AGR7 	AGR8 	AGR9 	AGR10 	CSN1 	CSN2 	CSN3 	CSN4 	CSN5 	CSN6 	CSN7 	CSN8 	CSN9 	CSN10 	OPN1 	OPN2 	OPN3 	OPN4 	OPN5 	OPN6 	OPN7 	OPN8 	OPN9 	OPN10 	dateload            introelapse testelapse 	endelapse 	IPC 	country 	lat_appx_lots_of_err 	long_appx_lots_of_err
+78795 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	2016-05-03 11:12:38 	30.0 	NaN 	            133 	1 	US 	                38.0 	                    -97.0
+78854 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	2016-05-03 12:02:08 	41.0 	NaN 	            25 	        32 	US 	                26.5584 	            -81.8997
+78889 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	2016-05-03 12:19:04 	15.0 	NaN 	            11 	        3 	US 	                28.0222 	            -81.7329
+153202 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	2016-07-12 01:42:46 	 5.0 	NaN 	            64279 	77 	SG 	                 1.3667 	            103.8
+153204 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	NaN 	2016-07-12 01:43:12 	22.0 	NaN 	            55 	        77 	SG 	                 1.3667 	            103.8
+</code></pre>
+<hr>
+<pre><code>BigFive = BigFive.dropna()
+BigFive.info(memory_usage='Deep')
+</code></pre>
+<hr>
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+Int64Index: 1012050 entries, 0 to 1015340
+Data columns (total 58 columns):
+#   Column                 Non-Null Count    Dtype         
+---  ------                 --------------    -----         
+0   EXT1                   1012050 non-null  float64       
+1   EXT2                   1012050 non-null  float64       
+2   EXT3                   1012050 non-null  float64       
+3   EXT4                   1012050 non-null  float64       
+4   EXT5                   1012050 non-null  float64       
+5   EXT6                   1012050 non-null  float64       
+6   EXT7                   1012050 non-null  float64       
+7   EXT8                   1012050 non-null  float64       
+8   EXT9                   1012050 non-null  float64       
+9   EXT10                  1012050 non-null  float64       
+10  EST1                   1012050 non-null  float64       
+11  EST2                   1012050 non-null  float64       
+12  EST3                   1012050 non-null  float64       
+13  EST4                   1012050 non-null  float64       
+14  EST5                   1012050 non-null  float64       
+15  EST6                   1012050 non-null  float64       
+16  EST7                   1012050 non-null  float64       
+17  EST8                   1012050 non-null  float64       
+18  EST9                   1012050 non-null  float64       
+19  EST10                  1012050 non-null  float64       
+20  AGR1                   1012050 non-null  float64       
+21  AGR2                   1012050 non-null  float64       
+22  AGR3                   1012050 non-null  float64       
+23  AGR4                   1012050 non-null  float64       
+24  AGR5                   1012050 non-null  float64       
+25  AGR6                   1012050 non-null  float64       
+26  AGR7                   1012050 non-null  float64       
+27  AGR8                   1012050 non-null  float64       
+28  AGR9                   1012050 non-null  float64       
+29  AGR10                  1012050 non-null  float64       
+30  CSN1                   1012050 non-null  float64       
+31  CSN2                   1012050 non-null  float64       
+32  CSN3                   1012050 non-null  float64       
+33  CSN4                   1012050 non-null  float64       
+34  CSN5                   1012050 non-null  float64       
+35  CSN6                   1012050 non-null  float64       
+36  CSN7                   1012050 non-null  float64       
+37  CSN8                   1012050 non-null  float64       
+38  CSN9                   1012050 non-null  float64       
+39  CSN10                  1012050 non-null  float64       
+40  OPN1                   1012050 non-null  float64       
+41  OPN2                   1012050 non-null  float64       
+42  OPN3                   1012050 non-null  float64       
+43  OPN4                   1012050 non-null  float64       
+44  OPN5                   1012050 non-null  float64       
+45  OPN6                   1012050 non-null  float64       
+46  OPN7                   1012050 non-null  float64       
+47  OPN8                   1012050 non-null  float64       
+48  OPN9                   1012050 non-null  float64       
+49  OPN10                  1012050 non-null  float64       
+50  dateload               1012050 non-null  datetime64[ns]
+51  introelapse            1012050 non-null  float64       
+52  testelapse             1012050 non-null  float64       
+53  endelapse              1012050 non-null  int64         
+54  IPC                    1012050 non-null  int64         
+55  country                1012050 non-null  category      
+56  lat_appx_lots_of_err   1012050 non-null  category      
+57  long_appx_lots_of_err  1012050 non-null  category      
+dtypes: category(3), datetime64[ns](1), float64(52), int64(2)
+memory usage: 441.2 MB
+</code></pre>
+<h3 id="34-choosing-rows-where-ipc--1">3.4. Choosing rows where IPC != 1</h3>
+<pre><code>BigFive.IPC != 1
+
+0          False
+1          False
+2          False
+3          False
+4           True
+        ...  
+1015336     True
+1015337    False
+1015338     True
+1015339    False
+1015340    False
+Name: IPC, Length: 1012050, dtype: bool
+</code></pre>
+<hr>
+<pre><code>IPC_index = BigFive[BigFive.IPC != 1].index
+BigFive.drop(IPC_index , inplace=True)
+
+BigFive.IPC != 1
+
+0          False
+1          False
+2          False
+3          False
+5          False
+        ...  
+1015334    False
+1015335    False
+1015337    False
+1015339    False
+1015340    False
+Name: IPC, Length: 694886, dtype: bool
+</code></pre>
+<hr>
+<pre><code>BigFive.drop(['IPC'], 1, inplace=True)
+BigFive.head(3)
+</code></pre>
+<hr>
+<pre><code>        EXT1 	EXT2 	EXT3 	EXT4 	EXT5 	EXT6 	EXT7 	EXT8 	EXT9 	EXT10 	EST1 	EST2 	EST3 	EST4 	EST5 	EST6 	EST7 	EST8 	EST9 	EST10 	AGR1 	AGR2 	AGR3 	AGR4 	AGR5 	AGR6 	AGR7 	AGR8 	AGR9 	AGR10 	CSN1 	CSN2 	CSN3 	CSN4 	CSN5 	CSN6 	CSN7 	CSN8 	CSN9 	CSN10 	OPN1 	OPN2 	OPN3 	OPN4 	OPN5 	OPN6 	OPN7 	OPN8 	OPN9 	OPN10 	dateload 	    introelapse 	testelapse 	endelapse 	country 	lat_appx_lots_of_err 	long_appx_lots_of_err
+0 	4.0 	1.0 	5.0 	2.0 	5.0 	1.0 	5.0 	2.0 	4.0 	1.0 	1.0 	4.0 	4.0 	2.0 	2.0 	2.0 	2.0 	2.0 	3.0 	2.0 	2.0 	5.0 	2.0 	4.0 	2.0 	3.0 	2.0 	4.0 	3.0 	4.0 	3.0 	4.0 	3.0 	2.0 	2.0 	4.0 	4.0 	2.0 	4.0 	4.0 	5.0 	1.0 	4.0 	1.0 	4.0 	1.0 	5.0 	3.0 	4.0 	5.0 	2016-03-03 02:01:01 	 9.0 	            234.0 	    6 	        GB 	            51.5448 	          0.1991
+1 	3.0 	5.0 	3.0 	4.0 	3.0 	3.0 	2.0 	5.0 	1.0 	5.0 	2.0 	3.0 	4.0 	1.0 	3.0 	1.0 	2.0 	1.0 	3.0 	1.0 	1.0 	4.0 	1.0 	5.0 	1.0 	5.0 	3.0 	4.0 	5.0 	3.0 	3.0 	2.0 	5.0 	3.0 	3.0 	1.0 	3.0 	3.0 	5.0 	3.0 	1.0 	2.0 	4.0 	2.0 	3.0 	1.0 	4.0 	2.0 	5.0 	3.0 	2016-03-03 02:01:20 	12.0 	            179.0 	    11 	        MY 	             3.1698 	        101.706
+2 	2.0 	3.0 	4.0 	4.0 	3.0 	2.0 	1.0 	3.0 	2.0 	5.0 	4.0 	4.0 	4.0 	2.0 	2.0 	2.0 	2.0 	2.0 	1.0 	3.0 	1.0 	4.0 	1.0 	4.0 	2.0 	4.0 	1.0 	4.0 	4.0 	3.0 	4.0 	2.0 	2.0 	2.0 	3.0 	3.0 	4.0 	2.0 	4.0 	2.0 	5.0 	1.0 	2.0 	1.0 	4.0 	2.0 	5.0 	3.0 	4.0 	4.0 	2016-03-03 02:01:56 	 3.0 	            186.0 	    7 	        GB 	            54.9119 	         -1.3833
+</code></pre>
+<h3 id="35-are-there-any-null-values">3.5. Are there any null values?</h3>
+<pre><code>if0_df = BigFive.loc[(BigFive['introelapse']==0) | (BigFive['testelapse']==0 )| (BigFive['endelapse']==0) ]
+len(if0_df)
+
+21
+</code></pre>
+<hr>
+<pre><code>if0_df.head(3)
+</code></pre>
+<p>Result:</p>
+<pre><code>        EXT1 	EXT2 	EXT3 	EXT4 	EXT5 	EXT6 	EXT7 	EXT8 	EXT9 	EXT10 	EST1 	EST2 	EST3 	EST4 	EST5 	EST6 	EST7 	EST8 	EST9 	EST10 	AGR1 	AGR2 	AGR3 	AGR4 	AGR5 	AGR6 	AGR7 	AGR8 	AGR9 	AGR10 	CSN1 	CSN2 	CSN3 	CSN4 	CSN5 	CSN6 	CSN7 	CSN8 	CSN9 	CSN10 	OPN1 	OPN2 	OPN3 	OPN4 	OPN5 	OPN6 	OPN7 	OPN8 	OPN9 	OPN10 	dateload 	    introelapse 	testelapse 	endelapse 	country 	lat_appx_lots_of_err 	long_appx_lots_of_err
+46867 	4.0 	3.0 	5.0 	1.0 	5.0 	4.0 	5.0 	5.0 	1.0 	1.0 	2.0 	3.0 	1.0 	3.0 	3.0 	2.0 	3.0 	3.0 	2.0 	1.0 	5.0 	1.0 	3.0 	1.0 	3.0 	1.0 	3.0 	3.0 	2.0 	1.0 	2.0 	5.0 	3.0 	1.0 	5.0 	4.0 	3.0 	3.0 	3.0 	1.0 	2.0 	5.0 	1.0 	5.0 	3.0 	5.0 	3.0 	1.0 	1.0 	1.0 	2016-04-08 12:51:17 	0.0 	            158.0 	    14 	        US 	            37.526 	            -122.3558
+50094 	1.0 	5.0 	2.0 	5.0 	1.0 	5.0 	1.0 	5.0 	1.0 	5.0 	3.0 	3.0 	3.0 	2.0 	1.0 	2.0 	1.0 	2.0 	4.0 	1.0 	4.0 	3.0 	2.0 	2.0 	3.0 	3.0 	5.0 	3.0 	1.0 	3.0 	4.0 	1.0 	5.0 	1.0 	2.0 	2.0 	5.0 	2.0 	3.0 	5.0 	5.0 	1.0 	5.0 	1.0 	5.0 	1.0 	5.0 	4.0 	5.0 	5.0 	2016-04-09 21:18:15 	0.0 	            208.0 	    12 	        US 	            37.526 	            -122.3558
+57062 	3.0 	1.0 	5.0 	2.0 	4.0 	4.0 	5.0 	4.0 	3.0 	4.0 	1.0 	5.0 	1.0 	0.0 	2.0 	2.0 	1.0 	1.0 	3.0 	1.0 	1.0 	5.0 	1.0 	5.0 	5.0 	5.0 	1.0 	5.0 	4.0 	4.0 	5.0 	1.0 	5.0 	1.0 	5.0 	2.0 	5.0 	2.0 	5.0 	5.0 	5.0 	3.0 	3.0 	3.0 	4.0 	2.0 	5.0 	3.0 	4.0 	5.0 	2016-04-14 04:15:07 	0.0 	            872.0 	    31 	        NO 	            59.95 	              10.75
+</code></pre>
+<hr>
+<pre><code># Czy występują jakieś wartości 0 w introelapse?
+BigFive.loc[(BigFive['introelapse']==0)]
+len(BigFive.loc[(BigFive['introelapse']==0)])
+
+21
+
+# Czy występują jakieś wartości 0 w kolumnie lat_appx_lots_of_err i long_appx_lots_of_err?
+BigFive.loc[(BigFive['lat_appx_lots_of_err']==0) | (BigFive['long_appx_lots_of_err']==0 )]
+len(BigFive.loc[(BigFive['lat_appx_lots_of_err']==0) | (BigFive['long_appx_lots_of_err']==0 )])
+
+0
+
+BigFive.loc[ (BigFive['dateload']==0) ]
+len(BigFive.loc[ (BigFive['dateload']==0) ]) 
+
+0
+</code></pre>
+<hr>
+<pre><code>for i, col_name in enumerate(BigFive.columns[:-7]):
+BigFive.loc[ (BigFive[col_name]==0) ]
+print(f'{col_name}: {len(BigFive.loc[ (BigFive[col_name]==0) ])} ')
+</code></pre>
+<hr>
+<pre><code>EXT1: 2247 
+EXT2: 3782 
+EXT3: 3763 
+EXT4: 4302 
+EXT5: 6277 
+EXT6: 3904 
+EXT7: 5240 
+EXT8: 3995 
+EXT9: 4386 
+EXT10: 3967 
+EST1: 4720 
+EST2: 6300 
+EST3: 3410 
+EST4: 6932 
+EST5: 3811 
+EST6: 7164 
+EST7: 3986 
+EST8: 4749 
+EST9: 4020 
+EST10: 4574 
+AGR1: 3072 
+AGR2: 5985 
+AGR3: 3083 
+AGR4: 4821 
+AGR5: 4087 
+AGR6: 6772 
+AGR7: 3953 
+AGR8: 5473 
+AGR9: 3815 
+AGR10: 5349 
+CSN1: 7559 
+CSN2: 4078 
+CSN3: 3762 
+CSN4: 4341 
+CSN5: 4980 
+CSN6: 4168 
+CSN7: 4624 
+CSN8: 5189 
+CSN9: 4800 
+CSN10: 5486 
+OPN1: 5753 
+OPN2: 3653 
+OPN3: 4819 
+OPN4: 4160 
+OPN5: 4916 
+OPN6: 5198 
+OPN7: 5389 
+OPN8: 5203 
+OPN9: 4822 
+OPN10: 3976 
+</code></pre>
+<hr>
+<pre><code>quest_codes = BigFive.columns[:-7]
+quest_codes
+
+Index(['EXT1', 'EXT2', 'EXT3', 'EXT4', 'EXT5', 'EXT6', 'EXT7', 'EXT8', 'EXT9',
+    'EXT10', 'EST1', 'EST2', 'EST3', 'EST4', 'EST5', 'EST6', 'EST7', 'EST8',
+    'EST9', 'EST10', 'AGR1', 'AGR2', 'AGR3', 'AGR4', 'AGR5', 'AGR6', 'AGR7',
+    'AGR8', 'AGR9', 'AGR10', 'CSN1', 'CSN2', 'CSN3', 'CSN4', 'CSN5', 'CSN6',
+    'CSN7', 'CSN8', 'CSN9', 'CSN10', 'OPN1', 'OPN2', 'OPN3', 'OPN4', 'OPN5',
+    'OPN6', 'OPN7', 'OPN8', 'OPN9', 'OPN10'],
+    dtype='object')
+</code></pre>
+<hr>
+<pre><code># Ile jest wierszy, gdzie dla wszystkich pytań jest wartość 0
+IndexZeroQuestion = BigFive.loc[
+                ( BigFive['EXT1']  == 0 ) &amp;
+                ( BigFive['EXT2']  == 0 ) &amp;
+                ( BigFive['EXT3']  == 0 ) &amp; 
+                ( BigFive['EXT4']  == 0 ) &amp;
+                ( BigFive['EXT5']  == 0 ) &amp;
+                ( BigFive['EXT6']  == 0 ) &amp;
+                ( BigFive['EXT7']  == 0 ) &amp; 
+                ( BigFive['EXT8']  == 0 ) &amp;
+                ( BigFive['EXT9']  == 0 ) &amp;
+                ( BigFive['EXT10'] == 0 ) &amp;
+
+                ( BigFive['EST1']  == 0 ) &amp;
+                ( BigFive['EST2']  == 0 ) &amp;
+                ( BigFive['EST3']  == 0 ) &amp; 
+                ( BigFive['EST4']  == 0 ) &amp;
+                ( BigFive['EST5']  == 0 ) &amp;
+                ( BigFive['EST6']  == 0 ) &amp;
+                ( BigFive['EST7']  == 0 ) &amp; 
+                ( BigFive['EST8']  == 0 ) &amp;
+                ( BigFive['EST9']  == 0 ) &amp;
+                ( BigFive['EST10'] == 0 ) &amp;
+                
+                ( BigFive['AGR1']  == 0 ) &amp;
+                ( BigFive['AGR2']  == 0 ) &amp;
+                ( BigFive['AGR3']  == 0 ) &amp; 
+                ( BigFive['AGR4']  == 0 ) &amp;
+                ( BigFive['AGR5']  == 0 ) &amp;
+                ( BigFive['AGR6']  == 0 ) &amp;
+                ( BigFive['AGR7']  == 0 ) &amp; 
+                ( BigFive['AGR8']  == 0 ) &amp;
+                ( BigFive['AGR9']  == 0 ) &amp;
+                ( BigFive['AGR10'] == 0 ) &amp;
+
+                ( BigFive['CSN1']  == 0 ) &amp;
+                ( BigFive['CSN2']  == 0 ) &amp;
+                ( BigFive['CSN3']  == 0 ) &amp; 
+                ( BigFive['CSN4']  == 0 ) &amp;
+                ( BigFive['CSN5']  == 0 ) &amp;
+                ( BigFive['CSN6']  == 0 ) &amp;
+                ( BigFive['CSN7']  == 0 ) &amp; 
+                ( BigFive['CSN8']  == 0 ) &amp;
+                ( BigFive['CSN9']  == 0 ) &amp;
+                ( BigFive['CSN10'] == 0 ) &amp;
+
+                ( BigFive['OPN1']  == 0 ) &amp;
+                ( BigFive['OPN2']  == 0 ) &amp;
+                ( BigFive['OPN3']  == 0 ) &amp; 
+                ( BigFive['OPN4']  == 0 ) &amp;
+                ( BigFive['OPN5']  == 0 ) &amp;
+                ( BigFive['OPN6']  == 0 ) &amp;
+                ( BigFive['OPN7']  == 0 ) &amp; 
+                ( BigFive['OPN8']  == 0 ) &amp;
+                ( BigFive['OPN9']  == 0 ) &amp;
+                ( BigFive['OPN10'] == 0 ) 
+            ].index 
+
+len(IndexZeroQuestion)
+
+1192
+</code></pre>
+<hr>
+<pre><code>BigFive.drop(IndexZeroQuestion, inplace=True)
+BigFive.head()
+</code></pre>
+<hr>
+<pre><code>        EXT1 	EXT2 	EXT3 	EXT4 	EXT5 	EXT6 	EXT7 	EXT8 	EXT9 	EXT10 	EST1 	EST2 	EST3 	EST4 	EST5 	EST6 	EST7 	EST8 	EST9 	EST10 	AGR1 	AGR2 	AGR3 	AGR4 	AGR5 	AGR6 	AGR7 	AGR8 	AGR9 	AGR10 	CSN1 	CSN2 	CSN3 	CSN4 	CSN5 	CSN6 	CSN7 	CSN8 	CSN9 	CSN10 	OPN1 	OPN2 	OPN3 	OPN4 	OPN5 	OPN6 	OPN7 	OPN8 	OPN9 	OPN10 	dateload 	    introelapse 	testelapse 	endelapse 	country 	lat_appx_lots_of_err 	long_appx_lots_of_err
+0 	4.0 	1.0 	5.0 	2.0 	5.0 	1.0 	5.0 	2.0 	4.0 	1.0 	1.0 	4.0 	4.0 	2.0 	2.0 	2.0 	2.0 	2.0 	3.0 	2.0 	2.0 	5.0 	2.0 	4.0 	2.0 	3.0 	2.0 	4.0 	3.0 	4.0 	3.0 	4.0 	3.0 	2.0 	2.0 	4.0 	4.0 	2.0 	4.0 	4.0 	5.0 	1.0 	4.0 	1.0 	4.0 	1.0 	5.0 	3.0 	4.0 	5.0 	2016-03-03 02:01:01 	  9.0 	            234.0 	    6 	           GB 	            51.5448 	             0.1991
+1 	3.0 	5.0 	3.0 	4.0 	3.0 	3.0 	2.0 	5.0 	1.0 	5.0 	2.0 	3.0 	4.0 	1.0 	3.0 	1.0 	2.0 	1.0 	3.0 	1.0 	1.0 	4.0 	1.0 	5.0 	1.0 	5.0 	3.0 	4.0 	5.0 	3.0 	3.0 	2.0 	5.0 	3.0 	3.0 	1.0 	3.0 	3.0 	5.0 	3.0 	1.0 	2.0 	4.0 	2.0 	3.0 	1.0 	4.0 	2.0 	5.0 	3.0 	2016-03-03 02:01:20 	 12.0 	            179.0 	    11 	           MY 	            3.1698 	           101.706
+2 	2.0 	3.0 	4.0 	4.0 	3.0 	2.0 	1.0 	3.0 	2.0 	5.0 	4.0 	4.0 	4.0 	2.0 	2.0 	2.0 	2.0 	2.0 	1.0 	3.0 	1.0 	4.0 	1.0 	4.0 	2.0 	4.0 	1.0 	4.0 	4.0 	3.0 	4.0 	2.0 	2.0 	2.0 	3.0 	3.0 	4.0 	2.0 	4.0 	2.0 	5.0 	1.0 	2.0 	1.0 	4.0 	2.0 	5.0 	3.0 	4.0 	4.0 	2016-03-03 02:01:56 	  3.0 	            186.0 	    7 	           GB 	            54.9119 	            -1.3833
+3 	2.0 	2.0 	2.0 	3.0 	4.0 	2.0 	2.0 	4.0 	1.0 	4.0 	3.0 	3.0 	3.0 	2.0 	3.0 	2.0 	2.0 	2.0 	4.0 	3.0 	2.0 	4.0 	3.0 	4.0 	2.0 	4.0 	2.0 	4.0 	3.0 	4.0 	2.0 	4.0 	4.0 	4.0 	1.0 	2.0 	2.0 	3.0 	1.0 	4.0 	4.0 	2.0 	5.0 	2.0 	3.0 	1.0 	4.0 	4.0 	3.0 	3.0 	2016-03-03 02:02:02 	186.0 	            219.0 	    7 	           GB 	            51.75 	            -1.25
+5 	3.0 	3.0 	4.0 	2.0 	4.0 	2.0 	2.0 	3.0 	3.0 	4.0 	3.0 	4.0 	3.0 	2.0 	2.0 	1.0 	2.0 	1.0 	2.0 	2.0 	2.0 	3.0 	1.0 	4.0 	2.0 	3.0 	2.0 	3.0 	4.0 	4.0 	3.0 	2.0 	4.0 	1.0 	3.0 	2.0 	4.0 	3.0 	4.0 	3.0 	5.0 	1.0 	5.0 	1.0 	3.0 	1.0 	5.0 	4.0 	5.0 	2.0 	2016-03-03 02:03:12 	  4.0 	            196.0 	    3 	           SE 	            59.3333 	            18.05
+</code></pre>
+<h3 id="36-renaming-column-country-to-alpha2_code">3.6. Renaming column &lsquo;country&rsquo; to &lsquo;alpha2_code&rsquo;</h3>
+<pre><code>BigFive = BigFive.rename(columns={'country' : 'alpha2_code'})
+BigFive.head()
+</code></pre>
+<hr>
+<pre><code>        EXT1 	EXT2 	EXT3 	EXT4 	EXT5 	EXT6 	EXT7 	EXT8 	EXT9 	EXT10 	EST1 	EST2 	EST3 	EST4 	EST5 	EST6 	EST7 	EST8 	EST9 	EST10 	AGR1 	AGR2 	AGR3 	AGR4 	AGR5 	AGR6 	AGR7 	AGR8 	AGR9 	AGR10 	CSN1 	CSN2 	CSN3 	CSN4 	CSN5 	CSN6 	CSN7 	CSN8 	CSN9 	CSN10 	OPN1 	OPN2 	OPN3 	OPN4 	OPN5 	OPN6 	OPN7 	OPN8 	OPN9 	OPN10 	dateload 	        introelapse 	testelapse 	endelapse 	alpha2_code 	lat_appx_lots_of_err 	long_appx_lots_of_err
+0 	4.0 	1.0 	5.0 	2.0 	5.0 	1.0 	5.0 	2.0 	4.0 	1.0 	1.0 	4.0 	4.0 	2.0 	2.0 	2.0 	2.0 	2.0 	3.0 	2.0 	2.0 	5.0 	2.0 	4.0 	2.0 	3.0 	2.0 	4.0 	3.0 	4.0 	3.0 	4.0 	3.0 	2.0 	2.0 	4.0 	4.0 	2.0 	4.0 	4.0 	5.0 	1.0 	4.0 	1.0 	4.0 	1.0 	5.0 	3.0 	4.0 	5.0 	2016-03-03 02:01:01 	    9.0 	    234.0 	    6 	            GB 	                51.5448 	         0.1991
+1 	3.0 	5.0 	3.0 	4.0 	3.0 	3.0 	2.0 	5.0 	1.0 	5.0 	2.0 	3.0 	4.0 	1.0 	3.0 	1.0 	2.0 	1.0 	3.0 	1.0 	1.0 	4.0 	1.0 	5.0 	1.0 	5.0 	3.0 	4.0 	5.0 	3.0 	3.0 	2.0 	5.0 	3.0 	3.0 	1.0 	3.0 	3.0 	5.0 	3.0 	1.0 	2.0 	4.0 	2.0 	3.0 	1.0 	4.0 	2.0 	5.0 	3.0 	2016-03-03 02:01:20 	   12.0 	    179.0 	    11 	            MY 	                 3.1698 	       101.706
+2 	2.0 	3.0 	4.0 	4.0 	3.0 	2.0 	1.0 	3.0 	2.0 	5.0 	4.0 	4.0 	4.0 	2.0 	2.0 	2.0 	2.0 	2.0 	1.0 	3.0 	1.0 	4.0 	1.0 	4.0 	2.0 	4.0 	1.0 	4.0 	4.0 	3.0 	4.0 	2.0 	2.0 	2.0 	3.0 	3.0 	4.0 	2.0 	4.0 	2.0 	5.0 	1.0 	2.0 	1.0 	4.0 	2.0 	5.0 	3.0 	4.0 	4.0 	2016-03-03 02:01:56 	    3.0 	    186.0 	    7 	            GB 	                54.9119 	        -1.3833
+3 	2.0 	2.0 	2.0 	3.0 	4.0 	2.0 	2.0 	4.0 	1.0 	4.0 	3.0 	3.0 	3.0 	2.0 	3.0 	2.0 	2.0 	2.0 	4.0 	3.0 	2.0 	4.0 	3.0 	4.0 	2.0 	4.0 	2.0 	4.0 	3.0 	4.0 	2.0 	4.0 	4.0 	4.0 	1.0 	2.0 	2.0 	3.0 	1.0 	4.0 	4.0 	2.0 	5.0 	2.0 	3.0 	1.0 	4.0 	4.0 	3.0 	3.0 	2016-03-03 02:02:02 	  186.0 	    219.0 	    7 	            GB 	                51.75 	                -1.25
+5 	3.0 	3.0 	4.0 	2.0 	4.0 	2.0 	2.0 	3.0 	3.0 	4.0 	3.0 	4.0 	3.0 	2.0 	2.0 	1.0 	2.0 	1.0 	2.0 	2.0 	2.0 	3.0 	1.0 	4.0 	2.0 	3.0 	2.0 	3.0 	4.0 	4.0 	3.0 	2.0 	4.0 	1.0 	3.0 	2.0 	4.0 	3.0 	4.0 	3.0 	5.0 	1.0 	5.0 	1.0 	3.0 	1.0 	5.0 	4.0 	5.0 	2.0 	2016-03-03 02:03:12 	    4.0 	    196.0 	    3 	            SE 	                59.3333 	        18.05
+</code></pre>
+<hr>
+<pre><code>BigFive['alpha2_code'].unique()
+
+['GB', 'MY', 'SE', 'US', 'FI', ..., 'DJ', 'ML', 'GN', 'AS', 'SH']
+Length: 221
+Categories (221, object): ['GB', 'MY', 'SE', 'US', ..., 'ML', 'GN', 'AS', 'SH']
+</code></pre>
+<hr>
+<pre><code># Według normy ISO 3166-1 alfa-2 kod dla każdego panstwa składa się z dwóch liter,
+# zatem zobaczymy, czy występuje jakiś składający się z trzech lub więcej znaków?
+
+for code in BigFive['alpha2_code'].unique():
+if (len(code) &gt; 3):
+    print(code)
+
+NONE
+</code></pre>
+<hr>
+<pre><code># Ile jest takich wierszy z zawartością NONE ?
+len(BigFive.loc[(BigFive['alpha2_code']=='NONE')])
+
+9580
+
+len(BigFive['alpha2_code'])
+
+693694
+</code></pre>
+<hr>
+<pre><code># Decoding of country names 
+def check_country_code(df):
+if len(df['alpha2_code']) == 2:
+    if df['alpha2_code'] == 'XK':
+    return 'Kosovo'
+    else:
+    return  pc.country_alpha2_to_country_name( country_2_code= df['alpha2_code'])   
+else:
+    return 'NONE'
+
+BigFive['country'] = BigFive.apply( check_country_code, axis=1)   
+
+BigFive.head(3)
+</code></pre>
+<hr>
+<pre><code>        EXT1 	EXT2 	EXT3 	EXT4 	EXT5 	EXT6 	EXT7 	EXT8 	EXT9 	EXT10 	EST1 	EST2 	EST3 	EST4 	EST5 	EST6 	EST7 	EST8 	EST9 	EST10 	AGR1 	AGR2 	AGR3 	AGR4 	AGR5 	AGR6 	AGR7 	AGR8 	AGR9 	AGR10 	CSN1 	CSN2 	CSN3 	CSN4 	CSN5 	CSN6 	CSN7 	CSN8 	CSN9 	CSN10 	OPN1 	OPN2 	OPN3 	OPN4 	OPN5 	OPN6 	OPN7 	OPN8 	OPN9 	OPN10 	dateload 	    introelapse 	testelapse 	endelapse 	alpha2_code 	lat_appx_lots_of_err 	long_appx_lots_of_err 	country
+0 	4.0 	1.0 	5.0 	2.0 	5.0 	1.0 	5.0 	2.0 	4.0 	1.0 	1.0 	4.0 	4.0 	2.0 	2.0 	2.0 	2.0 	2.0 	3.0 	2.0 	2.0 	5.0 	2.0 	4.0 	2.0 	3.0 	2.0 	4.0 	3.0 	4.0 	3.0 	4.0 	3.0 	2.0 	2.0 	4.0 	4.0 	2.0 	4.0 	4.0 	5.0 	1.0 	4.0 	1.0 	4.0 	1.0 	5.0 	3.0 	4.0 	5.0 	2016-03-03 02:01:01 	 9.0 	        234.0 	        6 	        GB 	            51.5448 	            0.1991 	     United Kingdom
+1 	3.0 	5.0 	3.0 	4.0 	3.0 	3.0 	2.0 	5.0 	1.0 	5.0 	2.0 	3.0 	4.0 	1.0 	3.0 	1.0 	2.0 	1.0 	3.0 	1.0 	1.0 	4.0 	1.0 	5.0 	1.0 	5.0 	3.0 	4.0 	5.0 	3.0 	3.0 	2.0 	5.0 	3.0 	3.0 	1.0 	3.0 	3.0 	5.0 	3.0 	1.0 	2.0 	4.0 	2.0 	3.0 	1.0 	4.0 	2.0 	5.0 	3.0 	2016-03-03 02:01:20 	12.0 	        179.0 	        11 	        MY 	             3.1698 	          101.706 	     Malaysia
+2 	2.0 	3.0 	4.0 	4.0 	3.0 	2.0 	1.0 	3.0 	2.0 	5.0 	4.0 	4.0 	4.0 	2.0 	2.0 	2.0 	2.0 	2.0 	1.0 	3.0 	1.0 	4.0 	1.0 	4.0 	2.0 	4.0 	1.0 	4.0 	4.0 	3.0 	4.0 	2.0 	2.0 	2.0 	3.0 	3.0 	4.0 	2.0 	4.0 	2.0 	5.0 	1.0 	2.0 	1.0 	4.0 	2.0 	5.0 	3.0 	4.0 	4.0 	2016-03-03 02:01:56 	 3.0 	        186.0 	        7 	        GB 	            54.9119 	           -1.3833 	     United Kingdom
+</code></pre>
+
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/hugo-toha/hugo-toha.github.io/edit/master/content/projects/BigFive/BigFive_data_prepare.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/projects/bigfive/bigfive_col_names/" class="btn btn-outline-info">
+          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+          <br />
+          <span>Big Five Personality test - data analysis</span>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/projects/bigfive/bigfive_modules/" class="btn btn-outline-info">
+            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
+            <br />
+            <span>Big Five Personality test - data analysis</span>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#3-data-preparation">3. <strong>Data preparation:</strong></a>
+      <ul>
+        <li><a href="#31-data-presentation">3.1. Data presentation</a></li>
+        <li><a href="#32-changing-the-type-from-object-to-type-category-and-datetime">3.2. Changing the type from object to type category and datetime</a></li>
+        <li><a href="#33-missing-values">3.3. Missing values</a></li>
+        <li><a href="#34-choosing-rows-where-ipc--1">3.4. Choosing rows where IPC != 1</a></li>
+        <li><a href="#35-are-there-any-null-values">3.5. Are there any null values?</a></li>
+        <li><a href="#36-renaming-column-country-to-alpha2_code">3.6. Renaming column &lsquo;country&rsquo; to &lsquo;alpha2_code&rsquo;</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">Armin Derencz</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#projects">Projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent projects</a>
+              </li>
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>armin.derencz@gmail.com</span></li>
+          
+        </ul>
+      </div>
+      
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/assets/images/inverted-logo.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/assets/images/hugo-logo-wide.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/assets/js/jquery-3.4.1.min.js"></script>
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+
+<script src="/assets/js/navbar.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/assets/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>

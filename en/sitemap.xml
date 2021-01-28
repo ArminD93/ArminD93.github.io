@@ -18,22 +18,7 @@
   </url>
   
   <url>
-    <loc>https://armind93.github.io/projects/bigfive/bigfive_col_names/</loc>
-    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://armind93.github.io/projects/bigfive/project_bigfive/</loc>
-    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://armind93.github.io/projects/bigfive/bigfive_data_prepare/</loc>
-    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://armind93.github.io/projects/bigfive/bigfive_modules/</loc>
+    <loc>https://armind93.github.io/projects/bigfive/bigfive_about/</loc>
     <lastmod>2020-06-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -43,17 +28,17 @@
   </url>
   
   <url>
-    <loc>https://armind93.github.io/projects/imageclassproject/project_imageclass/</loc>
+    <loc>https://armind93.github.io/projects/imageclassproject/project_imageclass_about/</loc>
     <lastmod>2020-04-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://armind93.github.io/projects/kepler/project_kepler/</loc>
+    <loc>https://armind93.github.io/projects/kepler/project_kepler_about/</loc>
     <lastmod>2020-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://armind93.github.io/projects/worldhappiness/project_worldhappiness/</loc>
+    <loc>https://armind93.github.io/projects/worldhappiness/project_worldhappiness_about/</loc>
     <lastmod>2020-02-19T00:00:00+00:00</lastmod>
   </url>
   
@@ -77,6 +62,22 @@
   </url>
   
   <url>
+    <loc>https://armind93.github.io/projects/bigfive/bigfive_col_names/</loc>
+  </url>
+  
+  <url>
+    <loc>https://armind93.github.io/projects/bigfive/project_bigfive_data_analysis/</loc>
+  </url>
+  
+  <url>
+    <loc>https://armind93.github.io/projects/bigfive/bigfive_data_prepare/</loc>
+  </url>
+  
+  <url>
+    <loc>https://armind93.github.io/projects/bigfive/bigfive_modules/</loc>
+  </url>
+  
+  <url>
     <loc>https://armind93.github.io/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -91,6 +92,38 @@
   </url>
   
   <url>
+    <loc>https://armind93.github.io/projects/imageclassproject/project_imageclass_data_preparing/</loc>
+  </url>
+  
+  <url>
+    <loc>https://armind93.github.io/projects/imageclassproject/project_imageclass_modules/</loc>
+  </url>
+  
+  <url>
+    <loc>https://armind93.github.io/projects/imageclassproject/project_imageclass_neural_networks/</loc>
+  </url>
+  
+  <url>
+    <loc>https://armind93.github.io/projects/kepler/project_kepler_col_names/</loc>
+  </url>
+  
+  <url>
+    <loc>https://armind93.github.io/projects/kepler/project_kepler_data_analysis/</loc>
+  </url>
+  
+  <url>
+    <loc>https://armind93.github.io/projects/kepler/project_kepler_data_prepare/</loc>
+  </url>
+  
+  <url>
+    <loc>https://armind93.github.io/projects/kepler/project_kepler_modules/</loc>
+  </url>
+  
+  <url>
+    <loc>https://armind93.github.io/projects/kepler/project_kepler_machine_learning/</loc>
+  </url>
+  
+  <url>
     <loc>https://armind93.github.io/tags/</loc>
     <xhtml:link
                 rel="alternate"
@@ -102,6 +135,18 @@
                 hreflang="en"
                 href="https://armind93.github.io/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://armind93.github.io/projects/worldhappiness/project_worldhappiness_data_analysis/</loc>
+  </url>
+  
+  <url>
+    <loc>https://armind93.github.io/projects/worldhappiness/project_worldhappiness_data_presentation/</loc>
+  </url>
+  
+  <url>
+    <loc>https://armind93.github.io/projects/worldhappiness/project_worldhappiness_machine_learning/</loc>
   </url>
   
 </urlset>

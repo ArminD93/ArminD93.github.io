@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Big Five Personality test - imported modules</title>
+    <title>Kepler Exoplanet Search Results - data analysis</title>
     <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -36,7 +36,7 @@
 <link rel="stylesheet" href="/assets/css/style.css"/>
 
     
-<meta name="description" content="Big Five Personality test - imported modules" />
+<meta name="description" content="Kepler Exoplanet Search Results - data analysis" />
 <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
@@ -128,15 +128,12 @@ if (!doNotTrack) {
   
   
   
-    
-    
-  
   
     
     <li>
-      <i class="fas fa-minus-circle"></i><a class="active" href="">Big Five Personality test</a>
+      <i class="fas fa-plus-circle"></i><a class="" href="">Big Five Personality test</a>
       
-      <ul class="active">
+      <ul class="">
         
   
   
@@ -169,12 +166,9 @@ if (!doNotTrack) {
   
   
   
-    
-    
-  
   
     
-    <li><a class="active" href="/projects/bigfive/bigfive_modules/">Imported modules</a></li>
+    <li><a class="" href="/projects/bigfive/bigfive_modules/">Imported modules</a></li>
   
 
   
@@ -247,12 +241,15 @@ if (!doNotTrack) {
   
   
   
+    
+    
+  
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="">Kepler Exoplanet Search Results</a>
+      <i class="fas fa-minus-circle"></i><a class="active" href="">Kepler Exoplanet Search Results</a>
       
-      <ul class="">
+      <ul class="active">
         
   
   
@@ -267,9 +264,12 @@ if (!doNotTrack) {
   
   
   
+    
+    
+  
   
     
-    <li><a class="" href="/projects/kepler/project_kepler_col_names/">Columns description</a></li>
+    <li><a class="active" href="/projects/kepler/project_kepler_col_names/">Columns description</a></li>
   
 
   
@@ -392,39 +392,144 @@ if (!doNotTrack) {
         </div>
 
         <div class="title">
-          <h1>Big Five Personality test - imported modules</h1>
+          <h1>Kepler Exoplanet Search Results - data analysis</h1>
         </div>
 
         <div class="post-content" id="post-content">
-          <p><a href="https://github.com/ArminD93/BigFivePersonalityTest/blob/dev/BigFivePersonality.ipynb">link to GitHub Repository</a></p>
-<h2 id="2-import-modules">2. <strong>Import modules</strong></h2>
-<pre><code>try:
-    import pandas as pd
-    import numpy as np
-    import matplotlib.pyplot as plt
-    import plotly.figure_factory as ff
-    import plotly.express as px
-    from plotly.subplots import make_subplots
-    import seaborn as sns
-    from itertools import islice
-    import pycountry_convert as pc
-    import squarify
-except:
-    !pip install pycountry_convert
-    !pip install squarify
-    import pycountry_convert as pc
-    import squarify
-
-
-%matplotlib inline
-</code></pre>
+          <h2 id="1-description-of-the-values-from-the-columns"><strong>1. Description of the values ​​from the columns</strong></h2>
+<p>The following items were presented on one page and each was rated on a five point scale using radio buttons. The order on page was was EXT1, AGR1, CSN1, EST1, OPN1, EXT2, etc.
+The scale was labeled 1=Disagree, 3=Neutral, 5=Agree</p>
+<p>5 major dimensions of personality: Openness, Conscientiousness, Agreeableness, Extraversion, and Neuroticism.</p>
+<ul>
+<li>EXT - Extraversion,</li>
+<li>EST - Neuroticism,</li>
+<li>AGR - Agreeableness (Zgodność),</li>
+<li>CSN - Conscientiousness (sumienność),</li>
+<li>OPN - Openness</li>
+</ul>
+<p><strong>KOI</strong> - Kepler Objects of Interest</p>
+<table>
+<thead>
+<tr>
+<th align="left">Oznaczenie</th>
+<th align="right">Opis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">kepid</td>
+<td align="right">Kepler Identification</td>
+</tr>
+<tr>
+<td align="left">kepoi_name</td>
+<td align="right"><strong>KOI Name</strong>. A number used to identify and track a Kepler Object of Interest (KOI). A KOI is a target identified by the Kepler Project that displays at least one transit-like sequence within Kepler time-series photometry that appears to be of astrophysical origin and initially consistent with a planetary transit hypothesis.</td>
+</tr>
+<tr>
+<td align="left">kepler_name</td>
+<td align="right"><strong>Kepler Name</strong>. Kepler number name in the form &ldquo;Kepler-N,&rdquo; plus a lower-case letter, identifying the planet. In general, these numbers are easier to remember than the corresponding KOI or KIC/KepID designations and are intended to clearly indicate a class of objects that have been confirmed or validated as planets—a step up from the planet candidate designation.</td>
+</tr>
+<tr>
+<td align="left">koi_pdisposition</td>
+<td align="right">The pipeline flag that designates the most probable physical explanation of the KOI. Typical values are FALSE POSITIVE, NOT DISPOSITIONED, and CANDIDATE. The value of this flag may change over time as the evaluation of KOIs proceeds to deeper levels of analysis using Kepler time-series pixel and light curve data, or follow-up observations. A not dispositioned value corresponds to objects for which the disposition tests have not yet been completed.</td>
+</tr>
+<tr>
+<td align="left">koi_score</td>
+<td align="right">A value between 0 and 1 that indicates the confidence in the KOI disposition. For CANDIDATEs, a higher value indicates more confidence in its disposition, while for FALSE POSITIVEs, a higher value indicates less confidence in that disposition. The value is calculated from a Monte Carlo technique such that the score&rsquo;s value is equivalent to the frction of iterations where the Robovetter yields a disposition of CANDIDATE.</td>
+</tr>
+<tr>
+<td align="left">koi_fpflag_nt</td>
+<td align="right"><strong>Not Transit-Like Flag</strong>  A KOI whose light curve is not consistent with that of a transiting planet. This includes, but is not limited to, instrumental artifacts, non-eclipsing variable stars, and spurious (very low SNR) detections.</td>
+</tr>
+<tr>
+<td align="left">koi_fpflag_ss</td>
+<td align="right"><strong>Stellar Eclipse Flag</strong> A KOI that is observed to have a significant secondary event, transit shape, or out-of-eclipse variability, which indicates that the transit-like event is most likely caused by an eclipsing binary. However, self-luminous, hot Jupiters with a visible secondary eclipse will also have this flag set, but with a disposition of PC.</td>
+</tr>
+<tr>
+<td align="left">koi_fpflag_co</td>
+<td align="right"><strong>Centroid Offset Flag</strong> The source of the signal is from a nearby star, as inferred by measuring the centroid location of the image both in and out of transit, or by the strength of the transit signal in the target&rsquo;s outer (halo) pixels as compared to the transit signal from the pixels in the optimal (or core) aperture.</td>
+</tr>
+<tr>
+<td align="left">koi_fpflag_ec</td>
+<td align="right"><strong>Ephemeris Match Indicates Contamination Flag</strong> The KOI shares the same period and epoch as another object and is judged to be the result of flux contamination in the aperture or electronic crosstalk.</td>
+</tr>
+<tr>
+<td align="left">koi_period</td>
+<td align="right"><strong>Orbital Period (days)</strong> The interval between consecutive planetary transits.</td>
+</tr>
+<tr>
+<td align="left">koi_time0bk</td>
+<td align="right"><strong>Transit Epoch (BJD - 2 454 833,0))</strong> The time corresponding to the center of the first detected transit in Barycentric Julian Day (BJD) minus a constant offset of 2,454,833.0 days. The offset corresponds to 12:00 on Jan 1, 2009 UTC.</td>
+</tr>
+<tr>
+<td align="left">koi_impact</td>
+<td align="right">The sky-projected distance between the center of the stellar disc and the center of the planet disc at conjunction, normalized by the stellar radius.</td>
+</tr>
+<tr>
+<td align="left">koi_duration</td>
+<td align="right"><strong>Transit Duration (hours)</strong> The duration of the observed transits. Duration is measured from first contact between the planet and star until last contact. Contact times are typically computed from a best-fit model produced by a Mandel-Agol (2002) model fit to a multi-quarter Kepler light curve, assuming a linear orbital ephemeris.</td>
+</tr>
+<tr>
+<td align="left">koi_depth</td>
+<td align="right"><strong>Transit Depth (parts per million)</strong> The fraction of stellar flux lost at the minimum of the planetary transit. Transit depths are typically computed from a best-fit model produced by a Mandel-Agol (2002) model fit to a multi-quarter Kepler light curve, assuming a linear orbital ephemeris.</td>
+</tr>
+<tr>
+<td align="left">koi_prad</td>
+<td align="right"><strong>Planetary Radius (Earth radii)</strong> The radius of the planet. Planetary radius is the product of the planet star radius ratio and the stellar radius.</td>
+</tr>
+<tr>
+<td align="left">koi_teq</td>
+<td align="right"><strong>Equilibrium Temperature (Kelvin)</strong> Approximation for the temperature of the planet.</td>
+</tr>
+<tr>
+<td align="left">koi_insol</td>
+<td align="right"><strong>Insolation Flux [Earth flux]</strong> Insolation flux is another way to give the equilibrium temperature. It depends on the stellar parameters (specifically the stellar radius and temperature), and on the semi-major axis of the planet. It&rsquo;s given in units relative to those measured for the Earth from the Sun.</td>
+</tr>
+<tr>
+<td align="left">koi_model_snr</td>
+<td align="right"><strong>Transit Signal-to-Noise</strong> Transit depth normalized by the mean uncertainty in the flux during the transits.</td>
+</tr>
+<tr>
+<td align="left">koi_tce_plnt_num</td>
+<td align="right">TCE Planet Number federated to the KOI.</td>
+</tr>
+<tr>
+<td align="left">koi_tce_delivname</td>
+<td align="right">TCE delivery name corresponding to the TCE data federated to the KOI.</td>
+</tr>
+<tr>
+<td align="left">koi_steff</td>
+<td align="right"><strong>Stellar Effective Temperature (Kelvin)</strong> The photospheric temperature of the star.</td>
+</tr>
+<tr>
+<td align="left">koi_slogg</td>
+<td align="right"><strong>Stellar Surface Gravity (log10(cm s-2)</strong> The base-10 logarithm of the acceleration due to gravity at the surface of the star.</td>
+</tr>
+<tr>
+<td align="left">koi_srad</td>
+<td align="right"><strong>Promieś gwiezdny</strong> Fotosferyczny promień gwiazdy.</td>
+</tr>
+<tr>
+<td align="left">ra</td>
+<td align="right"><strong>RA (deg). Rektascensja</strong>, α (łac. recta ascensio – &ldquo;wznoszenie proste&rdquo;) – jedna ze współrzędnych astronomicznych, określających położenie ciała niebieskiego na sferze niebieskiej w układzie współrzędnych astronomicznych zwanym układem równikowym równonocnym.</td>
+</tr>
+<tr>
+<td align="left">dec</td>
+<td align="right"><strong>Dec (deg). Deklinacja</strong> (łac. declinatio – „odchylenie”, oznaczana symbolem δ) – jedna ze współrzędnych określających położenie ciała w obydwu układach równikowych: równonocnym i godzinnym. Definiujemy ją jako kąt pomiędzy kierunkiem poprowadzonym od obserwatora do obiektu a płaszczyzną równika niebieskiego.</td>
+</tr>
+<tr>
+<td align="left">koi_kepmag</td>
+<td align="right">Kepler-band (mag)</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://exoplanetarchive.ipac.caltech.edu/docs/API_kepcandidate_columns.html">link to identification columns</a></p>
 
         </div>
 
         
         
           <div class="btn-improve-page">
-              <a href="https://github.com/hugo-toha/hugo-toha.github.io/edit/master/content/projects/BigFive/BigFive_modules.md">
+              <a href="https://github.com/hugo-toha/hugo-toha.github.io/edit/master/content/projects/Kepler/project_Kepler_col_names.md">
                 <i class="fas fa-code-branch"></i>
                 Improve this page
               </a>
@@ -443,13 +548,21 @@ except:
   
 
   
+
+  
+
+  
+
+  
+
+  
     
       
       <div class="col-md-6 previous-article">
-        <a href="/projects/bigfive/bigfive_data_prepare/" class="btn btn-outline-info">
+        <a href="/projects/imageclassproject/project_imageclass_neural_networks/" class="btn btn-outline-info">
           <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
           <br />
-          <span>Big Five Personality test - data preparation</span>
+          <span>Convolutional network testing for image classification - neural networks</span>
         </a>
       </div>
       
@@ -463,22 +576,14 @@ except:
           
         
         <div class="col-md-6 next-article">
-          <a href="/projects/imageclassproject/project_imageclass_data_preparing/" class="btn btn-outline-info">
+          <a href="/projects/kepler/project_kepler_data_analysis/" class="btn btn-outline-info">
             <span>Next <i class="fas fa-chevron-circle-right"></i></span>
             <br />
-            <span>Convolutional network testing for image classification - data preparing</span>
+            <span>Kepler Exoplanet Search Results - data analysis</span>
           </a>
         </div>
       
     
-  
-
-  
-
-  
-
-  
-
   
 
   
@@ -529,7 +634,7 @@ except:
       <div class="toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#2-import-modules">2. <strong>Import modules</strong></a></li>
+    <li><a href="#1-description-of-the-values-from-the-columns"><strong>1. Description of the values ​​from the columns</strong></a></li>
   </ul>
 </nav>
       </div>

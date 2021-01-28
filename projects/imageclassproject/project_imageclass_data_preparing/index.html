@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Convolutional network testing for image classification - data preparing</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/assets/css/layouts/main.css"/>
+<link rel="stylesheet" href="/assets/css/style.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L5C2B8SPR2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L5C2B8SPR2');
+</script>
+
+
+
+<link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+
+
+<link rel="stylesheet" href="/assets/css/style.css"/>
+
+    
+<meta name="description" content="Convolutional network testing for image classification - data preparing" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/assets/css/layouts/single.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/sidebar.css">
+
+
+    
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-L5C2B8SPR2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/assets/images/main-logo.png">Armin&#39;s portfolio</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/assets/images/main-logo.png" class="d-none" id="main-logo">
+  <img src="/assets/images/inverted-logo.png" class="d-none" id="inverted-logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/projects" data-filter="all">All projects</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/libraryproject/project_library/">Project of an automated system for selecting wooden blocks from a rack using Raspberry Pi</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bookprices/project_booksprices/">Books Prices</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="">Big Five Personality test</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bigfive/bigfive_about/">About project</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bigfive/bigfive_col_names/">Columns description</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bigfive/bigfive_data_prepare/">Data preparation</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bigfive/bigfive_modules/">Imported modules</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bigfive/project_bigfive_data_analysis/">Data analysis</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="">Convolutional network testing for image classification</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/imageclassproject/project_imageclass_about/">About project</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/imageclassproject/project_imageclass_modules/">Imported modules</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/projects/imageclassproject/project_imageclass_data_preparing/">Data preparing</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/imageclassproject/project_imageclass_neural_networks/">Neural networks</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="">Kepler Exoplanet Search Results</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/kepler/project_kepler_about/">About project</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/kepler/project_kepler_col_names/">Columns description</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/kepler/project_kepler_modules/">Imported modules</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/kepler/project_kepler_data_prepare/">Data presentation</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/kepler/project_kepler_data_analysis/">Data analysis</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/kepler/project_kepler_machine_learning/">Machine Learning</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="">World Happiness project</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/worldhappiness/project_worldhappiness_about/">About project</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/worldhappiness/project_worldhappiness_data_presentation/">Data presentation</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/worldhappiness/project_worldhappiness_data_analysis/">Data analysis</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/worldhappiness/project_worldhappiness_machine_learning/">Machine learning</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://armind93.github.io/assets/images/default-hero.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/static/images/A85.jpg'/>
+          <h5 class="author-name">Armin Derencz</h5>
+          <p>January 1, 0001</p>
+        </div>
+
+        <div class="title">
+          <h1>Convolutional network testing for image classification - data preparing</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+          <h2 id="2-data-preparing"><strong>2. Data preparing:</strong></h2>
+<pre><code>!unzip -q &quot;/content/drive/My Drive/ColabNotebooks/intel_image/data/intel_image.zip&quot; 
+</code></pre>
+<h3 id="21-number-of-photos-for-each-class">2.1. Number of photos for each class</h3>
+<pre><code>!rm -rf ./images
+
+base_dir = './intel_image' # Przypisujemy katalog bazowy
+
+raw_no_of_files = {}
+
+classes = ['buildings', 'forest', 'glacier', 'mountain', 'sea', 'street']
+for dir in classes: 
+    raw_no_of_files[dir] = len(os.listdir(os.path.join(base_dir, dir)))
+
+raw_no_of_files.items()
+</code></pre>
+<p>Results:</p>
+<pre><code>dict_items([('buildings', 2628), ('forest', 2745), ('glacier', 2957), ('mountain', 3037), ('sea', 2784), ('street', 2883)])
+</code></pre>
+<h3 id="22-catalogues-creating-train-test-valid">2.2. Catalogues creating: train, test, valid</h3>
+<pre><code>data_dir = './images' # Przypisujemy katalog bazowy
+
+if not os.path.exists(data_dir):
+    os.mkdir(data_dir)
+
+train_dir = os.path.join(data_dir, 'train')    # katalog dla zbioru treningowego
+valid_dir = os.path.join(data_dir, 'valid')    # katalog dla zbioru walidacyjnego
+test_dir = os.path.join(data_dir, 'test')      # katalog dla  zbioru testowego
+
+# Wskażemy klasy
+train_buildings_dir = os.path.join(train_dir, 'buildings')
+train_forest_dir = os.path.join(train_dir, 'forest')
+train_glacier_dir = os.path.join(train_dir, 'glacier')
+train_mountain_dir = os.path.join(train_dir, 'mountain')
+train_sea_dir = os.path.join(train_dir, 'sea')
+train_street_dir = os.path.join(train_dir, 'street')
+
+valid_buildings_dir = os.path.join(valid_dir, 'buildings')
+valid_forest_dir = os.path.join(valid_dir,    'forest'  )
+valid_glacier_dir = os.path.join(valid_dir, 'glacier')
+valid_mountain_dir = os.path.join(valid_dir, 'mountain')
+valid_sea_dir = os.path.join(valid_dir, 'sea')
+valid_street_dir = os.path.join(valid_dir, 'street')
+
+test_buildings_dir = os.
+# Pętla, która przejdzie po naszych katalogach
+for i, directory in enumerate([train_dir, valid_dir, test_dir]):
+    if not os.path.exists(directory): # Jeśli takie ścieżki nie istenieją, to po prostu utowrzymy te katalogi
+        os.mkdir(directory)
+
+# To samo wykonamy z katalogami w trzecim pozimie
+dirs = [train_buildings_dir, train_forest_dir, train_glacier_dir, train_mountain_dir, train_sea_dir, train_street_dir,
+        valid_buildings_dir, valid_forest_dir, valid_glacier_dir, valid_mountain_dir, valid_sea_dir, valid_street_dir,
+        test_buildings_dir, test_forest_dir, test_glacier_dir, test_mountain_dir, test_sea_dir, test_street_dir 
+        ]
+
+for dir in dirs:
+    if not os.path.exists(dir):
+        os.mkdir(dir)       
+
+path.join(test_dir, 'buildings')
+test_forest_dir = os.path.join(test_dir, 'forest')
+test_glacier_dir = os.path.join(test_dir, 'glacier')
+test_mountain_dir = os.path.join(test_dir, 'mountain')
+test_sea_dir = os.path.join(test_dir, 'sea')
+test_street_dir = os.path.join(test_dir, 'street')
+
+# Pętla, która przejdzie po naszych katalogach
+for i, directory in enumerate([train_dir, valid_dir, test_dir]):
+    if not os.path.exists(directory): # Jeśli takie ścieżki nie istenieją, to po prostu utowrzymy te katalogi
+        os.mkdir(directory)
+
+# To samo wykonamy z katalogami w trzecim pozimie
+dirs = [train_buildings_dir, train_forest_dir, train_glacier_dir, train_mountain_dir, train_sea_dir, train_street_dir,
+        valid_buildings_dir, valid_forest_dir, valid_glacier_dir, valid_mountain_dir, valid_sea_dir, valid_street_dir,
+        test_buildings_dir, test_forest_dir, test_glacier_dir, test_mountain_dir, test_sea_dir, test_street_dir 
+        ]
+
+for dir in dirs:
+    if not os.path.exists(dir):
+        os.mkdir(dir)       
+
+
+# Teraz musimy znać pełne ścieżki do naszych plików
+base_dir = './intel_image' # Przypisujemy katalog bazowy, gdzie są zdjęcia
+
+# Do zmiennej _fnames przypisujemy wylistowanie katalogu z katalogu bazowego, tam gdzie są zdjęcia
+buildings_files_names = os.listdir(os.path.join(base_dir, 'buildings')) 
+forest_files_names = os.listdir(os.path.join(base_dir,    'forest'))
+glacier_files_names = os.listdir(os.path.join(base_dir,   'glacier'))
+mountain_files_names = os.listdir(os.path.join(base_dir,  'mountain'))
+sea_files_names = os.listdir(os.path.join(base_dir,       'sea'))
+street_files_names = os.listdir(os.path.join(base_dir,    'street'))
+
+test_files_names = os.listdir(os.path.join(base_dir,      'test'))
+</code></pre>
+<h3 id="23-choosing-data-size">2.3. Choosing data size</h3>
+<pre><code># W związku z tym, że są różne wartości danych, w różnych klasach,
+# Wybierzemy minimalną długość z tych dwóch klas i przypiszemy do zmiennej rozmiar
+size = min(len(buildings_files_names), len(forest_files_names), len(glacier_files_names), len(mountain_files_names), len(sea_files_names), len(street_files_names))
+
+train_size = int(np.floor(0.7 * size)) # rozmiar danych treningowych to 70% wszystkich zdjęć                                     
+valid_size = int(np.floor(0.28 * size)) 
+test_size = size - (train_size + valid_size) # Testowy zbiór to będzie 10%
+</code></pre>
+<h3 id="24-copying-data-to-selected-folders">2.4. Copying data to selected folders</h3>
+<pre><code>def filesCopy(directory_dir):
+
+    train_id = train_size
+    valid_id = train_size + valid_size
+    test_id = train_size + valid_size + test_size
+
+    for i, dictio in enumerate(directory_dir):
+        dir_name = [val for val in directory_dir.values() ][i]
+        label_name = dictio
+        
+        for i, fname in enumerate(dir_name[0]):
+            if i &lt;= train_id:                                  
+                src = os.path.join(base_dir, label_name, fname)   
+                dst = os.path.join(dir_name[1], fname)
+                shutil.copyfile(src, dst)
+            elif train_id &lt; i &lt;= valid_id:
+                src = os.path.join(base_dir, label_name, fname)
+                dst = os.path.join(dir_name[2], fname)      
+                shutil.copyfile(src, dst)
+            elif valid_id &lt; i &lt; test_id:
+                src = os.path.join(base_dir, label_name, fname)     
+                dst = os.path.join(dir_name[3], fname)
+                shutil.copyfile(src, dst)
+</code></pre>
+<p>3.1.1. MODEL 1:
+print(f&rsquo;{label_name} - zbiór treningowy:  { len(os.listdir(dir_name[1] )) } &lsquo;)
+print(f&rsquo;{label_name} - zbiór walidacyjny: { len(os.listdir(dir_name[2] )) } &lsquo;)
+print(f&rsquo;{label_name} - zbiór testowy:     { len(os.listdir(dir_name[3] )) } &lsquo;)
+print()
+# &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
+<pre><code>directory_dir = {
+                'buildings' : [buildings_files_names,  train_buildings_dir,  valid_buildings_dir,  test_buildings_dir ],
+                'forest'    : [forest_files_names,     train_forest_dir,     valid_forest_dir,     test_forest_dir    ],
+                'glacier'   : [glacier_files_names,    train_glacier_dir,    valid_glacier_dir,    test_glacier_dir   ],   
+                'mountain'  : [mountain_files_names,   train_mountain_dir,   valid_mountain_dir,   test_mountain_dir  ],   
+                'sea'       : [sea_files_names,        train_sea_dir,        valid_sea_dir,        test_sea_dir       ],   
+                'street'    : [street_files_names,     train_street_dir,     valid_street_dir,     test_street_dir    ]   
+                }
+
+filesCopy(directory_dir) 
+</code></pre>
+<p>Results:</p>
+<pre><code>buildings - zbiór treningowy:  1840 
+buildings - zbiór walidacyjny: 735 
+buildings - zbiór testowy:     53 
+
+forest - zbiór treningowy:  1840 
+forest - zbiór walidacyjny: 735 
+forest - zbiór testowy:     53 
+
+glacier - zbiór treningowy:  1840 
+glacier - zbiór walidacyjny: 735 
+glacier - zbiór testowy:     53 
+
+mountain - zbiór treningowy:  1840 
+mountain - zbiór walidacyjny: 735 
+mountain - zbiór testowy:     53 
+
+sea - zbiór treningowy:  1840 
+sea - zbiór walidacyjny: 735 
+sea - zbiór testowy:     53 
+
+street - zbiór treningowy:  1840 
+street - zbiór walidacyjny: 735 
+street - zbiór testowy:     53 
+</code></pre>
+<h3 id="25-data-presentation">2.5. Data presentation</h3>
+<pre><code>#@title Wybierz indeks przykładowego zdjęcia ze zbioru treningowego:
+buildings_idx = 371 #@param {type:'slider', min:0, max:1839}
+names_mapping = dict(enumerate(buildings_files_names))
+img_path = os.path.join(train_buildings_dir, names_mapping[buildings_idx])
+img_buildings = image.load_img(img_path)
+
+forest_idx = 1302 #@param {type:'slider', min:0, max:1839}
+names_mapping = dict(enumerate(forest_files_names))
+img_path = os.path.join(train_forest_dir, names_mapping[forest_idx])
+img_forest = image.load_img(img_path)
+
+glacier_idx = 122 #@param {type:'slider', min:0, max:1839}
+names_mapping = dict(enumerate(glacier_files_names))
+img_path = os.path.join(train_glacier_dir, names_mapping[glacier_idx])
+img_glacier = image.load_img(img_path)
+
+mountain_idx = 1437 #@param {type:'slider', min:0, max:1839}
+names_mapping = dict(enumerate(mountain_files_names))
+img_path = os.path.join(train_mountain_dir, names_mapping[mountain_idx])
+img_mountain = image.load_img(img_path)
+
+sea_idx = 980 #@param {type:'slider', min:0, max:1839}
+names_mapping = dict(enumerate(sea_files_names))
+img_path = os.path.join(train_sea_dir, names_mapping[sea_idx])
+img_sea = image.load_img(img_path)
+
+street_idx = 171 #@param {type:'slider', min:0, max:1839}
+names_mapping = dict(enumerate(street_files_names))
+img_path = os.path.join(train_street_dir, names_mapping[street_idx])
+img_street = image.load_img(img_path)
+
+fig, ax = plt.subplots(2,3,figsize=(23, 15))
+
+ax[0,0].imshow(img_buildings)
+ax[0,1].imshow(img_forest)
+ax[0,2].imshow(img_glacier)
+
+ax[1,0].imshow(img_mountain)
+ax[1,1].imshow(img_sea)
+ax[1,2].imshow(img_street)
+
+
+ax[0,0].axis(False)
+ax[0,1].axis(False)
+ax[0,2].axis(False)
+
+ax[1,0].axis(False)
+ax[1,1].axis(False)
+ax[1,2].axis(False)
+
+plt.show()
+</code></pre>
+<p><img src="/static/images/ImageClass/data_presentation.jpg" alt="image presentation"></p>
+<h3 id="26-data-augmentation">2.6. Data augmentation</h3>
+<pre><code>train_datagen = ImageDataGenerator(
+    rotation_range=10,                                        # zakres kąta o który losowo zostanie wykonany obrót obrazów
+    rescale=1./255.,                                          # przeskalowujemy wszystkie obrazy o współczynnik 1/255
+    width_shift_range=0.1,                                    # pionowe przekształcenia obrazu 
+    height_shift_range=0.1,                                   # poziome przekształcenia obrazu
+    shear_range=0.2,                                          # zares losowego przycianania obrazu
+    zoom_range=0.1,                                           # zakres losowego przybliżania obrazu
+    horizontal_flip=True,                                     # losowe odbicie połowy obrazu w płaszczyźnie poziomej
+    fill_mode='nearest'                                       # strategia wypełniania nowo utworzonych pikseli, któe mogą powstać w wyniku przekształceń
+)
+
+valid_datagen = ImageDataGenerator(rescale=1./255.) 
+
+
+# Budujemy generatory
+train_generator = train_datagen.flow_from_directory(directory=train_dir, target_size=(150, 150), batch_size=32, class_mode='categorical')  # batch size 32
+valid_generator = valid_datagen.flow_from_directory(directory=valid_dir, target_size=(150, 150), batch_size=32, class_mode='categorical')                       
+</code></pre>
+
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/hugo-toha/hugo-toha.github.io/edit/master/content/projects/ImageClassProject/project_ImageClass_data_preparing.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/projects/bigfive/bigfive_modules/" class="btn btn-outline-info">
+          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+          <br />
+          <span>Big Five Personality test - imported modules</span>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/projects/imageclassproject/project_imageclass_modules/" class="btn btn-outline-info">
+            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
+            <br />
+            <span>Convolutional network testing for image classification - imported modules</span>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#2-data-preparing"><strong>2. Data preparing:</strong></a>
+      <ul>
+        <li><a href="#21-number-of-photos-for-each-class">2.1. Number of photos for each class</a></li>
+        <li><a href="#22-catalogues-creating-train-test-valid">2.2. Catalogues creating: train, test, valid</a></li>
+        <li><a href="#23-choosing-data-size">2.3. Choosing data size</a></li>
+        <li><a href="#24-copying-data-to-selected-folders">2.4. Copying data to selected folders</a></li>
+        <li><a href="#25-data-presentation">2.5. Data presentation</a></li>
+        <li><a href="#26-data-augmentation">2.6. Data augmentation</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">Armin Derencz</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#education">Education</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#projects">Projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent projects</a>
+              </li>
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>armin.derencz@gmail.com</span></li>
+          
+        </ul>
+      </div>
+      
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/assets/images/inverted-logo.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/assets/images/hugo-logo-wide.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/assets/js/jquery-3.4.1.min.js"></script>
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+
+<script src="/assets/js/navbar.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/assets/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>

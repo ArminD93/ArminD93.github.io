@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Big Five Personality test - imported modules</title>
+    <title>World Happiness project - data presentation</title>
     <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -36,7 +36,7 @@
 <link rel="stylesheet" href="/assets/css/style.css"/>
 
     
-<meta name="description" content="Big Five Personality test - imported modules" />
+<meta name="description" content="World Happiness project - data presentation" />
 <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
@@ -128,15 +128,12 @@ if (!doNotTrack) {
   
   
   
-    
-    
-  
   
     
     <li>
-      <i class="fas fa-minus-circle"></i><a class="active" href="">Big Five Personality test</a>
+      <i class="fas fa-plus-circle"></i><a class="" href="">Big Five Personality test</a>
       
-      <ul class="active">
+      <ul class="">
         
   
   
@@ -169,12 +166,9 @@ if (!doNotTrack) {
   
   
   
-    
-    
-  
   
     
-    <li><a class="active" href="/projects/bigfive/bigfive_modules/">Imported modules</a></li>
+    <li><a class="" href="/projects/bigfive/bigfive_modules/">Imported modules</a></li>
   
 
   
@@ -317,12 +311,15 @@ if (!doNotTrack) {
   
   
   
+    
+    
+  
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="">World Happiness project</a>
+      <i class="fas fa-minus-circle"></i><a class="active" href="">World Happiness project</a>
       
-      <ul class="">
+      <ul class="active">
         
   
   
@@ -337,9 +334,12 @@ if (!doNotTrack) {
   
   
   
+    
+    
+  
   
     
-    <li><a class="" href="/projects/worldhappiness/project_worldhappiness_data_presentation/">Data presentation</a></li>
+    <li><a class="active" href="/projects/worldhappiness/project_worldhappiness_data_presentation/">Data presentation</a></li>
   
 
   
@@ -392,39 +392,42 @@ if (!doNotTrack) {
         </div>
 
         <div class="title">
-          <h1>Big Five Personality test - imported modules</h1>
+          <h1>World Happiness project - data presentation</h1>
         </div>
 
         <div class="post-content" id="post-content">
-          <p><a href="https://github.com/ArminD93/BigFivePersonalityTest/blob/dev/BigFivePersonality.ipynb">link to GitHub Repository</a></p>
-<h2 id="2-import-modules">2. <strong>Import modules</strong></h2>
-<pre><code>try:
-    import pandas as pd
-    import numpy as np
-    import matplotlib.pyplot as plt
-    import plotly.figure_factory as ff
-    import plotly.express as px
-    from plotly.subplots import make_subplots
-    import seaborn as sns
-    from itertools import islice
-    import pycountry_convert as pc
-    import squarify
-except:
-    !pip install pycountry_convert
-    !pip install squarify
-    import pycountry_convert as pc
-    import squarify
-
-
-%matplotlib inline
-</code></pre>
+          <h2 id="1-data-presentation"><strong>1. Data presentation</strong>:</h2>
+<p>Data downloaded from kaggle was splitted into years, which means in one file we have all factors from one year and we&rsquo;ve 5 data files.:</p>
+<ol>
+<li>
+<p>Data from 2015:
+<img src="/static/images/WorldHappinessReport/dataFrom2015.png" alt="data2015"></p>
+</li>
+<li>
+<p>Data from 2016:
+<img src="/static/images/WorldHappinessReport/dataFrom2016.jpg" alt="data2015"></p>
+</li>
+<li>
+<p>Data from 2017:</p>
+<p><img src="/static/images/WorldHappinessReport/dataFrom2017.jpg" alt="data2015"></p>
+</li>
+<li>
+<p>Data from 2018:
+<img src="/static/images/WorldHappinessReport/dataFrom2018.jpg" alt="data2015"></p>
+</li>
+<li>
+<p>Data from 2019:
+<img src="/static/images/WorldHappinessReport/dataFrom2019.jpg" alt="data2015"></p>
+</li>
+</ol>
+<p>At the beginning, I considered each report separately, and then sum up my analysis into one report - summary report.</p>
 
         </div>
 
         
         
           <div class="btn-improve-page">
-              <a href="https://github.com/hugo-toha/hugo-toha.github.io/edit/master/content/projects/BigFive/BigFive_modules.md">
+              <a href="https://github.com/hugo-toha/hugo-toha.github.io/edit/master/content/projects/WorldHappiness/project_WorldHappiness_data_presentation.md">
                 <i class="fas fa-code-branch"></i>
                 Improve this page
               </a>
@@ -443,13 +446,33 @@ except:
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
       
       <div class="col-md-6 previous-article">
-        <a href="/projects/bigfive/bigfive_data_prepare/" class="btn btn-outline-info">
+        <a href="/projects/worldhappiness/project_worldhappiness_data_analysis/" class="btn btn-outline-info">
           <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
           <br />
-          <span>Big Five Personality test - data preparation</span>
+          <span>World Happiness project - data analysis</span>
         </a>
       </div>
       
@@ -463,34 +486,14 @@ except:
           
         
         <div class="col-md-6 next-article">
-          <a href="/projects/imageclassproject/project_imageclass_data_preparing/" class="btn btn-outline-info">
+          <a href="/projects/worldhappiness/project_worldhappiness_machine_learning/" class="btn btn-outline-info">
             <span>Next <i class="fas fa-chevron-circle-right"></i></span>
             <br />
-            <span>Convolutional network testing for image classification - data preparing</span>
+            <span>World Happiness project - machine learning</span>
           </a>
         </div>
       
     
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
   
@@ -529,7 +532,7 @@ except:
       <div class="toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#2-import-modules">2. <strong>Import modules</strong></a></li>
+    <li><a href="#1-data-presentation"><strong>1. Data presentation</strong>:</a></li>
   </ul>
 </nav>
       </div>

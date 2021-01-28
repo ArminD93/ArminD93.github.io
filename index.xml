@@ -12,75 +12,42 @@
     
     
     <item>
-      <title>Big Five Personality test - columns description</title>
-      <link>https://armind93.github.io/projects/bigfive/bigfive_col_names/</link>
+      <title>Big Five Personality test - about project</title>
+      <link>https://armind93.github.io/projects/bigfive/bigfive_about/</link>
       <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/bigfive/bigfive_col_names/</guid>
-      <description>link to GitHub Repository
-1. Description of the values ​​from the columns The following items were presented on one page and each was rated on a five point scale using radio buttons. The order on page was was EXT1, AGR1, CSN1, EST1, OPN1, EXT2, etc. The scale was labeled 1=Disagree, 3=Neutral, 5=Agree
-5 major dimensions of personality: Openness, Conscientiousness, Agreeableness, Extraversion, and Neuroticism.
- EXT - Extraversion, EST - Neuroticism, AGR - Agreeableness (Zgodność), CSN - Conscientiousness (sumienność), OPN - Openness     indication Description indication Description indication Description     EXT1 I am the life of the party.</description>
+      <guid>https://armind93.github.io/projects/bigfive/bigfive_about/</guid>
+      <description>Data analysis collected from the Big Five personality test.
+link to GitHub Repository</description>
     </item>
     
     <item>
-      <title>Big Five Personality test - data analysis</title>
-      <link>https://armind93.github.io/projects/bigfive/project_bigfive/</link>
-      <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://armind93.github.io/projects/bigfive/project_bigfive/</guid>
-      <description>4. Data analysis: 4.1. Preparation of groups based on the name of the country 4.2. The number of times each response occurs for each issue 4.3. Correlation analysis in individual traits 4.3.1. Description and classification of markings 4.3.2. Data preparation 4.3.3. Correlation maps for individual traits 4.4. Countries with the highest Extraversion level 4.5. Radar diagram for the selected row 4.5.1. Preparing the RadarChart class 4.5.2. Preparation of objects 4.6. Presentation of the results for each personality trait for the selected row 4.</description>
-    </item>
-    
-    <item>
-      <title>Big Five Personality test - data preparation</title>
-      <link>https://armind93.github.io/projects/bigfive/bigfive_data_prepare/</link>
-      <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://armind93.github.io/projects/bigfive/bigfive_data_prepare/</guid>
-      <description>3. Data preparation: 3.1. Data presentation BigFive_raw = pd.read_csv( &#39;/content/drive/My Drive/ColabNotebooks/BigFivePersonality/data-final.csv&#39;, low_memory=False, sep=&#39;\t&#39;, usecols=[&#39;EXT1&#39;, &#39;EXT2&#39;, &#39;EXT3&#39;, &#39;EXT4&#39;, &#39;EXT5&#39;, &#39;EXT6&#39;, &#39;EXT7&#39;, &#39;EXT8&#39;, &#39;EXT9&#39;, &#39;EXT10&#39;, &#39;EST1&#39;, &#39;EST2&#39;, &#39;EST3&#39;, &#39;EST4&#39;, &#39;EST5&#39;, &#39;EST6&#39;, &#39;EST7&#39;, &#39;EST8&#39;, &#39;EST9&#39;, &#39;EST10&#39;, &#39;AGR1&#39;, &#39;AGR2&#39;, &#39;AGR3&#39;, &#39;AGR4&#39;, &#39;AGR5&#39;, &#39;AGR6&#39;, &#39;AGR7&#39;, &#39;AGR8&#39;, &#39;AGR9&#39;, &#39;AGR10&#39;, &#39;CSN1&#39;, &#39;CSN2&#39;, &#39;CSN3&#39;, &#39;CSN4&#39;, &#39;CSN5&#39;, &#39;CSN6&#39;, &#39;CSN7&#39;, &#39;CSN8&#39;, &#39;CSN9&#39;, &#39;CSN10&#39;, &#39;OPN1&#39;, &#39;OPN2&#39;, &#39;OPN3&#39;, &#39;OPN4&#39;, &#39;OPN5&#39;, &#39;OPN6&#39;, &#39;OPN7&#39;, &#39;OPN8&#39;, &#39;OPN9&#39;, &#39;OPN10&#39;, # &#39;EXT1_E&#39;, &#39;EXT2_E&#39;, &#39;EXT3_E&#39;, &#39;EXT4_E&#39;, &#39;EXT5_E&#39;, &#39;EXT6_E&#39;, &#39;EXT7_E&#39;, &#39;EXT8_E&#39;, &#39;EXT9_E&#39;, &#39;EXT10_E&#39;, # &#39;EST1_E&#39;, &#39;EST2_E&#39;, &#39;EST3_E&#39;, &#39;EST4_E&#39;, &#39;EST5_E&#39;, &#39;EST6_E&#39;, &#39;EST7_E&#39;, &#39;EST8_E&#39;, &#39;EST9_E&#39;, &#39;EST10_E&#39;, # &#39;AGR1_E&#39;, &#39;AGR2_E&#39;, &#39;AGR3_E&#39;, &#39;AGR4_E&#39;, &#39;AGR5_E&#39;, &#39;AGR6_E&#39;, &#39;AGR7_E&#39;, &#39;AGR8_E&#39;, &#39;AGR9_E&#39;, &#39;AGR10_E&#39;, # &#39;CSN1_E&#39;, &#39;CSN2_E&#39;, &#39;CSN3_E&#39;, &#39;CSN4_E&#39;, &#39;CSN5_E&#39;, &#39;CSN6_E&#39;, &#39;CSN7_E&#39;, &#39;CSN8_E&#39;, &#39;CSN9_E&#39;, &#39;CSN10_E&#39;, # &#39;OPN1_E&#39;, &#39;OPN2_E&#39;, &#39;OPN3_E&#39;, &#39;OPN4_E&#39;, &#39;OPN5_E&#39;, &#39;OPN6_E&#39;, &#39;OPN7_E&#39;, &#39;OPN8_E&#39;, &#39;OPN9_E&#39;, &#39;OPN10_E&#39;, &#39;dateload&#39;, &#39;introelapse&#39;, &#39;testelapse&#39;, &#39;endelapse&#39;, &#39;IPC&#39;, &#39;country&#39;, &#39;lat_appx_lots_of_err&#39;, &#39;long_appx_lots_of_err&#39; ] ) # Kopia danych BigFive = BigFive_raw.</description>
-    </item>
-    
-    <item>
-      <title>Big Five Personality test - imported modules</title>
-      <link>https://armind93.github.io/projects/bigfive/bigfive_modules/</link>
-      <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://armind93.github.io/projects/bigfive/bigfive_modules/</guid>
-      <description>link to GitHub Repository
-2. Import modules try: import pandas as pd import numpy as np import matplotlib.pyplot as plt import plotly.figure_factory as ff import plotly.express as px from plotly.subplots import make_subplots import seaborn as sns from itertools import islice import pycountry_convert as pc import squarify except: !pip install pycountry_convert !pip install squarify import pycountry_convert as pc import squarify %matplotlib inline  </description>
-    </item>
-    
-    <item>
-      <title>Convolutional network testing for image classification</title>
-      <link>https://armind93.github.io/projects/imageclassproject/project_imageclass/</link>
+      <title>Convolutional network testing for image classification - about project</title>
+      <link>https://armind93.github.io/projects/imageclassproject/project_imageclass_about/</link>
       <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/imageclassproject/project_imageclass/</guid>
-      <description>&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;
+      <guid>https://armind93.github.io/projects/imageclassproject/project_imageclass_about/</guid>
+      <description>Using convolutional neural network to classifying image into 6 classes.
 link to data
-link to GitHub Repository
-1. Import modules import os import time from datetime import datetime as dt import numpy as np import pandas as pd import matplotlib.pyplot as plt import shutil # Pomaga w kopiowaniu plików import seaborn as sns sns.set(style=&amp;quot;ticks&amp;quot;, color_codes=True) from sklearn.metrics import confusion_matrix, classification_report from tensorflow.keras.preprocessing import image from tensorflow.keras.preprocessing.image import ImageDataGenerator from tensorflow.keras.models import Sequential, Model from tensorflow.</description>
+link to GitHub Repository</description>
     </item>
     
     <item>
-      <title>Kepler Exoplanet Search Results - data analysis</title>
-      <link>https://armind93.github.io/projects/kepler/project_kepler/</link>
+      <title>Kepler Exoplanet Search Results - about project</title>
+      <link>https://armind93.github.io/projects/kepler/project_kepler_about/</link>
       <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/kepler/project_kepler/</guid>
-      <description>&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;
-link to GitHub Repository
-1. Description of the values ​​from the columns KOI - Kepler Objects of Interest
-   Oznaczenie Opis     kepid Kepler Identification   kepoi_name KOI Name. A number used to identify and track a Kepler Object of Interest (KOI). A KOI is a target identified by the Kepler Project that displays at least one transit-like sequence within Kepler time-series photometry that appears to be of astrophysical origin and initially consistent with a planetary transit hypothesis.</description>
+      <guid>https://armind93.github.io/projects/kepler/project_kepler_about/</guid>
+      <description>Data analysis from the Kepler Exoplanet Search Results report.
+link to GitHub Repository</description>
     </item>
     
     <item>
-      <title>World happiness report - data analysis</title>
-      <link>https://armind93.github.io/projects/worldhappiness/project_worldhappiness/</link>
+      <title>World Happiness project - about project</title>
+      <link>https://armind93.github.io/projects/worldhappiness/project_worldhappiness_about/</link>
       <pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/worldhappiness/project_worldhappiness/</guid>
+      <guid>https://armind93.github.io/projects/worldhappiness/project_worldhappiness_about/</guid>
       <description>The data contain informations which might have influence for people&amp;rsquo;s happiness score in the selected country. We have 5 reports divided by years, from 2015 to 2019.
 Acording to data, the happiness score can be estimated from six factors - economic production, social support, life expectancy, freedom, absence of corruption, and generosity. These factors contribute to making life evaluations higher in each country than they are in Dystopia, a hypothetical country that has values equal to the world’s lowest national averages for each of the six factors.</description>
     </item>
@@ -124,6 +91,155 @@ Skills:   Python:  Completed Udemy course: Python Intermediate (Credential ID: U
       
       <guid>https://armind93.github.io/contact/</guid>
       <description>Social icons   </description>
+    </item>
+    
+    <item>
+      <title>Big Five Personality test - columns description</title>
+      <link>https://armind93.github.io/projects/bigfive/bigfive_col_names/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/bigfive/bigfive_col_names/</guid>
+      <description>1. Description of the values ​​from the columns The following items were presented on one page and each was rated on a five point scale using radio buttons. The order on page was was EXT1, AGR1, CSN1, EST1, OPN1, EXT2, etc. The scale was labeled 1=Disagree, 3=Neutral, 5=Agree
+5 major dimensions of personality: Openness, Conscientiousness, Agreeableness, Extraversion, and Neuroticism.
+ EXT - Extraversion, EST - Neuroticism, AGR - Agreeableness (Zgodność), CSN - Conscientiousness (sumienność), OPN - Openness  link to GitHub Repository</description>
+    </item>
+    
+    <item>
+      <title>Big Five Personality test - data analysis</title>
+      <link>https://armind93.github.io/projects/bigfive/project_bigfive_data_analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/bigfive/project_bigfive_data_analysis/</guid>
+      <description>4. Data analysis: 4.1. Preparation of groups based on the name of the country 4.2. The number of times each response occurs for each issue 4.3. Correlation analysis in individual traits 4.3.1. Description and classification of markings 4.3.2. Data preparation 4.3.3. Correlation maps for individual traits 4.4. Countries with the highest Extraversion level 4.5. Radar diagram for the selected row 4.5.1. Preparing the RadarChart class 4.5.2. Preparation of objects 4.6. Presentation of the results for each personality trait for the selected row 4.</description>
+    </item>
+    
+    <item>
+      <title>Big Five Personality test - data preparation</title>
+      <link>https://armind93.github.io/projects/bigfive/bigfive_data_prepare/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/bigfive/bigfive_data_prepare/</guid>
+      <description>3. Data preparation: &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;
+3.1. Data presentation BigFive_raw = pd.read_csv( &#39;/content/drive/My Drive/ColabNotebooks/BigFivePersonality/data-final.csv&#39;, low_memory=False, sep=&#39;\t&#39;, usecols=[&#39;EXT1&#39;, &#39;EXT2&#39;, &#39;EXT3&#39;, &#39;EXT4&#39;, &#39;EXT5&#39;, &#39;EXT6&#39;, &#39;EXT7&#39;, &#39;EXT8&#39;, &#39;EXT9&#39;, &#39;EXT10&#39;, &#39;EST1&#39;, &#39;EST2&#39;, &#39;EST3&#39;, &#39;EST4&#39;, &#39;EST5&#39;, &#39;EST6&#39;, &#39;EST7&#39;, &#39;EST8&#39;, &#39;EST9&#39;, &#39;EST10&#39;, &#39;AGR1&#39;, &#39;AGR2&#39;, &#39;AGR3&#39;, &#39;AGR4&#39;, &#39;AGR5&#39;, &#39;AGR6&#39;, &#39;AGR7&#39;, &#39;AGR8&#39;, &#39;AGR9&#39;, &#39;AGR10&#39;, &#39;CSN1&#39;, &#39;CSN2&#39;, &#39;CSN3&#39;, &#39;CSN4&#39;, &#39;CSN5&#39;, &#39;CSN6&#39;, &#39;CSN7&#39;, &#39;CSN8&#39;, &#39;CSN9&#39;, &#39;CSN10&#39;, &#39;OPN1&#39;, &#39;OPN2&#39;, &#39;OPN3&#39;, &#39;OPN4&#39;, &#39;OPN5&#39;, &#39;OPN6&#39;, &#39;OPN7&#39;, &#39;OPN8&#39;, &#39;OPN9&#39;, &#39;OPN10&#39;, # &#39;EXT1_E&#39;, &#39;EXT2_E&#39;, &#39;EXT3_E&#39;, &#39;EXT4_E&#39;, &#39;EXT5_E&#39;, &#39;EXT6_E&#39;, &#39;EXT7_E&#39;, &#39;EXT8_E&#39;, &#39;EXT9_E&#39;, &#39;EXT10_E&#39;, # &#39;EST1_E&#39;, &#39;EST2_E&#39;, &#39;EST3_E&#39;, &#39;EST4_E&#39;, &#39;EST5_E&#39;, &#39;EST6_E&#39;, &#39;EST7_E&#39;, &#39;EST8_E&#39;, &#39;EST9_E&#39;, &#39;EST10_E&#39;, # &#39;AGR1_E&#39;, &#39;AGR2_E&#39;, &#39;AGR3_E&#39;, &#39;AGR4_E&#39;, &#39;AGR5_E&#39;, &#39;AGR6_E&#39;, &#39;AGR7_E&#39;, &#39;AGR8_E&#39;, &#39;AGR9_E&#39;, &#39;AGR10_E&#39;, # &#39;CSN1_E&#39;, &#39;CSN2_E&#39;, &#39;CSN3_E&#39;, &#39;CSN4_E&#39;, &#39;CSN5_E&#39;, &#39;CSN6_E&#39;, &#39;CSN7_E&#39;, &#39;CSN8_E&#39;, &#39;CSN9_E&#39;, &#39;CSN10_E&#39;, # &#39;OPN1_E&#39;, &#39;OPN2_E&#39;, &#39;OPN3_E&#39;, &#39;OPN4_E&#39;, &#39;OPN5_E&#39;, &#39;OPN6_E&#39;, &#39;OPN7_E&#39;, &#39;OPN8_E&#39;, &#39;OPN9_E&#39;, &#39;OPN10_E&#39;, &#39;dateload&#39;, &#39;introelapse&#39;, &#39;testelapse&#39;, &#39;endelapse&#39;, &#39;IPC&#39;, &#39;country&#39;, &#39;lat_appx_lots_of_err&#39;, &#39;long_appx_lots_of_err&#39; ] ) # Kopia danych BigFive = BigFive_raw.</description>
+    </item>
+    
+    <item>
+      <title>Big Five Personality test - imported modules</title>
+      <link>https://armind93.github.io/projects/bigfive/bigfive_modules/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/bigfive/bigfive_modules/</guid>
+      <description>link to GitHub Repository
+2. Import modules try: import pandas as pd import numpy as np import matplotlib.pyplot as plt import plotly.figure_factory as ff import plotly.express as px from plotly.subplots import make_subplots import seaborn as sns from itertools import islice import pycountry_convert as pc import squarify except: !pip install pycountry_convert !pip install squarify import pycountry_convert as pc import squarify %matplotlib inline  </description>
+    </item>
+    
+    <item>
+      <title>Convolutional network testing for image classification - data preparing</title>
+      <link>https://armind93.github.io/projects/imageclassproject/project_imageclass_data_preparing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/imageclassproject/project_imageclass_data_preparing/</guid>
+      <description>2. Data preparing: !unzip -q &amp;quot;/content/drive/My Drive/ColabNotebooks/intel_image/data/intel_image.zip&amp;quot;  2.1. Number of photos for each class !rm -rf ./images base_dir = &#39;./intel_image&#39; # Przypisujemy katalog bazowy raw_no_of_files = {} classes = [&#39;buildings&#39;, &#39;forest&#39;, &#39;glacier&#39;, &#39;mountain&#39;, &#39;sea&#39;, &#39;street&#39;] for dir in classes: raw_no_of_files[dir] = len(os.listdir(os.path.join(base_dir, dir))) raw_no_of_files.items()  Results:
+dict_items([(&#39;buildings&#39;, 2628), (&#39;forest&#39;, 2745), (&#39;glacier&#39;, 2957), (&#39;mountain&#39;, 3037), (&#39;sea&#39;, 2784), (&#39;street&#39;, 2883)])  2.2. Catalogues creating: train, test, valid data_dir = &#39;./images&#39; # Przypisujemy katalog bazowy if not os.</description>
+    </item>
+    
+    <item>
+      <title>Convolutional network testing for image classification - imported modules</title>
+      <link>https://armind93.github.io/projects/imageclassproject/project_imageclass_modules/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/imageclassproject/project_imageclass_modules/</guid>
+      <description>link to data
+link to GitHub Repository
+1. Import modules import os import time from datetime import datetime as dt import numpy as np import pandas as pd import matplotlib.pyplot as plt import shutil # Pomaga w kopiowaniu plików import seaborn as sns sns.set(style=&amp;quot;ticks&amp;quot;, color_codes=True) from sklearn.metrics import confusion_matrix, classification_report from tensorflow.keras.preprocessing import image from tensorflow.keras.preprocessing.image import ImageDataGenerator from tensorflow.keras.models import Sequential, Model from tensorflow.keras.models import load_model from tensorflow.keras.layers import Input, Dense, Flatten, Dropout, Conv2D, MaxPooling2D, concatenate, BatchNormalization, GlobalAveragePooling2D from tensorflow.</description>
+    </item>
+    
+    <item>
+      <title>Convolutional network testing for image classification - neural networks</title>
+      <link>https://armind93.github.io/projects/imageclassproject/project_imageclass_neural_networks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/imageclassproject/project_imageclass_neural_networks/</guid>
+      <description>3. Neural networks: class Network: def __init__(self, model_name, epochs, optimizer): self.model_name = model_name self.epochs = epochs self.optimizer = optimizer self.tz = &#39;CEST&#39; def model_summary(self): self.model_name.summary() def save_model(self, file_name): self.models_dir = &#39;/content/drive/My Drive/ColabNotebooks/intel_image/models/&#39; + dt.now().strftime(&#39;%Y-%m-%d/&#39;) if not os.path.exists(self.models_dir): os.makedirs(self.models_dir) self.model_name.save(self.models_dir + file_name + &#39;.h5&#39;) def train(self, verbose=0, ): self.model_name.compile(optimizer= self.optimizer, loss=&#39;categorical_crossentropy&#39;, metrics=[&#39;accuracy&#39;]) log_dir = &#39;logs/&#39; + dt.now().strftime(&#39;%Y-%m-%d_%H:%M:%S&#39;+ self.tz) tensorboard = TensorBoard(log_dir=log_dir, histogram_freq=1 ) # -------------------------------------------------------- time_start = time.time() self.history = self.model_name.fit( train_generator, steps_per_epoch= steps_per_epoch, epochs= self.</description>
+    </item>
+    
+    <item>
+      <title>Kepler Exoplanet Search Results - data analysis</title>
+      <link>https://armind93.github.io/projects/kepler/project_kepler_col_names/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/kepler/project_kepler_col_names/</guid>
+      <description>1. Description of the values ​​from the columns The following items were presented on one page and each was rated on a five point scale using radio buttons. The order on page was was EXT1, AGR1, CSN1, EST1, OPN1, EXT2, etc. The scale was labeled 1=Disagree, 3=Neutral, 5=Agree
+5 major dimensions of personality: Openness, Conscientiousness, Agreeableness, Extraversion, and Neuroticism.
+ EXT - Extraversion, EST - Neuroticism, AGR - Agreeableness (Zgodność), CSN - Conscientiousness (sumienność), OPN - Openness  KOI - Kepler Objects of Interest</description>
+    </item>
+    
+    <item>
+      <title>Kepler Exoplanet Search Results - data analysis</title>
+      <link>https://armind93.github.io/projects/kepler/project_kepler_data_analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/kepler/project_kepler_data_analysis/</guid>
+      <description>5. Data analysis Columns names: KOI - Kepler Objects of Interest
+   Oznaczenie Opis     koi_period Orbital Period (days) The interval between consecutive planetary transits.   koi_time0bk Transit Epoch (BJD - 2 454 833,0)) The time corresponding to the center of the first detected transit in Barycentric Julian Day (BJD) minus a constant offset of 2,454,833.0 days. The offset corresponds to 12:00 on Jan 1, 2009 UTC.</description>
+    </item>
+    
+    <item>
+      <title>Kepler Exoplanet Search Results - data presentation</title>
+      <link>https://armind93.github.io/projects/kepler/project_kepler_data_prepare/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/kepler/project_kepler_data_prepare/</guid>
+      <description>3. Data preparation: 3.1. Data presentation kepler_raw = pd.read_csv(&#39;/content/drive/My Drive/ColabNotebooks/KeplerExoplanetSearchResults/datasets/cumulative.csv&#39;, low_memory=False) # Kopia danych kepler = kepler_raw.copy() kepler.head()  kepler.info(memory_usage=&#39;Deep&#39;) &amp;lt;class &#39;pandas.core.frame.DataFrame&#39;&amp;gt; RangeIndex: 9564 entries, 0 to 9563 Data columns (total 50 columns): # Column Non-Null Count Dtype --- ------ -------------- ----- 0 rowid 9564 non-null int64 1 kepid 9564 non-null int64 2 kepoi_name 9564 non-null object 3 kepler_name 2294 non-null object 4 koi_disposition 9564 non-null object 5 koi_pdisposition 9564 non-null object 6 koi_score 8054 non-null float64 7 koi_fpflag_nt 9564 non-null int64 8 koi_fpflag_ss 9564 non-null int64 9 koi_fpflag_co 9564 non-null int64 10 koi_fpflag_ec 9564 non-null int64 11 koi_period 9564 non-null float64 12 koi_period_err1 9110 non-null float64 13 koi_period_err2 9110 non-null float64 14 koi_time0bk 9564 non-null float64 15 koi_time0bk_err1 9110 non-null float64 16 koi_time0bk_err2 9110 non-null float64 17 koi_impact 9201 non-null float64 18 koi_impact_err1 9110 non-null float64 19 koi_impact_err2 9110 non-null float64 20 koi_duration 9564 non-null float64 21 koi_duration_err1 9110 non-null float64 22 koi_duration_err2 9110 non-null float64 23 koi_depth 9201 non-null float64 24 koi_depth_err1 9110 non-null float64 25 koi_depth_err2 9110 non-null float64 26 koi_prad 9201 non-null float64 27 koi_prad_err1 9201 non-null float64 28 koi_prad_err2 9201 non-null float64 29 koi_teq 9201 non-null float64 30 koi_teq_err1 0 non-null float64 31 koi_teq_err2 0 non-null float64 32 koi_insol 9243 non-null float64 33 koi_insol_err1 9243 non-null float64 34 koi_insol_err2 9243 non-null float64 35 koi_model_snr 9201 non-null float64 36 koi_tce_plnt_num 9218 non-null float64 37 koi_tce_delivname 9218 non-null object 38 koi_steff 9201 non-null float64 39 koi_steff_err1 9096 non-null float64 40 koi_steff_err2 9081 non-null float64 41 koi_slogg 9201 non-null float64 42 koi_slogg_err1 9096 non-null float64 43 koi_slogg_err2 9096 non-null float64 44 koi_srad 9201 non-null float64 45 koi_srad_err1 9096 non-null float64 46 koi_srad_err2 9096 non-null float64 47 ra 9564 non-null float64 48 dec 9564 non-null float64 49 koi_kepmag 9563 non-null float64 dtypes: float64(39), int64(6), object(5) memory usage: 3.</description>
+    </item>
+    
+    <item>
+      <title>Kepler Exoplanet Search Results - imported modules</title>
+      <link>https://armind93.github.io/projects/kepler/project_kepler_modules/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/kepler/project_kepler_modules/</guid>
+      <description>2. Import modules import pandas as pd import numpy as np import matplotlib.pyplot as plt import plotly.figure_factory as ff import plotly.express as px from plotly.subplots import make_subplots import seaborn as sns import plotly.express as px from plotly.subplots import make_subplots import seaborn as sns sns.set(style=&amp;quot;ticks&amp;quot;, color_codes=True) from sklearn.linear_model import LogisticRegression from sklearn.neighbors import KNeighborsClassifier from sklearn.tree import DecisionTreeClassifier from sklearn.ensemble import RandomForestClassifier from sklearn.svm import SVC from sklearn.naive_bayes import GaussianNB from sklearn.</description>
+    </item>
+    
+    <item>
+      <title>Kepler Exoplanet Search Results - machine learning</title>
+      <link>https://armind93.github.io/projects/kepler/project_kepler_machine_learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/kepler/project_kepler_machine_learning/</guid>
+      <description>6. Machine learning: 6.1. Preparing data for machine learning: 6.1.1. The number of occurrences for each label 6.1.2. Coding the label values 6.1.3. Division of data into training and test sets 6.1.4. Scaling features 6.2. Model testing: 6.2.1. Logistic regression model 6.2.2. K-nearest neighbors model 6.2.3. Decision tree model 6.2.4. Random forest model 6.2.5. Support vector machine model 6.2.6. Naive Bayesian classifier 6.3. Comparison of the obtained results 6.4. Performing cross-validation 6.</description>
+    </item>
+    
+    <item>
+      <title>World Happiness project - data analysis</title>
+      <link>https://armind93.github.io/projects/worldhappiness/project_worldhappiness_data_analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/worldhappiness/project_worldhappiness_data_analysis/</guid>
+      <description>2. Data reviewing: I checked if data are completed and if there is no NaN values.
+2.1. Correlation maps: On the correlation maps below, we see which factor has the highest influence on happiness score and which of them has lowest. Regardless the years, the highest influence on happiness score of the country has economy level of this country. On the opposite side, the generosity factor has little effect on happiness score.</description>
+    </item>
+    
+    <item>
+      <title>World Happiness project - data presentation</title>
+      <link>https://armind93.github.io/projects/worldhappiness/project_worldhappiness_data_presentation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/worldhappiness/project_worldhappiness_data_presentation/</guid>
+      <description>1. Data presentation: Data downloaded from kaggle was splitted into years, which means in one file we have all factors from one year and we&amp;rsquo;ve 5 data files.:
+  Data from 2015:   Data from 2016:   Data from 2017:
+  Data from 2018:   Data from 2019:   At the beginning, I considered each report separately, and then sum up my analysis into one report - summary report.</description>
+    </item>
+    
+    <item>
+      <title>World Happiness project - machine learning</title>
+      <link>https://armind93.github.io/projects/worldhappiness/project_worldhappiness_machine_learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/worldhappiness/project_worldhappiness_machine_learning/</guid>
+      <description>4. Preparing data to machine learning: I wanted to link all factors into one dataframe, where all years were located in one column. I used merge() method, where I chose merging on columns &amp;lsquo;Country or region&amp;rsquo; and &amp;lsquo;Year&amp;rsquo;.
+AllFeatures = pd.merge(happy_AllYears_stacked, economy_AllYears_stacked, on= [&#39;Country or region&#39;, &#39;Year&#39;] ) AllFeatures = AllFeatures.merge(healthy_AllYears_stacked, on= [&#39;Country or region&#39;, &#39;Year&#39;] ) AllFeatures = AllFeatures.merge(social_support_AllYears_stacked, on= [&#39;Country or region&#39;, &#39;Year&#39;] ) AllFeatures.head()  Next, I wished to find out what the descibe() method returns for column &amp;lsquo;happinessScore&amp;rsquo; in this &amp;lsquo;AllYears&amp;rsquo; data frame.</description>
     </item>
     
   </channel>

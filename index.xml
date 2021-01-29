@@ -110,7 +110,7 @@ Skills:   Python:  Completed Udemy course: Python Intermediate (Credential ID: U
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://armind93.github.io/projects/bigfive/project_bigfive_data_analysis/</guid>
-      <description>4. Data analysis: 4.1. Preparation of groups based on the name of the country 4.2. The number of times each response occurs for each issue 4.3. Correlation analysis in individual traits 4.3.1. Description and classification of markings 4.3.2. Data preparation 4.3.3. Correlation maps for individual traits 4.4. Countries with the highest Extraversion level 4.5. Radar diagram for the selected row 4.5.1. Preparing the RadarChart class 4.5.2. Preparation of objects 4.6. Presentation of the results for each personality trait for the selected row 4.</description>
+      <description>4. Data analysis: 4.1. Preparation of groups based on the name of the country countries_groups = BigFive.groupby(by=&#39;country&#39;) # How many groups are there?: len(countries_groups) 221   Countries_groups_counts = countries_groups.size().to_frame(&#39;count&#39;) Countries_groups_counts.reset_index(inplace=True) Countries_groups_counts.head()      country count     0 Afghanistan 46   1 Albania 353   2 Algeria 230   3 American Samoa 1   4 Andorra 15    Countries_groups_counts_descending = Countries_groups_counts.</description>
     </item>
     
     <item>

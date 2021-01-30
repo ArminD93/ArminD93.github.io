@@ -232,6 +232,15 @@ if (!doNotTrack) {
     <li><a class="" href="/projects/imageclassproject/project_imageclass_neural_networks/">Neural networks</a></li>
   
 
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/imageclassproject/project_imageclass_model_test/">Model testing</a></li>
+  
+
 
       </ul>
     </li>
@@ -374,6 +383,31 @@ if (!doNotTrack) {
   <div class="content container-fluid" id="content">
     <div class="container-fluid post-card-holder" id="post-card-holder">
       
+      
+        <div class="post-card">
+  <a href="/projects/imageclassproject/project_imageclass_model_test/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        <img class="card-img-top" src='/assets/images/default-hero.jpg'/>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Convolutional network testing for image classification - model testing</h5>
+        <p class="card-text post-summary">3.6. Models testing: Load best model:
+best_model = load_model('/content/drive/My Drive/ColabNotebooks/intel_image/models/2020-06-05/model_3_L0.36_A0.86.h5') # best_model.summary()  3.6.1. TestModel class Create TestModel class:
+class TestModel: def __init__(self, model_dict): self.model_dict = model_dict self.y_pred_list = [] self.models_metrics_list = [] self.models_errors_list = [] self.model_name_idx = 0 self.y_pred_idx = 0 self.models_metrics_idx = 0 self.errors_df_idx = 0 self.test_dir_list = [test_buildings_dir, test_forest_dir, test_glacier_dir, test_mountain_dir, test_sea_dir, test_street_dir] def __prepare_test_generator(self): self.test_datagen = ImageDataGenerator(rescale=1./255.) self.test_generator = self.test_datagen.flow_from_directory(test_dir, target_size=(150, 150), batch_size=32, class_mode='categorical', shuffle=False ) def __get_y_pred(self): self.</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">January 1, 0001</span>
+        <a
+        href="/projects/imageclassproject/project_imageclass_model_test/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+  </a>
+</div>
+
       
         <div class="post-card">
   <a href="/projects/imageclassproject/project_imageclass_neural_networks/" class="post-card-link">

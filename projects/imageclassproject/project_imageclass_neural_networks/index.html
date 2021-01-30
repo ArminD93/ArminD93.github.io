@@ -238,6 +238,15 @@ if (!doNotTrack) {
     <li><a class="active" href="/projects/imageclassproject/project_imageclass_neural_networks/">Neural networks</a></li>
   
 
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/imageclassproject/project_imageclass_model_test/">Model testing</a></li>
+  
+
 
       </ul>
     </li>
@@ -1686,170 +1695,6 @@ modelObj_5.plot_hist(title='MODEL 5')
 <img src="/static/images/ImageClass/plots/model_3_plot_result.jpg" alt="model 3 train result">
 <img src="/static/images/ImageClass/plots/model_4_plot_result.jpg" alt="model 4 train result">
 <img src="/static/images/ImageClass/plots/model_5_plot_result.jpg" alt="model 5 train result"></p>
-<h3 id="36-models-testing"><strong>3.6. Models testing:</strong></h3>
-<p>Load best model:</p>
-<pre><code>best_model = load_model('/content/drive/My Drive/ColabNotebooks/intel_image/models/2020-06-05/model_3_L0.36_A0.86.h5') 
-# best_model.summary()
-</code></pre>
-<h4 id="361-testmodel-class">3.6.1. TestModel class</h4>
-<p>Create TestModel class:</p>
-<pre><code>class TestModel:
-
-def __init__(self, model_dict):
-    self.model_dict          = model_dict
-    self.y_pred_list         = []
-    self.models_metrics_list = []
-    self.models_errors_list  = []
-    self.model_name_idx      = 0
-    self.y_pred_idx          = 0
-    self.models_metrics_idx  = 0
-    self.errors_df_idx       = 0
-    self.test_dir_list       = [test_buildings_dir, test_forest_dir, test_glacier_dir, test_mountain_dir, test_sea_dir, test_street_dir]
-    
-def __prepare_test_generator(self):
-    self.test_datagen = ImageDataGenerator(rescale=1./255.)
-    self.test_generator    = self.test_datagen.flow_from_directory(test_dir, target_size=(150, 150), batch_size=32, class_mode='categorical', shuffle=False )
-
-def __get_y_pred(self):
-    self.__prepare_test_generator()
-    for i, name in enumerate(self.model_dict):
-    self.model    = [val for val in self.model_dict.values() ][i]
-    self.y_proba  = self.model.predict(self.test_generator , steps=len(self.test_generator ), batch_size=32 ) 
-    self.y_pred   = np.argmax(self.y_proba, axis=1)
-    self.y_pred_list.append( self.y_pred )
-    
-
-def __get_model_metrics(self):
-    for i, name in enumerate(self.model_dict):
-    self.model          = [val for val in self.model_dict.values() ][i]
-    self.models_metrics = self.model.evaluate(self.test_generator , steps=len(self.test_generator ), batch_size=32, verbose=0)
-    self.models_metrics_list.append(self.models_metrics)
-
-def __create_errors_data_frame(self):
-    self.errors_df           = pd.DataFrame( index= self.test_generator.filenames )
-    self.y_true              = self.test_generator.classes
-    for i, y_pred in enumerate(self.y_pred_list):
-    self.errors_df['y_true']             = self.y_true
-    self.errors_df['y_pred_' + str(i) ]   = y_pred
-    self.errors_df['incorrect_' + str(i)] =  (self.y_true != y_pred) * 1 
-
-    self.number_of_errors = len(self.errors_df[self.errors_df['incorrect_'+ str(i)] == 1].index)
-    self.models_errors_list.append(self.number_of_errors)
-
-def create_matrix(self):
-    self.__get_y_pred()
-    self.__get_model_metrics()
-    self.__create_errors_data_frame()
-
-    sns.set_style(&quot;darkgrid&quot;)
-    fig = plt.figure(figsize=(30, 8))
-    fig.subplots_adjust(hspace=0.7, wspace=0.2)
-
-    for i in range(1, 7):
-    fig.add_subplot(2, 3, i) 
-
-    self.cm = confusion_matrix(self.y_true, self.y_pred_list[self.y_pred_idx])
-
-
-    g = sns.heatmap(self.cm, annot=True, fmt='d', linewidth=.2, cmap='Blues',
-                    xticklabels=self.test_generator.class_indices.keys(), yticklabels=self.test_generator.class_indices.keys(),
-                    annot_kws={&quot;size&quot;: 15})
-
-    g.tick_params(labelsize=15)
-    g.xaxis.tick_top()
-    plt.yticks(rotation=0) 
-    plt.xticks(rotation=0) 
-
-    plt.title(f'{ list(model_dict.keys())[self.model_name_idx]}\n Accuracy: {self.models_metrics_list[self.models_metrics_idx][1]:.4f} Loss: {self.models_metrics_list[self.models_metrics_idx][0]:.4f}\n Liczba pomyłek: {self.models_errors_list[self.errors_df_idx]}',
-                    fontdict={'fontsize' : 15, 'weight':'bold'})
-
-    self.model_name_idx     += 1
-    self.y_pred_idx         += 1
-    self.models_metrics_idx += 1
-    self.errors_df_idx      += 1
-    plt.show()  
-
-def __set_column_name_prefix(self, model_name):
-    for i, name in enumerate(self.model_dict):
-    if str(i) in model_name:
-        self.incorrect_col_name = 'incorrect_'
-        self.y_pred_col_name = 'y_pred_'
-        self.incorrect_col_name = self.incorrect_col_name + str(i)
-        self.y_pred_col_name = self.y_pred_col_name + str(i)
-    elif 'Best' in model_name:
-        self.incorrect_col_name = 'incorrect_'
-        self.y_pred_col_name = 'y_pred_'
-        self.incorrect_col_name = self.incorrect_col_name + str(5)
-        self.y_pred_col_name = self.y_pred_col_name + str(5)    
-
-def __get_image_name_and_category_from_df(self, col_idx):
-    self.img = [ img.split('/')[1] for i, img in enumerate(self.errors_df[self.errors_df[self.incorrect_col_name] == 1].index) ][col_idx]
-    self.category = [ img.split('/')[0] for i, img in enumerate(self.errors_df[self.errors_df[self.incorrect_col_name] == 1].index) ][col_idx]
-
-def __get_true_and_pred_label_from_df(self, col_idx):
-    self.pred_label = [self.pred_label for i, self.pred_label in enumerate(self.errors_df[self.errors_df[self.incorrect_col_name] == 1][self.y_pred_col_name].values) ][col_idx]
-    self.true_label = [self.true_label for i, self.true_label in enumerate(self.errors_df[self.errors_df[self.incorrect_col_name] == 1]['y_true'].values) ][col_idx]
-
-def __concatenate_class_inidces_with_label_from_df(self):
-    for key, val in self.test_generator.class_indices.items():
-        if val == self.pred_label:
-        self.pred_label = key
-        if val == self.true_label:
-        self.true_label = key 
-        
-def __prepare_image_path(self): 
-    self.dir_name = test_dir + '/'+ self.category
-    self.img_path = os.path.join(self.dir_name, self.img)       
-
-def show_incorrect_images(self, model_name, amount=10):
-    self.__set_column_name_prefix(model_name)
-
-    rows= 5
-    cols= 8
-    col_idx = 0
-
-    fig = plt.figure(figsize=(30, 20))
-    fig.subplots_adjust(hspace=0.3, wspace=0)
-
-    for i in range(1, amount):
-    fig.add_subplot(rows, cols, i)
-    self.__get_image_name_and_category_from_df(col_idx)
-    self.__get_true_and_pred_label_from_df(col_idx)
-    self.__concatenate_class_inidces_with_label_from_df()
-    self.__prepare_image_path()
-
-    self.img = image.load_img(self.img_path)
-    plt.imshow(self.img)
-    plt.title(f'true label: {self.true_label}\n predicted: {self.pred_label}', fontdict = {'color' : 'green', 'weight' : 'bold', 'size' : 12}) 
-    plt.axis('off')
-    col_idx += 1
-    plt.show()    
-</code></pre>
-<p>Create model dictionary:</p>
-<pre><code>model_dict = {
-            'model 1'    : model_1,
-            'model 2'    : model_2,
-            'model 3'    : model_3,
-            'model 4'    : model_4,
-            'model 5'    : model_5,
-            'Best model' : best_model              
-            }
-
-TestModel_obj = TestModel( model_dict= model_dict)
-</code></pre>
-<p>Results:</p>
-<pre><code>TestModel_obj.create_matrix() 
-</code></pre>
-<p><img src="/static/images/ImageClass/matrices/models_matrices.jpg" alt="models_matrices"></p>
-<h4 id="362-best-models">3.6.2. Best models</h4>
-<p><img src="/static/images/ImageClass/matrices/models_best_matrices.jpg" alt="models_best_matrices"></p>
-<h4 id="363-presentation-of-incorrect-image-classification">3.6.3. Presentation of incorrect image classification</h4>
-<pre><code>TestModel_obj.show_incorrect_images(model_name= 'model 3', amount= 25)
-</code></pre>
-<p><img src="/static/images/ImageClass/incorrect_results/model_3.jpg" alt="model_3"></p>
-<pre><code>TestModel_obj.show_incorrect_images(model_name= 'Best model', amount= 25)
-</code></pre>
-<p><img src="/static/images/ImageClass/incorrect_results/best_model.jpg" alt="best model"></p>
 
         </div>
 
@@ -1881,13 +1726,15 @@ TestModel_obj = TestModel( model_dict= model_dict)
   
 
   
+
+  
     
       
       <div class="col-md-6 previous-article">
-        <a href="/projects/imageclassproject/project_imageclass_modules/" class="btn btn-outline-info">
+        <a href="/projects/imageclassproject/project_imageclass_model_test/" class="btn btn-outline-info">
           <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
           <br />
-          <span>Convolutional network testing for image classification - imported modules</span>
+          <span>Convolutional network testing for image classification - model testing</span>
         </a>
       </div>
       
@@ -1996,13 +1843,6 @@ TestModel_obj = TestModel( model_dict= model_dict)
         <li><a href="#33-networks-training"><strong>3.3. Networks training</strong></a></li>
         <li><a href="#34-models-saving"><strong>3.4. Models saving</strong></a></li>
         <li><a href="#35-the-characteristics-of-the-trained-models"><strong>3.5. The characteristics of the trained models</strong></a></li>
-        <li><a href="#36-models-testing"><strong>3.6. Models testing:</strong></a>
-          <ul>
-            <li><a href="#361-testmodel-class">3.6.1. TestModel class</a></li>
-            <li><a href="#362-best-models">3.6.2. Best models</a></li>
-            <li><a href="#363-presentation-of-incorrect-image-classification">3.6.3. Presentation of incorrect image classification</a></li>
-          </ul>
-        </li>
       </ul>
     </li>
   </ul>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Kepler Exoplanet Search Results - data analysis</title>
+    <title>Convolutional network testing for image classification - model testing</title>
     <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -36,7 +36,7 @@
 <link rel="stylesheet" href="/assets/css/style.css"/>
 
     
-<meta name="description" content="Kepler Exoplanet Search Results - data analysis" />
+<meta name="description" content="Convolutional network testing for image classification - model testing" />
 <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
@@ -189,12 +189,15 @@ if (!doNotTrack) {
   
   
   
+    
+    
+  
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="">Convolutional network testing for image classification</a>
+      <i class="fas fa-minus-circle"></i><a class="active" href="">Convolutional network testing for image classification</a>
       
-      <ul class="">
+      <ul class="active">
         
   
   
@@ -236,9 +239,12 @@ if (!doNotTrack) {
   
   
   
+    
+    
+  
   
     
-    <li><a class="" href="/projects/imageclassproject/project_imageclass_model_test/">Model testing</a></li>
+    <li><a class="active" href="/projects/imageclassproject/project_imageclass_model_test/">Model testing</a></li>
   
 
 
@@ -250,15 +256,12 @@ if (!doNotTrack) {
   
   
   
-    
-    
-  
   
     
     <li>
-      <i class="fas fa-minus-circle"></i><a class="active" href="">Kepler Exoplanet Search Results</a>
+      <i class="fas fa-plus-circle"></i><a class="" href="">Kepler Exoplanet Search Results</a>
       
-      <ul class="active">
+      <ul class="">
         
   
   
@@ -273,12 +276,9 @@ if (!doNotTrack) {
   
   
   
-    
-    
-  
   
     
-    <li><a class="active" href="/projects/kepler/project_kepler_col_names/">Columns description</a></li>
+    <li><a class="" href="/projects/kepler/project_kepler_col_names/">Columns description</a></li>
   
 
   
@@ -401,144 +401,181 @@ if (!doNotTrack) {
         </div>
 
         <div class="title">
-          <h1>Kepler Exoplanet Search Results - data analysis</h1>
+          <h1>Convolutional network testing for image classification - model testing</h1>
         </div>
 
         <div class="post-content" id="post-content">
-          <h2 id="1-description-of-the-values-from-the-columns"><strong>1. Description of the values ​​from the columns</strong></h2>
-<p>The following items were presented on one page and each was rated on a five point scale using radio buttons. The order on page was was EXT1, AGR1, CSN1, EST1, OPN1, EXT2, etc.
-The scale was labeled 1=Disagree, 3=Neutral, 5=Agree</p>
-<p>5 major dimensions of personality: Openness, Conscientiousness, Agreeableness, Extraversion, and Neuroticism.</p>
-<ul>
-<li>EXT - Extraversion,</li>
-<li>EST - Neuroticism,</li>
-<li>AGR - Agreeableness (Zgodność),</li>
-<li>CSN - Conscientiousness (sumienność),</li>
-<li>OPN - Openness</li>
-</ul>
-<p><strong>KOI</strong> - Kepler Objects of Interest</p>
-<table>
-<thead>
-<tr>
-<th align="left">Oznaczenie</th>
-<th align="right">Opis</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">kepid</td>
-<td align="right">Kepler Identification</td>
-</tr>
-<tr>
-<td align="left">kepoi_name</td>
-<td align="right"><strong>KOI Name</strong>. A number used to identify and track a Kepler Object of Interest (KOI). A KOI is a target identified by the Kepler Project that displays at least one transit-like sequence within Kepler time-series photometry that appears to be of astrophysical origin and initially consistent with a planetary transit hypothesis.</td>
-</tr>
-<tr>
-<td align="left">kepler_name</td>
-<td align="right"><strong>Kepler Name</strong>. Kepler number name in the form &ldquo;Kepler-N,&rdquo; plus a lower-case letter, identifying the planet. In general, these numbers are easier to remember than the corresponding KOI or KIC/KepID designations and are intended to clearly indicate a class of objects that have been confirmed or validated as planets—a step up from the planet candidate designation.</td>
-</tr>
-<tr>
-<td align="left">koi_pdisposition</td>
-<td align="right">The pipeline flag that designates the most probable physical explanation of the KOI. Typical values are FALSE POSITIVE, NOT DISPOSITIONED, and CANDIDATE. The value of this flag may change over time as the evaluation of KOIs proceeds to deeper levels of analysis using Kepler time-series pixel and light curve data, or follow-up observations. A not dispositioned value corresponds to objects for which the disposition tests have not yet been completed.</td>
-</tr>
-<tr>
-<td align="left">koi_score</td>
-<td align="right">A value between 0 and 1 that indicates the confidence in the KOI disposition. For CANDIDATEs, a higher value indicates more confidence in its disposition, while for FALSE POSITIVEs, a higher value indicates less confidence in that disposition. The value is calculated from a Monte Carlo technique such that the score&rsquo;s value is equivalent to the frction of iterations where the Robovetter yields a disposition of CANDIDATE.</td>
-</tr>
-<tr>
-<td align="left">koi_fpflag_nt</td>
-<td align="right"><strong>Not Transit-Like Flag</strong>  A KOI whose light curve is not consistent with that of a transiting planet. This includes, but is not limited to, instrumental artifacts, non-eclipsing variable stars, and spurious (very low SNR) detections.</td>
-</tr>
-<tr>
-<td align="left">koi_fpflag_ss</td>
-<td align="right"><strong>Stellar Eclipse Flag</strong> A KOI that is observed to have a significant secondary event, transit shape, or out-of-eclipse variability, which indicates that the transit-like event is most likely caused by an eclipsing binary. However, self-luminous, hot Jupiters with a visible secondary eclipse will also have this flag set, but with a disposition of PC.</td>
-</tr>
-<tr>
-<td align="left">koi_fpflag_co</td>
-<td align="right"><strong>Centroid Offset Flag</strong> The source of the signal is from a nearby star, as inferred by measuring the centroid location of the image both in and out of transit, or by the strength of the transit signal in the target&rsquo;s outer (halo) pixels as compared to the transit signal from the pixels in the optimal (or core) aperture.</td>
-</tr>
-<tr>
-<td align="left">koi_fpflag_ec</td>
-<td align="right"><strong>Ephemeris Match Indicates Contamination Flag</strong> The KOI shares the same period and epoch as another object and is judged to be the result of flux contamination in the aperture or electronic crosstalk.</td>
-</tr>
-<tr>
-<td align="left">koi_period</td>
-<td align="right"><strong>Orbital Period (days)</strong> The interval between consecutive planetary transits.</td>
-</tr>
-<tr>
-<td align="left">koi_time0bk</td>
-<td align="right"><strong>Transit Epoch (BJD - 2 454 833,0))</strong> The time corresponding to the center of the first detected transit in Barycentric Julian Day (BJD) minus a constant offset of 2,454,833.0 days. The offset corresponds to 12:00 on Jan 1, 2009 UTC.</td>
-</tr>
-<tr>
-<td align="left">koi_impact</td>
-<td align="right">The sky-projected distance between the center of the stellar disc and the center of the planet disc at conjunction, normalized by the stellar radius.</td>
-</tr>
-<tr>
-<td align="left">koi_duration</td>
-<td align="right"><strong>Transit Duration (hours)</strong> The duration of the observed transits. Duration is measured from first contact between the planet and star until last contact. Contact times are typically computed from a best-fit model produced by a Mandel-Agol (2002) model fit to a multi-quarter Kepler light curve, assuming a linear orbital ephemeris.</td>
-</tr>
-<tr>
-<td align="left">koi_depth</td>
-<td align="right"><strong>Transit Depth (parts per million)</strong> The fraction of stellar flux lost at the minimum of the planetary transit. Transit depths are typically computed from a best-fit model produced by a Mandel-Agol (2002) model fit to a multi-quarter Kepler light curve, assuming a linear orbital ephemeris.</td>
-</tr>
-<tr>
-<td align="left">koi_prad</td>
-<td align="right"><strong>Planetary Radius (Earth radii)</strong> The radius of the planet. Planetary radius is the product of the planet star radius ratio and the stellar radius.</td>
-</tr>
-<tr>
-<td align="left">koi_teq</td>
-<td align="right"><strong>Equilibrium Temperature (Kelvin)</strong> Approximation for the temperature of the planet.</td>
-</tr>
-<tr>
-<td align="left">koi_insol</td>
-<td align="right"><strong>Insolation Flux [Earth flux]</strong> Insolation flux is another way to give the equilibrium temperature. It depends on the stellar parameters (specifically the stellar radius and temperature), and on the semi-major axis of the planet. It&rsquo;s given in units relative to those measured for the Earth from the Sun.</td>
-</tr>
-<tr>
-<td align="left">koi_model_snr</td>
-<td align="right"><strong>Transit Signal-to-Noise</strong> Transit depth normalized by the mean uncertainty in the flux during the transits.</td>
-</tr>
-<tr>
-<td align="left">koi_tce_plnt_num</td>
-<td align="right">TCE Planet Number federated to the KOI.</td>
-</tr>
-<tr>
-<td align="left">koi_tce_delivname</td>
-<td align="right">TCE delivery name corresponding to the TCE data federated to the KOI.</td>
-</tr>
-<tr>
-<td align="left">koi_steff</td>
-<td align="right"><strong>Stellar Effective Temperature (Kelvin)</strong> The photospheric temperature of the star.</td>
-</tr>
-<tr>
-<td align="left">koi_slogg</td>
-<td align="right"><strong>Stellar Surface Gravity (log10(cm s-2)</strong> The base-10 logarithm of the acceleration due to gravity at the surface of the star.</td>
-</tr>
-<tr>
-<td align="left">koi_srad</td>
-<td align="right"><strong>Promieś gwiezdny</strong> Fotosferyczny promień gwiazdy.</td>
-</tr>
-<tr>
-<td align="left">ra</td>
-<td align="right"><strong>RA (deg). Rektascensja</strong>, α (łac. recta ascensio – &ldquo;wznoszenie proste&rdquo;) – jedna ze współrzędnych astronomicznych, określających położenie ciała niebieskiego na sferze niebieskiej w układzie współrzędnych astronomicznych zwanym układem równikowym równonocnym.</td>
-</tr>
-<tr>
-<td align="left">dec</td>
-<td align="right"><strong>Dec (deg). Deklinacja</strong> (łac. declinatio – „odchylenie”, oznaczana symbolem δ) – jedna ze współrzędnych określających położenie ciała w obydwu układach równikowych: równonocnym i godzinnym. Definiujemy ją jako kąt pomiędzy kierunkiem poprowadzonym od obserwatora do obiektu a płaszczyzną równika niebieskiego.</td>
-</tr>
-<tr>
-<td align="left">koi_kepmag</td>
-<td align="right">Kepler-band (mag)</td>
-</tr>
-</tbody>
-</table>
-<p><a href="https://exoplanetarchive.ipac.caltech.edu/docs/API_kepcandidate_columns.html">link to identification columns</a></p>
+          <h3 id="36-models-testing"><strong>3.6. Models testing:</strong></h3>
+<p>Load best model:</p>
+<pre><code>best_model = load_model('/content/drive/My Drive/ColabNotebooks/intel_image/models/2020-06-05/model_3_L0.36_A0.86.h5') 
+# best_model.summary()
+</code></pre>
+<h4 id="361-testmodel-class">3.6.1. TestModel class</h4>
+<p>Create TestModel class:</p>
+<pre><code>class TestModel:
+
+def __init__(self, model_dict):
+    self.model_dict          = model_dict
+    self.y_pred_list         = []
+    self.models_metrics_list = []
+    self.models_errors_list  = []
+    self.model_name_idx      = 0
+    self.y_pred_idx          = 0
+    self.models_metrics_idx  = 0
+    self.errors_df_idx       = 0
+    self.test_dir_list       = [test_buildings_dir, test_forest_dir, test_glacier_dir, test_mountain_dir, test_sea_dir, test_street_dir]
+    
+def __prepare_test_generator(self):
+    self.test_datagen = ImageDataGenerator(rescale=1./255.)
+    self.test_generator    = self.test_datagen.flow_from_directory(test_dir, target_size=(150, 150), batch_size=32, class_mode='categorical', shuffle=False )
+
+def __get_y_pred(self):
+    self.__prepare_test_generator()
+    for i, name in enumerate(self.model_dict):
+    self.model    = [val for val in self.model_dict.values() ][i]
+    self.y_proba  = self.model.predict(self.test_generator , steps=len(self.test_generator ), batch_size=32 ) 
+    self.y_pred   = np.argmax(self.y_proba, axis=1)
+    self.y_pred_list.append( self.y_pred )
+    
+
+def __get_model_metrics(self):
+    for i, name in enumerate(self.model_dict):
+    self.model          = [val for val in self.model_dict.values() ][i]
+    self.models_metrics = self.model.evaluate(self.test_generator , steps=len(self.test_generator ), batch_size=32, verbose=0)
+    self.models_metrics_list.append(self.models_metrics)
+
+def __create_errors_data_frame(self):
+    self.errors_df           = pd.DataFrame( index= self.test_generator.filenames )
+    self.y_true              = self.test_generator.classes
+    for i, y_pred in enumerate(self.y_pred_list):
+    self.errors_df['y_true']             = self.y_true
+    self.errors_df['y_pred_' + str(i) ]   = y_pred
+    self.errors_df['incorrect_' + str(i)] =  (self.y_true != y_pred) * 1 
+
+    self.number_of_errors = len(self.errors_df[self.errors_df['incorrect_'+ str(i)] == 1].index)
+    self.models_errors_list.append(self.number_of_errors)
+
+def create_matrix(self):
+    self.__get_y_pred()
+    self.__get_model_metrics()
+    self.__create_errors_data_frame()
+
+    sns.set_style(&quot;darkgrid&quot;)
+    fig = plt.figure(figsize=(30, 8))
+    fig.subplots_adjust(hspace=0.7, wspace=0.2)
+
+    for i in range(1, 7):
+    fig.add_subplot(2, 3, i) 
+
+    self.cm = confusion_matrix(self.y_true, self.y_pred_list[self.y_pred_idx])
+
+
+    g = sns.heatmap(self.cm, annot=True, fmt='d', linewidth=.2, cmap='Blues',
+                    xticklabels=self.test_generator.class_indices.keys(), yticklabels=self.test_generator.class_indices.keys(),
+                    annot_kws={&quot;size&quot;: 15})
+
+    g.tick_params(labelsize=15)
+    g.xaxis.tick_top()
+    plt.yticks(rotation=0) 
+    plt.xticks(rotation=0) 
+
+    plt.title(f'{ list(model_dict.keys())[self.model_name_idx]}\n Accuracy: {self.models_metrics_list[self.models_metrics_idx][1]:.4f} Loss: {self.models_metrics_list[self.models_metrics_idx][0]:.4f}\n Liczba pomyłek: {self.models_errors_list[self.errors_df_idx]}',
+                    fontdict={'fontsize' : 15, 'weight':'bold'})
+
+    self.model_name_idx     += 1
+    self.y_pred_idx         += 1
+    self.models_metrics_idx += 1
+    self.errors_df_idx      += 1
+    plt.show()  
+
+def __set_column_name_prefix(self, model_name):
+    for i, name in enumerate(self.model_dict):
+    if str(i) in model_name:
+        self.incorrect_col_name = 'incorrect_'
+        self.y_pred_col_name = 'y_pred_'
+        self.incorrect_col_name = self.incorrect_col_name + str(i)
+        self.y_pred_col_name = self.y_pred_col_name + str(i)
+    elif 'Best' in model_name:
+        self.incorrect_col_name = 'incorrect_'
+        self.y_pred_col_name = 'y_pred_'
+        self.incorrect_col_name = self.incorrect_col_name + str(5)
+        self.y_pred_col_name = self.y_pred_col_name + str(5)    
+
+def __get_image_name_and_category_from_df(self, col_idx):
+    self.img = [ img.split('/')[1] for i, img in enumerate(self.errors_df[self.errors_df[self.incorrect_col_name] == 1].index) ][col_idx]
+    self.category = [ img.split('/')[0] for i, img in enumerate(self.errors_df[self.errors_df[self.incorrect_col_name] == 1].index) ][col_idx]
+
+def __get_true_and_pred_label_from_df(self, col_idx):
+    self.pred_label = [self.pred_label for i, self.pred_label in enumerate(self.errors_df[self.errors_df[self.incorrect_col_name] == 1][self.y_pred_col_name].values) ][col_idx]
+    self.true_label = [self.true_label for i, self.true_label in enumerate(self.errors_df[self.errors_df[self.incorrect_col_name] == 1]['y_true'].values) ][col_idx]
+
+def __concatenate_class_inidces_with_label_from_df(self):
+    for key, val in self.test_generator.class_indices.items():
+        if val == self.pred_label:
+        self.pred_label = key
+        if val == self.true_label:
+        self.true_label = key 
+        
+def __prepare_image_path(self): 
+    self.dir_name = test_dir + '/'+ self.category
+    self.img_path = os.path.join(self.dir_name, self.img)       
+
+def show_incorrect_images(self, model_name, amount=10):
+    self.__set_column_name_prefix(model_name)
+
+    rows= 5
+    cols= 8
+    col_idx = 0
+
+    fig = plt.figure(figsize=(30, 20))
+    fig.subplots_adjust(hspace=0.3, wspace=0)
+
+    for i in range(1, amount):
+    fig.add_subplot(rows, cols, i)
+    self.__get_image_name_and_category_from_df(col_idx)
+    self.__get_true_and_pred_label_from_df(col_idx)
+    self.__concatenate_class_inidces_with_label_from_df()
+    self.__prepare_image_path()
+
+    self.img = image.load_img(self.img_path)
+    plt.imshow(self.img)
+    plt.title(f'true label: {self.true_label}\n predicted: {self.pred_label}', fontdict = {'color' : 'green', 'weight' : 'bold', 'size' : 12}) 
+    plt.axis('off')
+    col_idx += 1
+    plt.show()    
+</code></pre>
+<p>Create model dictionary:</p>
+<pre><code>model_dict = {
+            'model 1'    : model_1,
+            'model 2'    : model_2,
+            'model 3'    : model_3,
+            'model 4'    : model_4,
+            'model 5'    : model_5,
+            'Best model' : best_model              
+            }
+
+TestModel_obj = TestModel( model_dict= model_dict)
+</code></pre>
+<p>Results:</p>
+<pre><code>TestModel_obj.create_matrix() 
+</code></pre>
+<p><img src="/static/images/ImageClass/matrices/models_matrices.jpg" alt="models_matrices"></p>
+<h4 id="362-best-models">3.6.2. Best models</h4>
+<p><img src="/static/images/ImageClass/matrices/models_best_matrices.jpg" alt="models_best_matrices"></p>
+<h4 id="363-presentation-of-incorrect-image-classification">3.6.3. Presentation of incorrect image classification</h4>
+<pre><code>TestModel_obj.show_incorrect_images(model_name= 'model 3', amount= 25)
+</code></pre>
+<p><img src="/static/images/ImageClass/incorrect_results/model_3.jpg" alt="model_3"></p>
+<pre><code>TestModel_obj.show_incorrect_images(model_name= 'Best model', amount= 25)
+</code></pre>
+<p><img src="/static/images/ImageClass/incorrect_results/best_model.jpg" alt="best model"></p>
 
         </div>
 
         
         
           <div class="btn-improve-page">
-              <a href="https://github.com/hugo-toha/hugo-toha.github.io/edit/master/content/projects/Kepler/project_Kepler_col_names.md">
+              <a href="https://github.com/hugo-toha/hugo-toha.github.io/edit/master/content/projects/ImageClassProject/project_ImageClass_model_test.md">
                 <i class="fas fa-code-branch"></i>
                 Improve this page
               </a>
@@ -563,17 +600,13 @@ The scale was labeled 1=Disagree, 3=Neutral, 5=Agree</p>
   
 
   
-
-  
-
-  
     
       
       <div class="col-md-6 previous-article">
-        <a href="/projects/imageclassproject/project_imageclass_neural_networks/" class="btn btn-outline-info">
+        <a href="/projects/imageclassproject/project_imageclass_modules/" class="btn btn-outline-info">
           <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
           <br />
-          <span>Convolutional network testing for image classification - neural networks</span>
+          <span>Convolutional network testing for image classification - imported modules</span>
         </a>
       </div>
       
@@ -587,14 +620,18 @@ The scale was labeled 1=Disagree, 3=Neutral, 5=Agree</p>
           
         
         <div class="col-md-6 next-article">
-          <a href="/projects/kepler/project_kepler_data_analysis/" class="btn btn-outline-info">
+          <a href="/projects/imageclassproject/project_imageclass_neural_networks/" class="btn btn-outline-info">
             <span>Next <i class="fas fa-chevron-circle-right"></i></span>
             <br />
-            <span>Kepler Exoplanet Search Results - data analysis</span>
+            <span>Convolutional network testing for image classification - neural networks</span>
           </a>
         </div>
       
     
+  
+
+  
+
   
 
   
@@ -645,7 +682,17 @@ The scale was labeled 1=Disagree, 3=Neutral, 5=Agree</p>
       <div class="toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#1-description-of-the-values-from-the-columns"><strong>1. Description of the values ​​from the columns</strong></a></li>
+    <li>
+      <ul>
+        <li><a href="#36-models-testing"><strong>3.6. Models testing:</strong></a>
+          <ul>
+            <li><a href="#361-testmodel-class">3.6.1. TestModel class</a></li>
+            <li><a href="#362-best-models">3.6.2. Best models</a></li>
+            <li><a href="#363-presentation-of-incorrect-image-classification">3.6.3. Presentation of incorrect image classification</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav>
       </div>

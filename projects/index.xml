@@ -95,6 +95,15 @@ Functions:  Downloading informations about books (title, price, date) from the a
     </item>
     
     <item>
+      <title>Big Five Personality test - data analysis for Poland</title>
+      <link>https://armind93.github.io/projects/bigfive/project_bigfive_data_analysisforpoland/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/bigfive/project_bigfive_data_analysisforpoland/</guid>
+      <description>4.9.Presentation of approximate locations in a scatterplot diagram pol_data = countries_groups.get_group(&#39;Poland&#39;) pol_data.head(3)   | | EXT1 | EXT2 | EXT3 | EXT4 | EXT5 | EXT6 | EXT7 | EXT8 | EXT9 | EXT10 | EST1 | EST2 | EST3 | EST4 | EST5 | EST6 | EST7 | EST8 | EST9 | EST10 | AGR1 | AGR2 | AGR3 | AGR4 | AGR5 | AGR6 | AGR7 | AGR8 | AGR9 | AGR10 | CSN1 | CSN2 | CSN3 | CSN4 | CSN5 | CSN6 | CSN7 | CSN8 | CSN9 | CSN10 | OPN1 | OPN2 | OPN3 | OPN4 | OPN5 | OPN6 | OPN7 | OPN8 | OPN9 | OPN10 | dateload | introelapse | testelapse | endelapse | alpha2_code | lat_appx_lots_of_err | long_appx_lots_of_err | country | Extraversion | Agreeableness | Conscientiousness | EmotionalStability | Openness | |-----|------|------|------|------|------|------|------|------|------|-------|------|------|------|------|------|------|------|------|------|-------|------|------|------|------|------|------|------|------|------|-------|------|------|------|------|------|------|------|------|------|-------|------|------|------|------|------|------|------|------|------|-------|---------------------|-------------|------------|-----------|-------------|----------------------|-----------------------|---------|--------------|---------------|-------------------|--------------------|----------| | 222 | 1.</description>
+    </item>
+    
+    <item>
       <title>Big Five Personality test - data preparation</title>
       <link>https://armind93.github.io/projects/bigfive/bigfive_data_prepare/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -111,7 +120,7 @@ Functions:  Downloading informations about books (title, price, date) from the a
       
       <guid>https://armind93.github.io/projects/bigfive/bigfive_modules/</guid>
       <description>link to GitHub Repository
-2. Import modules try: import pandas as pd import numpy as np import matplotlib.pyplot as plt import plotly.figure_factory as ff import plotly.express as px from plotly.subplots import make_subplots import seaborn as sns from itertools import islice import pycountry_convert as pc import squarify except: !pip install pycountry_convert !pip install squarify import pycountry_convert as pc import squarify %matplotlib inline  </description>
+2. Import modules try: import pandas as pd import numpy as np import matplotlib.pyplot as plt import plotly.figure_factory as ff import plotly.express as px from plotly.subplots import make_subplots import seaborn as sns from itertools import islice, combinations from geopy.geocoders import Nominatim geolocator = Nominatim(user_agent=&amp;quot;BigFive&amp;quot;) import pycountry_convert as pc import squarify except: !pip install pycountry_convert !pip install squarify import pycountry_convert as pc import squarify %matplotlib inline  </description>
     </item>
     
     <item>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>World Happiness project - about project on Armin&#39;s portfolio</title>
+    <link>https://armind93.github.io/projects/worldhappiness/</link>
+    <description>Recent content in World Happiness project - about project on Armin&#39;s portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 19 Feb 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://armind93.github.io/projects/worldhappiness/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>World Happiness project - about project</title>
+      <link>https://armind93.github.io/projects/worldhappiness/project_worldhappiness_about/</link>
+      <pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/worldhappiness/project_worldhappiness_about/</guid>
+      <description>The data contain informations which might have influence for people&amp;rsquo;s happiness score in the selected country. We have 5 reports divided by years, from 2015 to 2019.
+Acording to data, the happiness score can be estimated from six factors - economic production, social support, life expectancy, freedom, absence of corruption, and generosity. These factors contribute to making life evaluations higher in each country than they are in Dystopia, a hypothetical country that has values equal to the world’s lowest national averages for each of the six factors.</description>
+    </item>
+    
+    <item>
+      <title>World Happiness project - data analysis</title>
+      <link>https://armind93.github.io/projects/worldhappiness/project_worldhappiness_data_analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/worldhappiness/project_worldhappiness_data_analysis/</guid>
+      <description>2. Data reviewing: I checked if data are completed and if there is no NaN values.
+2.1. Correlation maps: On the correlation maps below, we see which factor has the highest influence on happiness score and which of them has lowest. Regardless the years, the highest influence on happiness score of the country has economy level of this country. On the opposite side, the generosity factor has little effect on happiness score.</description>
+    </item>
+    
+    <item>
+      <title>World Happiness project - data presentation</title>
+      <link>https://armind93.github.io/projects/worldhappiness/project_worldhappiness_data_presentation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/worldhappiness/project_worldhappiness_data_presentation/</guid>
+      <description>1. Data presentation: Data downloaded from kaggle was splitted into years, which means in one file we have all factors from one year and we&amp;rsquo;ve 5 data files.:
+  Data from 2015:   Data from 2016:   Data from 2017:
+  Data from 2018:   Data from 2019:   At the beginning, I considered each report separately, and then sum up my analysis into one report - summary report.</description>
+    </item>
+    
+    <item>
+      <title>World Happiness project - machine learning</title>
+      <link>https://armind93.github.io/projects/worldhappiness/project_worldhappiness_machine_learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/worldhappiness/project_worldhappiness_machine_learning/</guid>
+      <description>4. Preparing data to machine learning: I wanted to link all factors into one dataframe, where all years were located in one column. I used merge() method, where I chose merging on columns &amp;lsquo;Country or region&amp;rsquo; and &amp;lsquo;Year&amp;rsquo;.
+AllFeatures = pd.merge(happy_AllYears_stacked, economy_AllYears_stacked, on= [&#39;Country or region&#39;, &#39;Year&#39;] ) AllFeatures = AllFeatures.merge(healthy_AllYears_stacked, on= [&#39;Country or region&#39;, &#39;Year&#39;] ) AllFeatures = AllFeatures.merge(social_support_AllYears_stacked, on= [&#39;Country or region&#39;, &#39;Year&#39;] ) AllFeatures.head()  Next, I wished to find out what the descibe() method returns for column &amp;lsquo;happinessScore&amp;rsquo; in this &amp;lsquo;AllYears&amp;rsquo; data frame.</description>
+    </item>
+    
+  </channel>
+</rss>

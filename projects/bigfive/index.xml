@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Big Five Personality test on Armin&#39;s portfolio</title>
+    <link>https://armind93.github.io/projects/bigfive/</link>
+    <description>Recent content in Big Five Personality test on Armin&#39;s portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://armind93.github.io/projects/bigfive/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Big Five Personality test - about project</title>
+      <link>https://armind93.github.io/projects/bigfive/bigfive_about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/bigfive/bigfive_about/</guid>
+      <description>Data analysis collected from the Big Five personality test.
+link to GitHub Repository</description>
+    </item>
+    
+    <item>
+      <title>Big Five Personality test - columns description</title>
+      <link>https://armind93.github.io/projects/bigfive/bigfive_col_names/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/bigfive/bigfive_col_names/</guid>
+      <description>1. Description of the values ​​from the columns The following items were presented on one page and each was rated on a five point scale using radio buttons. The order on page was was EXT1, AGR1, CSN1, EST1, OPN1, EXT2, etc. The scale was labeled 1=Disagree, 3=Neutral, 5=Agree
+5 major dimensions of personality: Openness, Conscientiousness, Agreeableness, Extraversion, and Neuroticism.
+ EXT - Extraversion, EST - Neuroticism, AGR - Agreeableness (Zgodność), CSN - Conscientiousness (sumienność), OPN - Openness  link to GitHub Repository</description>
+    </item>
+    
+    <item>
+      <title>Big Five Personality test - data analysis</title>
+      <link>https://armind93.github.io/projects/bigfive/project_bigfive_data_analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/bigfive/project_bigfive_data_analysis/</guid>
+      <description>4. Data analysis: 4.1. Preparation of groups based on the name of the country countries_groups = BigFive.groupby(by=&#39;country&#39;) # How many groups are there?: len(countries_groups) 221   Countries_groups_counts = countries_groups.size().to_frame(&#39;count&#39;) Countries_groups_counts.reset_index(inplace=True) Countries_groups_counts.head()      country count     0 Afghanistan 46   1 Albania 353   2 Algeria 230   3 American Samoa 1   4 Andorra 15    Countries_groups_counts_descending = Countries_groups_counts.</description>
+    </item>
+    
+    <item>
+      <title>Big Five Personality test - data analysis for Poland</title>
+      <link>https://armind93.github.io/projects/bigfive/project_bigfive_data_analysisforpoland/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/bigfive/project_bigfive_data_analysisforpoland/</guid>
+      <description>4.9.Presentation of approximate locations in a scatterplot diagram pol_data = countries_groups.get_group(&#39;Poland&#39;) pol_data.head(3)   | | EXT1 | EXT2 | EXT3 | EXT4 | EXT5 | EXT6 | EXT7 | EXT8 | EXT9 | EXT10 | EST1 | EST2 | EST3 | EST4 | EST5 | EST6 | EST7 | EST8 | EST9 | EST10 | AGR1 | AGR2 | AGR3 | AGR4 | AGR5 | AGR6 | AGR7 | AGR8 | AGR9 | AGR10 | CSN1 | CSN2 | CSN3 | CSN4 | CSN5 | CSN6 | CSN7 | CSN8 | CSN9 | CSN10 | OPN1 | OPN2 | OPN3 | OPN4 | OPN5 | OPN6 | OPN7 | OPN8 | OPN9 | OPN10 | dateload | introelapse | testelapse | endelapse | alpha2_code | lat_appx_lots_of_err | long_appx_lots_of_err | country | Extraversion | Agreeableness | Conscientiousness | EmotionalStability | Openness | |-----|------|------|------|------|------|------|------|------|------|-------|------|------|------|------|------|------|------|------|------|-------|------|------|------|------|------|------|------|------|------|-------|------|------|------|------|------|------|------|------|------|-------|------|------|------|------|------|------|------|------|------|-------|---------------------|-------------|------------|-----------|-------------|----------------------|-----------------------|---------|--------------|---------------|-------------------|--------------------|----------| | 222 | 1.</description>
+    </item>
+    
+    <item>
+      <title>Big Five Personality test - data preparation</title>
+      <link>https://armind93.github.io/projects/bigfive/bigfive_data_prepare/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/bigfive/bigfive_data_prepare/</guid>
+      <description>3. Data preparation: &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;
+3.1. Data presentation BigFive_raw = pd.read_csv( &#39;/content/drive/My Drive/ColabNotebooks/BigFivePersonality/data-final.csv&#39;, low_memory=False, sep=&#39;\t&#39;, usecols=[&#39;EXT1&#39;, &#39;EXT2&#39;, &#39;EXT3&#39;, &#39;EXT4&#39;, &#39;EXT5&#39;, &#39;EXT6&#39;, &#39;EXT7&#39;, &#39;EXT8&#39;, &#39;EXT9&#39;, &#39;EXT10&#39;, &#39;EST1&#39;, &#39;EST2&#39;, &#39;EST3&#39;, &#39;EST4&#39;, &#39;EST5&#39;, &#39;EST6&#39;, &#39;EST7&#39;, &#39;EST8&#39;, &#39;EST9&#39;, &#39;EST10&#39;, &#39;AGR1&#39;, &#39;AGR2&#39;, &#39;AGR3&#39;, &#39;AGR4&#39;, &#39;AGR5&#39;, &#39;AGR6&#39;, &#39;AGR7&#39;, &#39;AGR8&#39;, &#39;AGR9&#39;, &#39;AGR10&#39;, &#39;CSN1&#39;, &#39;CSN2&#39;, &#39;CSN3&#39;, &#39;CSN4&#39;, &#39;CSN5&#39;, &#39;CSN6&#39;, &#39;CSN7&#39;, &#39;CSN8&#39;, &#39;CSN9&#39;, &#39;CSN10&#39;, &#39;OPN1&#39;, &#39;OPN2&#39;, &#39;OPN3&#39;, &#39;OPN4&#39;, &#39;OPN5&#39;, &#39;OPN6&#39;, &#39;OPN7&#39;, &#39;OPN8&#39;, &#39;OPN9&#39;, &#39;OPN10&#39;, # &#39;EXT1_E&#39;, &#39;EXT2_E&#39;, &#39;EXT3_E&#39;, &#39;EXT4_E&#39;, &#39;EXT5_E&#39;, &#39;EXT6_E&#39;, &#39;EXT7_E&#39;, &#39;EXT8_E&#39;, &#39;EXT9_E&#39;, &#39;EXT10_E&#39;, # &#39;EST1_E&#39;, &#39;EST2_E&#39;, &#39;EST3_E&#39;, &#39;EST4_E&#39;, &#39;EST5_E&#39;, &#39;EST6_E&#39;, &#39;EST7_E&#39;, &#39;EST8_E&#39;, &#39;EST9_E&#39;, &#39;EST10_E&#39;, # &#39;AGR1_E&#39;, &#39;AGR2_E&#39;, &#39;AGR3_E&#39;, &#39;AGR4_E&#39;, &#39;AGR5_E&#39;, &#39;AGR6_E&#39;, &#39;AGR7_E&#39;, &#39;AGR8_E&#39;, &#39;AGR9_E&#39;, &#39;AGR10_E&#39;, # &#39;CSN1_E&#39;, &#39;CSN2_E&#39;, &#39;CSN3_E&#39;, &#39;CSN4_E&#39;, &#39;CSN5_E&#39;, &#39;CSN6_E&#39;, &#39;CSN7_E&#39;, &#39;CSN8_E&#39;, &#39;CSN9_E&#39;, &#39;CSN10_E&#39;, # &#39;OPN1_E&#39;, &#39;OPN2_E&#39;, &#39;OPN3_E&#39;, &#39;OPN4_E&#39;, &#39;OPN5_E&#39;, &#39;OPN6_E&#39;, &#39;OPN7_E&#39;, &#39;OPN8_E&#39;, &#39;OPN9_E&#39;, &#39;OPN10_E&#39;, &#39;dateload&#39;, &#39;introelapse&#39;, &#39;testelapse&#39;, &#39;endelapse&#39;, &#39;IPC&#39;, &#39;country&#39;, &#39;lat_appx_lots_of_err&#39;, &#39;long_appx_lots_of_err&#39; ] ) # Kopia danych BigFive = BigFive_raw.</description>
+    </item>
+    
+    <item>
+      <title>Big Five Personality test - imported modules</title>
+      <link>https://armind93.github.io/projects/bigfive/bigfive_modules/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/projects/bigfive/bigfive_modules/</guid>
+      <description>link to GitHub Repository
+2. Import modules try: import pandas as pd import numpy as np import matplotlib.pyplot as plt import plotly.figure_factory as ff import plotly.express as px from plotly.subplots import make_subplots import seaborn as sns from itertools import islice, combinations from geopy.geocoders import Nominatim geolocator = Nominatim(user_agent=&amp;quot;BigFive&amp;quot;) import pycountry_convert as pc import squarify except: !pip install pycountry_convert !pip install squarify import pycountry_convert as pc import squarify %matplotlib inline  </description>
+    </item>
+    
+  </channel>
+</rss>

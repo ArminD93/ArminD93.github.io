@@ -6,6 +6,7 @@
     <description>Recent content in Big Five Personality test on Armin&#39;s portfolio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sat, 27 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://armind93.github.io/projects/bigfive/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,7 +14,7 @@
     <item>
       <title>Big Five Personality test - about project</title>
       <link>https://armind93.github.io/projects/bigfive/bigfive_about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://armind93.github.io/projects/bigfive/bigfive_about/</guid>
       <description>Data analysis collected from the Big Five personality test.

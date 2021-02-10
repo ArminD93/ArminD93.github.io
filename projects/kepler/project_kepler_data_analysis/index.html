@@ -992,6 +992,15 @@ col_idx += 1
 plt.show()
 </code></pre>
 <h3 id="54-correlation-analysis">5.4. Correlation analysis</h3>
+<pre><code>corr = kepler.corr()
+
+fig = plt.figure(figsize=(18,10))
+g = sns.heatmap(corr, xticklabels=corr.columns.values, yticklabels=corr.columns.values, annot=True, fmt='.2f', linewidth=.3, cmap=sns.diverging_palette(20, 220, n=256))
+g.set_xticklabels( g.get_xticklabels(), rotation=30,  horizontalalignment='right', fontweight='light' )
+
+plt.show()
+</code></pre>
+<p><img src="/static/images/Kepler/corr_map.jpg" alt="corr_map.jpg"></p>
 
         </div>
 

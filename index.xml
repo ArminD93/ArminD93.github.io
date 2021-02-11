@@ -188,9 +188,8 @@ class TestModel: def __init__(self, model_dict): self.model_dict = model_dict se
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://armind93.github.io/projects/kepler/project_kepler_col_names/</guid>
-      <description>1. Description of the values ​​from the columns The following items were presented on one page and each was rated on a five point scale using radio buttons. The order on page was was EXT1, AGR1, CSN1, EST1, OPN1, EXT2, etc. The scale was labeled 1=Disagree, 3=Neutral, 5=Agree
-5 major dimensions of personality: Openness, Conscientiousness, Agreeableness, Extraversion, and Neuroticism.
- EXT - Extraversion, EST - Neuroticism, AGR - Agreeableness (Zgodność), CSN - Conscientiousness (sumienność), OPN - Openness  KOI - Kepler Objects of Interest</description>
+      <description>1. Description of the values ​​from the columns KOI - Kepler Objects of Interest
+   Oznaczenie Opis     kepid Kepler Identification   kepoi_name KOI Name. A number used to identify and track a Kepler Object of Interest (KOI). A KOI is a target identified by the Kepler Project that displays at least one transit-like sequence within Kepler time-series photometry that appears to be of astrophysical origin and initially consistent with a planetary transit hypothesis.</description>
     </item>
     
     <item>

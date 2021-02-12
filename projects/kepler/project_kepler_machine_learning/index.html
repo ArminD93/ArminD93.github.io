@@ -516,6 +516,13 @@ y_train shape:  (7360,)
 y_test shape:   (1840,)
 </code></pre>
 <h4 id="614-scaling-features">6.1.4. Scaling features</h4>
+<pre><code>scaler = StandardScaler()
+
+scaler.fit(X_train)
+
+X_train = scaler.transform(X_train)
+X_test = scaler.transform(X_test)
+</code></pre>
 <h3 id="62-model-testing">6.2. Model testing:</h3>
 <h4 id="621-logistic-regression-model">6.2.1. Logistic regression model</h4>
 <h4 id="622-k-nearest-neighbors-model">6.2.2. K-nearest neighbors model</h4>

@@ -523,7 +523,52 @@ scaler.fit(X_train)
 X_train = scaler.transform(X_train)
 X_test = scaler.transform(X_test)
 </code></pre>
-<h3 id="62-model-testing">6.2. Model testing:</h3>
+<h3 id="62-pipeline-testing">6.2. Pipeline testing:</h3>
+<pre><code># pipeline testing
+# ################
+
+# lista kolumn numerycznych
+cols_numerical = X_train.select_dtypes(include=['int64', 'float64']).columns
+
+
+# transformer dla kolumn numerycznych
+transformer_numerical = Pipeline(
+                                steps = [
+                                            ('num_trans', StandardScaler() )
+                                        ] 
+                                )
+
+
+# lista kolmn kategorycznych
+cols_categorical = [ 'koi_fpflag_nt', 'koi_fpflag_ss', 	'koi_fpflag_co', 	'koi_fpflag_ec']
+
+# transformer dla kolumn kategorycznych
+transformer_categorical = Pipeline(
+                                steps = [
+                                            ('cat_trans', OneHotEncoder() )     # LabelEncoder() )  
+                                        ]
+                                )
+
+
+
+# Teraz z dwóch mniejszych pipelines budujemy większy i naziwe preprocessor
+# preprocesor danych
+preprocessor = ColumnTransformer(
+                                transformers = [
+                                                ('numerical', transformer_numerical, cols_numerical ),
+                                                ('categorical', transformer_categorical, cols_categorical )
+                                            ]
+                                )
+
+# złożenie wszystkiego razem
+
+pipe = Pipeline(
+                steps = [
+                        ('preprocessor', preprocessor ),
+                        ('classifier', RandomForestClassifier() )
+                        ]
+                )
+</code></pre>
 <h4 id="621-logistic-regression-model">6.2.1. Logistic regression model</h4>
 <h4 id="622-k-nearest-neighbors-model">6.2.2. K-nearest neighbors model</h4>
 <h4 id="623-decision-tree-model">6.2.3. Decision tree model</h4>
@@ -662,7 +707,7 @@ X_test = scaler.transform(X_test)
             <li><a href="#614-scaling-features">6.1.4. Scaling features</a></li>
           </ul>
         </li>
-        <li><a href="#62-model-testing">6.2. Model testing:</a>
+        <li><a href="#62-pipeline-testing">6.2. Pipeline testing:</a>
           <ul>
             <li><a href="#621-logistic-regression-model">6.2.1. Logistic regression model</a></li>
             <li><a href="#622-k-nearest-neighbors-model">6.2.2. K-nearest neighbors model</a></li>

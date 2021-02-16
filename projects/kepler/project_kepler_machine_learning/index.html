@@ -524,12 +524,15 @@ X_train = scaler.transform(X_train)
 X_test = scaler.transform(X_test)
 </code></pre>
 <h3 id="62-pipeline-testing">6.2. Pipeline testing:</h3>
-<pre><code># pipeline testing
-# ################
-
-# lista kolumn numerycznych
+<pre><code># lista kolumn numerycznych
 cols_numerical = X_train.select_dtypes(include=['int64', 'float64']).columns
 
+# lista kolmn kategorycznych
+cols_categorical = [ 'koi_fpflag_nt', 'koi_fpflag_ss', 'koi_fpflag_co', 'koi_fpflag_ec']
+</code></pre>
+<hr>
+<pre><code># pipeline testing
+# ################
 
 # transformer dla kolumn numerycznych
 transformer_numerical = Pipeline(
@@ -539,8 +542,6 @@ transformer_numerical = Pipeline(
                                 )
 
 
-# lista kolmn kategorycznych
-cols_categorical = [ 'koi_fpflag_nt', 'koi_fpflag_ss', 	'koi_fpflag_co', 	'koi_fpflag_ec']
 
 # transformer dla kolumn kategorycznych
 transformer_categorical = Pipeline(
@@ -569,12 +570,6 @@ pipe = Pipeline(
                         ]
                 )
 </code></pre>
-<h4 id="621-logistic-regression-model">6.2.1. Logistic regression model</h4>
-<h4 id="622-k-nearest-neighbors-model">6.2.2. K-nearest neighbors model</h4>
-<h4 id="623-decision-tree-model">6.2.3. Decision tree model</h4>
-<h4 id="624-random-forest-model">6.2.4. Random forest model</h4>
-<h4 id="625-support-vector-machine-model">6.2.5. Support vector machine model</h4>
-<h4 id="626-naive-bayesian-classifier">6.2.6. Naive Bayesian classifier</h4>
 <h3 id="63-comparison-of-the-obtained-results">6.3. Comparison of the obtained results</h3>
 <h3 id="64-performing-cross-validation">6.4. Performing cross-validation</h3>
 <h3 id="65-preview-on-error-matrices-for-individual-models">6.5. Preview on error matrices for individual models</h3>
@@ -707,16 +702,7 @@ pipe = Pipeline(
             <li><a href="#614-scaling-features">6.1.4. Scaling features</a></li>
           </ul>
         </li>
-        <li><a href="#62-pipeline-testing">6.2. Pipeline testing:</a>
-          <ul>
-            <li><a href="#621-logistic-regression-model">6.2.1. Logistic regression model</a></li>
-            <li><a href="#622-k-nearest-neighbors-model">6.2.2. K-nearest neighbors model</a></li>
-            <li><a href="#623-decision-tree-model">6.2.3. Decision tree model</a></li>
-            <li><a href="#624-random-forest-model">6.2.4. Random forest model</a></li>
-            <li><a href="#625-support-vector-machine-model">6.2.5. Support vector machine model</a></li>
-            <li><a href="#626-naive-bayesian-classifier">6.2.6. Naive Bayesian classifier</a></li>
-          </ul>
-        </li>
+        <li><a href="#62-pipeline-testing">6.2. Pipeline testing:</a></li>
         <li><a href="#63-comparison-of-the-obtained-results">6.3. Comparison of the obtained results</a></li>
         <li><a href="#64-performing-cross-validation">6.4. Performing cross-validation</a></li>
         <li><a href="#65-preview-on-error-matrices-for-individual-models">6.5. Preview on error matrices for individual models</a></li>

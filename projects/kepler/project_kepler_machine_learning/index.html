@@ -537,38 +537,73 @@ cols_categorical = [ 'koi_fpflag_nt', 'koi_fpflag_ss', 'koi_fpflag_co', 'koi_fpf
 # transformer dla kolumn numerycznych
 transformer_numerical = Pipeline(
                                 steps = [
-                                            ('num_trans', StandardScaler() )
+                                            ('num_transformer', None )
                                         ] 
                                 )
-
-
-
-# transformer dla kolumn kategorycznych
-transformer_categorical = Pipeline(
-                                steps = [
-                                            ('cat_trans', OneHotEncoder() )     # LabelEncoder() )  
-                                        ]
-                                )
-
-
-
-# Teraz z dwóch mniejszych pipelines budujemy większy i naziwe preprocessor
 # preprocesor danych
 preprocessor = ColumnTransformer(
                                 transformers = [
-                                                ('numerical', transformer_numerical, cols_numerical ),
-                                                ('categorical', transformer_categorical, cols_categorical )
+                                                ('numerical', transformer_numerical, cols_numerical ),                    
                                             ]
                                 )
 
-# złożenie wszystkiego razem
+# klasyfikatory                            
+classifiers = [
+    LogisticRegression(max_iter=500), 
+    KNeighborsClassifier(3), # 3 bo mamy dwie klasy ??
+    DecisionTreeClassifier(max_depth=4, random_state=42 ),
+    RandomForestClassifier(n_estimators=15, random_state=42 ),
+    SVC(C=1.0, kernel='rbf'),
+    GaussianNB()
+]
 
-pipe = Pipeline(
-                steps = [
-                        ('preprocessor', preprocessor ),
-                        ('classifier', RandomForestClassifier() )
-                        ]
-                )
+# transformatory dla kolumn liczbowych
+scalers = [StandardScaler(), MinMaxScaler(), Normalizer()]
+
+# # transformatory dla kolumn kategorycznych
+# cat_transformers = [OrdinalEncoder(), OneHotEncoder()]   
+</code></pre>
+<hr>
+<pre><code>models_df = pd.DataFrame()
+
+# utworzenie pipeline:
+pipe = Pipeline( steps = [ ('preprocessor', preprocessor), ('classifier', None) ] )models_df = pd.DataFrame()
+
+# utworzenie pipeline:
+pipe = Pipeline( steps = [ ('preprocessor', preprocessor), ('classifier', None) ] )
+</code></pre>
+<hr>
+<pre><code># dla każdego typu modelu zmieniamy kolejne transformatory kolumn
+for model in classifiers:
+    for num_tr in scalers:
+        
+            # odpowiednio zmieniamy jego paramety - dobieramy transformatory
+            pipe_params = {
+                'preprocessor__numerical__num_transformer': num_tr,
+                # 'preprocessor__categorical__cat_trans': cat_tr,
+                'classifier': model
+            }
+            pipe.set_params(**pipe_params)
+
+            start_time = time.time()
+            pipe.fit(X_train, y_train)   # trenowanie modelu 
+            end_time = time.time()
+
+            score = pipe.score(X_test, y_test) # zapisanie wyniku
+
+            param_dict = {
+                        'model': model.__class__.__name__,
+                        'num_trans': num_tr.__class__.__name__,
+                        # 'cat_trans': cat_tr.__class__.__name__,
+                        'Accuracy': score,
+                        'time_elapsed': end_time - start_time
+            }
+
+            # zapisanie wyników do data frame
+            models_df = models_df.append(pd.DataFrame(param_dict, index=[0]))
+
+
+models_df.reset_index(drop=True, inplace=True)
 </code></pre>
 <h3 id="63-comparison-of-the-obtained-results">6.3. Comparison of the obtained results</h3>
 <h3 id="64-performing-cross-validation">6.4. Performing cross-validation</h3>

@@ -66,7 +66,7 @@ On wikipedia page we can got to know that The Big Five personality traits is a t
       
       <guid>https://armind93.github.io/projects/bigfive/bigfive_modules/</guid>
       <description>link to GitHub Repository
-2. Import modules try: import pandas as pd import numpy as np import matplotlib.pyplot as plt import plotly.figure_factory as ff import plotly.express as px from plotly.subplots import make_subplots import seaborn as sns from itertools import islice, combinations from geopy.geocoders import Nominatim geolocator = Nominatim(user_agent=&amp;quot;BigFive&amp;quot;) import pycountry_convert as pc import squarify except: !pip install pycountry_convert !pip install squarify import pycountry_convert as pc import squarify %matplotlib inline  </description>
+2. Import modules try: import pandas as pd import numpy as np np.random.seed(42) import matplotlib.pyplot as plt plt.style.use(&amp;quot;fivethirtyeight&amp;quot;) import plotly.figure_factory as ff import plotly.express as px from plotly.subplots import make_subplots import seaborn as sns from itertools import islice, combinations from geopy.geocoders import Nominatim geolocator = Nominatim(user_agent=&amp;quot;BigFive_project&amp;quot;, timeout=None ) import pycountry_convert as pc import squarify import time import os import swifter import geopandas as gpd except: !pip3 install pycountry_convert !</description>
     </item>
     
   </channel>

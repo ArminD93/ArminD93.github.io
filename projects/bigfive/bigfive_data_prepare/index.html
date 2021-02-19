@@ -626,6 +626,8 @@ memory usage: 449.3+ MB
 BigFive = change_dtypes(BigFive)
 </code></pre>
 <hr>
+<h3 id="33-save-data-to-parquet">3.3. Save data to parquet:</h3>
+<hr>
 <pre><code># Save data to parquet
 BigFive.to_parquet('/content/drive/My Drive/ColabNotebooks/BigFivePersonality/data-final.gzip', compression='gzip')
 </code></pre>
@@ -719,7 +721,7 @@ Data columns (total 58 columns):
 dtypes: category(3), datetime64[ns](1), float64(52), int64(2)
 memory usage: 434.9 MB
 </code></pre>
-<h3 id="33-missing-values">3.3. Missing values</h3>
+<h3 id="34-missing-values">3.4. Missing values</h3>
 <pre><code>BigFive.isnull().sum()
 </code></pre>
 <hr>
@@ -865,7 +867,7 @@ Data columns (total 58 columns):
 dtypes: category(3), datetime64[ns](1), float64(52), int64(2)
 memory usage: 441.2 MB
 </code></pre>
-<h3 id="34-choosing-rows-where-ipc--1">3.4. Choosing rows where IPC != 1</h3>
+<h3 id="35-choosing-rows-where-ipc--1">3.5. Choosing rows where IPC != 1</h3>
 <pre><code>BigFive.IPC != 1
 
 0          False
@@ -910,7 +912,7 @@ BigFive.head(3)
 1 	3.0 	5.0 	3.0 	4.0 	3.0 	3.0 	2.0 	5.0 	1.0 	5.0 	2.0 	3.0 	4.0 	1.0 	3.0 	1.0 	2.0 	1.0 	3.0 	1.0 	1.0 	4.0 	1.0 	5.0 	1.0 	5.0 	3.0 	4.0 	5.0 	3.0 	3.0 	2.0 	5.0 	3.0 	3.0 	1.0 	3.0 	3.0 	5.0 	3.0 	1.0 	2.0 	4.0 	2.0 	3.0 	1.0 	4.0 	2.0 	5.0 	3.0 	2016-03-03 02:01:20 	12.0 	            179.0 	    11 	        MY 	             3.1698 	        101.706
 2 	2.0 	3.0 	4.0 	4.0 	3.0 	2.0 	1.0 	3.0 	2.0 	5.0 	4.0 	4.0 	4.0 	2.0 	2.0 	2.0 	2.0 	2.0 	1.0 	3.0 	1.0 	4.0 	1.0 	4.0 	2.0 	4.0 	1.0 	4.0 	4.0 	3.0 	4.0 	2.0 	2.0 	2.0 	3.0 	3.0 	4.0 	2.0 	4.0 	2.0 	5.0 	1.0 	2.0 	1.0 	4.0 	2.0 	5.0 	3.0 	4.0 	4.0 	2016-03-03 02:01:56 	 3.0 	            186.0 	    7 	        GB 	            54.9119 	         -1.3833
 </code></pre>
-<h3 id="35-are-there-any-null-values">3.5. Are there any null values?</h3>
+<h3 id="36-are-there-any-null-values">3.6. Are there any null values?</h3>
 <pre><code>if0_df = BigFive.loc[(BigFive['introelapse']==0) | (BigFive['testelapse']==0 )| (BigFive['endelapse']==0) ]
 len(if0_df)
 
@@ -1087,7 +1089,7 @@ BigFive.head()
 3 	2.0 	2.0 	2.0 	3.0 	4.0 	2.0 	2.0 	4.0 	1.0 	4.0 	3.0 	3.0 	3.0 	2.0 	3.0 	2.0 	2.0 	2.0 	4.0 	3.0 	2.0 	4.0 	3.0 	4.0 	2.0 	4.0 	2.0 	4.0 	3.0 	4.0 	2.0 	4.0 	4.0 	4.0 	1.0 	2.0 	2.0 	3.0 	1.0 	4.0 	4.0 	2.0 	5.0 	2.0 	3.0 	1.0 	4.0 	4.0 	3.0 	3.0 	2016-03-03 02:02:02 	186.0 	            219.0 	    7 	           GB 	            51.75 	            -1.25
 5 	3.0 	3.0 	4.0 	2.0 	4.0 	2.0 	2.0 	3.0 	3.0 	4.0 	3.0 	4.0 	3.0 	2.0 	2.0 	1.0 	2.0 	1.0 	2.0 	2.0 	2.0 	3.0 	1.0 	4.0 	2.0 	3.0 	2.0 	3.0 	4.0 	4.0 	3.0 	2.0 	4.0 	1.0 	3.0 	2.0 	4.0 	3.0 	4.0 	3.0 	5.0 	1.0 	5.0 	1.0 	3.0 	1.0 	5.0 	4.0 	5.0 	2.0 	2016-03-03 02:03:12 	  4.0 	            196.0 	    3 	           SE 	            59.3333 	            18.05
 </code></pre>
-<h3 id="36-renaming-column-country-to-alpha2_code">3.6. Renaming column &lsquo;country&rsquo; to &lsquo;alpha2_code&rsquo;</h3>
+<h3 id="37-renaming-column-country-to-alpha2_code">3.7. Renaming column &lsquo;country&rsquo; to &lsquo;alpha2_code&rsquo;</h3>
 <pre><code>BigFive = BigFive.rename(columns={'country' : 'alpha2_code'})
 BigFive.head()
 </code></pre>
@@ -1266,10 +1268,11 @@ BigFive.head(3)
       <ul>
         <li><a href="#31-data-presentation">3.1. Data presentation</a></li>
         <li><a href="#32-changing-the-data-types">3.2. Changing the data types</a></li>
-        <li><a href="#33-missing-values">3.3. Missing values</a></li>
-        <li><a href="#34-choosing-rows-where-ipc--1">3.4. Choosing rows where IPC != 1</a></li>
-        <li><a href="#35-are-there-any-null-values">3.5. Are there any null values?</a></li>
-        <li><a href="#36-renaming-column-country-to-alpha2_code">3.6. Renaming column &lsquo;country&rsquo; to &lsquo;alpha2_code&rsquo;</a></li>
+        <li><a href="#33-save-data-to-parquet">3.3. Save data to parquet:</a></li>
+        <li><a href="#34-missing-values">3.4. Missing values</a></li>
+        <li><a href="#35-choosing-rows-where-ipc--1">3.5. Choosing rows where IPC != 1</a></li>
+        <li><a href="#36-are-there-any-null-values">3.6. Are there any null values?</a></li>
+        <li><a href="#37-renaming-column-country-to-alpha2_code">3.7. Renaming column &lsquo;country&rsquo; to &lsquo;alpha2_code&rsquo;</a></li>
       </ul>
     </li>
   </ul>

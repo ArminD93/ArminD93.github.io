@@ -868,6 +868,7 @@ dtypes: category(3), datetime64[ns](1), float64(52), int64(2)
 memory usage: 441.2 MB
 </code></pre>
 <h3 id="35-choosing-rows-where-ipc--1">3.5. Choosing rows where IPC != 1</h3>
+<p>For max cleanliness, only use records where this value is 1. High values can be because of shared networks (e.g. entire universities) or multiple submissions.</p>
 <pre><code>BigFive.IPC != 1
 
 0          False
@@ -928,13 +929,12 @@ len(if0_df)
 57062 	3.0 	1.0 	5.0 	2.0 	4.0 	4.0 	5.0 	4.0 	3.0 	4.0 	1.0 	5.0 	1.0 	0.0 	2.0 	2.0 	1.0 	1.0 	3.0 	1.0 	1.0 	5.0 	1.0 	5.0 	5.0 	5.0 	1.0 	5.0 	4.0 	4.0 	5.0 	1.0 	5.0 	1.0 	5.0 	2.0 	5.0 	2.0 	5.0 	5.0 	5.0 	3.0 	3.0 	3.0 	4.0 	2.0 	5.0 	3.0 	4.0 	5.0 	2016-04-14 04:15:07 	0.0 	            872.0 	    31 	        NO 	            59.95 	              10.75
 </code></pre>
 <hr>
-<pre><code># Czy występują jakieś wartości 0 w introelapse?
-BigFive.loc[(BigFive['introelapse']==0)]
+<pre><code>BigFive.loc[(BigFive['introelapse']==0)]
 len(BigFive.loc[(BigFive['introelapse']==0)])
 
 21
 
-# Czy występują jakieś wartości 0 w kolumnie lat_appx_lots_of_err i long_appx_lots_of_err?
+
 BigFive.loc[(BigFive['lat_appx_lots_of_err']==0) | (BigFive['long_appx_lots_of_err']==0 )]
 len(BigFive.loc[(BigFive['lat_appx_lots_of_err']==0) | (BigFive['long_appx_lots_of_err']==0 )])
 
@@ -1333,7 +1333,7 @@ BigFive.head(3)
                 
               
               <li class="nav-item">
-                <a class="smooth-scroll" href="#projects">Projects</a>
+                <a class="smooth-scroll" href="#education">Education</a>
               </li>
             
             
@@ -1342,7 +1342,7 @@ BigFive.head(3)
                 
               
               <li class="nav-item">
-                <a class="smooth-scroll" href="#education">Education</a>
+                <a class="smooth-scroll" href="#projects">Projects</a>
               </li>
             
             

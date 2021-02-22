@@ -601,7 +601,21 @@ Data columns (total 58 columns):
 dtypes: float64(52), int64(2), object(4)
 memory usage: 449.3+ MB
 </code></pre>
-<h3 id="32-changing-the-data-types">3.2. Changing the data types</h3>
+<h3 id="32-save-data-to-parquet">3.2. Save data to parquet:</h3>
+<hr>
+<pre><code># Save data to parquet
+BigFive.to_parquet('/content/drive/My Drive/ColabNotebooks/BigFivePersonality/data-final.gzip', compression='gzip')
+</code></pre>
+<hr>
+<pre><code># Load parquet data
+%%time
+BigFive = pd.read_parquet('/content/drive/My Drive/ColabNotebooks/BigFivePersonality/data-final.gzip' )
+
+CPU times: user 1.74 s, sys: 485 ms, total: 2.23 s
+Wall time: 2.11 s
+</code></pre>
+<hr>
+<h3 id="33-changing-the-data-types">3.3. Changing the data types</h3>
 <pre><code>BigFive.columns[:50]
 </code></pre>
 <hr>
@@ -624,20 +638,6 @@ memory usage: 449.3+ MB
     return df
 
 BigFive = change_dtypes(BigFive)
-</code></pre>
-<hr>
-<h3 id="33-save-data-to-parquet">3.3. Save data to parquet:</h3>
-<hr>
-<pre><code># Save data to parquet
-BigFive.to_parquet('/content/drive/My Drive/ColabNotebooks/BigFivePersonality/data-final.gzip', compression='gzip')
-</code></pre>
-<hr>
-<pre><code># Load parquet data
-%%time
-BigFive = pd.read_parquet('/content/drive/My Drive/ColabNotebooks/BigFivePersonality/data-final.gzip' )
-
-CPU times: user 1.74 s, sys: 485 ms, total: 2.23 s
-Wall time: 2.11 s
 </code></pre>
 <hr>
 <pre><code>cols_name_list = ['country', 'lat_appx_lots_of_err', 'long_appx_lots_of_err', 'dateload']
@@ -1267,8 +1267,8 @@ BigFive.head(3)
     <li><a href="#3-data-preparation">3. <strong>Data preparation:</strong></a>
       <ul>
         <li><a href="#31-data-presentation">3.1. Data presentation</a></li>
-        <li><a href="#32-changing-the-data-types">3.2. Changing the data types</a></li>
-        <li><a href="#33-save-data-to-parquet">3.3. Save data to parquet:</a></li>
+        <li><a href="#32-save-data-to-parquet">3.2. Save data to parquet:</a></li>
+        <li><a href="#33-changing-the-data-types">3.3. Changing the data types</a></li>
         <li><a href="#34-missing-values">3.4. Missing values</a></li>
         <li><a href="#35-choosing-rows-where-ipc--1">3.5. Choosing rows where IPC != 1</a></li>
         <li><a href="#36-are-there-any-null-values">3.6. Are there any null values?</a></li>

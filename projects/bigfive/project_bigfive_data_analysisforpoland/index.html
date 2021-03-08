@@ -578,6 +578,53 @@ index +=1
 plt.show()
 </code></pre>
 <p><img src="/static/images/BigFive/scatter_Poland.jpg" alt="scatter_Poland"></p>
+<pre><code>personality_scores = pol_data.columns[-7:]
+pol_personality_scores = pol_data[personality_scores]
+pol_personality_scores.head()
+
+
+|     | Extraversion | Agreeableness | Conscientiousness | EmotionalStability | Openness | state         | place              |
+|-----|--------------|---------------|-------------------|--------------------|----------|---------------|--------------------|
+| 156 | 2.0          | 17.0          | 18.0              | 21.0               | 34.0     | łódzkie       | powiat pajęczański |
+| 223 | 10.0         | 19.0          | 11.0              | 13.0               | 9.0      | wielkopolskie | Poznań             |
+| 254 | 10.0         | 30.0          | 22.0              | 17.0               | 33.0     | mazowieckie   | Warszawa           |
+| 393 | 32.0         | 35.0          | 15.0              | 17.0               | 28.0     | mazowieckie   | Warszawa           |
+| 411 | 29.0         | 32.0          | 30.0              | 20.0               | 28.0     | mazowieckie   | Warszawa           |
+</code></pre>
+<hr>
+<pre><code>pol_personality_scores.describe().T
+
+|                    | count  | mean      | std      | min  | 25%  | 50%  | 75%  | max  |
+|--------------------|--------|-----------|----------|------|------|------|------|------|
+| Extraversion       | 4189.0 | 17.033660 | 9.341835 | -1.0 | 10.0 | 16.0 | 24.0 | 40.0 |
+| Agreeableness      | 4189.0 | 23.841490 | 7.734842 | -1.0 | 19.0 | 24.0 | 30.0 | 40.0 |
+| Conscientiousness  | 4189.0 | 20.909525 | 7.404900 | 0.0  | 16.0 | 21.0 | 26.0 | 40.0 |
+| EmotionalStability | 4189.0 | 17.297684 | 8.814573 | -1.0 | 11.0 | 17.0 | 23.0 | 40.0 |
+| Openness           | 4189.0 | 30.747195 | 6.178097 | 0.0  | 27.0 | 31.0 | 35.0 | 41.0 |
+</code></pre>
+<hr>
+<pre><code>cols = ['Extraversion', 'Agreeableness', 'Conscientiousness', 'EmotionalStability', 'Openness']
+colors = ['y', 'b', 'r', 'g', 'm']
+
+fig, ax = plt.subplots(1, 5, figsize=(20,2), constrained_layout=True)
+for i, col in enumerate(cols):
+sns.boxplot(  x=col, data=pol_personality_scores, ax=ax[i], color=colors[i])
+
+plt.show()
+</code></pre>
+<p><img src="/static/images/BigFive/pol_data/personalityBoxPlots_general.jpg" alt="personalityBoxPlots_general"></p>
+<pre><code>fig, ax = plt.subplots(5, 5, figsize=(20,15), constrained_layout=True)
+
+bins_list = [5, 10, 15, 20, 25]
+
+for i, bin in enumerate(bins_list):
+for j, col in enumerate(cols):
+    g = sns.histplot(data=pol_personality_scores, x =col, ax=ax[i, j], kde=True, bins=bins_list[i], color=colors[i] )
+    g.set(  title=f'bins: {bin}' )
+
+plt.show()
+</code></pre>
+<p><img src="/static/images/BigFive/pol_data/personality_hist_general.jpg" alt="personality_hist_general"></p>
 <hr>
 <p>Thanks to box plots, we see on them values for every personality traits through their quartiles. In each voivodeship scores obtained from the personality test for openness trait are the highest and obtained extraversion trait points are the lowest. In every voivodeship, there are some outliers. The most outliers occur in openness trait.</p>
 <p><img src="/static/images/BigFive/pol_data/boxes.jpg" alt="boxes"></p>

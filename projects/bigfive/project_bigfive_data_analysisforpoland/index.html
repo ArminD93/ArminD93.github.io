@@ -588,6 +588,7 @@ plt.show()
 </code></pre>
 <p>To have good orientation in data distribution on this plot, I&rsquo;ve marked a few main cities. The values are more concentrated, where cities are located. However, If we look at this graph, there is no huge correlaction in living location with gained scores from the personality test. Maybe, I&rsquo;ve to look deeper and compare individual cities with each other.</p>
 <p><img src="/static/images/BigFive/scatter_Poland.jpg" alt="scatter_Poland"></p>
+<h4 id="50-counted-statistical-values-for-personalities-data">5.0. Counted statistical values for personalities data</h4>
 <pre><code>personality_scores = pol_data.columns[-7:]
 pol_personality_scores = pol_data[personality_scores]
 pol_personality_scores.head()
@@ -602,7 +603,6 @@ pol_personality_scores.head()
 | 411 | 29.0         | 32.0          | 30.0              | 20.0               | 28.0     | mazowieckie   | Warszawa           |
 </code></pre>
 <hr>
-<h4 id="50-counted-statistical-values-for-personalities-data">5.0. Counted statistical values for personalities data</h4>
 <pre><code>pol_personality_scores.describe().T
 
 |                    | count  | mean      | std      | min  | 25%  | 50%  | 75%  | max  |

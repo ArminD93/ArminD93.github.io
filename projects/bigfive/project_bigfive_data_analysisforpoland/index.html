@@ -555,10 +555,11 @@ dtypes: category(3), datetime64[ns](1), float64(57), int64(1), object(1)
 memory usage: 5.0+ MB
 </code></pre>
 <hr>
+<p>We can use values from columns <strong>long_appx_lots_of_err</strong> and <strong>lat_appx_lots_of_err</strong> in order to draw approximate shape of Poland. The data type for this two columns is category. It is necessary to change type to float, in order to use values in scatterplot.</p>
 <pre><code>pol_data['long_appx_lots_of_err'] = pol_data['long_appx_lots_of_err'].astype('float')
 pol_data['lat_appx_lots_of_err'] = pol_data['lat_appx_lots_of_err'].astype('float')
 </code></pre>
-<p>We can use values from columns <strong>long_appx_lots_of_err</strong> and <strong>lat_appx_lots_of_err</strong> in order to draw approximate shape of Poland.</p>
+<p>I applied <strong>astype</strong> method with &lsquo;float&rsquo; as argument on data series. Results of this method was typed into <strong>long_appx_lots_of_err</strong> and <strong>lat_appx_lots_of_err</strong> columns.</p>
 <pre><code>cols = 2
 rows = 3
 personality_list = pol_data.columns[-5:]

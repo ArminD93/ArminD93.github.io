@@ -593,9 +593,9 @@ plt.show()
 <pre><code>personality_scores = pol_data.columns[-7:]
 pol_personality_scores = pol_data[personality_scores]
 pol_personality_scores.head()
-
-
-|     | Extraversion | Agreeableness | Conscientiousness | EmotionalStability | Openness | state         | place              |
+</code></pre>
+<hr>
+<pre><code>|     | Extraversion | Agreeableness | Conscientiousness | EmotionalStability | Openness | state         | place              |
 |-----|--------------|---------------|-------------------|--------------------|----------|---------------|--------------------|
 | 156 | 2.0          | 17.0          | 18.0              | 21.0               | 34.0     | łódzkie       | powiat pajęczański |
 | 223 | 10.0         | 19.0          | 11.0              | 13.0               | 9.0      | wielkopolskie | Poznań             |
@@ -603,7 +603,7 @@ pol_personality_scores.head()
 | 393 | 32.0         | 35.0          | 15.0              | 17.0               | 28.0     | mazowieckie   | Warszawa           |
 | 411 | 29.0         | 32.0          | 30.0              | 20.0               | 28.0     | mazowieckie   | Warszawa           |
 </code></pre>
-<hr>
+<p>Now, I would like to look at basic statistical values for the personalities cols. I use describe() method to get: count, mean, std, min, max values and quantiles for each column. Additionaly I transpose table to have better transparency at reading  data.</p>
 <pre><code>pol_personality_scores.describe().T
 
 |                    | count  | mean      | std      | min  | 25%  | 50%  | 75%  | max  |

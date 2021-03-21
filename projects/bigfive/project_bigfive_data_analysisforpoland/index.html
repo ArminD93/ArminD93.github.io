@@ -603,7 +603,7 @@ pol_personality_scores.head()
 | 393 | 32.0         | 35.0          | 15.0              | 17.0               | 28.0     | mazowieckie   | Warszawa           |
 | 411 | 29.0         | 32.0          | 30.0              | 20.0               | 28.0     | mazowieckie   | Warszawa           |
 </code></pre>
-<p>Now, I would like to look at basic statistical values for the personalities cols. I use describe() method to get: count, mean, std, min, max values and quantiles for each column. Additionaly I transposed table to have better transparency at reading  data.</p>
+<p>Now, I would like to look at basic statistical values for the personalities cols. I use describe() method to get: count, mean, std, min, max values and quantiles for each column. Additionaly I transposed table to have better transparency at reading data.</p>
 <pre><code>pol_personality_scores.describe().T
 
 |                    | count  | mean      | std      | min  | 25%  | 50%  | 75%  | max  |
@@ -614,7 +614,7 @@ pol_personality_scores.head()
 | EmotionalStability | 4189.0 | 17.297684 | 8.814573 | -1.0 | 11.0 | 17.0 | 23.0 | 40.0 |
 | Openness           | 4189.0 | 30.747195 | 6.178097 | 0.0  | 27.0 | 31.0 | 35.0 | 41.0 |
 </code></pre>
-<hr>
+<p>In Poland, mean value score for extraversion and emotional stability is the lowest compared to other personalities, but standard deviation for extraversion is slightly higher from emotional stability.</p>
 <pre><code>cols = ['Extraversion', 'Agreeableness', 'Conscientiousness', 'EmotionalStability', 'Openness']
 colors = ['y', 'b', 'r', 'g', 'm']
 

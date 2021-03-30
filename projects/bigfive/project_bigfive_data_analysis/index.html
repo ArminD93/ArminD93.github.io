@@ -568,7 +568,7 @@ def __CheckFlag(self, flag):
     # self.questions_list = self.Factors_name_list
     self.name_list = [ quest for quest in self.Factors_name_list][self.FactorNo]
     elif flag == 1:
-    self.scores_data = self.data.columns[-5:]
+    self.scores_data = ['Extraversion', 'Agreeableness', 'Conscientiousness', 'EmotionalStability', 'Openness']# self.data.columns[-5:]
     # self.questions_list = self.factors_list
     self.name_list = self.factors_list
     self.start, self.stop = ( 0, 10 )
@@ -645,7 +645,7 @@ def create_chart(self, flag=0):
         self.__setQuestions_and_scores_for_chart()
         self.__makePolarChart()
         self.__addDescriptionToChart(flag)
-    return plt.show()      
+    return plt.show()           
 </code></pre>
 <h4 id="452-preparation-of-objects">4.5.2. Preparation of objects</h4>
 <pre><code>scoresRadar_row_0   = RadarChart( rowNo= 0   )
@@ -663,6 +663,32 @@ scoresRadar_row_100 = RadarChart( rowNo= 100 )
 </code></pre>
 <p><img src="/static/images/BigFive/radar_plots/radar_for_USA.jpg" alt="radar_for_USA"></p>
 <h3 id="47-calculating-points-for-individual-features">4.7. Calculating points for individual features</h3>
+<p>Equations:</p>
+<ol>
+<li><strong>E</strong> = 20 + (1) ___ - (6)  ___  +(11) ___ - (16) ___ +(21) ___ - (26) ___ +(31) ___ - (36) ___ +(41) ___ - (46) ___     = _____</li>
+<li><strong>A</strong> = 14 - (2) ___ + (7)  ___  -(12) ___ +(17) ___ -(22) ___ +(27) ___ -(32) ___ +(37) ___ +(42) ___ +(47) ___    = _____</li>
+<li><strong>C</strong> = 14 + (3) ___ - (8)  ___  +(13) ___ - (18) ___ +(23) ___ - (28) ___ +(33) ___ - (38) ___ +(43) ___ +(48) ___    = _____</li>
+<li><strong>N</strong> = 38 - (4) ___ + (9)  ___  -(14) ___ +(19) ___ -(24) ___ - (29) ___ -(34) ___ - (39) ___ -(44) ___ - (49) ___       = _____</li>
+<li><strong>O</strong> = 8 + (5) ___ - (10)  ___ +(15) ___ - (20) ___ +(25) ___ - (30) ___ +(35) ___ +(40) ___ +(45) ___ +(50) ___  = _____</li>
+</ol>
+<p>Where:</p>
+<ul>
+<li><strong>E</strong> - Extraversion,</li>
+<li><strong>A</strong> - Agreeableness,</li>
+<li><strong>C</strong> - Conscientiousness,</li>
+<li><strong>N</strong> - Emotional Stability,</li>
+<li><strong>O</strong> - Intellect or Imagination (Openness)</li>
+</ul>
+<p>(question number)</p>
+<p>source: <a href="https://openpsychometrics.org/printable/big-five-personality-test.pdf">https://openpsychometrics.org/printable/big-five-personality-test.pdf</a></p>
+<p>Thus, after substituting the markings which occurs in the data frame to the formulas, we get:</p>
+<ol>
+<li><strong>E</strong> = 20 + <strong>EXT1</strong> - <strong>EXT2</strong>  + <strong>EXT3</strong> - <strong>EXT4</strong> + <strong>EXT5</strong> - <strong>EXT6</strong> + <strong>EXT7</strong> - <strong>EXT8</strong> + <strong>EXT9</strong> - <strong>EXT10</strong> =</li>
+<li><strong>A</strong> = 14 - <strong>AGR1</strong> + <strong>AGR2</strong>  - <strong>AGR3</strong> + <strong>AGR4</strong> - <strong>AGR5</strong> + <strong>AGR6</strong> - <strong>AGR7</strong> + <strong>AGR8</strong> + <strong>AGR9</strong> + <strong>AGR10</strong> =</li>
+<li><strong>C</strong> = 14 + <strong>CSN1</strong> - <strong>CSN2</strong>  + <strong>CSN3</strong> - <strong>CSN4</strong> + <strong>CSN5</strong> - <strong>CSN6</strong> + <strong>CSN7</strong> - <strong>CSN8</strong> + <strong>CSN9</strong> + <strong>CSN10</strong> =</li>
+<li><strong>N</strong> = 38 - <strong>EST1</strong> + <strong>EST2</strong>  - <strong>EST3</strong> + <strong>EST4</strong> - <strong>EST5</strong> - <strong>EST6</strong> - <strong>EST7</strong> - <strong>EST8</strong> - <strong>EST9</strong> - <strong>EST10</strong> =</li>
+<li><strong>O</strong> = 8  + <strong>OPN1</strong> - <strong>OPN2</strong>  + <strong>OPN3</strong> - <strong>OPN4</strong> + <strong>OPN5</strong> - <strong>OPN6</strong> + <strong>OPN7</strong> + <strong>OPN8</strong> + <strong>OPN9</strong> + <strong>OPN10</strong> =</li>
+</ol>
 <h4 id="471-preparation-of-additional-columns">4.7.1. Preparation of additional columns</h4>
 <h4 id="472-enter-the-calculated-results-into-the-data-frame">4.7.2. Enter the calculated results into the data frame</h4>
 <pre><code>def getExtraversionScore(df):
@@ -689,7 +715,6 @@ def getOpennessScore(df):
     OpennessScore = 0
     OpennessScore = 8 + df['OPN1'] - df['OPN2'] + df['OPN3'] - df['OPN4'] + df['OPN5'] - df['OPN6'] + df['OPN7'] + df['OPN8'] + df['OPN9'] + df['OPN10'] 
     return OpennessScore    
-
 
 BigFive['Extraversion']       = BigFive.apply( getExtraversionScore,        axis=1 ) 
 BigFive['Agreeableness']      = BigFive.apply( getAgreeablenessScore,       axis=1 ) 
@@ -922,7 +947,7 @@ BigFive['Openness']           = BigFive.apply( getOpennessScore,            axis
                 
               
               <li class="nav-item">
-                <a class="smooth-scroll" href="#projects">Projects</a>
+                <a class="smooth-scroll" href="#education">Education</a>
               </li>
             
             
@@ -931,7 +956,7 @@ BigFive['Openness']           = BigFive.apply( getOpennessScore,            axis
                 
               
               <li class="nav-item">
-                <a class="smooth-scroll" href="#education">Education</a>
+                <a class="smooth-scroll" href="#projects">Projects</a>
               </li>
             
             

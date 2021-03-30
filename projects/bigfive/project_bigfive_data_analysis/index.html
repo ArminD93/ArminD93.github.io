@@ -543,8 +543,9 @@ plt.show()
 <h4 id="451-preparing-the-radarchart-class">4.5.1. Preparing the RadarChart class</h4>
 <pre><code>class RadarChart:
 
-def __init__(self, rowNo):
+def __init__(self, rowNo, data):
     self.rowNo    = rowNo
+    self.data     = data
     self.cols     = 2
     self.rows     = 3
 
@@ -553,26 +554,28 @@ def __init__(self, rowNo):
     self.Factors_name_list = [Factor_I_Extraversion_names_list, Factor_II_Agreeableness_names_list, Factor_III_Conscientiousness_names_list,
                                 Factor_IV_EmotionalStability_names_list, Factor_V_Openness_names_list ]
 
-    self.scale_ticks = ['No\nanswer', 'Disagree', 'slightly\ndisagree', 'Neutral', 'Slightly\nagree', 'Agree']
-
-    self.title_list = ['Factor I - Extraversion', 'Factor II - Agreeableness', 'Factor III - Conscientiousness',
+    self.scale_ticks =  ['No\nanswer', 'Disagree', 'slightly\ndisagree', 'Neutral', 'Slightly\nagree', 'Agree']
+    self.title_list =   ['Factor I - Extraversion', 'Factor II - Agreeableness', 'Factor III - Conscientiousness',
                         'Factor IV - Emotional Stability (Neuroticism)', 'Factor V - Intellect or Imagination (Openness)']  
+    self.color_list =   ['green', 'blue', 'yellow', 'red', 'purple']
+    self.factors_list = ['Extraversion', 'Agreeableness', 'Conscientiousness', 'Emotional Stability', 'Openness']
 
-    self.color_list = ['green', 'blue', 'yellow', 'red', 'purple']
-
+def __CheckFlag(self, flag):
+    self.scores_data = 0
+    self.Factors_name_list
     if flag == 0:
-    self.scores_data = BigFive.columns[:50]
+    self.scores_data = self.data.columns[1:51]
     # self.questions_list = self.Factors_name_list
     self.name_list = [ quest for quest in self.Factors_name_list][self.FactorNo]
     elif flag == 1:
-    self.scores_data = BigFive.columns[-5:]
+    self.scores_data = self.data.columns[-5:]
     # self.questions_list = self.factors_list
     self.name_list = self.factors_list
     self.start, self.stop = ( 0, 10 )
 
 def __getnRowFromDataFrame(self):
-    self.first_row_scores = np.array( BigFive.loc[ self.rowNo, self.scores_data ] )
-    self.country_name = np.array( BigFive.loc[ self.rowNo, BigFive.columns[-6] ] )
+    self.first_row_scores = np.array( self.data.loc[ self.rowNo, self.scores_data ] )
+    self.country_name = np.array( self.data.loc[ self.rowNo, self.data.columns[0] ] )
     self.first_row_scores_with_country_name = np.append( self.first_row_scores, self.country_name )
 
 def __setTitleAndColor(self, flag):
@@ -615,12 +618,10 @@ def create_chart(self, flag=0):
     self.FactorNo = 0
     self.titleNo  = 0
     self.ColorNo  = 0
-
     self. __CheckFlag(flag)
     self.__getnRowFromDataFrame()
 
     if flag == 0:
-
     self.fig= plt.figure(figsize=(28, 28) )
     self.fig.subplots_adjust(hspace=0.2, wspace=0.1)
 
@@ -631,11 +632,11 @@ def create_chart(self, flag=0):
         self.__setQuestions_and_scores_for_chart()
         self.__makePolarChart()
         self.__addDescriptionToChart(flag)
-
+        
         self.titleNo  += 1
         self.ColorNo  += 1
-        self.FactorNo += 1
-        
+        self.FactorNo += 1   
+
     elif flag == 1:
         self.fig= plt.figure(figsize=(10, 10) )
         self.ax = self.fig.add_subplot(1, 1, 1, polar=True)
@@ -644,7 +645,6 @@ def create_chart(self, flag=0):
         self.__setQuestions_and_scores_for_chart()
         self.__makePolarChart()
         self.__addDescriptionToChart(flag)
-
     return plt.show()      
 </code></pre>
 <h4 id="452-preparation-of-objects">4.5.2. Preparation of objects</h4>

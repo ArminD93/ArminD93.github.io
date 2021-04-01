@@ -1,78 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>projects on Armin&#39;s portfolio</title>
-    <link>https://hugo-toha.github.io/posts/</link>
-    <description>Recent content in projects on Armin&#39;s portfolio</description>
+    <title>Posts on Armin&#39;s portfolio</title>
+    <link>https://armind93.github.io/posts/</link>
+    <description>Recent content in Posts on Armin&#39;s portfolio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 27 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 08 Jun 2010 08:06:25 +0600</lastBuildDate>
     
-	<atom:link href="https://hugo-toha.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://armind93.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Big Five Personality test - data analysis</title>
-      <link>https://hugo-toha.github.io/posts/project_bigfive/</link>
-      <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://hugo-toha.github.io/posts/project_bigfive/</guid>
-      <description>link to GitHub Repository
-overview </description>
-    </item>
     
     <item>
-      <title>Convolutional network testing for image classification</title>
-      <link>https://hugo-toha.github.io/posts/project_imageclass/</link>
-      <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
+      <title>Search Results</title>
+      <link>https://armind93.github.io/search/</link>
+      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
       
-      <guid>https://hugo-toha.github.io/posts/project_imageclass/</guid>
-      <description>link to GitHub Repository
-overview </description>
-    </item>
-    
-    <item>
-      <title>Kepler Exoplanet Search Results - data analysis</title>
-      <link>https://hugo-toha.github.io/posts/project_kepler/</link>
-      <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://hugo-toha.github.io/posts/project_kepler/</guid>
-      <description>link to GitHub Repository
-overview </description>
-    </item>
-    
-    <item>
-      <title>World happiness report - data analysis</title>
-      <link>https://hugo-toha.github.io/posts/project_worldhappiness/</link>
-      <pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://hugo-toha.github.io/posts/project_worldhappiness/</guid>
-      <description>link to data
-link to GitHub Repository
-1. Data presentation: The data contain informations which might have influence for people&amp;rsquo;s happiness score in the selected country. We have 5 reports divided by years, from 2015 to 2019.
-Acording to data, the happiness score can be estimated from six factors - economic production, social support, life expectancy, freedom, absence of corruption, and generosity. These factors contribute to making life evaluations higher in each country than they are in Dystopia, a hypothetical country that has values equal to the world’s lowest national averages for each of the six factors.</description>
-    </item>
-    
-    <item>
-      <title>Project of an automated system for selecting wooden blocks from a rack using Raspberry Pi</title>
-      <link>https://hugo-toha.github.io/posts/project_library/</link>
-      <pubDate>Fri, 05 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://hugo-toha.github.io/posts/project_library/</guid>
-      <description>link to GitHub Repository
-Introduction The device was built using elements from a 3D printer (frame, stepper motors). Three randomly placed wooden blocks on the shelves of the rack are picked up by the gripper and stored in one of the cells in the bottom row of this rack. The place on the bottom shelf is chosen, where the path from these blocks to this place is the shortest
-Overview   Device control through a graphical user interface:</description>
-    </item>
-    
-    <item>
-      <title>Books prices project</title>
-      <link>https://hugo-toha.github.io/posts/project_booksprices/</link>
-      <pubDate>Mon, 08 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://hugo-toha.github.io/posts/project_booksprices/</guid>
-      <description>link to GitHub repository
-Introduction I wanted to get informations about books prices, which I&amp;rsquo;d like to buy in the future. Additionally, it would be nice to see the price curve on the chart.
-Functions:  Downloading informations about books (title, price, date) from the acount on the website: ebooki.swiatczytnikow.pl. Saving data to the database. Displaying charts - how the price has changed over time for a specific title.  </description>
+      <guid>https://armind93.github.io/search/</guid>
+      <description>This file exists solely to respond to /search URL with the related search layout template.
+No content shown here is rendered, all content is based in the template layouts/page/search.html
+Setting a very low sitemap priority will tell search engines this is not important content.
+This implementation uses Fusejs, jquery and mark.js
+Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
     </item>
     
   </channel>

@@ -2,38 +2,38 @@
 <html>
   <head>
     <title></title>
-    <meta charset="UTF-8" />
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
 
-<link rel="stylesheet" href="/assets/css/bootstrap.min.css"/>
-<link rel="stylesheet" href="/assets/css/layouts/main.css"/>
-<link rel="stylesheet" href="/assets/css/style.css"/>
-<link rel="stylesheet" href="/assets/css/navigators/navbar.css"/>
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
 
 
 <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
 
 
+<link rel="icon" type="image/png" href="/images/favicon_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_2.png" />
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L5C2B8SPR2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-L5C2B8SPR2');
-</script>
-
-
-
-<link rel="icon" type="image/png" href="/assets/images/favicon.png" />
-
-
-<link rel="stylesheet" href="/assets/css/style.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
 
     
 <meta name="description" content="" />
@@ -41,8 +41,8 @@
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
 />
-<link rel="stylesheet" href="/assets/css/layouts/single.css"/>
-<link rel="stylesheet" href="/assets/css/navigators/sidebar.css">
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
 
 
     
@@ -71,13 +71,30 @@ if (!doNotTrack) {
 
 
 
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
 <nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
   <div class="container">
       <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
       <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="/">
-      <img src="/assets/images/main-logo.png">Armin&#39;s portfolio</a>
+      <img src="/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_2.png" alt="Logo">Armin&#39;s portfolio</a>
     <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -89,8 +106,8 @@ if (!doNotTrack) {
     </div>
   </div>
   
-  <img src="/assets/images/main-logo.png" class="d-none" id="main-logo">
-  <img src="/assets/images/inverted-logo.png" class="d-none" id="inverted-logo">
+  <img src="/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_2.png" class="d-none" id="main-logo" alt="Logo">
+  <img src="/images/inverted-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_2.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
 </nav>
 
 
@@ -100,10 +117,12 @@ if (!doNotTrack) {
   <section class="sidebar-section" id="sidebar-section">
     <div class="sidebar-holder">
       <div class="sidebar" id="sidebar">
-        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <form class="mx-auto" method="get" action="https://armind93.github.io/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
         <div class="sidebar-tree">
           <ul class="tree" id="tree">
-            <li id="list-heading"><a href="/projects" data-filter="all">All projects</a></li>
+            <li id="list-heading"><a href="/projects" data-filter="all">More about projects</a></li>
             <div class="subtree">
                 
   
@@ -112,26 +131,8 @@ if (!doNotTrack) {
   
   
     
-    <li><a class="" href="/projects/libraryproject/project_library/">Project of an automated system for selecting wooden blocks from a rack using Raspberry Pi</a></li>
-  
-
-  
-  
-  
-  
-  
-    
-    <li><a class="" href="/projects/bookprices/project_booksprices/">Books Prices</a></li>
-  
-
-  
-  
-  
-  
-  
-    
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="">Big Five Personality test</a>
+      <i class="fas fa-plus-circle"></i><a class="" href="/projects/bigfive/">Big Five Personality test</a>
       
       <ul class="">
         
@@ -159,15 +160,6 @@ if (!doNotTrack) {
   
   
     
-    <li><a class="" href="/projects/bigfive/bigfive_data_prepare/">Data preparation</a></li>
-  
-
-  
-  
-  
-  
-  
-    
     <li><a class="" href="/projects/bigfive/bigfive_modules/">Imported modules</a></li>
   
 
@@ -177,12 +169,7 @@ if (!doNotTrack) {
   
   
     
-    <li><a class="" href="/projects/bigfive/project_bigfive_data_analysis/">Data analysis</a></li>
-  
-
-
-      </ul>
-    </li>
+    <li><a class="" href="/projects/bigfive/bigfive_data_prepare/">Data preparation</a></li>
   
 
   
@@ -192,7 +179,7 @@ if (!doNotTrack) {
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="">Convolutional network testing for image classification</a>
+      <i class="fas fa-plus-circle"></i><a class="" href="/projects/bigfive/project_bigfive_data_analysis/">Data analysis</a>
       
       <ul class="">
         
@@ -202,7 +189,7 @@ if (!doNotTrack) {
   
   
     
-    <li><a class="" href="/projects/imageclassproject/project_imageclass_about/">About project</a></li>
+    <li><a class="" href="/projects/bigfive/project_bigfive_data_analysisforpoland/">Poland data analysis</a></li>
   
 
   
@@ -211,25 +198,12 @@ if (!doNotTrack) {
   
   
     
-    <li><a class="" href="/projects/imageclassproject/project_imageclass_modules/">Imported modules</a></li>
+    <li><a class="" href="/projects/bigfive/project_bigfive_data_analysisforuk/">United Kingdom data analysis</a></li>
   
 
-  
-  
-  
-  
-  
-    
-    <li><a class="" href="/projects/imageclassproject/project_imageclass_data_preparing/">Data preparing</a></li>
-  
 
-  
-  
-  
-  
-  
-    
-    <li><a class="" href="/projects/imageclassproject/project_imageclass_neural_networks/">Neural networks</a></li>
+      </ul>
+    </li>
   
 
 
@@ -244,7 +218,59 @@ if (!doNotTrack) {
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="">Kepler Exoplanet Search Results</a>
+      <i class="fas fa-plus-circle"></i><a class="" href="/projects/worldhappiness/">World Happiness project - about project</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/worldhappiness/project_worldhappiness_about/">About project</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/worldhappiness/project_worldhappiness_data_presentation/">Data presentation</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/worldhappiness/project_worldhappiness_data_analysis/">Data analysis</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/worldhappiness/project_worldhappiness_machine_learning/">Machine learning</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/projects/kepler/">Kepler Exoplanet Search Results</a>
       
       <ul class="">
         
@@ -314,7 +340,7 @@ if (!doNotTrack) {
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="">World Happiness project</a>
+      <i class="fas fa-plus-circle"></i><a class="" href="/projects/imageclassproject/">Convolutional network testing for image classification</a>
       
       <ul class="">
         
@@ -324,7 +350,7 @@ if (!doNotTrack) {
   
   
     
-    <li><a class="" href="/projects/worldhappiness/project_worldhappiness_about/">About project</a></li>
+    <li><a class="" href="/projects/imageclassproject/project_imageclass_about/">About project</a></li>
   
 
   
@@ -333,7 +359,7 @@ if (!doNotTrack) {
   
   
     
-    <li><a class="" href="/projects/worldhappiness/project_worldhappiness_data_presentation/">Data presentation</a></li>
+    <li><a class="" href="/projects/imageclassproject/project_imageclass_modules/">Imported modules</a></li>
   
 
   
@@ -342,7 +368,7 @@ if (!doNotTrack) {
   
   
     
-    <li><a class="" href="/projects/worldhappiness/project_worldhappiness_data_analysis/">Data analysis</a></li>
+    <li><a class="" href="/projects/imageclassproject/project_imageclass_data_preparing/">Data preparing</a></li>
   
 
   
@@ -351,7 +377,66 @@ if (!doNotTrack) {
   
   
     
-    <li><a class="" href="/projects/worldhappiness/project_worldhappiness_machine_learning/">Machine learning</a></li>
+    <li><a class="" href="/projects/imageclassproject/project_imageclass_neural_networks/">Neural networks</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/imageclassproject/project_imageclass_model_test/">Model testing</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/projects/libraryproject/">Project of an automated system for selecting wooden blocks from a rack using Raspberry Pi</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/libraryproject/project_library/">Project of an automated system for selecting wooden blocks from a rack using Raspberry Pi</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/projects/bookprices/">Books prices project</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/projects/bookprices/project_booksprices/">Books Prices</a></li>
   
 
 
@@ -374,13 +459,13 @@ if (!doNotTrack) {
   <div class="content">
     <div class="container p-0 read-area">
       
-      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://armind93.github.io/assets/images/default-hero.jpg);'>
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://armind93.github.io/images/default-hero.jpg);'>
       </div>
 
       
       <div class="page-content">
         <div class="author-profile ml-auto align-self-lg-center">
-          <img class="rounded-circle" src='/static/images/A85.jpg'/>
+          <img class="rounded-circle" src='/images/A85.jpg' alt="Author Image">
           <h5 class="author-name">Armin Derencz</h5>
           <p>January 1, 0001</p>
         </div>
@@ -450,7 +535,7 @@ and pandas (Credential ID: UC-K631OZR7)</li>
         
         
           <div class="btn-improve-page">
-              <a href="https://github.com/hugo-toha/hugo-toha.github.io/edit/master/content/about.md">
+              <a href="https://github.com/ArminD93/edit//content/about.md">
                 <i class="fas fa-code-branch"></i>
                 Improve this page
               </a>
@@ -504,6 +589,14 @@ and pandas (Credential ID: UC-K631OZR7)</li>
 
   
 
+  
+
+  
+
+  
+
+  
+
 </div>
 
       <hr />
@@ -512,6 +605,8 @@ and pandas (Credential ID: UC-K631OZR7)</li>
       </div>
     </div>
   </div>
+  
+  <a id="scroll-to-top" class="btn"><i class="fas fa-chevron-circle-up"></i></a>
   
 </section>
 
@@ -526,23 +621,27 @@ and pandas (Credential ID: UC-K631OZR7)</li>
       <div class="toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#hi-im-armin">Hi, I&rsquo;m Armin</a></li>
-    <li><a href="#skills">Skills:</a>
+    <li>
       <ul>
-        <li>
+        <li><a href="#hi-im-armin">Hi, I&rsquo;m Armin</a></li>
+        <li><a href="#skills">Skills:</a>
           <ul>
             <li>
               <ul>
-                <li><a href="#python"><strong>Python</strong>:</a></li>
-                <li><a href="#data-analysis"><strong>Data analysis</strong>:</a></li>
-                <li><a href="#machine-learning"><strong>Machine learning</strong>:</a></li>
-                <li><a href="#neural-networks"><strong>Neural networks</strong>:</a></li>
-                <li><a href="#linux-system"><strong>Linux system</strong></a></li>
-                <li><a href="#relational-database-and-language"><strong>Relational database and language</strong>:</a></li>
-                <li><a href="#basics-of-c-and-c-"><strong>Basics of C and C ++</strong></a></li>
+                <li>
+                  <ul>
+                    <li><a href="#python"><strong>Python</strong>:</a></li>
+                    <li><a href="#data-analysis"><strong>Data analysis</strong>:</a></li>
+                    <li><a href="#machine-learning"><strong>Machine learning</strong>:</a></li>
+                    <li><a href="#neural-networks"><strong>Neural networks</strong>:</a></li>
+                    <li><a href="#linux-system"><strong>Linux system</strong></a></li>
+                    <li><a href="#relational-database-and-language"><strong>Relational database and language</strong>:</a></li>
+                    <li><a href="#basics-of-c-and-c-"><strong>Basics of C and C ++</strong></a></li>
+                  </ul>
+                </li>
+                <li><a href="#languages-and-tools">Languages and Tools:</a></li>
               </ul>
             </li>
-            <li><a href="#languages-and-tools">Languages and Tools:</a></li>
           </ul>
         </li>
       </ul>
@@ -574,6 +673,21 @@ and pandas (Credential ID: UC-K631OZR7)</li>
   
 
 
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
 <footer class="container-fluid text-center align-content-center footer pb-2">
   <div class="container pt-5">
     <div class="row text-left">
@@ -587,7 +701,7 @@ and pandas (Credential ID: UC-K631OZR7)</li>
                 
               
               <li class="nav-item">
-                <a class="smooth-scroll" href="#about">Armin Derencz</a>
+                <a class="smooth-scroll" href="/#about">About</a>
               </li>
             
             
@@ -596,7 +710,17 @@ and pandas (Credential ID: UC-K631OZR7)</li>
                 
               
               <li class="nav-item">
-                <a class="smooth-scroll" href="#skills">Skills</a>
+                <a class="smooth-scroll" href="/#skills">Skills</a>
+              </li>
+            
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#education">Education</a>
               </li>
             
             
@@ -605,7 +729,7 @@ and pandas (Credential ID: UC-K631OZR7)</li>
                 
               
               <li class="nav-item">
-                <a class="smooth-scroll" href="#education">Education</a>
+                <a class="smooth-scroll" href="/#projects">Projects</a>
               </li>
             
             
@@ -614,7 +738,7 @@ and pandas (Credential ID: UC-K631OZR7)</li>
                 
               
               <li class="nav-item">
-                <a class="smooth-scroll" href="#projects">Projects</a>
+                <a class="smooth-scroll" href="/#recent-posts">Recent projects</a>
               </li>
             
             
@@ -623,7 +747,7 @@ and pandas (Credential ID: UC-K631OZR7)</li>
                 
               
               <li class="nav-item">
-                <a class="smooth-scroll" href="#recent-posts">Recent projects</a>
+                <a class="smooth-scroll" href="/#accomplishments">Accomplishments</a>
               </li>
             
         </ul>
@@ -648,7 +772,7 @@ and pandas (Credential ID: UC-K631OZR7)</li>
     <div class="row text-left">
       <div class="col-md-4">
         <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
-          <img src="/assets/images/inverted-logo.png">
+          <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png" alt="Toha Theme Logo">
           Toha
         </a>
       </div>
@@ -656,7 +780,7 @@ and pandas (Credential ID: UC-K631OZR7)</li>
       <div class="col-md-4 text-right">
         <a id="hugo" href="https://gohugo.io/">Powered by
         <img
-          src="/assets/images/hugo-logo-wide.svg"
+          src="/images/hugo-logo.svg"
           alt="Hugo Logo"
           height="18"
         />
@@ -666,18 +790,18 @@ and pandas (Credential ID: UC-K631OZR7)</li>
   </div>
 </footer>
 
-    <script src="/assets/js/jquery-3.4.1.min.js"></script>
-<script src="/assets/js/popper.min.js"></script>
-<script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 
-<script src="/assets/js/navbar.js"></script>
-<script src="/assets/js/main.js"></script>
+<script src="/js/navbar.js"></script>
+<script src="/js/main.js"></script>
 
 
     
     
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
-<script src="/assets/js/single.js"></script>
+<script src="/js/single.js"></script>
 <script>
   hljs.initHighlightingOnLoad();
 </script>

@@ -2,42 +2,42 @@
 <html>
   <head>
     <title>projects</title>
-    <meta charset="UTF-8" />
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
 
-<link rel="stylesheet" href="/assets/css/bootstrap.min.css"/>
-<link rel="stylesheet" href="/assets/css/layouts/main.css"/>
-<link rel="stylesheet" href="/assets/css/style.css"/>
-<link rel="stylesheet" href="/assets/css/navigators/navbar.css"/>
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
 
 
 <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
 
 
+<link rel="icon" type="image/png" href="/images/favicon_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_2.png" />
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L5C2B8SPR2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-L5C2B8SPR2');
-</script>
-
-
-
-<link rel="icon" type="image/png" href="/assets/images/favicon.png" />
-
-
-<link rel="stylesheet" href="/assets/css/style.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
 
     
-    <link rel="stylesheet" href="/assets/css/layouts/list.css">
-    <link rel="stylesheet" href="/assets/css/navigators/sidebar.css">
+    <link rel="stylesheet" href="/css/layouts/list.css">
+    <link rel="stylesheet" href="/css/navigators/sidebar.css">
 
 
     
@@ -66,13 +66,30 @@ if (!doNotTrack) {
 
 
 
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
 <nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
   <div class="container">
       <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
       <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="/">
-      <img src="/assets/images/main-logo.png">Armin&#39;s portfolio</a>
+      <img src="/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_2.png" alt="Logo">Armin&#39;s portfolio</a>
     <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -84,8 +101,8 @@ if (!doNotTrack) {
     </div>
   </div>
   
-  <img src="/assets/images/main-logo.png" class="d-none" id="main-logo">
-  <img src="/assets/images/inverted-logo.png" class="d-none" id="inverted-logo">
+  <img src="/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_2.png" class="d-none" id="main-logo" alt="Logo">
+  <img src="/images/inverted-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_2.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
 </nav>
 
 
@@ -100,10 +117,12 @@ if (!doNotTrack) {
   <section class="sidebar-section" id="sidebar-section">
     <div class="sidebar-holder">
       <div class="sidebar" id="sidebar">
-        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <form class="mx-auto" method="get" action="https://armind93.github.io/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
         <div class="sidebar-tree">
           <ul class="tree" id="tree">
-            <li id="list-heading"><a href="/projects" data-filter="all">All projects</a></li>
+            <li id="list-heading"><a href="/projects" data-filter="all"></a></li>
             <div class="subtree">
                 
   
@@ -441,16 +460,18 @@ if (!doNotTrack) {
     <div class="container-fluid post-card-holder" id="post-card-holder">
       
       
-        <div class="post-card">
+        
+          <div class="post-card">
   <a href="/projects/bigfive/bigfive_about/" class="post-card-link">
     <div class="card">
       <div class="card-head">
-        <img class="card-img-top" src='/assets/images/default-hero.jpg'/>
+        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
       </div>
       <div class="card-body">
         <h5 class="card-title">Big Five Personality test - about project</h5>
-        <p class="card-text post-summary">Dataset contains 1,015,342 questionnaire answers collected online by Open-Source Psychometrics Project. According to information from the page openpsychometrics.org, The big five personality traits are the best accepted and most commonly used model of personality in academic psychology. Thanks to results from this test, researchers can analyse factors of personality which can be applied to individual person.
-On wikipedia page we can got to know that The Big Five personality traits is a taxonomy, or grouping for personality traits.</p>
+        <p class="card-text post-summary">Data analysis from the Big Five Personality test.
+link to wikipedia
+link to GitHub Repository</p>
       </div>
       <div class="card-footer">
         <span class="float-left">June 27, 2020</span>
@@ -464,12 +485,14 @@ On wikipedia page we can got to know that The Big Five personality traits is a t
   </a>
 </div>
 
+        
       
-        <div class="post-card">
+        
+          <div class="post-card">
   <a href="/projects/imageclassproject/project_imageclass_about/" class="post-card-link">
     <div class="card">
       <div class="card-head">
-        <img class="card-img-top" src='/assets/images/default-hero.jpg'/>
+        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
       </div>
       <div class="card-body">
         <h5 class="card-title">Convolutional network testing for image classification - about project</h5>
@@ -489,12 +512,14 @@ link to GitHub Repository</p>
   </a>
 </div>
 
+        
       
-        <div class="post-card">
+        
+          <div class="post-card">
   <a href="/projects/kepler/project_kepler_about/" class="post-card-link">
     <div class="card">
       <div class="card-head">
-        <img class="card-img-top" src='/assets/images/default-hero.jpg'/>
+        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
       </div>
       <div class="card-body">
         <h5 class="card-title">Kepler Exoplanet Search Results - about project</h5>
@@ -513,12 +538,14 @@ link to GitHub Repository</p>
   </a>
 </div>
 
+        
       
-        <div class="post-card">
+        
+          <div class="post-card">
   <a href="/projects/worldhappiness/project_worldhappiness_about/" class="post-card-link">
     <div class="card">
       <div class="card-head">
-        <img class="card-img-top" src='/assets/images/default-hero.jpg'/>
+        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
       </div>
       <div class="card-body">
         <h5 class="card-title">World Happiness project - about project</h5>
@@ -537,12 +564,14 @@ Acording to data, the happiness score can be estimated from six factors - econom
   </a>
 </div>
 
+        
       
-        <div class="post-card">
+        
+          <div class="post-card">
   <a href="/projects/libraryproject/project_library/" class="post-card-link">
     <div class="card">
       <div class="card-head">
-        <img class="card-img-top" src='/assets/images/default-hero.jpg'/>
+        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
       </div>
       <div class="card-body">
         <h5 class="card-title">Project of an automated system for selecting wooden blocks from a rack using Raspberry Pi</h5>
@@ -562,12 +591,14 @@ Overview   Device control through a graphical user interface:</p>
   </a>
 </div>
 
+        
       
-        <div class="post-card">
+        
+          <div class="post-card">
   <a href="/projects/bookprices/project_booksprices/" class="post-card-link">
     <div class="card">
       <div class="card-head">
-        <img class="card-img-top" src='/assets/images/default-hero.jpg'/>
+        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
       </div>
       <div class="card-body">
         <h5 class="card-title">Books prices project</h5>
@@ -587,18 +618,19 @@ Functions:  Downloading informations about books (title, price, date) from the a
   </a>
 </div>
 
+        
       
-        <div class="post-card">
+        
+          <div class="post-card">
   <a href="/projects/bigfive/bigfive_col_names/" class="post-card-link">
     <div class="card">
       <div class="card-head">
-        <img class="card-img-top" src='/assets/images/default-hero.jpg'/>
+        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
       </div>
       <div class="card-body">
         <h5 class="card-title">Big Five Personality test - columns description</h5>
-        <p class="card-text post-summary">1. Description of the values ​​from the columns The following items were presented on one page and each was rated on a five point scale using radio buttons. The order on page was was EXT1, AGR1, CSN1, EST1, OPN1, EXT2, etc. The scale was labeled 1=Disagree, 3=Neutral, 5=Agree
-5 major dimensions of personality: Openness, Conscientiousness, Agreeableness, Extraversion, and Neuroticism.
- EXT - Extraversion, EST - Neuroticism, AGR - Agreeableness (Zgodność), CSN - Conscientiousness (sumienność), OPN - Openness  link to GitHub Repository</p>
+        <p class="card-text post-summary">Dataset contains 1,015,342 questionnaire answers collected online by Open-Source Psychometrics Project. According to information from the page openpsychometrics.org, The big five personality traits are the best accepted and most commonly used model of personality in academic psychology. Thanks to results from this test, researchers can analyse factors of personality which can be applied to individual person.
+On wikipedia page we can got to know that The Big Five personality traits is a taxonomy, or grouping for personality traits.</p>
       </div>
       <div class="card-footer">
         <span class="float-left">January 1, 0001</span>
@@ -612,12 +644,14 @@ Functions:  Downloading informations about books (title, price, date) from the a
   </a>
 </div>
 
+        
       
-        <div class="post-card">
+        
+          <div class="post-card">
   <a href="/projects/bigfive/project_bigfive_data_analysis/" class="post-card-link">
     <div class="card">
       <div class="card-head">
-        <img class="card-img-top" src='/assets/images/default-hero.jpg'/>
+        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
       </div>
       <div class="card-body">
         <h5 class="card-title">Big Five Personality test - data analysis</h5>
@@ -635,12 +669,14 @@ Functions:  Downloading informations about books (title, price, date) from the a
   </a>
 </div>
 
+        
       
-        <div class="post-card">
+        
+          <div class="post-card">
   <a href="/projects/bigfive/project_bigfive_data_analysisforpoland/" class="post-card-link">
     <div class="card">
       <div class="card-head">
-        <img class="card-img-top" src='/assets/images/default-hero.jpg'/>
+        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
       </div>
       <div class="card-body">
         <h5 class="card-title">Big Five Personality test - data analysis for Poland</h5>
@@ -660,12 +696,14 @@ There is a lot of data collected from the city of Warsaw. There are definitely m
   </a>
 </div>
 
+        
       
-        <div class="post-card">
+        
+          <div class="post-card">
   <a href="/projects/bigfive/project_bigfive_data_analysisforuk/" class="post-card-link">
     <div class="card">
       <div class="card-head">
-        <img class="card-img-top" src='/assets/images/default-hero.jpg'/>
+        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
       </div>
       <div class="card-body">
         <h5 class="card-title">Big Five Personality test - data analysis for United Kingdom</h5>
@@ -683,12 +721,14 @@ There is a lot of data collected from the city of Warsaw. There are definitely m
   </a>
 </div>
 
+        
       
-        <div class="post-card">
+        
+          <div class="post-card">
   <a href="/projects/bigfive/bigfive_data_prepare/" class="post-card-link">
     <div class="card">
       <div class="card-head">
-        <img class="card-img-top" src='/assets/images/default-hero.jpg'/>
+        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
       </div>
       <div class="card-body">
         <h5 class="card-title">Big Five Personality test - data preparation</h5>
@@ -706,12 +746,14 @@ There is a lot of data collected from the city of Warsaw. There are definitely m
   </a>
 </div>
 
+        
       
-        <div class="post-card">
+        
+          <div class="post-card">
   <a href="/projects/bigfive/bigfive_modules/" class="post-card-link">
     <div class="card">
       <div class="card-head">
-        <img class="card-img-top" src='/assets/images/default-hero.jpg'/>
+        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
       </div>
       <div class="card-body">
         <h5 class="card-title">Big Five Personality test - imported modules</h5>
@@ -730,6 +772,7 @@ There is a lot of data collected from the city of Warsaw. There are definitely m
   </a>
 </div>
 
+        
       
     </div>
     <div class="paginator">
@@ -769,12 +812,23 @@ There is a lot of data collected from the city of Warsaw. There are definitely m
     <li class="page-item"><a class="page-link" href="/projects/page/2/">2</a></li>
     
     
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/projects/page/3/">3</a></li>
+    
+    
     <li class="page-item">
     <a href="/projects/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
     </li>
     
     <li class="page-item">
-        <a href="/projects/page/2/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/projects/page/3/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
     </li>
     
 </ul>
@@ -807,6 +861,21 @@ There is a lot of data collected from the city of Warsaw. There are definitely m
   
 
 
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
 <footer class="container-fluid text-center align-content-center footer pb-2">
   <div class="container pt-5">
     <div class="row text-left">
@@ -820,7 +889,7 @@ There is a lot of data collected from the city of Warsaw. There are definitely m
                 
               
               <li class="nav-item">
-                <a class="smooth-scroll" href="#about">Armin Derencz</a>
+                <a class="smooth-scroll" href="/#about">About</a>
               </li>
             
             
@@ -829,7 +898,7 @@ There is a lot of data collected from the city of Warsaw. There are definitely m
                 
               
               <li class="nav-item">
-                <a class="smooth-scroll" href="#skills">Skills</a>
+                <a class="smooth-scroll" href="/#skills">Skills</a>
               </li>
             
             
@@ -838,7 +907,17 @@ There is a lot of data collected from the city of Warsaw. There are definitely m
                 
               
               <li class="nav-item">
-                <a class="smooth-scroll" href="#education">Education</a>
+                <a class="smooth-scroll" href="/#education">Education</a>
+              </li>
+            
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#projects">Projects</a>
               </li>
             
             
@@ -847,7 +926,7 @@ There is a lot of data collected from the city of Warsaw. There are definitely m
                 
               
               <li class="nav-item">
-                <a class="smooth-scroll" href="#projects">Projects</a>
+                <a class="smooth-scroll" href="/#recent-posts">Recent projects</a>
               </li>
             
             
@@ -856,7 +935,7 @@ There is a lot of data collected from the city of Warsaw. There are definitely m
                 
               
               <li class="nav-item">
-                <a class="smooth-scroll" href="#recent-posts">Recent projects</a>
+                <a class="smooth-scroll" href="/#accomplishments">Accomplishments</a>
               </li>
             
         </ul>
@@ -881,7 +960,7 @@ There is a lot of data collected from the city of Warsaw. There are definitely m
     <div class="row text-left">
       <div class="col-md-4">
         <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
-          <img src="/assets/images/inverted-logo.png">
+          <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png" alt="Toha Theme Logo">
           Toha
         </a>
       </div>
@@ -889,7 +968,7 @@ There is a lot of data collected from the city of Warsaw. There are definitely m
       <div class="col-md-4 text-right">
         <a id="hugo" href="https://gohugo.io/">Powered by
         <img
-          src="/assets/images/hugo-logo-wide.svg"
+          src="/images/hugo-logo.svg"
           alt="Hugo Logo"
           height="18"
         />
@@ -899,17 +978,17 @@ There is a lot of data collected from the city of Warsaw. There are definitely m
   </div>
 </footer>
 
-    <script src="/assets/js/jquery-3.4.1.min.js"></script>
-<script src="/assets/js/popper.min.js"></script>
-<script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 
-<script src="/assets/js/navbar.js"></script>
-<script src="/assets/js/main.js"></script>
+<script src="/js/navbar.js"></script>
+<script src="/js/main.js"></script>
 
 
     
     
-    <script src="/assets/js/list.js"></script>
+    <script src="/js/list.js"></script>
 
   </body>
 </html>

@@ -17,8 +17,9 @@
       <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://armind93.github.io/projects/bigfive/bigfive_about/</guid>
-      <description>Dataset contains 1,015,342 questionnaire answers collected online by Open-Source Psychometrics Project. According to information from the page openpsychometrics.org, The big five personality traits are the best accepted and most commonly used model of personality in academic psychology. Thanks to results from this test, researchers can analyse factors of personality which can be applied to individual person.
-On wikipedia page we can got to know that The Big Five personality traits is a taxonomy, or grouping for personality traits.</description>
+      <description>Data analysis from the Big Five Personality test.
+link to wikipedia
+link to GitHub Repository</description>
     </item>
     
     <item>
@@ -27,9 +28,8 @@ On wikipedia page we can got to know that The Big Five personality traits is a t
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://armind93.github.io/projects/bigfive/bigfive_col_names/</guid>
-      <description>1. Description of the values ​​from the columns The following items were presented on one page and each was rated on a five point scale using radio buttons. The order on page was was EXT1, AGR1, CSN1, EST1, OPN1, EXT2, etc. The scale was labeled 1=Disagree, 3=Neutral, 5=Agree
-5 major dimensions of personality: Openness, Conscientiousness, Agreeableness, Extraversion, and Neuroticism.
- EXT - Extraversion, EST - Neuroticism, AGR - Agreeableness (Zgodność), CSN - Conscientiousness (sumienność), OPN - Openness  link to GitHub Repository</description>
+      <description>Dataset contains 1,015,342 questionnaire answers collected online by Open-Source Psychometrics Project. According to information from the page openpsychometrics.org, The big five personality traits are the best accepted and most commonly used model of personality in academic psychology. Thanks to results from this test, researchers can analyse factors of personality which can be applied to individual person.
+On wikipedia page we can got to know that The Big Five personality traits is a taxonomy, or grouping for personality traits.</description>
     </item>
     
     <item>

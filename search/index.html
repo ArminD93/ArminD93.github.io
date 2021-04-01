@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>World Happiness project - about project</title>
+    <title>Search Results</title>
     
 
 
@@ -215,15 +215,12 @@ if (!doNotTrack) {
   
   
   
-    
-    
-  
   
     
     <li>
-      <i class="fas fa-minus-circle"></i><a class="active" href="/projects/worldhappiness/">World Happiness project - about project</a>
+      <i class="fas fa-plus-circle"></i><a class="" href="/projects/worldhappiness/">World Happiness project - about project</a>
       
-      <ul class="active">
+      <ul class="">
         
   
   
@@ -461,118 +458,29 @@ if (!doNotTrack) {
 <section class="content-section" id="content-section">
   <div class="content container-fluid" id="content">
     <div class="container-fluid post-card-holder" id="post-card-holder">
-      
-      
-        
+      <div id="search-results">
+
+        <script id="search-result-template" type="text/x-js-template">
           <div class="post-card">
-  <a href="/projects/worldhappiness/project_worldhappiness_about/" class="post-card-link">
-    <div class="card">
-      <div class="card-head">
-        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">World Happiness project - about project</h5>
-        <p class="card-text post-summary">The data contain informations which might have influence for people&rsquo;s happiness score in the selected country. We have 5 reports divided by years, from 2015 to 2019.
-Acording to data, the happiness score can be estimated from six factors - economic production, social support, life expectancy, freedom, absence of corruption, and generosity. These factors contribute to making life evaluations higher in each country than they are in Dystopia, a hypothetical country that has values equal to the world’s lowest national averages for each of the six factors.</p>
-      </div>
-      <div class="card-footer">
-        <span class="float-left">February 19, 2020</span>
-        <a
-        href="/projects/worldhappiness/project_worldhappiness_about/"
-        class="float-right btn btn-outline-info btn-sm"
-        >Read</a
-        >
-      </div>
-    </div>
-  </a>
-</div>
+            <a href="${link}" class="post-card-link">
+              <div class="card" style="min-height: 352px;"><a href="${link}" class="post-card-link">
+                <div class="card-head">
+                  <img class="card-img-top" src="${hero}" alt="Card Heading Image">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">${title}</h5>
+                  <p class="card-text post-summary">${summary}</p>
+                </div>
+                <div class="card-footer">
+                  <span class="float-left">${date}</span>
+                  <a href="${link}" class="float-right btn btn-outline-info btn-sm">Read</a>
+                </div>
+              </div>
+	          </a>
+          </div>
+        </script>
 
-        
-      
-        
-          <div class="post-card">
-  <a href="/projects/worldhappiness/project_worldhappiness_data_analysis/" class="post-card-link">
-    <div class="card">
-      <div class="card-head">
-        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
       </div>
-      <div class="card-body">
-        <h5 class="card-title">World Happiness project - data analysis</h5>
-        <p class="card-text post-summary">2. Data reviewing: I checked if data are completed and if there is no NaN values.
-2.1. Correlation maps: On the correlation maps below, we see which factor has the highest influence on happiness score and which of them has lowest. Regardless the years, the highest influence on happiness score of the country has economy level of this country. On the opposite side, the generosity factor has little effect on happiness score.</p>
-      </div>
-      <div class="card-footer">
-        <span class="float-left">January 1, 0001</span>
-        <a
-        href="/projects/worldhappiness/project_worldhappiness_data_analysis/"
-        class="float-right btn btn-outline-info btn-sm"
-        >Read</a
-        >
-      </div>
-    </div>
-  </a>
-</div>
-
-        
-      
-        
-          <div class="post-card">
-  <a href="/projects/worldhappiness/project_worldhappiness_data_presentation/" class="post-card-link">
-    <div class="card">
-      <div class="card-head">
-        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">World Happiness project - data presentation</h5>
-        <p class="card-text post-summary">1. Data presentation: Data downloaded from kaggle was splitted into years, which means in one file we have all factors from one year and we&rsquo;ve 5 data files.:
-  Data from 2015:   Data from 2016:   Data from 2017:
-  Data from 2018:   Data from 2019:   At the beginning, I considered each report separately, and then sum up my analysis into one report - summary report.</p>
-      </div>
-      <div class="card-footer">
-        <span class="float-left">January 1, 0001</span>
-        <a
-        href="/projects/worldhappiness/project_worldhappiness_data_presentation/"
-        class="float-right btn btn-outline-info btn-sm"
-        >Read</a
-        >
-      </div>
-    </div>
-  </a>
-</div>
-
-        
-      
-        
-          <div class="post-card">
-  <a href="/projects/worldhappiness/project_worldhappiness_machine_learning/" class="post-card-link">
-    <div class="card">
-      <div class="card-head">
-        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">World Happiness project - machine learning</h5>
-        <p class="card-text post-summary">4. Preparing data to machine learning: I wanted to link all factors into one dataframe, where all years were located in one column. I used merge() method, where I chose merging on columns &lsquo;Country or region&rsquo; and &lsquo;Year&rsquo;.
-AllFeatures = pd.merge(happy_AllYears_stacked, economy_AllYears_stacked, on= ['Country or region', 'Year'] ) AllFeatures = AllFeatures.merge(healthy_AllYears_stacked, on= ['Country or region', 'Year'] ) AllFeatures = AllFeatures.merge(social_support_AllYears_stacked, on= ['Country or region', 'Year'] ) AllFeatures.head()  Next, I wished to find out what the descibe() method returns for column &lsquo;happinessScore&rsquo; in this &lsquo;AllYears&rsquo; data frame.</p>
-      </div>
-      <div class="card-footer">
-        <span class="float-left">January 1, 0001</span>
-        <a
-        href="/projects/worldhappiness/project_worldhappiness_machine_learning/"
-        class="float-right btn btn-outline-info btn-sm"
-        >Read</a
-        >
-      </div>
-    </div>
-  </a>
-</div>
-
-        
-      
-    </div>
-    <div class="paginator">
-      
-
-
     </div>
   </div>
 </section>
@@ -641,6 +549,7 @@ AllFeatures = pd.merge(happy_AllYears_stacked, economy_AllYears_stacked, on= ['C
               </li>
             
             
+            
               
               
                 
@@ -648,7 +557,6 @@ AllFeatures = pd.merge(happy_AllYears_stacked, economy_AllYears_stacked, on= ['C
               <li class="nav-item">
                 <a class="smooth-scroll" href="/#education">Education</a>
               </li>
-            
             
             
               
@@ -727,7 +635,9 @@ AllFeatures = pd.merge(happy_AllYears_stacked, economy_AllYears_stacked, on= ['C
 
     
     
-    <script src="/js/list.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
+<script src="https://armind93.github.io/js/search.js"></script>
 
   </body>
 </html>

@@ -12,48 +12,49 @@
     
     <meta name="description" content="Portfolio of Armin Derencz." />
     
-    <meta charset="UTF-8" />
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
 
-<link rel="stylesheet" href="/assets/css/bootstrap.min.css"/>
-<link rel="stylesheet" href="/assets/css/layouts/main.css"/>
-<link rel="stylesheet" href="/assets/css/style.css"/>
-<link rel="stylesheet" href="/assets/css/navigators/navbar.css"/>
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
 
 
 <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
 
 
+<link rel="icon" type="image/png" href="/images/favicon_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_2.png" />
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L5C2B8SPR2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<link rel="stylesheet" href="/css/style.css"/>
 
-  gtag('config', 'G-L5C2B8SPR2');
-</script>
-
-
-
-<link rel="icon" type="image/png" href="/assets/images/favicon.png" />
-
-
-<link rel="stylesheet" href="/assets/css/style.css"/>
-
-    <link rel="stylesheet" href="/assets/css/sections/home.css"/>
-    <link rel="stylesheet" href="/assets/css/sections/about.css"/>
-    <link rel="stylesheet" href="/assets/css/sections/skills.css"/>
-    <link rel="stylesheet" href="/assets/css/sections/experiences.css"/>
-    <link rel="stylesheet" href="/assets/css/sections/education.css"/>
-    <link rel="stylesheet" href="/assets/css/sections/projects.css"/>
-    <link rel="stylesheet" href="/assets/css/sections/about-projects.css"/>
-    <link rel="stylesheet" href="/assets/css/sections/achievements.css"/>
-
+    <link rel="stylesheet" href="/css/sections/home.css"/>
+    <link rel="stylesheet" href="/css/sections/about.css"/>
+    <link rel="stylesheet" href="/css/sections/skills.css"/>
+    <link rel="stylesheet" href="/css/sections/experiences.css"/>
+    <link rel="stylesheet" href="/css/sections/education.css"/>
+    <link rel="stylesheet" href="/css/sections/projects.css"/>
+    <link rel="stylesheet" href="/css/sections/recent-posts.css"/>
+    <link rel="stylesheet" href="/css/sections/achievements.css"/>
+    <link rel="stylesheet" href="/css/sections/accomplishments.css"/>
+    
     
     
         
@@ -79,13 +80,32 @@ if (!doNotTrack) {
 
 
 
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
   
 
 
 <nav class="navbar navbar-expand-xl top-navbar initial-navbar" id="top-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <img src="/assets/images/inverted-logo.png" id="logo">Armin&#39;s portfolio</a>
+      <img src="/images/inverted-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_2.png" id="logo" alt="Logo">Armin&#39;s portfolio</a>
     <button
       class="navbar-toggler navbar-dark"
       id="navbar-toggler"
@@ -103,51 +123,84 @@ if (!doNotTrack) {
         </li>
         
           
+          
             
               
               
+                <li class="nav-item">
+                  <a class="nav-link" href="#about">About</a>
+                </li>
+              
+            
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="#skills">Skills</a>
+                </li>
+              
+            
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="#education">Education</a>
+                </li>
+              
+            
+            
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="#projects">Projects</a>
+                </li>
+              
+            
+            
+              
+              
+            
+            
+              
+              
+            
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 
-              
-              <li class="nav-item">
-                <a class="nav-link" href="#about">Armin Derencz</a>
-              </li>
-            
-            
-              
-              
                 
-              
-              <li class="nav-item">
-                <a class="nav-link" href="#skills">Skills</a>
-              </li>
-            
-            
-              
-              
-                
-              
-              <li class="nav-item">
-                <a class="nav-link" href="#education">Education</a>
-              </li>
-            
-            
-              
-              
-                
-              
-              <li class="nav-item">
-                <a class="nav-link" href="#projects">Projects</a>
-              </li>
-            
-            
-              
-              
-                
-              
-              <li class="nav-item">
-                <a class="nav-link" href="#recent-posts">Recent projects</a>
-              </li>
-            
+                  
+                    
+                    
+                  
+                  
+                    
+                    
+                  
+                  
+                    
+                    
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    
+                    
+                  
+                  
+                    
+                    
+                      <a class="dropdown-item" href="#accomplishments">Accomplishments</a>
+                    
+                  
+              </div>
+            </li>
+          
         
         
         
@@ -155,25 +208,28 @@ if (!doNotTrack) {
         
         
           <li class="nav-item">
-            <a class="nav-link" id="blog-link" href="/projects">All projects</a>
+            <a class="nav-link" id="blog-link" href="/projects">More about projects</a>
           </li>
         
         
         
           <li class="nav-item dropdown">
 <a class="nav-link dropdown-toggle" href="#" id="languageSelector" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <img class="flag" src="https://www.countryflags.io/gb/flat/16.png">
+    
+    <img class="flag" src="https://www.countryflags.io/gb/flat/16.png" alt="gb">
     English
 </a>
 <div class="dropdown-menu" aria-labelledby="languageSelector">
     
     <a class="dropdown-item nav-link languages-item" href="/">
-        <img class="flag" src="https://www.countryflags.io/gb/flat/24.png">
+        
+        <img class="flag" src="https://www.countryflags.io/gb/flat/24.png" alt="gb">
         English
     </a>
     
     <a class="dropdown-item nav-link languages-item" href="/pl/">
-        <img class="flag" src="https://www.countryflags.io/pl/flat/24.png">
+        
+        <img class="flag" src="https://www.countryflags.io/pl/flat/24.png" alt="pl">
         polish
     </a>
     
@@ -184,8 +240,8 @@ if (!doNotTrack) {
     </div>
   </div>
   
-  <img src="/assets/images/main-logo.png" class="d-none" id="main-logo">
-  <img src="/assets/images/inverted-logo.png" class="d-none" id="inverted-logo">
+  <img src="/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_2.png" class="d-none" id="main-logo" alt="Logo">
+  <img src="/images/inverted-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_2.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
 </nav>
 
 
@@ -209,17 +265,78 @@ if (!doNotTrack) {
 
 
 
+
   
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="container-fluid home" id="home">
+  <style>
+     
+    #homePageBackgroundImageDivStyled {
+        
+      background-image: url('https://armind93.github.io/images/saiboat_backgrounnd_hu41a56a79c4e26e9b2e68985a33a3c06e_4576366_500x0_resize_q75_box.jpg');
+    }
+     
+    @media (min-width: 500px) and (max-width: 800px) {  
+      #homePageBackgroundImageDivStyled {   
+          background-image: url('https://armind93.github.io/images/saiboat_backgrounnd_hu41a56a79c4e26e9b2e68985a33a3c06e_4576366_800x0_resize_q75_box.jpg');
+        }
+    }
+    @media (min-width: 801px) and (max-width: 1200px) {  
+      #homePageBackgroundImageDivStyled {   
+          background-image: url('https://armind93.github.io/images/saiboat_backgrounnd_hu41a56a79c4e26e9b2e68985a33a3c06e_4576366_1200x0_resize_q75_box.jpg');
+        }
+    }
+    @media (min-width: 1201px) and (max-width: 1500px) {  
+      #homePageBackgroundImageDivStyled {   
+          background-image: url('https://armind93.github.io/images/saiboat_backgrounnd_hu41a56a79c4e26e9b2e68985a33a3c06e_4576366_1500x0_resize_q75_box.jpg');
+        }
+    }
+    @media (min-width: 1501px) {  
+      #homePageBackgroundImageDivStyled {   
+          background-image: url('https://armind93.github.io/images/saiboat_backgrounnd.jpg');
+        }
+    }
+    </style>
+    <span class="on-the-fly-behavior"></span>
   <div
+    id="homePageBackgroundImageDivStyled"
     class="background container-fluid"
-    style="background-image: url('https://armind93.github.io/static/images/saiboat_backgrounnd.jpg');"
   ></div>
   <div class="container content text-center">
-    <img src="/static/images/A85.jpg"
+    <img src="/images/A85_hu01778d0e5cb4233ea1a29d07a5848760_75385_148x148_fit_q75_box.jpg"
       class="rounded-circle mx-auto d-block img-fluid"
+      alt="Author Image"
     />
     <h1 class="greeting"> Hi, I&#39;m Armin</h1>
     <div class="typing-carousel">
@@ -296,7 +413,7 @@ if (!doNotTrack) {
           
           <li>
             
-              <a href="https://www.linkedin.com/in/armin-derencz-519962117/" target="/"><i class="fab fa-linkedin"></i></a>
+              <a href="https://www.linkedin.com/in/armin-derencz/" target="/"><i class="fab fa-linkedin"></i></a>
             
           </li>
           
@@ -475,12 +592,10 @@ if (!doNotTrack) {
     <div class="card">
       <div class="card-head d-flex">
         
-        <img class="card-img-xs" src="/static/images/sections/skills/pyhon_logo.png" alt="Python" />
-        
         <h5 class="card-title">Python</h5>
       </div>
       <div class="card-body">
-        <p class="card-text">Using as the main language for my projects development. Program implemented in the Master’s and Bachelor’s projects. A few of projects the Gdańsk University of Technology. Completed Udemy course: Python Intermediate (Credential ID: UC-CZ6ZMUWE)</p>
+        <p class="card-text">Using as the main language for my projects development. Program implemented in the Master’s and Bachelor’s projects. A few of projects the Gdańsk University of Technology.</p>
       </div>
     </div>
   </a>
@@ -492,13 +607,10 @@ if (!doNotTrack) {
     <div class="card">
       <div class="card-head d-flex">
         
-        <img class="card-img-xs" src="/static/images/sections/skills/data_analysis.png" alt="Data analysis" />
-        
         <h5 class="card-title">Data analysis</h5>
       </div>
       <div class="card-body">
-        <p class="card-text">Classes in &lsquo;visualization and multimedia in technology&rsquo; at the Gdańsk University of Technology. Capable of writing projects in jupyter notebook.
-Completed Udemy course: Data Science: Data analysis in Python and pandas (Credential ID: UC-K631OZR7) Modules which I work with: <strong>pandas</strong>, <strong>numpy</strong>, <strong>matplolib</strong>, <strong>seaborn</strong></p>
+        <p class="card-text">Classes in &lsquo;visualization and multimedia in technology&rsquo; at the Gdańsk University of Technology. Capable of writing projects in jupyter notebook. Modules which I work with: <strong>pandas</strong>, <strong>numpy</strong>, <strong>matplolib</strong>, <strong>seaborn</strong></p>
       </div>
     </div>
   </a>
@@ -513,7 +625,7 @@ Completed Udemy course: Data Science: Data analysis in Python and pandas (Creden
         <h5 class="card-title">Machine learning</h5>
       </div>
       <div class="card-body">
-        <p class="card-text">Classes in optimization methods at the Gdańsk University of Technology. Completed Udemy: Machine Learning in Python. Basics, perceptron, regression ( Credential ID: UC-1f13cf3e-e300-4e06-81d4-0a9d318179d6) Completed Udemy: Machine Learning Bootcamp in Python language ep. I (Credential ID: UC-6ae7344a-81cc-4347-8b0b-6c330a2626b0) <strong>Scikit-learn basics</strong></p>
+        <p class="card-text">Classes in optimization methods at the Gdańsk University of Technology. Completed Udemy: Machine Learning in Python. Basics, perceptron, regression <strong>Scikit-learn basics</strong></p>
       </div>
     </div>
   </a>
@@ -524,8 +636,6 @@ Completed Udemy course: Data Science: Data analysis in Python and pandas (Creden
   <a class="skill-card-link" href="javascript:void(0)">
     <div class="card">
       <div class="card-head d-flex">
-        
-        <img class="card-img-xs" src="/static/images/sections/skills/linux.png" alt="Linux" />
         
         <h5 class="card-title">Linux</h5>
       </div>
@@ -542,12 +652,10 @@ Completed Udemy course: Data Science: Data analysis in Python and pandas (Creden
     <div class="card">
       <div class="card-head d-flex">
         
-        <img class="card-img-xs" src="/static/images/sections/skills/ai.png" alt="Neural networks" />
-        
         <h5 class="card-title">Neural networks</h5>
       </div>
       <div class="card-body">
-        <p class="card-text">Basics of neural networks in engineering and master&rsquo;s studies. Classes in artificial inteligence at the Gdańsk University of Technology and University of Warmia and Mazury. Completed Udemy: Introduction to neural networks - Tensorflow 2.0 + Keras (Credential ID: UC-6ae7344a-81cc-4347-8b0b-6c330a2626b0) <strong>Keras basics</strong></p>
+        <p class="card-text">Basics of neural networks in engineering and master&rsquo;s studies. Classes in artificial inteligence at the Gdańsk University of Technology and University of Warmia and Mazury. <strong>Keras basics</strong></p>
       </div>
     </div>
   </a>
@@ -573,8 +681,6 @@ Completed Udemy course: Data Science: Data analysis in Python and pandas (Creden
   <a class="skill-card-link" href="javascript:void(0)">
     <div class="card">
       <div class="card-head d-flex">
-        
-        <img class="card-img-xs" src="/static/images/sections/skills/c&#43;&#43;.png" alt="C/C&#43;&#43;" />
         
         <h5 class="card-title">C/C&#43;&#43;</h5>
       </div>
@@ -634,7 +740,6 @@ Completed Udemy course: Data Science: Data analysis in Python and pandas (Creden
                                 <div class="timeframe col-lg-2 col-md-4">2017-2019</div>
                             </div>
                             <h6>Master of Engineering</h6>
-                            <h6>Speciality - Information technology in control systems</h6>
                             
                             
                             
@@ -677,7 +782,9 @@ Completed Udemy course: Data Science: Data analysis in Python and pandas (Creden
                                 
                                 
                                     <button type="button" class="btn btn-link show-more-btn pt-0 ml-2"
-                                    onclick="showMoreCourses(this);">Show More</button>
+                                    onclick="toggleCourseVisibility(this);" id="show-more-btn">Show more</button>
+                                    <button type="button" class="btn btn-link show-more-btn hidden pt-0 ml-2"
+                                    onclick="toggleCourseVisibility(this);" id="show-less-btn">Show less</button>
                                 
                             </div>
                             
@@ -707,7 +814,6 @@ Completed Udemy course: Data Science: Data analysis in Python and pandas (Creden
                                 <div class="timeframe col-lg-2 col-md-4">2012-2016</div>
                             </div>
                             <h6>Bachelor of Engineering</h6>
-                            <h6>Speciality - Mechatronics</h6>
                             
                             
                             
@@ -734,7 +840,9 @@ Completed Udemy course: Data Science: Data analysis in Python and pandas (Creden
                                 
                                 
                                     <button type="button" class="btn btn-link show-more-btn pt-0 ml-2"
-                                    onclick="showMoreCourses(this);">Show More</button>
+                                    onclick="toggleCourseVisibility(this);" id="show-more-btn">Show more</button>
+                                    <button type="button" class="btn btn-link show-more-btn hidden pt-0 ml-2"
+                                    onclick="toggleCourseVisibility(this);" id="show-less-btn">Show less</button>
                                 
                             </div>
                             
@@ -764,7 +872,6 @@ Completed Udemy course: Data Science: Data analysis in Python and pandas (Creden
                                 <div class="timeframe col-lg-2 col-md-4">2009-2012</div>
                             </div>
                             <h6>Higher Secondary School Certificate</h6>
-                            <h6>Mathematics, IT and Physics profile</h6>
                             
                             
                             
@@ -782,6 +889,8 @@ Completed Udemy course: Data Science: Data analysis in Python and pandas (Creden
           
             
           
+        
+      
         
       
         
@@ -835,9 +944,21 @@ Completed Udemy course: Data Science: Data analysis in Python and pandas (Creden
       </a>
       <div class="card-body text-justify pt-1 pb-1">
         <p>Data analysis collected from the Big Five personality test.</p>
-        <span class="float-right">
+        
+        <div class="project-card-footer">
           
-        </span>
+            <div class="project-tags-holder">
+              
+                  <span class="badge btn-info">
+                    hobby
+                  </span>
+              
+            </div>
+          
+          <div class="project-btn-holder">
+            
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -864,9 +985,21 @@ Completed Udemy course: Data Science: Data analysis in Python and pandas (Creden
       </a>
       <div class="card-body text-justify pt-1 pb-1">
         <p>Using convolutional neural network to classifying image into 6 classes.</p>
-        <span class="float-right">
+        
+        <div class="project-card-footer">
           
-        </span>
+            <div class="project-tags-holder">
+              
+                  <span class="badge btn-info">
+                    hobby
+                  </span>
+              
+            </div>
+          
+          <div class="project-btn-holder">
+            
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -893,9 +1026,21 @@ Completed Udemy course: Data Science: Data analysis in Python and pandas (Creden
       </a>
       <div class="card-body text-justify pt-1 pb-1">
         <p>Data analysis from the Kepler Exoplanet Search Results report.</p>
-        <span class="float-right">
+        
+        <div class="project-card-footer">
           
-        </span>
+            <div class="project-tags-holder">
+              
+                  <span class="badge btn-info">
+                    hobby
+                  </span>
+              
+            </div>
+          
+          <div class="project-btn-holder">
+            
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -922,9 +1067,21 @@ Completed Udemy course: Data Science: Data analysis in Python and pandas (Creden
       </a>
       <div class="card-body text-justify pt-1 pb-1">
         <p>Data analysis collected from the World Happiness Report in 2015-2019.</p>
-        <span class="float-right">
+        
+        <div class="project-card-footer">
           
-        </span>
+            <div class="project-tags-holder">
+              
+                  <span class="badge btn-info">
+                    hobby
+                  </span>
+              
+            </div>
+          
+          <div class="project-btn-holder">
+            
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -951,9 +1108,21 @@ Completed Udemy course: Data Science: Data analysis in Python and pandas (Creden
       </a>
       <div class="card-body text-justify pt-1 pb-1">
         <p>The robot has been built that takes wooden blocks from a shelf and put them on the other place. Used raspberry pi to controling the robot.</p>
-        <span class="float-right">
+        
+        <div class="project-card-footer">
           
-        </span>
+            <div class="project-tags-holder">
+              
+                  <span class="badge btn-info">
+                    academic
+                  </span>
+              
+            </div>
+          
+          <div class="project-btn-holder">
+            
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -980,9 +1149,21 @@ Completed Udemy course: Data Science: Data analysis in Python and pandas (Creden
       </a>
       <div class="card-body text-justify pt-1 pb-1">
         <p>Collecting informations about books prices from the website, saving them to the database and displaying the graphs.</p>
-        <span class="float-right">
+        
+        <div class="project-card-footer">
           
-        </span>
+            <div class="project-tags-holder">
+              
+                  <span class="badge btn-info">
+                    hobby
+                  </span>
+              
+            </div>
+          
+          <div class="project-btn-holder">
+            
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -1015,69 +1196,148 @@ Completed Udemy course: Data Science: Data analysis in Python and pandas (Creden
     <div class="row" id="recent-post-cards">
       
         <div class="col-lg-4 col-md-6 pt-2 post-card">
-  <a href="/projects/bigfive/bigfive_about/" class="post-card-link">
+  <a href="/search/" class="post-card-link">
     <div class="card">
       <div class="card-head">
-        <img class="card-img-top" src='/assets/images/default-hero.jpg'
+        <img class="card-img-top" src='/images/default-hero.jpg'
           alt="Card image cap"
         />
       </div>
       <div class="card-body">
-        <h5 class="card-title">Big Five Personality test - about project</h5>
-        <p class="card-text post-summary"> Dataset contains 1,015,342 questionnaire answers collected online by Open-Source Psychometrics Project. According to information from the page openpsychometrics.org, The big five personality traits are the best accepted and most commonly used model of personality in academic psychology. Thanks to results from this test, researchers can analyse factors of personality which can be applied to individual person.
-On wikipedia page we can got to know that The Big Five personality traits is a taxonomy, or grouping for personality traits.</p>
+        <h5 class="card-title">Search Results</h5>
+        <p class="card-text post-summary"> This file exists solely to respond to /search URL with the related search layout template.
+No content shown here is rendered, all content is based in the template layouts/page/search.html
+Setting a very low sitemap priority will tell search engines this is not important content.
+This implementation uses Fusejs, jquery and mark.js
+Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&ldquo;HTML&rdquo;, &ldquo;JSON&rdquo;] ```</p>
       </div>
       <div class="card-footer">
-        <span class="float-left">June 27, 2020</span>
-        <a href="/projects/bigfive/bigfive_about/" class="float-right btn btn-outline-info btn-sm">Read</a>
+        <span class="float-left">June 8, 2010</span>
+        <a href="/search/" class="float-right btn btn-outline-info btn-sm">Read</a>
       </div>
     </div>
   </a>
 </div>
 
       
-        <div class="col-lg-4 col-md-6 pt-2 post-card">
-  <a href="/projects/imageclassproject/project_imageclass_about/" class="post-card-link">
-    <div class="card">
-      <div class="card-head">
-        <img class="card-img-top" src='/assets/images/default-hero.jpg'
-          alt="Card image cap"
-        />
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">Convolutional network testing for image classification - about project</h5>
-        <p class="card-text post-summary"> Using convolutional neural network to classifying image into 6 classes.
-link to data
-link to GitHub Repository</p>
-      </div>
-      <div class="card-footer">
-        <span class="float-left">April 6, 2020</span>
-        <a href="/projects/imageclassproject/project_imageclass_about/" class="float-right btn btn-outline-info btn-sm">Read</a>
+    </div>
+  </div>
+</div>
+
+          </div>
+          
+          
+            
+          
+        
+      
+        
+          <div class="container-fluid section-holder d-flex bg-dimmed">
+            
+
+  
+
+
+<div class="container-fluid anchor pb-5 accomplishments-section" id="accomplishments">
+  
+    <h1 class="text-center">Accomplishments</h1>
+  
+
+  <div class="container">
+    <div class="row" id="acomplishment-card-holder">
+      
+        <div class="col-md-12 col-lg-6 p-2">
+  <div class="card mt-3">
+    <div class="card-header">
+      <h5 class="card-title mb-0">Machine Learning Bootcamp w języku Python cz. I - od A do Z</h5>
+      <div class="sub-title">
+        <span><a href="https://www.udemy.com">Udemy</a></span>
+        <span class="ml-2">Apr 2020</span>
       </div>
     </div>
-  </a>
+    <div class="card-body">
+      <p>Overview</p>
+    </div>
+    <div class="card-footer">
+      <a class="btn btn-outline-info ml-1 pl-2 mb-2" href="https://www.udemy.com/certificate/UC-6ae7344a-81cc-4347-8b0b-6c330a2626b0/" target="_blank" role="button">View Certificate</a>
+    </div>
+  </div>
 </div>
 
       
-        <div class="col-lg-4 col-md-6 pt-2 post-card">
-  <a href="/projects/kepler/project_kepler_about/" class="post-card-link">
-    <div class="card">
-      <div class="card-head">
-        <img class="card-img-top" src='/assets/images/default-hero.jpg'
-          alt="Card image cap"
-        />
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">Kepler Exoplanet Search Results - about project</h5>
-        <p class="card-text post-summary"> Data analysis from the Kepler Exoplanet Search Results report.
-link to GitHub Repository</p>
-      </div>
-      <div class="card-footer">
-        <span class="float-left">April 2, 2020</span>
-        <a href="/projects/kepler/project_kepler_about/" class="float-right btn btn-outline-info btn-sm">Read</a>
+        <div class="col-md-12 col-lg-6 p-2">
+  <div class="card mt-3">
+    <div class="card-header">
+      <h5 class="card-title mb-0">Wprowadzenie do sieci neuronowych - Tensorflow 2.0 &#43; Keras</h5>
+      <div class="sub-title">
+        <span><a href="https://www.udemy.com">Udemy</a></span>
+        <span class="ml-2">Mar 2020</span>
       </div>
     </div>
-  </a>
+    <div class="card-body">
+      <p>Overview</p>
+    </div>
+    <div class="card-footer">
+      <a class="btn btn-outline-info ml-1 pl-2 mb-2" href="https://www.udemy.com/certificate/UC-cd00b4b9-9c94-4f51-afb3-e77986ea7ae3/" target="_blank" role="button">View Certificate</a>
+    </div>
+  </div>
+</div>
+
+      
+        <div class="col-md-12 col-lg-6 p-2">
+  <div class="card mt-3">
+    <div class="card-header">
+      <h5 class="card-title mb-0">Uczenie maszynowe w Pythonie. Podstawy, perceptron, regresja</h5>
+      <div class="sub-title">
+        <span><a href="https://www.udemy.com">Udemy</a></span>
+        <span class="ml-2">March 2020</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <p>Overview</p>
+    </div>
+    <div class="card-footer">
+      <a class="btn btn-outline-info ml-1 pl-2 mb-2" href="https://www.udemy.com/certificate/UC-1f13cf3e-e300-4e06-81d4-0a9d318179d6/" target="_blank" role="button">View Certificate</a>
+    </div>
+  </div>
+</div>
+
+      
+        <div class="col-md-12 col-lg-6 p-2">
+  <div class="card mt-3">
+    <div class="card-header">
+      <h5 class="card-title mb-0">Data Science - Analiza danych w Python i pandas</h5>
+      <div class="sub-title">
+        <span><a href="https://www.udemy.com">Udemy</a></span>
+        <span class="ml-2">Jan 2020</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <p>Overview</p>
+    </div>
+    <div class="card-footer">
+      <a class="btn btn-outline-info ml-1 pl-2 mb-2" href="https://www.udemy.com/certificate/UC-K631OZR7/" target="_blank" role="button">View Certificate</a>
+    </div>
+  </div>
+</div>
+
+      
+        <div class="col-md-12 col-lg-6 p-2">
+  <div class="card mt-3">
+    <div class="card-header">
+      <h5 class="card-title mb-0">Python dla średnio zaawansowanych</h5>
+      <div class="sub-title">
+        <span><a href="https://www.udemy.com">Udemy</a></span>
+        <span class="ml-2">Jan 2020</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <p>Overview</p>
+    </div>
+    <div class="card-footer">
+      <a class="btn btn-outline-info ml-1 pl-2 mb-2" href="https://www.udemy.com/certificate/UC-CZ6ZMUWE/" target="_blank" role="button">View Certificate</a>
+    </div>
+  </div>
 </div>
 
       
@@ -1112,6 +1372,21 @@ link to GitHub Repository</p>
   
 
 
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
 <footer class="container-fluid text-center align-content-center footer pb-2">
   <div class="container pt-5">
     <div class="row text-left">
@@ -1125,7 +1400,7 @@ link to GitHub Repository</p>
                 
               
               <li class="nav-item">
-                <a class="smooth-scroll" href="#about">Armin Derencz</a>
+                <a class="smooth-scroll" href="/#about">About</a>
               </li>
             
             
@@ -1134,7 +1409,17 @@ link to GitHub Repository</p>
                 
               
               <li class="nav-item">
-                <a class="smooth-scroll" href="#skills">Skills</a>
+                <a class="smooth-scroll" href="/#skills">Skills</a>
+              </li>
+            
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#education">Education</a>
               </li>
             
             
@@ -1143,7 +1428,7 @@ link to GitHub Repository</p>
                 
               
               <li class="nav-item">
-                <a class="smooth-scroll" href="#education">Education</a>
+                <a class="smooth-scroll" href="/#projects">Projects</a>
               </li>
             
             
@@ -1152,7 +1437,7 @@ link to GitHub Repository</p>
                 
               
               <li class="nav-item">
-                <a class="smooth-scroll" href="#projects">Projects</a>
+                <a class="smooth-scroll" href="/#recent-posts">Recent projects</a>
               </li>
             
             
@@ -1161,7 +1446,7 @@ link to GitHub Repository</p>
                 
               
               <li class="nav-item">
-                <a class="smooth-scroll" href="#recent-posts">Recent projects</a>
+                <a class="smooth-scroll" href="/#accomplishments">Accomplishments</a>
               </li>
             
         </ul>
@@ -1186,7 +1471,7 @@ link to GitHub Repository</p>
     <div class="row text-left">
       <div class="col-md-4">
         <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
-          <img src="/assets/images/inverted-logo.png">
+          <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png" alt="Toha Theme Logo">
           Toha
         </a>
       </div>
@@ -1194,7 +1479,7 @@ link to GitHub Repository</p>
       <div class="col-md-4 text-right">
         <a id="hugo" href="https://gohugo.io/">Powered by
         <img
-          src="/assets/images/hugo-logo-wide.svg"
+          src="/images/hugo-logo.svg"
           alt="Hugo Logo"
           height="18"
         />
@@ -1204,18 +1489,18 @@ link to GitHub Repository</p>
   </div>
 </footer>
 
-    <script src="/assets/js/jquery-3.4.1.min.js"></script>
-<script src="/assets/js/popper.min.js"></script>
-<script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 
-<script src="/assets/js/navbar.js"></script>
-<script src="/assets/js/main.js"></script>
+<script src="/js/navbar.js"></script>
+<script src="/js/main.js"></script>
 
 
     
-    <script src="/assets/js/itype.min.js"></script>
-    <script src="/assets/js/github-button.js"></script>
-    <script src="/assets/js/home.js"></script>
-    <script src="/assets/js/jquery.filterizr.min.js"></script>
+    <script src="/js/itype.min.js"></script>
+    <script src="/js/github-button.js"></script>
+    <script src="/js/home.js"></script>
+    <script src="/js/jquery.filterizr.min.js"></script>
   </body>
 </html>

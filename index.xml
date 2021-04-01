@@ -12,13 +12,27 @@
     
     
     <item>
+      <title>Search Results</title>
+      <link>https://armind93.github.io/search/</link>
+      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      
+      <guid>https://armind93.github.io/search/</guid>
+      <description>This file exists solely to respond to /search URL with the related search layout template.
+No content shown here is rendered, all content is based in the template layouts/page/search.html
+Setting a very low sitemap priority will tell search engines this is not important content.
+This implementation uses Fusejs, jquery and mark.js
+Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+    </item>
+    
+    <item>
       <title>Big Five Personality test - about project</title>
       <link>https://armind93.github.io/projects/bigfive/bigfive_about/</link>
       <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://armind93.github.io/projects/bigfive/bigfive_about/</guid>
-      <description>Dataset contains 1,015,342 questionnaire answers collected online by Open-Source Psychometrics Project. According to information from the page openpsychometrics.org, The big five personality traits are the best accepted and most commonly used model of personality in academic psychology. Thanks to results from this test, researchers can analyse factors of personality which can be applied to individual person.
-On wikipedia page we can got to know that The Big Five personality traits is a taxonomy, or grouping for personality traits.</description>
+      <description>Data analysis from the Big Five Personality test.
+link to wikipedia
+link to GitHub Repository</description>
     </item>
     
     <item>
@@ -90,7 +104,8 @@ Skills:   Python:  Completed Udemy course: Python Intermediate (Credential ID: U
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://armind93.github.io/contact/</guid>
-      <description>Social icons   </description>
+      <description>Social icons +++ [[params.social]] name = &amp;ldquo;email&amp;rdquo; url = &amp;ldquo;mailto:armin.derencz@gmail.com&amp;rdquo; weight = 1 [[params.social]] name = &amp;ldquo;github&amp;rdquo; url = &amp;ldquo;https://github.com/ArminD93&amp;quot; weight = 2
+[params.social]] name = &amp;ldquo;linkedin&amp;rdquo; url = &amp;ldquo;https://www.linkedin.com/in/armin-derencz/&amp;quot; weight = 3 +++</description>
     </item>
     
     <item>
@@ -99,9 +114,8 @@ Skills:   Python:  Completed Udemy course: Python Intermediate (Credential ID: U
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://armind93.github.io/projects/bigfive/bigfive_col_names/</guid>
-      <description>1. Description of the values ​​from the columns The following items were presented on one page and each was rated on a five point scale using radio buttons. The order on page was was EXT1, AGR1, CSN1, EST1, OPN1, EXT2, etc. The scale was labeled 1=Disagree, 3=Neutral, 5=Agree
-5 major dimensions of personality: Openness, Conscientiousness, Agreeableness, Extraversion, and Neuroticism.
- EXT - Extraversion, EST - Neuroticism, AGR - Agreeableness (Zgodność), CSN - Conscientiousness (sumienność), OPN - Openness  link to GitHub Repository</description>
+      <description>Dataset contains 1,015,342 questionnaire answers collected online by Open-Source Psychometrics Project. According to information from the page openpsychometrics.org, The big five personality traits are the best accepted and most commonly used model of personality in academic psychology. Thanks to results from this test, researchers can analyse factors of personality which can be applied to individual person.
+On wikipedia page we can got to know that The Big Five personality traits is a taxonomy, or grouping for personality traits.</description>
     </item>
     
     <item>
@@ -119,9 +133,9 @@ Skills:   Python:  Completed Udemy course: Python Intermediate (Credential ID: U
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://armind93.github.io/projects/bigfive/project_bigfive_data_analysisforpoland/</guid>
-      <description>First, let&amp;rsquo;s see what the distribution of data from Polish cities looks like.
-You can see that a lot of data is collected from the city of Warsaw. There are definitely more of them than for other cities. It can be concluded that the data is not properly balanced.
-4.9. Presentation of approximate locations in a scatterplot diagram I wanted to present approximate users locations gathered from Poland on scatterplot diagram.</description>
+      <description>4.9. Polish cities - data distribution First, let&amp;rsquo;s see what the distribution of data from Polish cities looks like.
+There is a lot of data collected from the city of Warsaw. There are definitely more of them than for other cities. It can be concluded that the data is not properly balanced.
+5.0. Presentation of approximate locations in a scatterplot diagram I wanted to present approximate users locations gathered from Poland on scatterplot diagram.</description>
     </item>
     
     <item>
@@ -238,6 +252,32 @@ class TestModel: def __init__(self, model_dict): self.model_dict = model_dict se
       
       <guid>https://armind93.github.io/projects/kepler/project_kepler_machine_learning/</guid>
       <description>6. Machine learning: 6.1. Preparing data for machine learning: kepler.head()   | | koi_disposition | koi_fpflag_nt | koi_fpflag_ss | koi_fpflag_co | koi_fpflag_ec | koi_period | koi_time0bk | koi_impact | koi_duration | koi_depth | koi_prad | koi_teq | koi_insol | koi_model_snr | koi_steff | koi_slogg | koi_srad | ra | dec | koi_kepmag | |---|-----------------|---------------|---------------|---------------|---------------|------------|-------------|------------|--------------|-----------|----------|---------|-----------|---------------|-----------|-----------|----------|-----------|-----------|------------| | 0 | CONFIRMED | 0 | 0 | 0 | 0 | 9.488036 | 170.</description>
+    </item>
+    
+    <item>
+      <title>Search Results</title>
+      <link>https://armind93.github.io/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/search/</guid>
+      <description>This file exists solely to respond to /search URL with the related search layout template.
+No content shown here is rendered, all content is based in the template layouts/page/search.html
+Setting a very low sitemap priority will tell search engines this is not important content.
+This implementation uses Fusejs, jquery and mark.js
+Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+    </item>
+    
+    <item>
+      <title>Search Results</title>
+      <link>https://armind93.github.io/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/search/</guid>
+      <description>This file exists solely to respond to /search URL with the related search layout template.
+No content shown here is rendered, all content is based in the template layouts/page/search.html
+Setting a very low sitemap priority will tell search engines this is not important content.
+This implementation uses Fusejs, jquery and mark.js
+Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
     </item>
     
     <item>

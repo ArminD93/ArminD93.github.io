@@ -484,11 +484,11 @@ if (!doNotTrack) {
         </div>
 
         <div class="post-content" id="post-content">
-          <h4 id="49-polish-cities---data-distribution">4.9. Polish cities - data distribution</h4>
+          <h4 id="polish-cities---data-distribution">Polish cities - data distribution</h4>
 <p>First, let&rsquo;s see what the distribution of data from Polish cities looks like.</p>
 <p><img src="/static/images/BigFive/places_groups.jpg" alt="places_groups"></p>
 <p>There is a lot of data collected from the city of Warsaw. There are definitely more of them than for other cities. It can be concluded that the data is not properly balanced.</p>
-<h4 id="50-presentation-of-approximate-locations-in-a-scatterplot-diagram">5.0. Presentation of approximate locations in a scatterplot diagram</h4>
+<h4 id="presentation-of-approximate-locations-in-a-scatterplot-diagram">Presentation of approximate locations in a scatterplot diagram</h4>
 <p>I wanted to present approximate users locations gathered from Poland on scatterplot diagram. In order to do this, first I extracted group from main data frame, which contain informations only about Poland.</p>
 <pre><code>pol_data = countries_groups.get_group('Poland')
 pol_data.head(3)
@@ -608,7 +608,7 @@ plt.show()
 <p>To have good orientation in data distribution on this plot, I&rsquo;ve marked a few main cities. The values are more concentrated, where cities are located. However, If we look at this graph, there is no huge correlaction in living location with gained scores from the personality test. Maybe, I&rsquo;ve to look deeper and compare individual cities with each other.</p>
 <p><img src="/static/images/BigFive/scatter_Poland.jpg" alt="scatter_Poland"></p>
 <p><img src="/static/images/BigFive/pol_data/voivoidships_groups.jpg" alt="voivoidships_groups"></p>
-<h4 id="51-counted-statistical-values-for-personalities-data">5.1. Counted statistical values for personalities data</h4>
+<h4 id="counted-statistical-values-for-personalities-data">Counted statistical values for personalities data</h4>
 <pre><code>personality_scores = pol_data.columns[-7:]
 pol_personality_scores = pol_data[personality_scores]
 pol_personality_scores.head()
@@ -634,7 +634,7 @@ pol_personality_scores.head()
 | Openness           | 4189.0 | 30.747195 | 6.178097 | 0.0  | 27.0 | 31.0 | 35.0 | 41.0 |
 </code></pre>
 <p>In Poland, mean score value for extraversion and emotional stability is the lowest compared to other personalities, but standard deviation for extraversion is slightly higher from emotional stability.</p>
-<h5 id="511-box-plots-for-personalities-data">5.1.1. Box plots for personalities data</h5>
+<h5 id="box-plots-for-personalities-data">Box plots for personalities data</h5>
 <pre><code>cols = ['Extraversion', 'Agreeableness', 'Conscientiousness', 'EmotionalStability', 'Openness']
 colors = ['y', 'b', 'r', 'g', 'm']
 
@@ -645,7 +645,7 @@ sns.boxplot(  x=col, data=pol_personality_scores, ax=ax[i], color=colors[i])
 plt.show()
 </code></pre>
 <p><img src="/static/images/BigFive/pol_data/personalityBoxPlots_general.jpg" alt="personalityBoxPlots_general"></p>
-<h5 id="512-histograms-for-personalities-data">5.1.2. Histograms for personalities data</h5>
+<h5 id="histograms-for-personalities-data">Histograms for personalities data</h5>
 <pre><code>fig, ax = plt.subplots(5, 5, figsize=(20,15), constrained_layout=True)
 
 bins_list = [5, 10, 15, 20, 25]
@@ -789,12 +789,12 @@ plt.show()
           <ul>
             <li>
               <ul>
-                <li><a href="#49-polish-cities---data-distribution">4.9. Polish cities - data distribution</a></li>
-                <li><a href="#50-presentation-of-approximate-locations-in-a-scatterplot-diagram">5.0. Presentation of approximate locations in a scatterplot diagram</a></li>
-                <li><a href="#51-counted-statistical-values-for-personalities-data">5.1. Counted statistical values for personalities data</a>
+                <li><a href="#polish-cities---data-distribution">Polish cities - data distribution</a></li>
+                <li><a href="#presentation-of-approximate-locations-in-a-scatterplot-diagram">Presentation of approximate locations in a scatterplot diagram</a></li>
+                <li><a href="#counted-statistical-values-for-personalities-data">Counted statistical values for personalities data</a>
                   <ul>
-                    <li><a href="#511-box-plots-for-personalities-data">5.1.1. Box plots for personalities data</a></li>
-                    <li><a href="#512-histograms-for-personalities-data">5.1.2. Histograms for personalities data</a></li>
+                    <li><a href="#box-plots-for-personalities-data">Box plots for personalities data</a></li>
+                    <li><a href="#histograms-for-personalities-data">Histograms for personalities data</a></li>
                   </ul>
                 </li>
               </ul>
@@ -880,7 +880,6 @@ plt.show()
               </li>
             
             
-            
               
               
                 
@@ -888,6 +887,7 @@ plt.show()
               <li class="nav-item">
                 <a class="smooth-scroll" href="/#projects">Projects</a>
               </li>
+            
             
             
               

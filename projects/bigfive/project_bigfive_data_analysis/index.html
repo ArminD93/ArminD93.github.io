@@ -481,8 +481,8 @@ if (!doNotTrack) {
         </div>
 
         <div class="post-content" id="post-content">
-          <h2 id="4-data-analysis">4. <strong>Data analysis:</strong></h2>
-<h3 id="41-preparation-of-groups-based-on-the-name-of-the-country">4.1. Preparation of groups based on the name of the country</h3>
+          <h2 id="data-analysis"><strong>Data analysis:</strong></h2>
+<h3 id="preparation-of-groups-based-on-the-name-of-the-country">Preparation of groups based on the name of the country</h3>
 <pre><code>countries_groups = BigFive.groupby(by='country')
 
 # How many groups are there?:
@@ -544,13 +544,13 @@ plt.axis('off')
 plt.show()
 </code></pre>
 <p><img src="/static/images/BigFive/groups_map.jpg" alt="groups_map"></p>
-<h3 id="42-the-number-of-times-each-response-occurs-for-each-issue">4.2. The number of times each response occurs for each issue</h3>
-<h3 id="43-correlation-analysis-in-individual-traits">4.3. Correlation analysis in individual traits</h3>
-<h4 id="431-description-and-classification-of-markings">4.3.1. Description and classification of markings</h4>
-<h4 id="432-data-preparation">4.3.2. Data preparation</h4>
-<h4 id="433-correlation-maps-for-individual-traits">4.3.3. Correlation maps for individual traits</h4>
-<h3 id="44-countries-with-the-highest-extraversion-level">4.4. Countries with the highest Extraversion level</h3>
-<h3 id="45-radar-diagram-for-the-selected-row">4.5. Radar diagram for the selected row</h3>
+<h3 id="the-number-of-times-each-response-occurs-for-each-issue">The number of times each response occurs for each issue</h3>
+<h3 id="correlation-analysis-in-individual-traits">Correlation analysis in individual traits</h3>
+<h4 id="description-and-classification-of-markings">Description and classification of markings</h4>
+<h4 id="data-preparation">Data preparation</h4>
+<h4 id="correlation-maps-for-individual-traits">Correlation maps for individual traits</h4>
+<h3 id="countries-with-the-highest-extraversion-level">Countries with the highest Extraversion level</h3>
+<h3 id="radar-diagram-for-the-selected-row">Radar diagram for the selected row</h3>
 <pre><code>BigFive.head(3)
 </code></pre>
 <hr>
@@ -559,7 +559,7 @@ plt.show()
 1 	3.0 	5.0 	3.0 	4.0 	3.0 	3.0 	2.0 	5.0 	1.0 	5.0 	2.0 	3.0 	4.0 	1.0 	3.0 	1.0 	2.0 	1.0 	3.0 	1.0 	1.0 	4.0 	1.0 	5.0 	1.0 	5.0 	3.0 	4.0 	5.0 	3.0 	3.0 	2.0 	5.0 	3.0 	3.0 	1.0 	3.0 	3.0 	5.0 	3.0 	1.0 	2.0 	4.0 	2.0 	3.0 	1.0 	4.0 	2.0 	5.0 	3.0 	2016-03-03 02:01:20 	12.0 	        179.0 	        11 	        MY 	        3.1698 	                101.706 	        Malaysia
 2 	2.0 	3.0 	4.0 	4.0 	3.0 	2.0 	1.0 	3.0 	2.0 	5.0 	4.0 	4.0 	4.0 	2.0 	2.0 	2.0 	2.0 	2.0 	1.0 	3.0 	1.0 	4.0 	1.0 	4.0 	2.0 	4.0 	1.0 	4.0 	4.0 	3.0 	4.0 	2.0 	2.0 	2.0 	3.0 	3.0 	4.0 	2.0 	4.0 	2.0 	5.0 	1.0 	2.0 	1.0 	4.0 	2.0 	5.0 	3.0 	4.0 	4.0 	2016-03-03 02:01:56 	3.0 	        186.0 	        7 	        GB 	        54.9119                  -1.3833 	        United Kingdom
 </code></pre>
-<h4 id="451-preparing-the-radarchart-class">4.5.1. Preparing the RadarChart class</h4>
+<h4 id="preparing-the-radarchart-class">Preparing the RadarChart class</h4>
 <pre><code>class RadarChart:
 
 def __init__(self, rowNo, data):
@@ -666,7 +666,7 @@ def create_chart(self, flag=0):
         self.__addDescriptionToChart(flag)
     return plt.show()           
 </code></pre>
-<h4 id="452-preparation-of-objects">4.5.2. Preparation of objects</h4>
+<h4 id="preparation-of-objects">Preparation of objects</h4>
 <pre><code>scoresRadar_row_0   = RadarChart( rowNo= 0   )
 scoresRadar_row_25  = RadarChart( rowNo= 25  )
 scoresRadar_row_100 = RadarChart( rowNo= 100 )
@@ -884,22 +884,22 @@ BigFive['Openness']           = BigFive.apply( getOpennessScore,            axis
   <ul>
     <li>
       <ul>
-        <li><a href="#4-data-analysis">4. <strong>Data analysis:</strong></a>
+        <li><a href="#data-analysis"><strong>Data analysis:</strong></a>
           <ul>
-            <li><a href="#41-preparation-of-groups-based-on-the-name-of-the-country">4.1. Preparation of groups based on the name of the country</a></li>
-            <li><a href="#42-the-number-of-times-each-response-occurs-for-each-issue">4.2. The number of times each response occurs for each issue</a></li>
-            <li><a href="#43-correlation-analysis-in-individual-traits">4.3. Correlation analysis in individual traits</a>
+            <li><a href="#preparation-of-groups-based-on-the-name-of-the-country">Preparation of groups based on the name of the country</a></li>
+            <li><a href="#the-number-of-times-each-response-occurs-for-each-issue">The number of times each response occurs for each issue</a></li>
+            <li><a href="#correlation-analysis-in-individual-traits">Correlation analysis in individual traits</a>
               <ul>
-                <li><a href="#431-description-and-classification-of-markings">4.3.1. Description and classification of markings</a></li>
-                <li><a href="#432-data-preparation">4.3.2. Data preparation</a></li>
-                <li><a href="#433-correlation-maps-for-individual-traits">4.3.3. Correlation maps for individual traits</a></li>
+                <li><a href="#description-and-classification-of-markings">Description and classification of markings</a></li>
+                <li><a href="#data-preparation">Data preparation</a></li>
+                <li><a href="#correlation-maps-for-individual-traits">Correlation maps for individual traits</a></li>
               </ul>
             </li>
-            <li><a href="#44-countries-with-the-highest-extraversion-level">4.4. Countries with the highest Extraversion level</a></li>
-            <li><a href="#45-radar-diagram-for-the-selected-row">4.5. Radar diagram for the selected row</a>
+            <li><a href="#countries-with-the-highest-extraversion-level">Countries with the highest Extraversion level</a></li>
+            <li><a href="#radar-diagram-for-the-selected-row">Radar diagram for the selected row</a>
               <ul>
-                <li><a href="#451-preparing-the-radarchart-class">4.5.1. Preparing the RadarChart class</a></li>
-                <li><a href="#452-preparation-of-objects">4.5.2. Preparation of objects</a></li>
+                <li><a href="#preparing-the-radarchart-class">Preparing the RadarChart class</a></li>
+                <li><a href="#preparation-of-objects">Preparation of objects</a></li>
               </ul>
             </li>
             <li><a href="#46-presentation-of-the-results-for-each-personality-trait-for-the-selected-row">4.6. Presentation of the results for each personality trait for the selected row</a></li>
@@ -991,7 +991,6 @@ BigFive['Openness']           = BigFive.apply( getOpennessScore,            axis
               </li>
             
             
-            
               
               
                 
@@ -999,6 +998,7 @@ BigFive['Openness']           = BigFive.apply( getOpennessScore,            axis
               <li class="nav-item">
                 <a class="smooth-scroll" href="/#projects">Projects</a>
               </li>
+            
             
             
               

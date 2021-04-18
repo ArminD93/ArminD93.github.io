@@ -634,7 +634,7 @@ pol_personality_scores.head()
 | Openness           | 4189.0 | 30.747195 | 6.178097 | 0.0  | 27.0 | 31.0 | 35.0 | 41.0 |
 </code></pre>
 <p>In Poland, mean score value for extraversion and emotional stability is the lowest compared to other personalities, but standard deviation for extraversion is slightly higher from emotional stability.</p>
-<h5 id="box-plots-for-personalities-data">Box plots for personalities data</h5>
+<h5 id="box-plots-for-personalities-data">Box plots for personalities data:</h5>
 <pre><code>cols = ['Extraversion', 'Agreeableness', 'Conscientiousness', 'EmotionalStability', 'Openness']
 colors = ['y', 'b', 'r', 'g', 'm']
 
@@ -646,7 +646,7 @@ plt.show()
 </code></pre>
 <p><img src="/static/images/BigFive/pol_data/personalityBoxPlots_general.jpg" alt="personalityBoxPlots_general"></p>
 <p>There is a huge amount of outliers below minimum value for openness trait. Same as for openness trait, there are outliers for agreeableness trait and Conscientiousness trait. However, for conscientiousness trait we can notice only one outlier below minimum.</p>
-<h5 id="histograms-for-personalities-data">Histograms for personalities data</h5>
+<h5 id="histograms-for-personalities-data">Histograms for personalities data:</h5>
 <pre><code>fig, ax = plt.subplots(5, 5, figsize=(20,15), constrained_layout=True)
 
 bins_list = [5, 10, 15, 20, 25]
@@ -662,14 +662,14 @@ plt.show()
 <hr>
 <p>Thanks to box plots, we see on them values for every personality traits through their quartiles. In each voivodeship scores obtained from the personality test for openness trait are the highest and obtained extraversion trait points are the lowest. In every voivodeship, there are some outliers. The most outliers occur in openness trait.</p>
 <p><img src="/static/images/BigFive/pol_data/boxes.jpg" alt="boxes"></p>
-<hr>
+<h5 id="geopandas-maps">Geopandas maps:</h5>
 <p>The Geopandas module allowed for the presentation of data from the personality test on a map.</p>
 <p><img src="/static/images/BigFive/pol_data/mean_personalities.jpg" alt="mean_personalities"></p>
 <pre><code>scoresRadar_pol_data_row_156   = RadarChart( rowNo= 156,   data=pol_data   )
 scoresRadar_pol_data_row_223   = RadarChart( rowNo= 223,   data=pol_data   )
 scoresRadar_pol_data_row_393   = RadarChart( rowNo= 393,   data=pol_data   )
 </code></pre>
-<hr>
+<h5 id="radar-plots">Radar plots:</h5>
 <pre><code>scoresRadar_pol_data_row_156.create_chart(flag=0)
 </code></pre>
 <p><img src="/static/images/BigFive/pol_data/156_answered_each_question_radar.jpg" alt="156_answered_each_question_radar"></p>
@@ -808,8 +808,10 @@ scoresRadar_pol_data_row_393   = RadarChart( rowNo= 393,   data=pol_data   )
                 <li><a href="#presentation-of-approximate-locations-in-a-scatterplot-diagram">Presentation of approximate locations in a scatterplot diagram</a></li>
                 <li><a href="#counted-statistical-values-for-personalities-data">Counted statistical values for personalities data</a>
                   <ul>
-                    <li><a href="#box-plots-for-personalities-data">Box plots for personalities data</a></li>
-                    <li><a href="#histograms-for-personalities-data">Histograms for personalities data</a></li>
+                    <li><a href="#box-plots-for-personalities-data">Box plots for personalities data:</a></li>
+                    <li><a href="#histograms-for-personalities-data">Histograms for personalities data:</a></li>
+                    <li><a href="#geopandas-maps">Geopandas maps:</a></li>
+                    <li><a href="#radar-plots">Radar plots:</a></li>
                   </ul>
                 </li>
               </ul>
@@ -895,6 +897,7 @@ scoresRadar_pol_data_row_393   = RadarChart( rowNo= 393,   data=pol_data   )
               </li>
             
             
+            
               
               
                 
@@ -902,7 +905,6 @@ scoresRadar_pol_data_row_393   = RadarChart( rowNo= 393,   data=pol_data   )
               <li class="nav-item">
                 <a class="smooth-scroll" href="/#projects">Projects</a>
               </li>
-            
             
             
               

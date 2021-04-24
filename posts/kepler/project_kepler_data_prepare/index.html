@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kepler Exoplanet Search Results - data presentation</title>
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/images/favicon_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_2.png" />
+
+
+<link rel="stylesheet" href="/css/style.css" />
+
+    
+<meta name="description" content="Kepler Exoplanet Search Results - data presentation" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+
+    
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-L5C2B8SPR2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+  </head>
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_2.png" alt="Logo">Armin&#39;s portfolio</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_2.png" class="d-none" id="main-logo" alt="Logo">
+  <img src="/images/inverted-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_2.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="https://armind93.github.io/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">More about projects</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/bigfive/">Big Five Personality test</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/bigfive_about/">About project</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/bigfive_col_names/">Columns description</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/bigfive_modules/">Imported modules</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/bigfive_data_prepare/">Data preparation</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/bigfive/project_bigfive_data_analysis/">Data analysis</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/project_bigfive_data_analysisforpoland/">Poland data analysis</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/project_bigfive_data_analysisforuk/">United Kingdom data analysis</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/worldhappiness/">World Happiness project - about project</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/worldhappiness/project_worldhappiness_about/">About project</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/worldhappiness/project_worldhappiness_data_presentation/">Data presentation</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/worldhappiness/project_worldhappiness_data_analysis/">Data analysis</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/worldhappiness/project_worldhappiness_machine_learning/">Machine learning</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/kepler/">Kepler Exoplanet Search Results</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_about/">About project</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_col_names/">Columns description</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_modules/">Imported modules</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/posts/kepler/project_kepler_data_prepare/">Data presentation</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_data_analysis/">Data analysis</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_machine_learning/">Machine Learning</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/imageclassproject/">Convolutional network testing for image classification</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/imageclassproject/project_imageclass_about/">About project</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/imageclassproject/project_imageclass_modules/">Imported modules</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/imageclassproject/project_imageclass_data_preparing/">Data preparing</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/imageclassproject/project_imageclass_neural_networks/">Neural networks</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/imageclassproject/project_imageclass_model_test/">Model testing</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/libraryproject/">Project of an automated system for selecting wooden blocks from a rack using Raspberry Pi</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/libraryproject/project_library/">Project of an automated system for selecting wooden blocks from a rack using Raspberry Pi</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/bookprices/">Books prices project</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bookprices/project_booksprices/">Books Prices</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://armind93.github.io/images/default-hero.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/A85.jpg' alt="Author Image">
+          <h5 class="author-name">Armin Derencz</h5>
+          <p>January 1, 0001</p>
+        </div>
+
+        <div class="title">
+          <h1>Kepler Exoplanet Search Results - data presentation</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+          <h2 id="3-data-preparation"><strong>3. Data preparation:</strong></h2>
+<h3 id="31-data-presentation">3.1. Data presentation</h3>
+<pre><code>kepler_raw = pd.read_csv('/content/drive/My Drive/ColabNotebooks/KeplerExoplanetSearchResults/datasets/cumulative.csv', low_memory=False)
+
+# Kopia danych
+kepler = kepler_raw.copy()                         
+                            
+kepler.head()
+</code></pre>
+<p><img src="/static/images/Kepler/data/data_head_v1.jpg" alt="data_head_v1.jpg"><img src="/static/images/Kepler/data/data_head_v2.jpg" alt="data_head_v2.jpg">
+<img src="/static/images/Kepler/data/data_head_v3.jpg" alt="data_head_v3.jpg"><img src="/static/images/Kepler/data/data_head_v4.jpg" alt="data_head_v4.jpg"><img src="/static/images/Kepler/data/data_head_v5.jpg" alt="data_head_v5.jpg"></p>
+<pre><code>kepler.info(memory_usage='Deep')
+
+&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 9564 entries, 0 to 9563
+Data columns (total 50 columns):
+#   Column             Non-Null Count  Dtype  
+---  ------             --------------  -----  
+0   rowid              9564 non-null   int64  
+1   kepid              9564 non-null   int64  
+2   kepoi_name         9564 non-null   object 
+3   kepler_name        2294 non-null   object 
+4   koi_disposition    9564 non-null   object 
+5   koi_pdisposition   9564 non-null   object 
+6   koi_score          8054 non-null   float64
+7   koi_fpflag_nt      9564 non-null   int64  
+8   koi_fpflag_ss      9564 non-null   int64  
+9   koi_fpflag_co      9564 non-null   int64  
+10  koi_fpflag_ec      9564 non-null   int64  
+11  koi_period         9564 non-null   float64
+12  koi_period_err1    9110 non-null   float64
+13  koi_period_err2    9110 non-null   float64
+14  koi_time0bk        9564 non-null   float64
+15  koi_time0bk_err1   9110 non-null   float64
+16  koi_time0bk_err2   9110 non-null   float64
+17  koi_impact         9201 non-null   float64
+18  koi_impact_err1    9110 non-null   float64
+19  koi_impact_err2    9110 non-null   float64
+20  koi_duration       9564 non-null   float64
+21  koi_duration_err1  9110 non-null   float64
+22  koi_duration_err2  9110 non-null   float64
+23  koi_depth          9201 non-null   float64
+24  koi_depth_err1     9110 non-null   float64
+25  koi_depth_err2     9110 non-null   float64
+26  koi_prad           9201 non-null   float64
+27  koi_prad_err1      9201 non-null   float64
+28  koi_prad_err2      9201 non-null   float64
+29  koi_teq            9201 non-null   float64
+30  koi_teq_err1       0 non-null      float64
+31  koi_teq_err2       0 non-null      float64
+32  koi_insol          9243 non-null   float64
+33  koi_insol_err1     9243 non-null   float64
+34  koi_insol_err2     9243 non-null   float64
+35  koi_model_snr      9201 non-null   float64
+36  koi_tce_plnt_num   9218 non-null   float64
+37  koi_tce_delivname  9218 non-null   object 
+38  koi_steff          9201 non-null   float64
+39  koi_steff_err1     9096 non-null   float64
+40  koi_steff_err2     9081 non-null   float64
+41  koi_slogg          9201 non-null   float64
+42  koi_slogg_err1     9096 non-null   float64
+43  koi_slogg_err2     9096 non-null   float64
+44  koi_srad           9201 non-null   float64
+45  koi_srad_err1      9096 non-null   float64
+46  koi_srad_err2      9096 non-null   float64
+47  ra                 9564 non-null   float64
+48  dec                9564 non-null   float64
+49  koi_kepmag         9563 non-null   float64
+dtypes: float64(39), int64(6), object(5)
+memory usage: 3.6+ MB
+</code></pre>
+<h3 id="32-ridding-of-unnecessary-columns">3.2. Ridding of unnecessary columns</h3>
+<pre><code>for i, column in enumerate(kepler.columns):
+
+if column.endswith('_err1') or column.endswith('_err2'): 
+    kepler.drop([column], 1, inplace=True)
+
+for i, name in enumerate(['kepid', 'rowid', 'kepoi_name', 'kepler_name', 'koi_pdisposition','koi_tce_plnt_num', 'koi_tce_delivname', 'koi_score']):
+kepler.drop([name], 1, inplace=True)
+
+kepler.info(memory_usage='Deep')
+
+
+&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 9564 entries, 0 to 9563
+Data columns (total 20 columns):
+#   Column           Non-Null Count  Dtype  
+---  ------           --------------  -----  
+0   koi_disposition  9564 non-null   object 
+1   koi_fpflag_nt    9564 non-null   int64  
+2   koi_fpflag_ss    9564 non-null   int64  
+3   koi_fpflag_co    9564 non-null   int64  
+4   koi_fpflag_ec    9564 non-null   int64  
+5   koi_period       9564 non-null   float64
+6   koi_time0bk      9564 non-null   float64
+7   koi_impact       9201 non-null   float64
+8   koi_duration     9564 non-null   float64
+9   koi_depth        9201 non-null   float64
+10  koi_prad         9201 non-null   float64
+11  koi_teq          9201 non-null   float64
+12  koi_insol        9243 non-null   float64
+13  koi_model_snr    9201 non-null   float64
+14  koi_steff        9201 non-null   float64
+15  koi_slogg        9201 non-null   float64
+16  koi_srad         9201 non-null   float64
+17  ra               9564 non-null   float64
+18  dec              9564 non-null   float64
+19  koi_kepmag       9563 non-null   float64
+dtypes: float64(15), int64(4), object(1)
+memory usage: 1.5+ MB
+</code></pre>
+<h3 id="33-changing-the-type-from-object-to-type-category">3.3. Changing the type from object to type category</h3>
+<pre><code>kepler['koi_disposition'] = kepler['koi_disposition'].astype('category')
+kepler.info(memory_usage='Deep')
+
+&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 9564 entries, 0 to 9563
+Data columns (total 20 columns):
+#   Column           Non-Null Count  Dtype   
+---  ------           --------------  -----   
+0   koi_disposition  9564 non-null   category
+1   koi_fpflag_nt    9564 non-null   int64   
+2   koi_fpflag_ss    9564 non-null   int64   
+3   koi_fpflag_co    9564 non-null   int64   
+4   koi_fpflag_ec    9564 non-null   int64   
+5   koi_period       9564 non-null   float64 
+6   koi_time0bk      9564 non-null   float64 
+7   koi_impact       9201 non-null   float64 
+8   koi_duration     9564 non-null   float64 
+9   koi_depth        9201 non-null   float64 
+10  koi_prad         9201 non-null   float64 
+11  koi_teq          9201 non-null   float64 
+12  koi_insol        9243 non-null   float64 
+13  koi_model_snr    9201 non-null   float64 
+14  koi_steff        9201 non-null   float64 
+15  koi_slogg        9201 non-null   float64 
+16  koi_srad         9201 non-null   float64 
+17  ra               9564 non-null   float64 
+18  dec              9564 non-null   float64 
+19  koi_kepmag       9563 non-null   float64 
+dtypes: category(1), float64(15), int64(4)
+memory usage: 1.4 MB
+</code></pre>
+<h3 id="34-missing-values">3.4. Missing values</h3>
+<pre><code>kepler.isnull().sum()
+</code></pre>
+<p>Result:</p>
+<pre><code>koi_disposition      0
+koi_fpflag_nt        0
+koi_fpflag_ss        0
+koi_fpflag_co        0
+koi_fpflag_ec        0
+koi_period           0
+koi_time0bk          0
+koi_impact         363
+koi_duration         0
+koi_depth          363
+koi_prad           363
+koi_teq            363
+koi_insol          321
+koi_model_snr      363
+koi_steff          363
+koi_slogg          363
+koi_srad           363
+ra                   0
+dec                  0
+koi_kepmag           1
+dtype: int64   
+</code></pre>
+<p>Showing missing values.
+Where are missing values in the data frame?</p>
+<pre><code>kepler[pd.isnull(kepler['koi_impact'])].head()
+</code></pre>
+<p><img src="/static/images/Kepler/data/missing_values_v1.jpg" alt="missing_values_v1.jpg"><img src="/static/images/Kepler/data/missing_values_v2.jpg" alt="missing_values_v2.jpg"></p>
+<p>Dropping missing values:</p>
+<pre><code>kepler = kepler.dropna()
+kepler.info(memory_usage='Deep')
+
+&lt;class 'pandas.core.frame.DataFrame'&gt;
+Int64Index: 9200 entries, 0 to 9563
+Data columns (total 20 columns):
+#   Column           Non-Null Count  Dtype   
+---  ------           --------------  -----   
+0   koi_disposition  9200 non-null   category
+1   koi_fpflag_nt    9200 non-null   int64   
+2   koi_fpflag_ss    9200 non-null   int64   
+3   koi_fpflag_co    9200 non-null   int64   
+4   koi_fpflag_ec    9200 non-null   int64   
+5   koi_period       9200 non-null   float64 
+6   koi_time0bk      9200 non-null   float64 
+7   koi_impact       9200 non-null   float64 
+8   koi_duration     9200 non-null   float64 
+9   koi_depth        9200 non-null   float64 
+10  koi_prad         9200 non-null   float64 
+11  koi_teq          9200 non-null   float64 
+12  koi_insol        9200 non-null   float64 
+13  koi_model_snr    9200 non-null   float64 
+14  koi_steff        9200 non-null   float64 
+15  koi_slogg        9200 non-null   float64 
+16  koi_srad         9200 non-null   float64 
+17  ra               9200 non-null   float64 
+18  dec              9200 non-null   float64 
+19  koi_kepmag       9200 non-null   float64 
+dtypes: category(1), float64(15), int64(4)
+memory usage: 1.4 MB
+</code></pre>
+
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/ArminD93/edit//content/posts/Kepler/project_Kepler_data_prepare.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/posts/kepler/project_kepler_data_analysis/" class="btn btn-outline-info">
+          <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+          <div class="next-prev-text">Kepler Exoplanet Search Results - data analysis</div>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/posts/kepler/project_kepler_modules/" class="btn btn-outline-info">
+            <div>Next <i class="fas fa-chevron-circle-right"></i></div>
+            <div class="next-prev-text">Kepler Exoplanet Search Results - imported modules</div>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+  <a id="scroll-to-top" class="btn"><i class="fas fa-chevron-circle-up"></i></a>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#3-data-preparation"><strong>3. Data preparation:</strong></a>
+      <ul>
+        <li><a href="#31-data-presentation">3.1. Data presentation</a></li>
+        <li><a href="#32-ridding-of-unnecessary-columns">3.2. Ridding of unnecessary columns</a></li>
+        <li><a href="#33-changing-the-type-from-object-to-type-category">3.3. Changing the type from object to type category</a></li>
+        <li><a href="#34-missing-values">3.4. Missing values</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#education">Education</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#projects">Projects</a>
+              </li>
+            
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#recent-posts">Recent projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#accomplishments">Accomplishments</a>
+              </li>
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>armin.derencz@gmail.com</span></li>
+          
+        </ul>
+      </div>
+      
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png" alt="Toha Theme Logo">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/images/hugo-logo.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+<script src="/js/navbar.js"></script>
+<script src="/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>

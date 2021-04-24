@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kepler Exoplanet Search Results on Armin&#39;s portfolio</title>
+    <link>https://armind93.github.io/posts/kepler/</link>
+    <description>Recent content in Kepler Exoplanet Search Results on Armin&#39;s portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Apr 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://armind93.github.io/posts/kepler/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Kepler Exoplanet Search Results - about project</title>
+      <link>https://armind93.github.io/posts/kepler/project_kepler_about/</link>
+      <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/posts/kepler/project_kepler_about/</guid>
+      <description>Data analysis from the Kepler Exoplanet Search Results report.
+link to GitHub Repository</description>
+    </item>
+    
+    <item>
+      <title>Kepler Exoplanet Search Results - data analysis</title>
+      <link>https://armind93.github.io/posts/kepler/project_kepler_col_names/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/posts/kepler/project_kepler_col_names/</guid>
+      <description>1. Description of the values ​​from the columns KOI - Kepler Objects of Interest
+   column name description     kepid Kepler Identification   kepoi_name KOI Name. A number used to identify and track a Kepler Object of Interest (KOI). A KOI is a target identified by the Kepler Project that displays at least one transit-like sequence within Kepler time-series photometry that appears to be of astrophysical origin and initially consistent with a planetary transit hypothesis.</description>
+    </item>
+    
+    <item>
+      <title>Kepler Exoplanet Search Results - data analysis</title>
+      <link>https://armind93.github.io/posts/kepler/project_kepler_data_analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/posts/kepler/project_kepler_data_analysis/</guid>
+      <description>5. Data analysis Columns names: KOI - Kepler Objects of Interest
+   column name description     koi_period Orbital Period (days) The interval between consecutive planetary transits.   koi_time0bk Transit Epoch (BJD - 2 454 833,0)) The time corresponding to the center of the first detected transit in Barycentric Julian Day (BJD) minus a constant offset of 2,454,833.0 days. The offset corresponds to 12:00 on Jan 1, 2009 UTC.</description>
+    </item>
+    
+    <item>
+      <title>Kepler Exoplanet Search Results - data presentation</title>
+      <link>https://armind93.github.io/posts/kepler/project_kepler_data_prepare/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/posts/kepler/project_kepler_data_prepare/</guid>
+      <description>3. Data preparation: 3.1. Data presentation kepler_raw = pd.read_csv(&#39;/content/drive/My Drive/ColabNotebooks/KeplerExoplanetSearchResults/datasets/cumulative.csv&#39;, low_memory=False) # Kopia danych kepler = kepler_raw.copy() kepler.head()  kepler.info(memory_usage=&#39;Deep&#39;) &amp;lt;class &#39;pandas.core.frame.DataFrame&#39;&amp;gt; RangeIndex: 9564 entries, 0 to 9563 Data columns (total 50 columns): # Column Non-Null Count Dtype --- ------ -------------- ----- 0 rowid 9564 non-null int64 1 kepid 9564 non-null int64 2 kepoi_name 9564 non-null object 3 kepler_name 2294 non-null object 4 koi_disposition 9564 non-null object 5 koi_pdisposition 9564 non-null object 6 koi_score 8054 non-null float64 7 koi_fpflag_nt 9564 non-null int64 8 koi_fpflag_ss 9564 non-null int64 9 koi_fpflag_co 9564 non-null int64 10 koi_fpflag_ec 9564 non-null int64 11 koi_period 9564 non-null float64 12 koi_period_err1 9110 non-null float64 13 koi_period_err2 9110 non-null float64 14 koi_time0bk 9564 non-null float64 15 koi_time0bk_err1 9110 non-null float64 16 koi_time0bk_err2 9110 non-null float64 17 koi_impact 9201 non-null float64 18 koi_impact_err1 9110 non-null float64 19 koi_impact_err2 9110 non-null float64 20 koi_duration 9564 non-null float64 21 koi_duration_err1 9110 non-null float64 22 koi_duration_err2 9110 non-null float64 23 koi_depth 9201 non-null float64 24 koi_depth_err1 9110 non-null float64 25 koi_depth_err2 9110 non-null float64 26 koi_prad 9201 non-null float64 27 koi_prad_err1 9201 non-null float64 28 koi_prad_err2 9201 non-null float64 29 koi_teq 9201 non-null float64 30 koi_teq_err1 0 non-null float64 31 koi_teq_err2 0 non-null float64 32 koi_insol 9243 non-null float64 33 koi_insol_err1 9243 non-null float64 34 koi_insol_err2 9243 non-null float64 35 koi_model_snr 9201 non-null float64 36 koi_tce_plnt_num 9218 non-null float64 37 koi_tce_delivname 9218 non-null object 38 koi_steff 9201 non-null float64 39 koi_steff_err1 9096 non-null float64 40 koi_steff_err2 9081 non-null float64 41 koi_slogg 9201 non-null float64 42 koi_slogg_err1 9096 non-null float64 43 koi_slogg_err2 9096 non-null float64 44 koi_srad 9201 non-null float64 45 koi_srad_err1 9096 non-null float64 46 koi_srad_err2 9096 non-null float64 47 ra 9564 non-null float64 48 dec 9564 non-null float64 49 koi_kepmag 9563 non-null float64 dtypes: float64(39), int64(6), object(5) memory usage: 3.</description>
+    </item>
+    
+    <item>
+      <title>Kepler Exoplanet Search Results - imported modules</title>
+      <link>https://armind93.github.io/posts/kepler/project_kepler_modules/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/posts/kepler/project_kepler_modules/</guid>
+      <description>2. Import modules import pandas as pd import numpy as np import matplotlib.pyplot as plt import plotly.figure_factory as ff import plotly.express as px from plotly.subplots import make_subplots import seaborn as sns import plotly.express as px from plotly.subplots import make_subplots import seaborn as sns sns.set(style=&amp;quot;ticks&amp;quot;, color_codes=True) from sklearn.linear_model import LogisticRegression from sklearn.neighbors import KNeighborsClassifier from sklearn.tree import DecisionTreeClassifier from sklearn.ensemble import RandomForestClassifier from sklearn.svm import SVC from sklearn.naive_bayes import GaussianNB from sklearn.</description>
+    </item>
+    
+    <item>
+      <title>Kepler Exoplanet Search Results - machine learning</title>
+      <link>https://armind93.github.io/posts/kepler/project_kepler_machine_learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/posts/kepler/project_kepler_machine_learning/</guid>
+      <description>6. Machine learning: 6.1. Preparing data for machine learning: kepler.head()   | | koi_disposition | koi_fpflag_nt | koi_fpflag_ss | koi_fpflag_co | koi_fpflag_ec | koi_period | koi_time0bk | koi_impact | koi_duration | koi_depth | koi_prad | koi_teq | koi_insol | koi_model_snr | koi_steff | koi_slogg | koi_srad | ra | dec | koi_kepmag | |---|-----------------|---------------|---------------|---------------|---------------|------------|-------------|------------|--------------|-----------|----------|---------|-----------|---------------|-----------|-----------|----------|-----------|-----------|------------| | 0 | CONFIRMED | 0 | 0 | 0 | 0 | 9.488036 | 170.</description>
+    </item>
+    
+  </channel>
+</rss>

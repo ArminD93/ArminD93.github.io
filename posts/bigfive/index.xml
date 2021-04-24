@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Big Five Personality test on Armin&#39;s portfolio</title>
+    <link>https://armind93.github.io/posts/bigfive/</link>
+    <description>Recent content in Big Five Personality test on Armin&#39;s portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 27 Jun 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://armind93.github.io/posts/bigfive/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Big Five Personality test - about project</title>
+      <link>https://armind93.github.io/posts/bigfive/bigfive_about/</link>
+      <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/posts/bigfive/bigfive_about/</guid>
+      <description>Data analysis from the Big Five Personality test.
+link to wikipedia
+link to GitHub Repository</description>
+    </item>
+    
+    <item>
+      <title>Big Five Personality test - columns description</title>
+      <link>https://armind93.github.io/posts/bigfive/bigfive_col_names/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/posts/bigfive/bigfive_col_names/</guid>
+      <description>Dataset contains 1,015,342 questionnaire answers collected online by Open-Source Psychometrics Project. According to information from the page openpsychometrics.org, The big five personality traits are the best accepted and most commonly used model of personality in academic psychology. Thanks to results from this test, researchers can analyse factors of personality which can be applied to individual person.
+On wikipedia page we can got to know that The Big Five personality traits is a taxonomy, or grouping for personality traits.</description>
+    </item>
+    
+    <item>
+      <title>Big Five Personality test - data analysis</title>
+      <link>https://armind93.github.io/posts/bigfive/project_bigfive_data_analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/posts/bigfive/project_bigfive_data_analysis/</guid>
+      <description>Data analysis: Preparation of groups based on the name of the country countries_groups = BigFive.groupby(by=&#39;country&#39;) # How many groups are there?: len(countries_groups) 221   Countries_groups_counts = countries_groups.size().to_frame(&#39;count&#39;) Countries_groups_counts.reset_index(inplace=True) Countries_groups_counts.head()      country count     0 Afghanistan 46   1 Albania 353   2 Algeria 230   3 American Samoa 1   4 Andorra 15    Countries_groups_counts_descending = Countries_groups_counts.</description>
+    </item>
+    
+    <item>
+      <title>Big Five Personality test - data analysis for Poland</title>
+      <link>https://armind93.github.io/posts/bigfive/project_bigfive_data_analysisforpoland/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/posts/bigfive/project_bigfive_data_analysisforpoland/</guid>
+      <description>Polish cities - data distribution First, let&amp;rsquo;s see what the distribution of data from Polish cities looks like.
+There is a lot of data collected from the city of Warsaw. There are definitely more of them than for other cities. It can be concluded that the data is not properly balanced.
+Presentation of approximate locations in a scatterplot diagram I wanted to present approximate users locations gathered from Poland on scatterplot diagram.</description>
+    </item>
+    
+    <item>
+      <title>Big Five Personality test - data analysis for United Kingdom</title>
+      <link>https://armind93.github.io/posts/bigfive/project_bigfive_data_analysisforuk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/posts/bigfive/project_bigfive_data_analysisforuk/</guid>
+      <description>uk_data.info() &amp;lt;class &#39;pandas.core.frame.DataFrame&#39;&amp;gt; Int64Index: 49662 entries, 0 to 693689 Data columns (total 62 columns): # Column Non-Null Count Dtype --- ------ -------------- ----- 0 country 49662 non-null object 1 EXT1 49662 non-null float32 2 EXT2 49662 non-null float32 3 EXT3 49662 non-null float32 4 EXT4 49662 non-null float32 5 EXT5 49662 non-null float32 6 EXT6 49662 non-null float32 7 EXT7 49662 non-null float32 8 EXT8 49662 non-null float32 9 EXT9 49662 non-null float32 10 EXT10 49662 non-null float32 11 EST1 49662 non-null float32 12 EST2 49662 non-null float32 13 EST3 49662 non-null float32 14 EST4 49662 non-null float32 15 EST5 49662 non-null float32 16 EST6 49662 non-null float32 17 EST7 49662 non-null float32 18 EST8 49662 non-null float32 19 EST9 49662 non-null float32 20 EST10 49662 non-null float32 21 AGR1 49662 non-null float32 22 AGR2 49662 non-null float32 23 AGR3 49662 non-null float32 24 AGR4 49662 non-null float32 25 AGR5 49662 non-null float32 26 AGR6 49662 non-null float32 27 AGR7 49662 non-null float32 28 AGR8 49662 non-null float32 29 AGR9 49662 non-null float32 30 AGR10 49662 non-null float32 31 CSN1 49662 non-null float32 32 CSN2 49662 non-null float32 33 CSN3 49662 non-null float32 34 CSN4 49662 non-null float32 35 CSN5 49662 non-null float32 36 CSN6 49662 non-null float32 37 CSN7 49662 non-null float32 38 CSN8 49662 non-null float32 39 CSN9 49662 non-null float32 40 CSN10 49662 non-null float32 41 OPN1 49662 non-null float32 42 OPN2 49662 non-null float32 43 OPN3 49662 non-null float32 44 OPN4 49662 non-null float32 45 OPN5 49662 non-null float32 46 OPN6 49662 non-null float32 47 OPN7 49662 non-null float32 48 OPN8 49662 non-null float32 49 OPN9 49662 non-null float32 50 OPN10 49662 non-null float32 51 dateload 49662 non-null datetime64[ns] 52 introelapse 49662 non-null float32 53 testelapse 49662 non-null float32 54 endelapse 49662 non-null int16 55 lat_appx_lots_of_err 49662 non-null category 56 long_appx_lots_of_err 49662 non-null category 57 Extraversion 49662 non-null float32 58 Agreeableness 49662 non-null float32 59 Conscientiousness 49662 non-null float32 60 EmotionalStability 49662 non-null float32 61 Openness 49662 non-null float32 dtypes: category(2), datetime64[ns](1), float32(57), int16(1), object(1) memory usage: 15.</description>
+    </item>
+    
+    <item>
+      <title>Big Five Personality test - data preparation</title>
+      <link>https://armind93.github.io/posts/bigfive/bigfive_data_prepare/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/posts/bigfive/bigfive_data_prepare/</guid>
+      <description>Data preparation: Data presentation BigFive_raw = pd.read_csv( &#39;/content/drive/My Drive/ColabNotebooks/BigFivePersonality/data-final.csv&#39;, low_memory=False, sep=&#39;\t&#39;, usecols=[&#39;EXT1&#39;, &#39;EXT2&#39;, &#39;EXT3&#39;, &#39;EXT4&#39;, &#39;EXT5&#39;, &#39;EXT6&#39;, &#39;EXT7&#39;, &#39;EXT8&#39;, &#39;EXT9&#39;, &#39;EXT10&#39;, &#39;EST1&#39;, &#39;EST2&#39;, &#39;EST3&#39;, &#39;EST4&#39;, &#39;EST5&#39;, &#39;EST6&#39;, &#39;EST7&#39;, &#39;EST8&#39;, &#39;EST9&#39;, &#39;EST10&#39;, &#39;AGR1&#39;, &#39;AGR2&#39;, &#39;AGR3&#39;, &#39;AGR4&#39;, &#39;AGR5&#39;, &#39;AGR6&#39;, &#39;AGR7&#39;, &#39;AGR8&#39;, &#39;AGR9&#39;, &#39;AGR10&#39;, &#39;CSN1&#39;, &#39;CSN2&#39;, &#39;CSN3&#39;, &#39;CSN4&#39;, &#39;CSN5&#39;, &#39;CSN6&#39;, &#39;CSN7&#39;, &#39;CSN8&#39;, &#39;CSN9&#39;, &#39;CSN10&#39;, &#39;OPN1&#39;, &#39;OPN2&#39;, &#39;OPN3&#39;, &#39;OPN4&#39;, &#39;OPN5&#39;, &#39;OPN6&#39;, &#39;OPN7&#39;, &#39;OPN8&#39;, &#39;OPN9&#39;, &#39;OPN10&#39;, # &#39;EXT1_E&#39;, &#39;EXT2_E&#39;, &#39;EXT3_E&#39;, &#39;EXT4_E&#39;, &#39;EXT5_E&#39;, &#39;EXT6_E&#39;, &#39;EXT7_E&#39;, &#39;EXT8_E&#39;, &#39;EXT9_E&#39;, &#39;EXT10_E&#39;, # &#39;EST1_E&#39;, &#39;EST2_E&#39;, &#39;EST3_E&#39;, &#39;EST4_E&#39;, &#39;EST5_E&#39;, &#39;EST6_E&#39;, &#39;EST7_E&#39;, &#39;EST8_E&#39;, &#39;EST9_E&#39;, &#39;EST10_E&#39;, # &#39;AGR1_E&#39;, &#39;AGR2_E&#39;, &#39;AGR3_E&#39;, &#39;AGR4_E&#39;, &#39;AGR5_E&#39;, &#39;AGR6_E&#39;, &#39;AGR7_E&#39;, &#39;AGR8_E&#39;, &#39;AGR9_E&#39;, &#39;AGR10_E&#39;, # &#39;CSN1_E&#39;, &#39;CSN2_E&#39;, &#39;CSN3_E&#39;, &#39;CSN4_E&#39;, &#39;CSN5_E&#39;, &#39;CSN6_E&#39;, &#39;CSN7_E&#39;, &#39;CSN8_E&#39;, &#39;CSN9_E&#39;, &#39;CSN10_E&#39;, # &#39;OPN1_E&#39;, &#39;OPN2_E&#39;, &#39;OPN3_E&#39;, &#39;OPN4_E&#39;, &#39;OPN5_E&#39;, &#39;OPN6_E&#39;, &#39;OPN7_E&#39;, &#39;OPN8_E&#39;, &#39;OPN9_E&#39;, &#39;OPN10_E&#39;, &#39;dateload&#39;, &#39;introelapse&#39;, &#39;testelapse&#39;, &#39;endelapse&#39;, &#39;IPC&#39;, &#39;country&#39;, &#39;lat_appx_lots_of_err&#39;, &#39;long_appx_lots_of_err&#39; ] ) # Kopia danych BigFive = BigFive_raw.</description>
+    </item>
+    
+    <item>
+      <title>Big Five Personality test - imported modules</title>
+      <link>https://armind93.github.io/posts/bigfive/bigfive_modules/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/posts/bigfive/bigfive_modules/</guid>
+      <description>link to GitHub Repository
+Import modules try: import pandas as pd import numpy as np np.random.seed(42) import matplotlib.pyplot as plt plt.style.use(&amp;quot;fivethirtyeight&amp;quot;) import plotly.figure_factory as ff import plotly.express as px from plotly.subplots import make_subplots import seaborn as sns from itertools import islice, combinations from geopy.geocoders import Nominatim geolocator = Nominatim(user_agent=&amp;quot;BigFive_project&amp;quot;, timeout=None ) import pycountry_convert as pc import squarify import time import os import swifter import geopandas as gpd except: !pip3 install pycountry_convert !</description>
+    </item>
+    
+  </channel>
+</rss>

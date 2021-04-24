@@ -3,12 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://armind93.github.io/search/</loc>
-    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
-    <priority>0.1</priority>
-  </url>
-  
-  <url>
     <loc>https://armind93.github.io/</loc>
     <lastmod>2020-06-27T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -24,73 +18,68 @@
   </url>
   
   <url>
-    <loc>https://armind93.github.io/projects/bigfive/</loc>
+    <loc>https://armind93.github.io/posts/bigfive/</loc>
     <lastmod>2020-06-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://armind93.github.io/projects/bigfive/bigfive_about/</loc>
+    <loc>https://armind93.github.io/posts/bigfive/bigfive_about/</loc>
     <lastmod>2020-06-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://armind93.github.io/projects/</loc>
-    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://armind93.github.io/projects/imageclassproject/</loc>
-    <lastmod>2020-04-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://armind93.github.io/projects/imageclassproject/project_imageclass_about/</loc>
-    <lastmod>2020-04-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://armind93.github.io/projects/kepler/</loc>
-    <lastmod>2020-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://armind93.github.io/projects/kepler/project_kepler_about/</loc>
-    <lastmod>2020-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://armind93.github.io/projects/worldhappiness/</loc>
-    <lastmod>2020-02-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://armind93.github.io/projects/worldhappiness/project_worldhappiness_about/</loc>
-    <lastmod>2020-02-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://armind93.github.io/projects/libraryproject/</loc>
-    <lastmod>2019-07-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://armind93.github.io/projects/libraryproject/project_library/</loc>
-    <lastmod>2019-07-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://armind93.github.io/projects/bookprices/</loc>
-    <lastmod>2018-10-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://armind93.github.io/projects/bookprices/project_booksprices/</loc>
-    <lastmod>2018-10-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://armind93.github.io/posts/</loc>
-    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
+    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://armind93.github.io/posts/imageclassproject/</loc>
+    <lastmod>2020-04-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://armind93.github.io/posts/imageclassproject/project_imageclass_about/</loc>
+    <lastmod>2020-04-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://armind93.github.io/posts/kepler/</loc>
+    <lastmod>2020-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://armind93.github.io/posts/kepler/project_kepler_about/</loc>
+    <lastmod>2020-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://armind93.github.io/posts/worldhappiness/</loc>
+    <lastmod>2020-02-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://armind93.github.io/posts/worldhappiness/project_worldhappiness_about/</loc>
+    <lastmod>2020-02-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://armind93.github.io/posts/libraryproject/</loc>
+    <lastmod>2019-07-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://armind93.github.io/posts/libraryproject/project_library/</loc>
+    <lastmod>2019-07-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://armind93.github.io/posts/bookprices/</loc>
+    <lastmod>2018-10-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://armind93.github.io/posts/bookprices/project_booksprices/</loc>
+    <lastmod>2018-10-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -103,27 +92,27 @@
   </url>
   
   <url>
-    <loc>https://armind93.github.io/projects/bigfive/bigfive_col_names/</loc>
+    <loc>https://armind93.github.io/posts/bigfive/bigfive_col_names/</loc>
   </url>
   
   <url>
-    <loc>https://armind93.github.io/projects/bigfive/project_bigfive_data_analysis/</loc>
+    <loc>https://armind93.github.io/posts/bigfive/project_bigfive_data_analysis/</loc>
   </url>
   
   <url>
-    <loc>https://armind93.github.io/projects/bigfive/project_bigfive_data_analysisforpoland/</loc>
+    <loc>https://armind93.github.io/posts/bigfive/project_bigfive_data_analysisforpoland/</loc>
   </url>
   
   <url>
-    <loc>https://armind93.github.io/projects/bigfive/project_bigfive_data_analysisforuk/</loc>
+    <loc>https://armind93.github.io/posts/bigfive/project_bigfive_data_analysisforuk/</loc>
   </url>
   
   <url>
-    <loc>https://armind93.github.io/projects/bigfive/bigfive_data_prepare/</loc>
+    <loc>https://armind93.github.io/posts/bigfive/bigfive_data_prepare/</loc>
   </url>
   
   <url>
-    <loc>https://armind93.github.io/projects/bigfive/bigfive_modules/</loc>
+    <loc>https://armind93.github.io/posts/bigfive/bigfive_modules/</loc>
   </url>
   
   <url>
@@ -141,39 +130,39 @@
   </url>
   
   <url>
-    <loc>https://armind93.github.io/projects/imageclassproject/project_imageclass_data_preparing/</loc>
+    <loc>https://armind93.github.io/posts/imageclassproject/project_imageclass_data_preparing/</loc>
   </url>
   
   <url>
-    <loc>https://armind93.github.io/projects/imageclassproject/project_imageclass_modules/</loc>
+    <loc>https://armind93.github.io/posts/imageclassproject/project_imageclass_modules/</loc>
   </url>
   
   <url>
-    <loc>https://armind93.github.io/projects/imageclassproject/project_imageclass_model_test/</loc>
+    <loc>https://armind93.github.io/posts/imageclassproject/project_imageclass_model_test/</loc>
   </url>
   
   <url>
-    <loc>https://armind93.github.io/projects/imageclassproject/project_imageclass_neural_networks/</loc>
+    <loc>https://armind93.github.io/posts/imageclassproject/project_imageclass_neural_networks/</loc>
   </url>
   
   <url>
-    <loc>https://armind93.github.io/projects/kepler/project_kepler_col_names/</loc>
+    <loc>https://armind93.github.io/posts/kepler/project_kepler_col_names/</loc>
   </url>
   
   <url>
-    <loc>https://armind93.github.io/projects/kepler/project_kepler_data_analysis/</loc>
+    <loc>https://armind93.github.io/posts/kepler/project_kepler_data_analysis/</loc>
   </url>
   
   <url>
-    <loc>https://armind93.github.io/projects/kepler/project_kepler_data_prepare/</loc>
+    <loc>https://armind93.github.io/posts/kepler/project_kepler_data_prepare/</loc>
   </url>
   
   <url>
-    <loc>https://armind93.github.io/projects/kepler/project_kepler_modules/</loc>
+    <loc>https://armind93.github.io/posts/kepler/project_kepler_modules/</loc>
   </url>
   
   <url>
-    <loc>https://armind93.github.io/projects/kepler/project_kepler_machine_learning/</loc>
+    <loc>https://armind93.github.io/posts/kepler/project_kepler_machine_learning/</loc>
   </url>
   
   <url>
@@ -182,12 +171,12 @@
   
   <url>
     <loc>https://armind93.github.io/search/</loc>
-    <priority>0</priority>
+    <priority>0.1</priority>
   </url>
   
   <url>
     <loc>https://armind93.github.io/search/</loc>
-    <priority>0.1</priority>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -205,15 +194,15 @@
   </url>
   
   <url>
-    <loc>https://armind93.github.io/projects/worldhappiness/project_worldhappiness_data_analysis/</loc>
+    <loc>https://armind93.github.io/posts/worldhappiness/project_worldhappiness_data_analysis/</loc>
   </url>
   
   <url>
-    <loc>https://armind93.github.io/projects/worldhappiness/project_worldhappiness_data_presentation/</loc>
+    <loc>https://armind93.github.io/posts/worldhappiness/project_worldhappiness_data_presentation/</loc>
   </url>
   
   <url>
-    <loc>https://armind93.github.io/projects/worldhappiness/project_worldhappiness_machine_learning/</loc>
+    <loc>https://armind93.github.io/posts/worldhappiness/project_worldhappiness_machine_learning/</loc>
   </url>
   
 </urlset>

@@ -72,6 +72,16 @@ var isMobile = false, isTablet = false, isLaptop = false;
     }
     addSmoothScroll();
 
+    // ===================== Video Player ==================
+    function renderVideoPlayer(){
+      var videos = document.getElementsByClassName("video-player");
+      for (var i =0; i< videos.length; i++ ){
+        const player = new Plyr("#"+videos[i].id);
+      }
+
+    }
+    renderVideoPlayer();
+
     // re-render custom functions on window resize
     window.onresize = function () {
       detectDevice();
@@ -154,20 +164,12 @@ function toggleCourseVisibility(elem) {
     }
   }
 
-  // toggle the button text
-  let btnText = elem.innerText;
-  if (btnText == "Show more") {
-    elem.innerText = "Show less";
-  } else {
-    elem.innerText = "Show more";
-
-  // // toggle the current button visibility
-  // elem.classList.toggle("hidden");
-  // // toggle the alternate button visibility
-  // if  (elem.id === "show-more-btn"){
-  //   document.getElementById("show-less-btn").classList.toggle("hidden");
-  // }else{
-  //   document.getElementById("show-more-btn").classList.toggle("hidden");
-  
+  // toggle the current button visibility
+  elem.classList.toggle("hidden");
+  // toggle the alternate button visibility
+  if  (elem.id === "show-more-btn"){
+    document.getElementById("show-less-btn").classList.toggle("hidden");
+  }else{
+    document.getElementById("show-more-btn").classList.toggle("hidden");
   }
 }

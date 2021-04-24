@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Big Five Personality test - data analysis for Poland</title>
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/images/favicon_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_2.png" />
+
+
+<link rel="stylesheet" href="/css/style.css" />
+
+    
+<meta name="description" content="Big Five Personality test - data analysis for Poland" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+
+    
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-L5C2B8SPR2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+  </head>
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_2.png" alt="Logo">Armin&#39;s portfolio</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_2.png" class="d-none" id="main-logo" alt="Logo">
+  <img src="/images/inverted-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_2.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="https://armind93.github.io/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">More about projects</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/bigfive/">Big Five Personality test</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/bigfive_about/">About project</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/bigfive_col_names/">Columns description</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/bigfive_modules/">Imported modules</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/bigfive_data_prepare/">Data preparation</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/bigfive/project_bigfive_data_analysis/">Data analysis</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/posts/bigfive/project_bigfive_data_analysisforpoland/">Poland data analysis</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/project_bigfive_data_analysisforuk/">United Kingdom data analysis</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/worldhappiness/">World Happiness project - about project</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/worldhappiness/project_worldhappiness_about/">About project</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/worldhappiness/project_worldhappiness_data_presentation/">Data presentation</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/worldhappiness/project_worldhappiness_data_analysis/">Data analysis</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/worldhappiness/project_worldhappiness_machine_learning/">Machine learning</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/kepler/">Kepler Exoplanet Search Results</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_about/">About project</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_col_names/">Columns description</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_modules/">Imported modules</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_data_prepare/">Data presentation</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_data_analysis/">Data analysis</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_machine_learning/">Machine Learning</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/imageclassproject/">Convolutional network testing for image classification</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/imageclassproject/project_imageclass_about/">About project</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/imageclassproject/project_imageclass_modules/">Imported modules</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/imageclassproject/project_imageclass_data_preparing/">Data preparing</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/imageclassproject/project_imageclass_neural_networks/">Neural networks</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/imageclassproject/project_imageclass_model_test/">Model testing</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/libraryproject/">Project of an automated system for selecting wooden blocks from a rack using Raspberry Pi</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/libraryproject/project_library/">Project of an automated system for selecting wooden blocks from a rack using Raspberry Pi</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/bookprices/">Books prices project</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bookprices/project_booksprices/">Books Prices</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://armind93.github.io/images/default-hero.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/A85.jpg' alt="Author Image">
+          <h5 class="author-name">Armin Derencz</h5>
+          <p>January 1, 0001</p>
+        </div>
+
+        <div class="title">
+          <h1>Big Five Personality test - data analysis for Poland</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+          <h4 id="polish-cities---data-distribution">Polish cities - data distribution</h4>
+<p>First, let&rsquo;s see what the distribution of data from Polish cities looks like.</p>
+<p><img src="/static/images/BigFive/places_groups.jpg" alt="places_groups"></p>
+<p>There is a lot of data collected from the city of Warsaw. There are definitely more of them than for other cities. It can be concluded that the data is not properly balanced.</p>
+<h4 id="presentation-of-approximate-locations-in-a-scatterplot-diagram">Presentation of approximate locations in a scatterplot diagram</h4>
+<p>I wanted to present approximate users locations gathered from Poland on scatterplot diagram. In order to do this, first I extracted group from main data frame, which contain informations only about Poland.</p>
+<pre><code>pol_data = countries_groups.get_group('Poland')
+pol_data.head(3)
+</code></pre>
+<hr>
+<pre><code>|     | EXT1 | EXT2 | EXT3 | EXT4 | EXT5 | EXT6 | EXT7 | EXT8 | EXT9 | EXT10 | EST1 | EST2 | EST3 | EST4 | EST5 | EST6 | EST7 | EST8 | EST9 | EST10 | AGR1 | AGR2 | AGR3 | AGR4 | AGR5 | AGR6 | AGR7 | AGR8 | AGR9 | AGR10 | CSN1 | CSN2 | CSN3 | CSN4 | CSN5 | CSN6 | CSN7 | CSN8 | CSN9 | CSN10 | OPN1 | OPN2 | OPN3 | OPN4 | OPN5 | OPN6 | OPN7 | OPN8 | OPN9 | OPN10 | dateload            | introelapse | testelapse | endelapse | alpha2_code | lat_appx_lots_of_err | long_appx_lots_of_err | country | Extraversion | Agreeableness | Conscientiousness | EmotionalStability | Openness |
+|-----|------|------|------|------|------|------|------|------|------|-------|------|------|------|------|------|------|------|------|------|-------|------|------|------|------|------|------|------|------|------|-------|------|------|------|------|------|------|------|------|------|-------|------|------|------|------|------|------|------|------|------|-------|---------------------|-------------|------------|-----------|-------------|----------------------|-----------------------|---------|--------------|---------------|-------------------|--------------------|----------|
+| 222 | 1.0  | 5.0  | 2.0  | 5.0  | 1.0  | 5.0  | 1.0  | 4.0  | 1.0  | 5.0   | 1.0  | 3.0  | 2.0  | 1.0  | 1.0  | 2.0  | 4.0  | 4.0  | 2.0  | 5.0   | 4.0  | 1.0  | 3.0  | 2.0  | 3.0  | 4.0  | 4.0  | 2.0  | 4.0  | 4.0   | 2.0  | 5.0  | 5.0  | 5.0  | 4.0  | 1.0  | 1.0  | 2.0  | 1.0  | 4.0   | 5.0  | 1.0  | 4.0  | 2.0  | 3.0  | 1.0  | 4.0  | 4.0  | 5.0  | 5.0   | 2016-03-03 05:46:21 | 10.0        | 204.0      | 11        | PL          | 51.2036              | 18.8997               | Poland  | 2.0          | 17.0          | 18.0              | 21.0               | 34.0     |
+| 325 | 2.0  | 5.0  | 3.0  | 4.0  | 2.0  | 5.0  | 1.0  | 3.0  | 4.0  | 5.0   | 2.0  | 2.0  | 4.0  | 2.0  | 4.0  | 1.0  | 5.0  | 5.0  | 3.0  | 5.0   | 3.0  | 3.0  | 2.0  | 2.0  | 4.0  | 4.0  | 4.0  | 4.0  | 2.0  | 3.0   | 1.0  | 4.0  | 4.0  | 5.0  | 5.0  | 5.0  | 3.0  | 5.0  | 2.0  | 1.0   | 2.0  | 5.0  | 1.0  | 1.0  | 1.0  | 5.0  | 1.0  | 1.0  | 5.0  | 1.0   | 2016-03-03 06:58:57 | 41.0        | 308.0      | 21        | PL          | 52.4167              | 16.9667               | Poland  | 10.0         | 19.0          | 11.0              | 13.0               | 9.0      |
+| 376 | 2.0  | 3.0  | 2.0  | 5.0  | 2.0  | 1.0  | 1.0  | 5.0  | 2.0  | 5.0   | 4.0  | 3.0  | 5.0  | 3.0  | 3.0  | 5.0  | 1.0  | 1.0  | 5.0  | 3.0   | 3.0  | 5.0  | 1.0  | 4.0  | 2.0  | 4.0  | 3.0  | 5.0  | 4.0  | 3.0   | 3.0  | 0.0  | 5.0  | 4.0  | 2.0  | 2.0  | 3.0  | 4.0  | 1.0  | 4.0   | 4.0  | 1.0  | 5.0  | 2.0  | 5.0  | 2.0  | 4.0  | 2.0  | 5.0  | 5.0   | 2016-03-03 07:53:14 | 16.0        | 356.0      | 14        | PL          | 52.25                | 21.0                  | Poland  | 10.0         | 30.0          | 22.0              | 17.0               | 33.0     |
+</code></pre>
+<p>It&rsquo;s good to know, what are the data types in columns.
+Mainly, we have deal with float64 data type. However there are three data with data type category, one datetime64[ns] data type, one int64 data type and one object data type.</p>
+<pre><code>pol_data.info()
+
+&lt;class 'pandas.core.frame.DataFrame'&gt;
+Int64Index: 4189 entries, 222 to 1015293
+Data columns (total 63 columns):
+#   Column                 Non-Null Count  Dtype         
+---  ------                 --------------  -----         
+0   EXT1                   4189 non-null   float64       
+1   EXT2                   4189 non-null   float64       
+2   EXT3                   4189 non-null   float64       
+3   EXT4                   4189 non-null   float64       
+4   EXT5                   4189 non-null   float64       
+5   EXT6                   4189 non-null   float64       
+6   EXT7                   4189 non-null   float64       
+7   EXT8                   4189 non-null   float64       
+8   EXT9                   4189 non-null   float64       
+9   EXT10                  4189 non-null   float64       
+10  EST1                   4189 non-null   float64       
+11  EST2                   4189 non-null   float64       
+12  EST3                   4189 non-null   float64       
+13  EST4                   4189 non-null   float64       
+14  EST5                   4189 non-null   float64       
+15  EST6                   4189 non-null   float64       
+16  EST7                   4189 non-null   float64       
+17  EST8                   4189 non-null   float64       
+18  EST9                   4189 non-null   float64       
+19  EST10                  4189 non-null   float64       
+20  AGR1                   4189 non-null   float64       
+21  AGR2                   4189 non-null   float64       
+22  AGR3                   4189 non-null   float64       
+23  AGR4                   4189 non-null   float64       
+24  AGR5                   4189 non-null   float64       
+25  AGR6                   4189 non-null   float64       
+26  AGR7                   4189 non-null   float64       
+27  AGR8                   4189 non-null   float64       
+28  AGR9                   4189 non-null   float64       
+29  AGR10                  4189 non-null   float64       
+30  CSN1                   4189 non-null   float64       
+31  CSN2                   4189 non-null   float64       
+32  CSN3                   4189 non-null   float64       
+33  CSN4                   4189 non-null   float64       
+34  CSN5                   4189 non-null   float64       
+35  CSN6                   4189 non-null   float64       
+36  CSN7                   4189 non-null   float64       
+37  CSN8                   4189 non-null   float64       
+38  CSN9                   4189 non-null   float64       
+39  CSN10                  4189 non-null   float64       
+40  OPN1                   4189 non-null   float64       
+41  OPN2                   4189 non-null   float64       
+42  OPN3                   4189 non-null   float64       
+43  OPN4                   4189 non-null   float64       
+44  OPN5                   4189 non-null   float64       
+45  OPN6                   4189 non-null   float64       
+46  OPN7                   4189 non-null   float64       
+47  OPN8                   4189 non-null   float64       
+48  OPN9                   4189 non-null   float64       
+49  OPN10                  4189 non-null   float64       
+50  dateload               4189 non-null   datetime64[ns]
+51  introelapse            4189 non-null   float64       
+52  testelapse             4189 non-null   float64       
+53  endelapse              4189 non-null   int64         
+54  alpha2_code            4189 non-null   category      
+55  lat_appx_lots_of_err   4189 non-null   category      
+56  long_appx_lots_of_err  4189 non-null   category      
+57  country                4189 non-null   object        
+58  Extraversion           4189 non-null   float64       
+59  Agreeableness          4189 non-null   float64       
+60  Conscientiousness      4189 non-null   float64       
+61  EmotionalStability     4189 non-null   float64       
+62  Openness               4189 non-null   float64       
+dtypes: category(3), datetime64[ns](1), float64(57), int64(1), object(1)
+memory usage: 5.0+ MB
+</code></pre>
+<p>We can use values from columns <strong>long_appx_lots_of_err</strong> and <strong>lat_appx_lots_of_err</strong> in order to draw approximate shape of Poland. The data type for this two columns is category. It is necessary to change type to float, in order to use values in scatterplot.</p>
+<pre><code>pol_data['long_appx_lots_of_err'] = pol_data['long_appx_lots_of_err'].astype('float')
+pol_data['lat_appx_lots_of_err'] = pol_data['lat_appx_lots_of_err'].astype('float')
+</code></pre>
+<p>I applied <strong>astype</strong> method with &lsquo;float&rsquo; as argument on data series. Results of this method was typed into <strong>long_appx_lots_of_err</strong> and <strong>lat_appx_lots_of_err</strong> columns.</p>
+<pre><code>cols = 2
+rows = 3
+personality_list = pol_data.columns[-5:]
+color_list = ['Reds', 'Greens', 'Blues', 'Purples', 'YlOrBr']
+cities_list =['Olsztyn', 'Gdańsk', 'Warszawa', 'Kraków', 'Wrocław', 'Rzeszów', 'Poznań']
+index = 0
+
+fig = plt.figure(figsize=(25, 28))
+fig.subplots_adjust(hspace=0.1, wspace=0.1 )
+
+for i in range(1, 6):   
+fig.add_subplot(rows, cols, i)
+
+p1 = sns.scatterplot(x='long_appx_lots_of_err', y='lat_appx_lots_of_err',  hue= personality_list[index], size= personality_list[index], data=pol_data, palette= color_list[index],
+            sizes=(10,200), alpha=0.7  )
+
+for i, city in enumerate(cities_list):
+    loc = geolocator.geocode(city)
+    city_coordinates = (loc.longitude, loc.latitude )
+    plt.annotate(city, xy= city_coordinates, xycoords='data', fontsize=15)
+
+index +=1
+
+plt.show()
+</code></pre>
+<p>To have good orientation in data distribution on this plot, I&rsquo;ve marked a few main cities. The values are more concentrated, where cities are located. However, If we look at this graph, there is no huge correlaction in living location with gained scores from the personality test. Maybe, I&rsquo;ve to look deeper and compare individual cities with each other.</p>
+<p><img src="/static/images/BigFive/scatter_Poland.jpg" alt="scatter_Poland"></p>
+<p><img src="/static/images/BigFive/pol_data/voivoidships_groups.jpg" alt="voivoidships_groups"></p>
+<h4 id="counted-statistical-values-for-personalities-data">Counted statistical values for personalities data</h4>
+<pre><code>personality_scores = pol_data.columns[-7:]
+pol_personality_scores = pol_data[personality_scores]
+pol_personality_scores.head()
+</code></pre>
+<hr>
+<pre><code>|     | Extraversion | Agreeableness | Conscientiousness | EmotionalStability | Openness | state         | place              |
+|-----|--------------|---------------|-------------------|--------------------|----------|---------------|--------------------|
+| 156 | 2.0          | 17.0          | 18.0              | 21.0               | 34.0     | łódzkie       | powiat pajęczański |
+| 223 | 10.0         | 19.0          | 11.0              | 13.0               | 9.0      | wielkopolskie | Poznań             |
+| 254 | 10.0         | 30.0          | 22.0              | 17.0               | 33.0     | mazowieckie   | Warszawa           |
+| 393 | 32.0         | 35.0          | 15.0              | 17.0               | 28.0     | mazowieckie   | Warszawa           |
+| 411 | 29.0         | 32.0          | 30.0              | 20.0               | 28.0     | mazowieckie   | Warszawa           |
+</code></pre>
+<p>Now, I would like to look at basic statistical values for the personalities cols. I use describe() method to get: count, mean, std, min, max values and quantiles for each column. Additionaly I transposed table to have better transparency at reading data.</p>
+<pre><code>pol_personality_scores.describe().T
+
+|                    | count  | mean      | std      | min  | 25%  | 50%  | 75%  | max  |
+|--------------------|--------|-----------|----------|------|------|------|------|------|
+| Extraversion       | 4189.0 | 17.033660 | 9.341835 | -1.0 | 10.0 | 16.0 | 24.0 | 40.0 |
+| Agreeableness      | 4189.0 | 23.841490 | 7.734842 | -1.0 | 19.0 | 24.0 | 30.0 | 40.0 |
+| Conscientiousness  | 4189.0 | 20.909525 | 7.404900 | 0.0  | 16.0 | 21.0 | 26.0 | 40.0 |
+| EmotionalStability | 4189.0 | 17.297684 | 8.814573 | -1.0 | 11.0 | 17.0 | 23.0 | 40.0 |
+| Openness           | 4189.0 | 30.747195 | 6.178097 | 0.0  | 27.0 | 31.0 | 35.0 | 41.0 |
+</code></pre>
+<p>In Poland, mean score value for extraversion and emotional stability is the lowest compared to other personalities, but standard deviation for extraversion is slightly higher from emotional stability.</p>
+<h5 id="box-plots-for-personalities-data">Box plots for personalities data:</h5>
+<pre><code>cols = ['Extraversion', 'Agreeableness', 'Conscientiousness', 'EmotionalStability', 'Openness']
+colors = ['y', 'b', 'r', 'g', 'm']
+
+fig, ax = plt.subplots(1, 5, figsize=(20,2), constrained_layout=True)
+for i, col in enumerate(cols):
+sns.boxplot(  x=col, data=pol_personality_scores, ax=ax[i], color=colors[i])
+
+plt.show()
+</code></pre>
+<p><img src="/static/images/BigFive/pol_data/personalityBoxPlots_general.jpg" alt="personalityBoxPlots_general"></p>
+<p>There is a huge amount of outliers below minimum value for openness trait. Same as for openness trait, there are outliers for agreeableness trait and Conscientiousness trait. However, for conscientiousness trait we can notice only one outlier below minimum.</p>
+<h5 id="histograms-for-personalities-data">Histograms for personalities data:</h5>
+<pre><code>fig, ax = plt.subplots(5, 5, figsize=(20,15), constrained_layout=True)
+
+bins_list = [5, 10, 15, 20, 25]
+
+for i, bin in enumerate(bins_list):
+for j, col in enumerate(cols):
+    g = sns.histplot(data=pol_personality_scores, x =col, ax=ax[i, j], kde=True, bins=bins_list[i], color=colors[i] )
+    g.set(  title=f'bins: {bin}' )
+
+plt.show()
+</code></pre>
+<p><img src="/static/images/BigFive/pol_data/personality_hist_general.jpg" alt="personality_hist_general"></p>
+<hr>
+<p>Thanks to box plots, we see on them values for every personality traits through their quartiles. In each voivodeship scores obtained from the personality test for openness trait are the highest and obtained extraversion trait points are the lowest. In every voivodeship, there are some outliers. The most outliers occur in openness trait.</p>
+<p><img src="/static/images/BigFive/pol_data/boxes.jpg" alt="boxes"></p>
+<h5 id="geopandas-maps">Geopandas maps:</h5>
+<p>The Geopandas module allowed for the presentation of data from the personality test on a map.</p>
+<p><img src="/static/images/BigFive/pol_data/mean_personalities.jpg" alt="mean_personalities"></p>
+<pre><code>scoresRadar_pol_data_row_156   = RadarChart( rowNo= 156,   data=pol_data   )
+scoresRadar_pol_data_row_223   = RadarChart( rowNo= 223,   data=pol_data   )
+scoresRadar_pol_data_row_393   = RadarChart( rowNo= 393,   data=pol_data   )
+</code></pre>
+<h5 id="radar-plots">Radar plots:</h5>
+<pre><code>scoresRadar_pol_data_row_156.create_chart(flag=0)
+</code></pre>
+<p><img src="/static/images/BigFive/pol_data/156_answered_each_question_radar.jpg" alt="156_answered_each_question_radar"></p>
+<pre><code>scoresRadar_pol_data_row_223.create_chart(flag=0)
+</code></pre>
+<p><img src="/static/images/BigFive/pol_data/223_answered_each_question_radar.jpg" alt="223_answered_each_question_radar"></p>
+<pre><code>scoresRadar_pol_data_row_393.create_chart(flag=0)
+</code></pre>
+<p><img src="/static/images/BigFive/pol_data/393_answered_each_question_radar.jpg" alt="393_answered_each_question_radar"></p>
+
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/ArminD93/edit//content/posts/BigFive/project_BigFive_data_analysisForPoland.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/posts/bigfive/project_bigfive_data_analysis/" class="btn btn-outline-info">
+          <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+          <div class="next-prev-text">Big Five Personality test - data analysis</div>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/posts/bigfive/project_bigfive_data_analysisforuk/" class="btn btn-outline-info">
+            <div>Next <i class="fas fa-chevron-circle-right"></i></div>
+            <div class="next-prev-text">Big Five Personality test - data analysis for United Kingdom</div>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+  <a id="scroll-to-top" class="btn"><i class="fas fa-chevron-circle-up"></i></a>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#polish-cities---data-distribution">Polish cities - data distribution</a></li>
+            <li><a href="#presentation-of-approximate-locations-in-a-scatterplot-diagram">Presentation of approximate locations in a scatterplot diagram</a></li>
+            <li><a href="#counted-statistical-values-for-personalities-data">Counted statistical values for personalities data</a>
+              <ul>
+                <li><a href="#box-plots-for-personalities-data">Box plots for personalities data:</a></li>
+                <li><a href="#histograms-for-personalities-data">Histograms for personalities data:</a></li>
+                <li><a href="#geopandas-maps">Geopandas maps:</a></li>
+                <li><a href="#radar-plots">Radar plots:</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#education">Education</a>
+              </li>
+            
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#projects">Projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#recent-posts">Recent projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#accomplishments">Accomplishments</a>
+              </li>
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>armin.derencz@gmail.com</span></li>
+          
+        </ul>
+      </div>
+      
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png" alt="Toha Theme Logo">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/images/hugo-logo.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+<script src="/js/navbar.js"></script>
+<script src="/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>

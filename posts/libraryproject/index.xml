@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project of an automated system for selecting wooden blocks from a rack using Raspberry Pi on Armin&#39;s portfolio</title>
+    <link>https://armind93.github.io/posts/libraryproject/</link>
+    <description>Recent content in Project of an automated system for selecting wooden blocks from a rack using Raspberry Pi on Armin&#39;s portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 05 Jul 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://armind93.github.io/posts/libraryproject/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Project of an automated system for selecting wooden blocks from a rack using Raspberry Pi</title>
+      <link>https://armind93.github.io/posts/libraryproject/project_library/</link>
+      <pubDate>Fri, 05 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://armind93.github.io/posts/libraryproject/project_library/</guid>
+      <description>link to GitHub Repository
+Introduction The device was built using elements from a 3D printer (frame, stepper motors). Three randomly placed wooden blocks on the shelves of the rack are picked up by the gripper and stored in one of the cells in the bottom row of this rack. The place on the bottom shelf is chosen, where the path from these blocks to this place is the shortest
+Overview   Device control through a graphical user interface:</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>World Happiness project - machine learning</title>
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/images/favicon_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_2.png" />
+
+
+<link rel="stylesheet" href="/css/style.css" />
+
+    
+<meta name="description" content="World Happiness project - machine learning" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+
+    
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-L5C2B8SPR2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+  </head>
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_2.png" alt="Logo">Armin&#39;s portfolio</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_2.png" class="d-none" id="main-logo" alt="Logo">
+  <img src="/images/inverted-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_2.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="https://armind93.github.io/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">More about projects</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/bigfive/">Big Five Personality test</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/bigfive_about/">About project</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/bigfive_col_names/">Columns description</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/bigfive_modules/">Imported modules</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/bigfive_data_prepare/">Data preparation</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/bigfive/project_bigfive_data_analysis/">Data analysis</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/project_bigfive_data_analysisforpoland/">Poland data analysis</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/project_bigfive_data_analysisforuk/">United Kingdom data analysis</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/worldhappiness/">World Happiness project - about project</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/worldhappiness/project_worldhappiness_about/">About project</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/worldhappiness/project_worldhappiness_data_presentation/">Data presentation</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/worldhappiness/project_worldhappiness_data_analysis/">Data analysis</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/posts/worldhappiness/project_worldhappiness_machine_learning/">Machine learning</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/kepler/">Kepler Exoplanet Search Results</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_about/">About project</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_col_names/">Columns description</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_modules/">Imported modules</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_data_prepare/">Data presentation</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_data_analysis/">Data analysis</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_machine_learning/">Machine Learning</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/imageclassproject/">Convolutional network testing for image classification</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/imageclassproject/project_imageclass_about/">About project</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/imageclassproject/project_imageclass_modules/">Imported modules</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/imageclassproject/project_imageclass_data_preparing/">Data preparing</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/imageclassproject/project_imageclass_neural_networks/">Neural networks</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/imageclassproject/project_imageclass_model_test/">Model testing</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/libraryproject/">Project of an automated system for selecting wooden blocks from a rack using Raspberry Pi</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/libraryproject/project_library/">Project of an automated system for selecting wooden blocks from a rack using Raspberry Pi</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/bookprices/">Books prices project</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bookprices/project_booksprices/">Books Prices</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://armind93.github.io/images/default-hero.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/A85.jpg' alt="Author Image">
+          <h5 class="author-name">Armin Derencz</h5>
+          <p>January 1, 0001</p>
+        </div>
+
+        <div class="title">
+          <h1>World Happiness project - machine learning</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+          <h2 id="4-preparing-data-to-machine-learning">4. <strong>Preparing data to machine learning:</strong></h2>
+<p>I wanted to link all factors into one dataframe, where all years were located in one column. I used merge() method, where I chose merging on columns &lsquo;Country or region&rsquo; and &lsquo;Year&rsquo;.</p>
+<pre><code>AllFeatures = pd.merge(happy_AllYears_stacked, economy_AllYears_stacked, on= ['Country or region', 'Year'] )
+AllFeatures = AllFeatures.merge(healthy_AllYears_stacked,                on= ['Country or region', 'Year'] )
+AllFeatures = AllFeatures.merge(social_support_AllYears_stacked,         on= ['Country or region', 'Year'] )      
+
+AllFeatures.head()       
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/allFeatures_df.jpg" alt="allFeatures_df"></p>
+<p>Next, I wished to find out what the descibe() method returns for column &lsquo;happinessScore&rsquo; in this &lsquo;AllYears&rsquo; data frame. I received count of values, mean and standard deviation of them. Moreover there is min and max values and quantiles.
+Technically speaking, the median is 0.5 quantile (50% quantile), which split data into equal sized groups. Another quantiles are 0.25 quantile and 0.75 quantile. They are are called quartiles. Quartiles and median split data into four equal sized groups.</p>
+<pre><code>AllFeatures.groupby(by='Year')['HappinessScore'].describe()
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/AllFeaturesGrouped_describe.jpg" alt="AllFeaturesGrouped_describe"></p>
+<h3 id="41-visualization-of-the-factors-that-had-the-greatest-impact-on-the-level-of-happiness-in-2015-2019">4.1. Visualization of the factors that had the greatest impact on the level of happiness in 2015-2019</h3>
+<p><img src="/static/images/WorldHappinessReport/pairPlot.jpg" alt="pairPlot"></p>
+<p><img src="/static/images/WorldHappinessReport/box_swarm_violin_plots.jpg" alt="box_swarm_violin_plots"></p>
+<h3 id="42-ridding-of-outliers-values">4.2. Ridding of outliers values</h3>
+<pre><code>cols = ['HappinessScore', 'Economy', 	'Health (LifeExpectancy)', 'socialSupport']
+colors = ['y', 'b', 'r', 'g']
+
+
+fig, ax = plt.subplots(1, 4, figsize=(20,2), constrained_layout=True)
+for i, col in enumerate(cols):
+sns.boxplot(  x=col, data=AllFeatures, ax=ax[i], color=colors[i])
+
+plt.show()
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/boxPlots.jpg" alt="boxPlots"></p>
+<pre><code># wyznaczamy dolną część pudełka (lewa część)
+Q1 = AllFeatures[cols].quantile(0.25)
+
+# wyznaczamy górną część pudełka (prawa część)
+Q3 =  AllFeatures[cols].quantile(0.75)
+
+# IQR - rozstęp kwartylowy
+IQR = Q3 - Q1
+
+outlier_condit =  ((AllFeatures[cols] &lt; (Q1 - 1.5*IQR)) | (AllFeatures[cols] &gt; (Q3 + 1.5*IQR)) ) 
+AllFeatures_iqr = AllFeatures[cols][~outlier_condit.any(axis=1)]
+
+
+fig, ax = plt.subplots(1, 4, figsize=(20,2), constrained_layout=True)
+
+for i, col in enumerate(cols):
+sns.boxplot(  x=col, data=AllFeatures_iqr, ax=ax[i], color=colors[i])
+
+
+plt.show()
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/BoxPlots_iqr.jpg" alt="BoxPlots_iqr"></p>
+<pre><code>fig, ax = plt.subplots(1,4, figsize=(20,4))
+
+for i, col in enumerate(cols):
+sns.distplot(AllFeatures[col], ax=ax[i])
+
+for i, col in enumerate(cols):
+sns.distplot(AllFeatures_iqr[col], ax=ax[i])
+
+plt.show()
+</code></pre>
+<p><strong>Without IQR:</strong>
+<img src="/static/images/WorldHappinessReport/hist.jpg" alt="hist"></p>
+<p><strong>With IQR:</strong>
+<img src="/static/images/WorldHappinessReport/hist_iqr.jpg" alt="hist_iqr"></p>
+<pre><code>AllFeatures.info()
+
+&lt;class 'pandas.core.frame.DataFrame'&gt;
+Int64Index: 705 entries, 0 to 704
+Data columns (total 6 columns):
+#   Column                   Non-Null Count  Dtype  
+---  ------                   --------------  -----  
+0   Country or region        705 non-null    object 
+1   Year                     705 non-null    object 
+2   HappinessScore           705 non-null    float64
+3   Economy                  705 non-null    float64
+4   Health (LifeExpectancy)  705 non-null    float64
+5   socialSupport            705 non-null    float64
+dtypes: float64(4), object(2)
+memory usage: 58.6+ KB
+</code></pre>
+<p>Tekst</p>
+<pre><code>for col in ['Country or region', 'Year']:
+AllFeatures[col] = AllFeatures[col].astype('category')
+
+AllFeatures.info()
+
+&lt;class 'pandas.core.frame.DataFrame'&gt;
+Int64Index: 705 entries, 0 to 704
+Data columns (total 6 columns):
+#   Column                   Non-Null Count  Dtype   
+---  ------                   --------------  -----   
+0   Country or region        705 non-null    category
+1   Year                     705 non-null    category
+2   HappinessScore           705 non-null    float64 
+3   Economy                  705 non-null    float64 
+4   Health (LifeExpectancy)  705 non-null    float64 
+5   socialSupport            705 non-null    float64 
+dtypes: category(2), float64(4)
+memory usage: 55.9 KB
+</code></pre>
+<p>Tekst</p>
+<pre><code>AllFeatures.describe().T
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/AllFeature_describe.jpg" alt="AllFeature_describe"></p>
+<p>Po pozbyciu się wartości odstających</p>
+<pre><code>AllFeatures_iqr.describe().T
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/AllFeature_iqr_describe.jpg" alt="AllFeature_iqr_describe"></p>
+<pre><code>AllFeatures.describe(include=['category']).T
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/AllFeatures_describe_category.jpg" alt="AllFeatures_describe_category"></p>
+<p>Tekst</p>
+<pre><code>AllFeatures.isnull().sum()
+
+Country or region          0
+Year                       0
+
+Country or region          0
+Year                       0
+HappinessScore             0
+Economy                    0
+Health (LifeExpectancy)    0
+socialSupport              0
+dtype: int64
+
+
+AllFeatures_iqr.isnull().sum()
+
+HappinessScore             0
+Economy                    0
+Health (LifeExpectancy)    0
+socialSupport              0
+dtype: int64
+</code></pre>
+<h3 id="43-visualization-of-the-influence-of-the-analyzed-factors-on-the-level-of-happiness-score">4.3. Visualization of the influence of the analyzed factors on the level of happiness score</h3>
+<p><img src="/static/images/WorldHappinessReport/scatterPlot1.png" alt="scatterPlot1"></p>
+<h3 id="44-splitting-data-into-training-and-test-sets">4.4. Splitting data into training and test sets</h3>
+<pre><code>features = ['Economy', 'Health (LifeExpectancy)', 'socialSupport']
+label = 'HappinessScore'
+
+X = AllFeatures[features].values
+y = AllFeatures[label].values.reshape(-1,1)
+
+# Bez wartości odstających:
+X_iqr = AllFeatures_iqr[features].values
+y_iqr = AllFeatures_iqr[label].values.reshape(-1,1)
+
+print(f'X: {X.shape},   X_iqr: {X_iqr.shape}')
+print(f'y: {y.shape},   y_iqr: {y_iqr.shape}')
+
+
+
+
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+X_iqr_train, X_iqr_test, y_iqr_train, y_iqr_test = train_test_split(X_iqr, y_iqr, test_size=0.2)
+
+
+print(f'X_train shape:  {X_train.shape},    X_iqr_train shape: {X_iqr_train.shape}')
+print(f'X_test shape:   {X_test.shape},     X_iqr_test shape: {X_iqr_test.shape}')
+
+print(f'y_train shape:  {y_train.shape},    y_iqr_train shape: {y_iqr_train.shape}')
+print(f'y_test shape:   {y_test.shape},     y_iqr_test shape: {y_iqr_test.shape}')
+</code></pre>
+<h3 id="45-scaling-the-values">4.5. Scaling the values</h3>
+<pre><code>scaler = StandardScaler()
+scaler.fit(X_train)
+
+X_train = scaler.transform(X_train)
+X_test = scaler.transform(X_test)
+
+
+scaler_iqr = StandardScaler()
+scaler_iqr.fit(X_iqr_train)
+
+X_iqr_train = scaler.transform(X_iqr_train)
+X_iqr_test = scaler.transform(X_iqr_test)
+</code></pre>
+<h3 id="46-linear-regression-model-testing">4.6. Linear regression model testing</h3>
+<pre><code>metric_cols =[('SCORES', 'SCORE[%]'), ('SCORES', 'SCORE(IQR)[%]'),
+            
+            ('R2','Train[%]'), ('R2','Test[%]'),
+            ('R2(IQR)','Train[%]'), ('R2(IQR)','Test[%]'),
+
+            ('MSE','Train'), ('MSE','Test'),
+            ('MSE(IQR)','Train'), ('MSE(IQR)','Test'), 
+
+            ('RMSE','Train'), ('RMSE','Test'),
+            ('RMSE(IQR)','Train'), ('RMSE(IQR)','Test'),                            
+            
+            ]
+
+metrics_df = pd.DataFrame(columns=metric_cols )
+metrics_df.columns = pd.MultiIndex.from_tuples(metrics_df.columns)
+
+index = 0
+
+for i in range(150):  
+# podzielimy dane na zbiory uczące i testowe:
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+X_iqr_train, X_iqr_test, y_iqr_train, y_iqr_test = train_test_split(X_iqr, y_iqr, test_size=0.2)
+
+lr                  = LinearRegression()
+lr.fit(X_train, y_train)
+
+lin_reg_iqr         = LinearRegression()
+lin_reg_iqr.fit(X_iqr_train, y_iqr_train)
+
+y_pred_test         = lr.predict(X_test)
+y_pred_iqr_sc_test  = lin_reg_iqr.predict(X_iqr_test)
+
+y_pred_train        = lr.predict(X_train)
+y_pred_iqr_sc_train = lin_reg_iqr.predict(X_iqr_train)
+
+
+# ---------------------------------------------------------------------------
+score          = lr.score(X_test, y_test)
+score_iqr      = lr.score(X_iqr_test, y_iqr_test)
+
+r2_train       =  r2_score(y_train, y_pred_train)
+r2_train_iqr   = r2_score(y_iqr_train, y_pred_iqr_sc_train)
+
+r2_test        =  r2_score(y_test, y_pred_test)
+r2_test_iqr    = r2_score(y_iqr_test, y_pred_iqr_sc_test)
+
+
+mse_train      = mean_squared_error(y_train, y_pred_train)
+mse_train_iqr  = mean_squared_error(y_iqr_train, y_pred_iqr_sc_train)
+
+mse_test       = mean_squared_error(y_test, y_pred_test)
+mse_test_iqr   = mean_squared_error(y_iqr_test, y_pred_iqr_sc_test)
+
+rmse_train     = mean_squared_error(y_train, y_pred_train, squared=False)
+rmse_train_iqr = mean_squared_error(y_iqr_train, y_pred_iqr_sc_train, squared=False)
+
+rmse_test      = mean_squared_error(y_test, y_pred_test, squared=False)
+rmse_test_iqr  = mean_squared_error(y_iqr_test, y_pred_iqr_sc_test, squared=False)  
+
+# -----------------------------------------------------------------------------
+
+SCORE, SCORE_IQR              = round(score*100, 2), round(score_iqr*100, 2) 
+
+R2_train, R2_test             = round(r2_train*100, 2), round(r2_test*100,2)
+R2_IQR_train, R2_IQR_test     = round(r2_train_iqr*100, 2), round(r2_test_iqr*100, 2)
+
+mse_train, mse_test           = round(mse_train, 4), round(mse_test, 4)
+mse_IQR_train, mse_IQR_test   = round(mse_train_iqr, 4), round(mse_test_iqr, 4)
+
+rmse_train, rmse_test         = round(rmse_train, 4), round(rmse_test, 4)
+rmse_IQR_train, rmse_IQR_test = round(rmse_train_iqr, 4), round(rmse_test_iqr, 4)
+
+
+# #############################################################################
+
+metrics_df.loc[index] = [
+                        SCORE, SCORE_IQR,
+                        R2_train, R2_test, R2_IQR_train, R2_IQR_test,
+                        mse_train, mse_test, mse_IQR_train, mse_IQR_test,
+                        rmse_train, rmse_test, rmse_IQR_train, rmse_IQR_test                           
+                        ]
+
+index +=1
+
+metrics_df.tail()
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/metric_df.jpg" alt="metric_df"></p>
+<pre><code>def highlight_best(s):
+
+        index = {index: '' for index in s.index}
+
+        if s[('R2','Test[%]')] &gt; s[('R2','Train[%]')]: 
+            index[('R2','Test[%]')] = 'background-color: green'
+        if s[('R2(IQR)','Test[%]')] &gt; s[('R2(IQR)','Train[%]')]: 
+            index[('R2(IQR)','Test[%]')] = 'background-color: green'        
+        if s[('MSE','Test')] &lt; s[('MSE','Train')]: 
+            index[('MSE','Test')] = 'background-color: green'
+        if s[('MSE(IQR)','Test')]&lt; s[('MSE(IQR)','Train')]: 
+            index[('MSE(IQR)','Test')] = 'background-color: green'
+        if s[('RMSE','Test')] &lt; s[('RMSE','Train')]: 
+            index[('RMSE','Test')] = 'background-color: green'
+        if s[('RMSE(IQR)','Test')] &lt; s[('RMSE(IQR)','Train')]: 
+            index[('RMSE(IQR)','Test')] = 'background-color: green'
+        return index
+
+metrics_df.tail().style.apply( highlight_best, axis=1)
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/metric_df_tail_v2.jpg" alt="metric_df_tail_v2"></p>
+<pre><code># Jak poszło przewidywanie danych
+fig, ax = plt.subplots(1, 2, figsize=(10,5), constrained_layout=True)
+
+y_list = [
+        { 'b' : [  y_test      , y_pred_test        ]  },
+        { 'g' : [  y_iqr_test  , y_pred_iqr_sc_test ]  }
+        ]
+
+labels_dict = [
+                {'Z wartościami odstającymi' : [  'y_test' , 'y_pred' ] },
+                {'bez wartości odstających'  : [  'y_test'  , 'y_pred'  ] }                 
+            ]
+index = 0
+for col in range(2):
+    yTestAndPred = [val for val in y_list[index].values() ][0] 
+    color = [key for key in y_list[index].keys() ] 
+
+    xyLabels = [val for val in labels_dict[index].values() ][0]
+    title = [key for key in labels_dict[index].keys() ] 
+
+    ax[col].scatter(yTestAndPred[0], yTestAndPred[1], s=80, facecolors='none', edgecolors= color)
+    ax[col].set_xlabel(xyLabels[0])
+    ax[col].set_ylabel(xyLabels[1])
+    ax[col].set_title(title[0])
+    index+=1   
+
+plt.show()
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/HowGoodLearning.jpg" alt="HowGoodLearning"></p>
+<pre><code># Wykresy wartości resztowych:
+fig, ax = plt.subplots(2, 2, figsize=(10,9), constrained_layout=True)
+
+error_train = y_pred_train - y_train # ta wartość mówi nam, jak bardzo pomyliliśmy się w trakcie przewidywania wartości
+error_test =  y_pred_test - y_test
+
+error_iqr_train = y_pred_iqr_sc_train - y_iqr_train
+error_iqr_test =  y_pred_iqr_sc_test - y_iqr_test
+
+y_list = [
+        { 'b' : [  y_train     , error_train     ]  },
+        { 'g' : [  y_test      , error_test      ]  },
+        { 'b' : [  y_iqr_train , error_iqr_train ]  },
+        { 'g' : [  y_iqr_test  , error_iqr_test  ]  }
+        ]
+
+labels_dict = [
+                {'Z wartościami odstającymi' : [  'y_train' , 'error_train' ] },
+                {'Z wartościami odstającymi' : [  'y_test'  , 'error_test'  ] },              
+                {'bez wartości odstających'  : [  'y_train' , 'error_train' ] },
+                {'bez wartości odstających'  : [  'y_test'  , 'error_test'  ] }                 
+            ]
+
+index = 0
+for row in range(2):
+for col in range(2):
+    yAndError= [val for val in y_list[index].values() ][0] 
+    color = [key for key in y_list[index].keys() ] 
+
+    xyLabels = [val for val in labels_dict[index].values() ][0]
+    title = [key for key in labels_dict[index].keys() ] 
+
+    ax[row,col].scatter(yAndError[0], yAndError[1], s=80, facecolors='none', edgecolors= color)
+
+    ax[row,col].hlines(y=1, xmin=3, xmax=8, colors='r', linestyles='--', lw=1.5)
+    ax[row,col].hlines(y=-1, xmin=3, xmax=8, colors='r', linestyles='--', lw=1.5)
+    
+    ax[row,col].set_xlabel(xyLabels[0])
+    ax[row,col].set_ylabel(xyLabels[1])
+    ax[row,col].set_title(title[0])
+
+    index+=1   
+
+plt.show()   
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/RestValuesPlots.jpg" alt="RestValuesPlots"></p>
+
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/ArminD93/edit//content/posts/WorldHappiness/project_WorldHappiness_machine_learning.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/posts/worldhappiness/project_worldhappiness_data_presentation/" class="btn btn-outline-info">
+          <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+          <div class="next-prev-text">World Happiness project - data presentation</div>
+        </a>
+      </div>
+      
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+  <a id="scroll-to-top" class="btn"><i class="fas fa-chevron-circle-up"></i></a>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#4-preparing-data-to-machine-learning">4. <strong>Preparing data to machine learning:</strong></a>
+      <ul>
+        <li><a href="#41-visualization-of-the-factors-that-had-the-greatest-impact-on-the-level-of-happiness-in-2015-2019">4.1. Visualization of the factors that had the greatest impact on the level of happiness in 2015-2019</a></li>
+        <li><a href="#42-ridding-of-outliers-values">4.2. Ridding of outliers values</a></li>
+        <li><a href="#43-visualization-of-the-influence-of-the-analyzed-factors-on-the-level-of-happiness-score">4.3. Visualization of the influence of the analyzed factors on the level of happiness score</a></li>
+        <li><a href="#44-splitting-data-into-training-and-test-sets">4.4. Splitting data into training and test sets</a></li>
+        <li><a href="#45-scaling-the-values">4.5. Scaling the values</a></li>
+        <li><a href="#46-linear-regression-model-testing">4.6. Linear regression model testing</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#education">Education</a>
+              </li>
+            
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#projects">Projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#recent-posts">Recent projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#accomplishments">Accomplishments</a>
+              </li>
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>armin.derencz@gmail.com</span></li>
+          
+        </ul>
+      </div>
+      
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png" alt="Toha Theme Logo">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/images/hugo-logo.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+<script src="/js/navbar.js"></script>
+<script src="/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>

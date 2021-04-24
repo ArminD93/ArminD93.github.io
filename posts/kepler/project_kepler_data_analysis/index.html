@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kepler Exoplanet Search Results - data analysis</title>
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/images/favicon_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_2.png" />
+
+
+<link rel="stylesheet" href="/css/style.css" />
+
+    
+<meta name="description" content="Kepler Exoplanet Search Results - data analysis" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+
+    
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-L5C2B8SPR2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+  </head>
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_2.png" alt="Logo">Armin&#39;s portfolio</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_2.png" class="d-none" id="main-logo" alt="Logo">
+  <img src="/images/inverted-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_2.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="https://armind93.github.io/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">More about projects</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/bigfive/">Big Five Personality test</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/bigfive_about/">About project</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/bigfive_col_names/">Columns description</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/bigfive_modules/">Imported modules</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/bigfive_data_prepare/">Data preparation</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/bigfive/project_bigfive_data_analysis/">Data analysis</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/project_bigfive_data_analysisforpoland/">Poland data analysis</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/project_bigfive_data_analysisforuk/">United Kingdom data analysis</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/worldhappiness/">World Happiness project - about project</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/worldhappiness/project_worldhappiness_about/">About project</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/worldhappiness/project_worldhappiness_data_presentation/">Data presentation</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/worldhappiness/project_worldhappiness_data_analysis/">Data analysis</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/worldhappiness/project_worldhappiness_machine_learning/">Machine learning</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/kepler/">Kepler Exoplanet Search Results</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_about/">About project</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_col_names/">Columns description</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_modules/">Imported modules</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_data_prepare/">Data presentation</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/posts/kepler/project_kepler_data_analysis/">Data analysis</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_machine_learning/">Machine Learning</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/imageclassproject/">Convolutional network testing for image classification</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/imageclassproject/project_imageclass_about/">About project</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/imageclassproject/project_imageclass_modules/">Imported modules</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/imageclassproject/project_imageclass_data_preparing/">Data preparing</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/imageclassproject/project_imageclass_neural_networks/">Neural networks</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/imageclassproject/project_imageclass_model_test/">Model testing</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/libraryproject/">Project of an automated system for selecting wooden blocks from a rack using Raspberry Pi</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/libraryproject/project_library/">Project of an automated system for selecting wooden blocks from a rack using Raspberry Pi</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/bookprices/">Books prices project</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bookprices/project_booksprices/">Books Prices</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://armind93.github.io/images/default-hero.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/A85.jpg' alt="Author Image">
+          <h5 class="author-name">Armin Derencz</h5>
+          <p>January 1, 0001</p>
+        </div>
+
+        <div class="title">
+          <h1>Kepler Exoplanet Search Results - data analysis</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+          <h2 id="5-data-analysis"><strong>5. Data analysis</strong></h2>
+<h3 id="columns-names">Columns names:</h3>
+<p>KOI - Kepler Objects of Interest</p>
+<table>
+<thead>
+<tr>
+<th align="left">column name</th>
+<th align="right">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">koi_period</td>
+<td align="right"><strong>Orbital Period (days)</strong> The interval between consecutive planetary transits.</td>
+</tr>
+<tr>
+<td align="left">koi_time0bk</td>
+<td align="right"><strong>Transit Epoch (BJD - 2 454 833,0))</strong> The time corresponding to the center of the first detected transit in Barycentric Julian Day (BJD) minus a constant offset of 2,454,833.0 days. The offset corresponds to 12:00 on Jan 1, 2009 UTC.</td>
+</tr>
+<tr>
+<td align="left">koi_impact</td>
+<td align="right">The sky-projected distance between the center of the stellar disc and the center of the planet disc at conjunction, normalized by the stellar radius.</td>
+</tr>
+<tr>
+<td align="left">koi_duration</td>
+<td align="right"><strong>Transit Duration (hours)</strong> The duration of the observed transits. Duration is measured from first contact between the planet and star until last contact. Contact times are typically computed from a best-fit model produced by a Mandel-Agol (2002) model fit to a multi-quarter Kepler light curve, assuming a linear orbital ephemeris.</td>
+</tr>
+<tr>
+<td align="left">koi_depth</td>
+<td align="right"><strong>Transit Depth (parts per million)</strong> The fraction of stellar flux lost at the minimum of the planetary transit. Transit depths are typically computed from a best-fit model produced by a Mandel-Agol (2002) model fit to a multi-quarter Kepler light curve, assuming a linear orbital ephemeris.</td>
+</tr>
+<tr>
+<td align="left">koi_prad</td>
+<td align="right"><strong>Planetary Radius (Earth radii)</strong> The radius of the planet. Planetary radius is the product of the planet star radius ratio and the stellar radius.</td>
+</tr>
+<tr>
+<td align="left">koi_teq</td>
+<td align="right"><strong>Equilibrium Temperature (Kelvin)</strong> Approximation for the temperature of the planet.</td>
+</tr>
+<tr>
+<td align="left">koi_insol</td>
+<td align="right"><strong>Insolation Flux [Earth flux]</strong> Insolation flux is another way to give the equilibrium temperature. It depends on the stellar parameters (specifically the stellar radius and temperature), and on the semi-major axis of the planet. It&rsquo;s given in units relative to those measured for the Earth from the Sun.</td>
+</tr>
+<tr>
+<td align="left">koi_model_snr</td>
+<td align="right"><strong>Transit Signal-to-Noise</strong> Transit depth normalized by the mean uncertainty in the flux during the transits.</td>
+</tr>
+<tr>
+<td align="left">koi_tce_plnt_num</td>
+<td align="right">TCE Planet Number federated to the KOI.</td>
+</tr>
+<tr>
+<td align="left">koi_tce_delivname</td>
+<td align="right">TCE delivery name corresponding to the TCE data federated to the KOI.</td>
+</tr>
+<tr>
+<td align="left">koi_steff</td>
+<td align="right"><strong>Stellar Effective Temperature (Kelvin)</strong> The photospheric temperature of the star.</td>
+</tr>
+<tr>
+<td align="left">koi_slogg</td>
+<td align="right"><strong>Stellar Surface Gravity (log10(cm s-2)</strong> The base-10 logarithm of the acceleration due to gravity at the surface of the star.</td>
+</tr>
+<tr>
+<td align="left">koi_srad</td>
+<td align="right"><strong>Stellar Radius (solar radii)</strong> The photospheric radius of the star.</td>
+</tr>
+<tr>
+<td align="left">ra</td>
+<td align="right">**RA (deg).**KIC Right Ascension</td>
+</tr>
+<tr>
+<td align="left">dec</td>
+<td align="right">**Dec (deg). **KIC Declination</td>
+</tr>
+<tr>
+<td align="left">koi_kepmag</td>
+<td align="right">Kepler-band (mag)</td>
+</tr>
+</tbody>
+</table>
+<pre><code>kepler['koi_disposition'].value_counts()
+
+FALSE POSITIVE    4723
+CONFIRMED         2292
+CANDIDATE         2185
+Name: koi_disposition, dtype: int64
+
+
+kepler_CONFIRMED = kepler.where(kepler['koi_disposition'] == 'CONFIRMED').dropna()
+kepler_CANDIDATE = kepler.where(kepler['koi_disposition'] == 'CANDIDATE').dropna()
+kepler_FALSE_POSITIVE = kepler.where(kepler['koi_disposition'] == 'FALSE POSITIVE').dropna()
+
+kepler_CONFIRMED.head()
+</code></pre>
+<p><img src="/static/images/Kepler/data/koi_disposition_v1.jpg" alt="koi_disposition_v1.jpg"><img src="/static/images/Kepler/data/koi_disposition_v2.jpg" alt="koi_disposition_v2.jpg"></p>
+<h3 id="51-determination-of-statistical-values"><strong>5.1 Determination of statistical values</strong></h3>
+<p><img src="/static/images/Kepler/data/statistical_values.jpg" alt="statistical_values.jpg"></p>
+<h3 id="52-grouping-of-data">5.2. Grouping of data</h3>
+<pre><code>kepler_groupby_disposition = kepler.groupby(by='koi_disposition')
+
+kepler_groupby_disposition.groups
+
+{'CANDIDATE': Int64Index([  37,   58,   62,   63,   72,   84,   92,   94,  103,  112,
+            ...
+            9533, 9539, 9542, 9544, 9546, 9550, 9551, 9557, 9558, 9561],
+            dtype='int64', length=2185),
+'CONFIRMED': Int64Index([   0,    1,    4,    5,    6,    7,    9,   10,   11,   12,
+            ...
+            9178, 9219, 9221, 9264, 9305, 9309, 9353, 9355, 9479, 9540],
+            dtype='int64', length=2292),
+'FALSE POSITIVE': Int64Index([   2,    3,    8,   14,   15,   16,   17,   20,   24,   28,
+            ...
+            9549, 9552, 9553, 9554, 9555, 9556, 9559, 9560, 9562, 9563],
+            dtype='int64', length=4723)}
+
+[col for col in kepler.columns[5:]]
+
+['koi_period',
+'koi_time0bk',
+'koi_impact',
+'koi_duration',
+'koi_depth',
+'koi_prad',
+'koi_teq',
+'koi_insol',
+'koi_model_snr',
+'koi_steff',
+'koi_slogg',
+'koi_srad',
+'ra',
+'dec',
+'koi_kepmag']
+
+
+
+kepler_groupby_disposition_mean_std = kepler_groupby_disposition.agg(
+                                                                    {
+                                                                        'koi_period'    : ['mean', 'std'],
+                                                                        'koi_time0bk'   : ['mean', 'std'],
+                                                                        'koi_impact'    : ['mean', 'std'],
+                                                                        'koi_duration'  : ['mean', 'std'],
+                                                                        'koi_depth'     : ['mean', 'std'],
+                                                                        'koi_prad'      : ['mean', 'std'],
+                                                                        'koi_teq'       : ['mean', 'std'],
+                                                                        'koi_insol'     : ['mean', 'std'],
+                                                                        'koi_model_snr' : ['mean', 'std'],
+                                                                        'koi_steff'     : ['mean', 'std'],
+                                                                        'koi_slogg'     : ['mean', 'std'],
+                                                                        'koi_srad'      : ['mean', 'std'],
+                                                                        'ra'            : ['mean', 'std'],
+                                                                        'dec'           : ['mean', 'std'],
+                                                                        'koi_kepmag'    : ['mean', 'std']
+                                                                    }
+                                                                    ).apply(lambda x: round(x, 3))
+
+
+kepler_groupby_disposition_mean_std.T
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="right">koi_disposition</th>
+<th align="right">CANDIDATE</th>
+<th align="right">CONFIRMED</th>
+<th align="right">FALSE POSITIVE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>koi_period</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">131.283</td>
+<td align="right">27.053</td>
+<td align="right">70.897</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">2783.360</td>
+<td align="right">54.028</td>
+<td align="right">138.975</td>
+</tr>
+<tr>
+<td align="left"><strong>koi_time0bk</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">170.316</td>
+<td align="right">157.246</td>
+<td align="right">167.210</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">75.209</td>
+<td align="right">42.481</td>
+<td align="right">72.731</td>
+</tr>
+<tr>
+<td align="left"><strong>koi_impact</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">0.537</td>
+<td align="right">0.427</td>
+<td align="right">0.976</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">1.990</td>
+<td align="right">0.332</td>
+<td align="right">4.454</td>
+</tr>
+<tr>
+<td align="left"><strong>koi_duration</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">4.814</td>
+<td align="right">4.307</td>
+<td align="right">6.698</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="left">Name: koi_disposition, dtype: int64</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<pre><code>kepler_CONFIRMED = kepler.where(kepler['koi_disposition'] == 'CONFIRMED').dropna()
+kepler_CANDIDATE = kepler.where(kepler['koi_disposition'] == 'CANDIDATE').dropna()
+kepler_FALSE_POSITIVE = kepler.where(kepler['koi_disposition'] == 'FALSE POSITIVE').dropna()
+
+kepler_CONFIRMED.head()
+</code></pre>
+<p><img src="/static/images/Kepler/data/koi_disposition_v1.jpg" alt="koi_disposition_v1.jpg"><img src="/static/images/Kepler/data/koi_disposition_v2.jpg" alt="koi_disposition_v2.jpg"></p>
+<h3 id="51-determination-of-statistical-values-1"><strong>5.1 Determination of statistical values</strong></h3>
+<p><img src="/static/images/Kepler/data/statistical_values.jpg" alt="statistical_values.jpg"></p>
+<h3 id="52-grouping-of-data-1">5.2. Grouping of data</h3>
+<pre><code>kepler_groupby_disposition = kepler.groupby(by='koi_disposition')
+
+kepler_groupby_disposition.groups
+
+{'CANDIDATE': Int64Index([  37,   58,   62,   63,   72,   84,   92,   94,  103,  112,
+            ...
+            9533, 9539, 9542, 9544, 9546, 9550, 9551, 9557, 9558, 9561],
+            dtype='int64', length=2185),
+'CONFIRMED': Int64Index([   0,    1,    4,    5,    6,    7,    9,   10,   11,   12,
+            ...
+            9178, 9219, 9221, 9264, 9305, 9309, 9353, 9355, 9479, 9540],
+            dtype='int64', length=2292),
+'FALSE POSITIVE': Int64Index([   2,    3,    8,   14,   15,   16,   17,   20,   24,   28,
+            ...
+            9549, 9552, 9553, 9554, 9555, 9556, 9559, 9560, 9562, 9563],
+            dtype='int64', length=4723)}
+
+[col for col in kepler.columns[5:]]
+
+['koi_period',
+'koi_time0bk',
+'koi_impact',
+'koi_duration',
+'koi_depth',
+'koi_prad',
+'koi_teq',
+'koi_insol',
+'koi_model_snr',
+'koi_steff',
+'koi_slogg',
+'koi_srad',
+'ra',
+'dec',
+'koi_kepmag']
+
+
+
+kepler_groupby_disposition_mean_std = kepler_groupby_disposition.agg(
+                                                                    {
+                                                                        'koi_period'    : ['mean', 'std'],
+                                                                        'koi_time0bk'   : ['mean', 'std'],
+                                                                        'koi_impact'    : ['mean', 'std'],
+                                                                        'koi_duration'  : ['mean', 'std'],
+                                                                        'koi_depth'     : ['mean', 'std'],
+                                                                        'koi_prad'      : ['mean', 'std'],
+                                                                        'koi_teq'       : ['mean', 'std'],
+                                                                        'koi_insol'     : ['mean', 'std'],
+                                                                        'koi_model_snr' : ['mean', 'std'],
+                                                                        'koi_steff'     : ['mean', 'std'],
+                                                                        'koi_slogg'     : ['mean', 'std'],
+                                                                        'koi_srad'      : ['mean', 'std'],
+                                                                        'ra'            : ['mean', 'std'],
+                                                                        'dec'           : ['mean', 'std'],
+                                                                        'koi_kepmag'    : ['mean', 'std']
+                                                                    }
+                                                                    ).apply(lambda x: round(x, 3))
+
+
+kepler_groupby_disposition_mean_std.T
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="right">koi_disposition</th>
+<th align="right">CANDIDATE</th>
+<th align="right">CONFIRMED</th>
+<th align="right">FALSE POSITIVE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>koi_period</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">131.283</td>
+<td align="right">27.053</td>
+<td align="right">70.897</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">2783.360</td>
+<td align="right">54.028</td>
+<td align="right">138.975</td>
+</tr>
+<tr>
+<td align="left"><strong>koi_time0bk</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">170.316</td>
+<td align="right">157.246</td>
+<td align="right">167.210</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">75.209</td>
+<td align="right">42.481</td>
+<td align="right">72.731</td>
+</tr>
+<tr>
+<td align="left"><strong>koi_impact</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">0.537</td>
+<td align="right">0.427</td>
+<td align="right">0.976</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">1.990</td>
+<td align="right">0.332</td>
+<td align="right">4.454</td>
+</tr>
+<tr>
+<td align="left"><strong>koi_duration</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">4.814</td>
+<td align="right">4.307</td>
+<td align="right">6.698</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">4.421</td>
+<td align="right">2.720</td>
+<td align="right">8.209</td>
+</tr>
+<tr>
+<td align="left"><strong>koi_depth</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">1864.239</td>
+<td align="right">1141.446</td>
+<td align="right">44924.240</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">12502.100</td>
+<td align="right">2686.208</td>
+<td align="right">110382.027</td>
+</tr>
+<tr>
+<td align="left"><strong>koi_prad</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">15.931</td>
+<td align="right">2.872</td>
+<td align="right">191.672</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">316.937</td>
+<td align="right">3.361</td>
+<td align="right">4288.541</td>
+</tr>
+<tr>
+<td align="left"><strong>koi_teq</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">882.420</td>
+<td align="right">839.126</td>
+<td align="right">1298.734</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">665.620</td>
+<td align="right">386.741</td>
+<td align="right">1028.230</td>
+</tr>
+<tr>
+<td align="left"><strong>koi_insol</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">5359.428</td>
+<td align="right">350.666</td>
+<td align="right">12383.162</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">155923.364</td>
+<td align="right">1223.676</td>
+<td align="right">195698.944</td>
+</tr>
+<tr>
+<td align="left"><strong>koi_model_snr</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">45.596</td>
+<td align="right">87.923</td>
+<td align="right">442.498</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">231.866</td>
+<td align="right">284.086</td>
+<td align="right">1049.244</td>
+</tr>
+<tr>
+<td align="left"><strong>koi_steff</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">5639.767</td>
+<td align="right">5477.974</td>
+<td align="right">5848.887</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">693.971</td>
+<td align="right">677.133</td>
+<td align="right">862.706</td>
+</tr>
+<tr>
+<td align="left"><strong>koi_slogg</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">4.331</td>
+<td align="right">4.411</td>
+<td align="right">4.251</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">0.391</td>
+<td align="right">0.235</td>
+<td align="right">0.508</td>
+</tr>
+<tr>
+<td align="left"><strong>koi_srad</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">1.566</td>
+<td align="right">1.067</td>
+<td align="right">2.125</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">5.875</td>
+<td align="right">0.643</td>
+<td align="right">7.523</td>
+</tr>
+<tr>
+<td align="left"><strong>ra</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">291.790</td>
+<td align="right">290.943</td>
+<td align="right">292.733</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">4.835</td>
+<td align="right">4.757</td>
+<td align="right">4.612</td>
+</tr>
+<tr>
+<td align="left"><strong>dec</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">43.928</td>
+<td align="right">44.366</td>
+<td align="right">43.484</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">3.606</td>
+<td align="right">3.569</td>
+<td align="right">3.581</td>
+</tr>
+<tr>
+<td align="left"><strong>koi_kepmag</strong></td>
+<td align="right"><strong>mean</strong></td>
+<td align="right">14.348</td>
+<td align="right">14.339</td>
+<td align="right">14.212</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="right"><strong>std</strong></td>
+<td align="right">1.303</td>
+<td align="right">1.224</td>
+<td align="right">1.477</td>
+</tr>
+</tbody>
+</table>
+<h3 id="53-value-distribution-analysis">5.3. Value distribution analysis</h3>
+<pre><code>cols = kepler.columns[5:]
+
+fig = plt.figure(figsize=(25,10))
+fig.subplots_adjust(hspace=0.5, wspace=0.3)
+
+col_idx = 0
+for i in range(1, 16):
+fig.add_subplot(4, 4, i) 
+sns.distplot(kepler[cols[col_idx]])
+col_idx += 1
+
+plt.show()
+</code></pre>
+<h3 id="54-correlation-analysis">5.4. Correlation analysis</h3>
+<pre><code>corr = kepler.corr()
+
+fig = plt.figure(figsize=(18,10))
+g = sns.heatmap(corr, xticklabels=corr.columns.values, yticklabels=corr.columns.values, annot=True, fmt='.2f', linewidth=.3, cmap=sns.diverging_palette(20, 220, n=256))
+g.set_xticklabels( g.get_xticklabels(), rotation=30,  horizontalalignment='right', fontweight='light' )
+
+plt.show()
+</code></pre>
+<p><img src="/static/images/Kepler/corr_map.jpg" alt="corr_map.jpg"></p>
+
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/ArminD93/edit//content/posts/Kepler/project_Kepler_data_analysis.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/posts/kepler/project_kepler_col_names/" class="btn btn-outline-info">
+          <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+          <div class="next-prev-text">Kepler Exoplanet Search Results - data analysis</div>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/posts/kepler/project_kepler_data_prepare/" class="btn btn-outline-info">
+            <div>Next <i class="fas fa-chevron-circle-right"></i></div>
+            <div class="next-prev-text">Kepler Exoplanet Search Results - data presentation</div>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+  <a id="scroll-to-top" class="btn"><i class="fas fa-chevron-circle-up"></i></a>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#5-data-analysis"><strong>5. Data analysis</strong></a>
+      <ul>
+        <li><a href="#columns-names">Columns names:</a></li>
+        <li><a href="#51-determination-of-statistical-values"><strong>5.1 Determination of statistical values</strong></a></li>
+        <li><a href="#52-grouping-of-data">5.2. Grouping of data</a></li>
+        <li><a href="#51-determination-of-statistical-values-1"><strong>5.1 Determination of statistical values</strong></a></li>
+        <li><a href="#52-grouping-of-data-1">5.2. Grouping of data</a></li>
+        <li><a href="#53-value-distribution-analysis">5.3. Value distribution analysis</a></li>
+        <li><a href="#54-correlation-analysis">5.4. Correlation analysis</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#education">Education</a>
+              </li>
+            
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#projects">Projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#recent-posts">Recent projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#accomplishments">Accomplishments</a>
+              </li>
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>armin.derencz@gmail.com</span></li>
+          
+        </ul>
+      </div>
+      
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png" alt="Toha Theme Logo">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/images/hugo-logo.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+<script src="/js/navbar.js"></script>
+<script src="/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>

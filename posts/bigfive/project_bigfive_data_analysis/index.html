@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Big Five Personality test - data analysis</title>
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/images/favicon_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_2.png" />
+
+
+<link rel="stylesheet" href="/css/style.css" />
+
+    
+<meta name="description" content="Big Five Personality test - data analysis" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+
+    
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-L5C2B8SPR2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+  </head>
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_2.png" alt="Logo">Armin&#39;s portfolio</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_2.png" class="d-none" id="main-logo" alt="Logo">
+  <img src="/images/inverted-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_2.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="https://armind93.github.io/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">More about projects</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/bigfive/">Big Five Personality test</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/bigfive_about/">About project</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/bigfive_col_names/">Columns description</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/bigfive_modules/">Imported modules</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/bigfive_data_prepare/">Data preparation</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/bigfive/project_bigfive_data_analysis/">Data analysis</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/project_bigfive_data_analysisforpoland/">Poland data analysis</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/project_bigfive_data_analysisforuk/">United Kingdom data analysis</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/worldhappiness/">World Happiness project - about project</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/worldhappiness/project_worldhappiness_about/">About project</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/worldhappiness/project_worldhappiness_data_presentation/">Data presentation</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/worldhappiness/project_worldhappiness_data_analysis/">Data analysis</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/worldhappiness/project_worldhappiness_machine_learning/">Machine learning</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/kepler/">Kepler Exoplanet Search Results</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_about/">About project</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_col_names/">Columns description</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_modules/">Imported modules</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_data_prepare/">Data presentation</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_data_analysis/">Data analysis</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_machine_learning/">Machine Learning</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/imageclassproject/">Convolutional network testing for image classification</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/imageclassproject/project_imageclass_about/">About project</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/imageclassproject/project_imageclass_modules/">Imported modules</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/imageclassproject/project_imageclass_data_preparing/">Data preparing</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/imageclassproject/project_imageclass_neural_networks/">Neural networks</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/imageclassproject/project_imageclass_model_test/">Model testing</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/libraryproject/">Project of an automated system for selecting wooden blocks from a rack using Raspberry Pi</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/libraryproject/project_library/">Project of an automated system for selecting wooden blocks from a rack using Raspberry Pi</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/bookprices/">Books prices project</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bookprices/project_booksprices/">Books Prices</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://armind93.github.io/images/default-hero.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/A85.jpg' alt="Author Image">
+          <h5 class="author-name">Armin Derencz</h5>
+          <p>January 1, 0001</p>
+        </div>
+
+        <div class="title">
+          <h1>Big Five Personality test - data analysis</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+          <h2 id="data-analysis"><strong>Data analysis:</strong></h2>
+<h3 id="preparation-of-groups-based-on-the-name-of-the-country">Preparation of groups based on the name of the country</h3>
+<pre><code>countries_groups = BigFive.groupby(by='country')
+
+# How many groups are there?:
+len(countries_groups)
+221
+</code></pre>
+<hr>
+<pre><code>Countries_groups_counts = countries_groups.size().to_frame('count')
+Countries_groups_counts.reset_index(inplace=True)
+Countries_groups_counts.head()
+</code></pre>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>country</th>
+<th>count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Afghanistan</td>
+<td>46</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Albania</td>
+<td>353</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Algeria</td>
+<td>230</td>
+</tr>
+<tr>
+<td>3</td>
+<td>American Samoa</td>
+<td>1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Andorra</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+<pre><code>Countries_groups_counts_descending = Countries_groups_counts.sort_values('count', ascending=False )
+
+
+
+plt.figure(figsize=(27, 10) )
+
+squarify.plot(
+            sizes= Countries_groups_counts_descending['count'],
+            label= Countries_groups_counts_descending['country'][:25],
+            alpha=.7 )
+plt.axis('off')
+plt.show()
+</code></pre>
+<p><img src="/static/images/BigFive/groups_map.jpg" alt="groups_map"></p>
+<h3 id="the-number-of-times-each-response-occurs-for-each-issue">The number of times each response occurs for each issue</h3>
+<h3 id="correlation-analysis-in-individual-traits">Correlation analysis in individual traits</h3>
+<h4 id="description-and-classification-of-markings">Description and classification of markings</h4>
+<h4 id="data-preparation">Data preparation</h4>
+<h4 id="correlation-maps-for-individual-traits">Correlation maps for individual traits</h4>
+<h3 id="countries-with-the-highest-extraversion-level">Countries with the highest Extraversion level</h3>
+<h3 id="radar-diagram-for-the-selected-row">Radar diagram for the selected row</h3>
+<pre><code>BigFive.head(3)
+</code></pre>
+<hr>
+<pre><code>        EXT1 	EXT2 	EXT3 	EXT4 	EXT5 	EXT6 	EXT7 	EXT8 	EXT9 	EXT10 	EST1 	EST2 	EST3 	EST4 	EST5 	EST6 	EST7 	EST8 	EST9 	EST10 	AGR1 	AGR2 	AGR3 	AGR4 	AGR5 	AGR6 	AGR7 	AGR8 	AGR9 	AGR10 	CSN1 	CSN2 	CSN3 	CSN4 	CSN5 	CSN6 	CSN7 	CSN8 	CSN9 	CSN10 	OPN1 	OPN2 	OPN3 	OPN4 	OPN5 	OPN6 	OPN7 	OPN8 	OPN9 	OPN10 	dateload 	    introelapse 	testelapse 	endelapse 	alpha2_code 	lat_appx_lots_of_err 	long_appx_lots_of_err 	country
+0 	4.0 	1.0 	5.0 	2.0 	5.0 	1.0 	5.0 	2.0 	4.0 	1.0 	1.0 	4.0 	4.0 	2.0 	2.0 	2.0 	2.0 	2.0 	3.0 	2.0 	2.0 	5.0 	2.0 	4.0 	2.0 	3.0 	2.0 	4.0 	3.0 	4.0 	3.0 	4.0 	3.0 	2.0 	2.0 	4.0 	4.0 	2.0 	4.0 	4.0 	5.0 	1.0 	4.0 	1.0 	4.0 	1.0 	5.0 	3.0 	4.0 	5.0 	2016-03-03 02:01:01 	9.0 	        234.0 	        6 	        GB 	        51.5448 	          0.1991 	        United Kingdom
+1 	3.0 	5.0 	3.0 	4.0 	3.0 	3.0 	2.0 	5.0 	1.0 	5.0 	2.0 	3.0 	4.0 	1.0 	3.0 	1.0 	2.0 	1.0 	3.0 	1.0 	1.0 	4.0 	1.0 	5.0 	1.0 	5.0 	3.0 	4.0 	5.0 	3.0 	3.0 	2.0 	5.0 	3.0 	3.0 	1.0 	3.0 	3.0 	5.0 	3.0 	1.0 	2.0 	4.0 	2.0 	3.0 	1.0 	4.0 	2.0 	5.0 	3.0 	2016-03-03 02:01:20 	12.0 	        179.0 	        11 	        MY 	        3.1698 	                101.706 	        Malaysia
+2 	2.0 	3.0 	4.0 	4.0 	3.0 	2.0 	1.0 	3.0 	2.0 	5.0 	4.0 	4.0 	4.0 	2.0 	2.0 	2.0 	2.0 	2.0 	1.0 	3.0 	1.0 	4.0 	1.0 	4.0 	2.0 	4.0 	1.0 	4.0 	4.0 	3.0 	4.0 	2.0 	2.0 	2.0 	3.0 	3.0 	4.0 	2.0 	4.0 	2.0 	5.0 	1.0 	2.0 	1.0 	4.0 	2.0 	5.0 	3.0 	4.0 	4.0 	2016-03-03 02:01:56 	3.0 	        186.0 	        7 	        GB 	        54.9119                  -1.3833 	        United Kingdom
+</code></pre>
+<h4 id="preparing-the-radarchart-class">Preparing the RadarChart class</h4>
+<pre><code>class RadarChart:
+
+def __init__(self, rowNo, data):
+    self.rowNo    = rowNo
+    self.data     = data
+    self.cols     = 2
+    self.rows     = 3
+
+    self.scale_ticks_in_numbers = np.array([0, 1, 2, 3, 4, 5])  # 1=Disagree, 3=Neutral, 5=Agree
+    self.factors_ticks_in_numbers = np.arange(0, 41, 5)
+    self.Factors_name_list = [Factor_I_Extraversion_names_list, Factor_II_Agreeableness_names_list, Factor_III_Conscientiousness_names_list,
+                                Factor_IV_EmotionalStability_names_list, Factor_V_Openness_names_list ]
+
+    self.scale_ticks =  ['No\nanswer', 'Disagree', 'slightly\ndisagree', 'Neutral', 'Slightly\nagree', 'Agree']
+    self.title_list =   ['Factor I - Extraversion', 'Factor II - Agreeableness', 'Factor III - Conscientiousness',
+                        'Factor IV - Emotional Stability (Neuroticism)', 'Factor V - Intellect or Imagination (Openness)']  
+    self.color_list =   ['green', 'blue', 'yellow', 'red', 'purple']
+    self.factors_list = ['Extraversion', 'Agreeableness', 'Conscientiousness', 'Emotional Stability', 'Openness']
+
+def __CheckFlag(self, flag):
+    self.scores_data = 0
+    self.Factors_name_list
+    if flag == 0:
+    self.scores_data = self.data.columns[1:51]
+    # self.questions_list = self.Factors_name_list
+    self.name_list = [ quest for quest in self.Factors_name_list][self.FactorNo]
+    elif flag == 1:
+    self.scores_data = ['Extraversion', 'Agreeableness', 'Conscientiousness', 'EmotionalStability', 'Openness']# self.data.columns[-5:]
+    # self.questions_list = self.factors_list
+    self.name_list = self.factors_list
+    self.start, self.stop = ( 0, 10 )
+
+def __getnRowFromDataFrame(self):
+    self.first_row_scores = np.array( self.data.loc[ self.rowNo, self.scores_data ] )
+    self.country_name = np.array( self.data.loc[ self.rowNo, self.data.columns[0] ] )
+    self.first_row_scores_with_country_name = np.append( self.first_row_scores, self.country_name )
+
+def __setTitleAndColor(self, flag):
+    if  flag == 0:
+    self.setTitle = [ title for title in self.title_list ][self.titleNo]
+    self.setColor = [ color for color in self.color_list ][self.ColorNo]
+    elif flag == 1:
+    self.setTitle = 'Personality'
+    self.setColor =  self.color_list[0]
+
+def __getScoresAndQuestions(self):
+    self.iterator = islice(self.first_row_scores_with_country_name[:-1], self.start, self.stop )
+    self.factor_scores = [scores for scores in self.iterator]
+    self.factor_questions = self.name_list
+
+def __setQuestions_and_scores_for_chart(self):
+    self.factor_questions = np.array(self.factor_questions)
+    self.angles = np.linspace(0, 2*np.pi, len(self.factor_questions), endpoint=False)
+
+    self.factor_scores = np.concatenate( [ self.factor_scores, [self.factor_scores[0]] ] )
+    self.angles = np.concatenate( [ self.angles, [self.angles[0]] ] )  
+
+def __makePolarChart(self):
+    self.ax.plot(self.angles, self.factor_scores, 'o-', linewidth=2, color= self.setColor)
+    self.ax.fill(self.angles, self.factor_scores, alpha=0.3, color= self.setColor)
+    self.ax.set_thetagrids(self.angles * 180/np.pi, self.factor_questions)
+
+def __addDescriptionToChart(self, flag):
+    self.ax.set_title(self.setTitle)
+    self.fig.suptitle(f'Row number: {self.rowNo} - Country: { self.first_row_scores_with_country_name[-1:] }', fontsize=25)
+    self.ax.set_rlabel_position(30)
+    if flag == 0:
+    plt.yticks(self.scale_ticks_in_numbers, self.scale_ticks, color='grey', size=12) # map values with names
+    plt.ylim(0, 5)
+    elif flag == 1:
+    plt.yticks(self.factors_ticks_in_numbers,  color='grey', size=12) 
+    plt.ylim(0, 40)
+
+def create_chart(self, flag=0):
+    self.FactorNo = 0
+    self.titleNo  = 0
+    self.ColorNo  = 0
+    self. __CheckFlag(flag)
+    self.__getnRowFromDataFrame()
+
+    if flag == 0:
+    self.fig= plt.figure(figsize=(28, 28) )
+    self.fig.subplots_adjust(hspace=0.2, wspace=0.1)
+
+    for self.i, self.start, self.stop in zip( range(1, 6), range(0, 50, 10), range(10, 60, 10)):
+        self.ax = self.fig.add_subplot(self.rows, self.cols, self.i, polar=True)
+        self.__setTitleAndColor(flag)
+        self.__getScoresAndQuestions()
+        self.__setQuestions_and_scores_for_chart()
+        self.__makePolarChart()
+        self.__addDescriptionToChart(flag)
+        
+        self.titleNo  += 1
+        self.ColorNo  += 1
+        self.FactorNo += 1   
+
+    elif flag == 1:
+        self.fig= plt.figure(figsize=(10, 10) )
+        self.ax = self.fig.add_subplot(1, 1, 1, polar=True)
+        self.__setTitleAndColor(flag)
+        self.__getScoresAndQuestions()
+        self.__setQuestions_and_scores_for_chart()
+        self.__makePolarChart()
+        self.__addDescriptionToChart(flag)
+    return plt.show()           
+</code></pre>
+<h4 id="creating-objects">Creating objects</h4>
+<pre><code>scoresRadar_row_0   = RadarChart( rowNo= 0   )
+scoresRadar_row_25  = RadarChart( rowNo= 25  )
+scoresRadar_row_100 = RadarChart( rowNo= 100 )
+</code></pre>
+<h3 id="presentation-of-the-results-for-each-personality-trait-for-the-selected-row">Presentation of the results for each personality trait for the selected row</h3>
+<pre><code>scoresRadar_row_0.create_chart(flag=0)
+</code></pre>
+<p><img src="/static/images/BigFive/radar_plots/radar_for_UK.jpg" alt="radar_for_UK"></p>
+<pre><code>scoresRadar_row_25.create_chart(flag=0)
+</code></pre>
+<p><img src="/static/images/BigFive/radar_plots/radar_for_Canada.jpg" alt="radar_for_Canada"></p>
+<pre><code>scoresRadar_row_100.create_chart(flag=0 )
+</code></pre>
+<p><img src="/static/images/BigFive/radar_plots/radar_for_USA.jpg" alt="radar_for_USA"></p>
+<h3 id="calculating-points-for-individual-features">Calculating points for individual features</h3>
+<p>Equations:</p>
+<ol>
+<li><strong>E</strong> = 20 + (1) ___ - (6)  ___  +(11) ___ - (16) ___ +(21) ___ - (26) ___ +(31) ___ - (36) ___ +(41) ___ - (46) ___     = _____</li>
+<li><strong>A</strong> = 14 - (2) ___ + (7)  ___  -(12) ___ +(17) ___ -(22) ___ +(27) ___ -(32) ___ +(37) ___ +(42) ___ +(47) ___    = _____</li>
+<li><strong>C</strong> = 14 + (3) ___ - (8)  ___  +(13) ___ - (18) ___ +(23) ___ - (28) ___ +(33) ___ - (38) ___ +(43) ___ +(48) ___    = _____</li>
+<li><strong>N</strong> = 38 - (4) ___ + (9)  ___  -(14) ___ +(19) ___ -(24) ___ - (29) ___ -(34) ___ - (39) ___ -(44) ___ - (49) ___       = _____</li>
+<li><strong>O</strong> = 8 + (5) ___ - (10)  ___ +(15) ___ - (20) ___ +(25) ___ - (30) ___ +(35) ___ +(40) ___ +(45) ___ +(50) ___  = _____</li>
+</ol>
+<p>Where:</p>
+<ul>
+<li><strong>E</strong> - Extraversion,</li>
+<li><strong>A</strong> - Agreeableness,</li>
+<li><strong>C</strong> - Conscientiousness,</li>
+<li><strong>N</strong> - Emotional Stability,</li>
+<li><strong>O</strong> - Intellect or Imagination (Openness)</li>
+</ul>
+<p>(question number)</p>
+<p>source: <a href="https://openpsychometrics.org/printable/big-five-personality-test.pdf">https://openpsychometrics.org/printable/big-five-personality-test.pdf</a></p>
+<p>Thus, after substituting the markings which occurs in the data frame to the formulas, we get:</p>
+<ol>
+<li><strong>E</strong> = 20 + <strong>EXT1</strong> - <strong>EXT2</strong>  + <strong>EXT3</strong> - <strong>EXT4</strong> + <strong>EXT5</strong> - <strong>EXT6</strong> + <strong>EXT7</strong> - <strong>EXT8</strong> + <strong>EXT9</strong> - <strong>EXT10</strong> =</li>
+<li><strong>A</strong> = 14 - <strong>AGR1</strong> + <strong>AGR2</strong>  - <strong>AGR3</strong> + <strong>AGR4</strong> - <strong>AGR5</strong> + <strong>AGR6</strong> - <strong>AGR7</strong> + <strong>AGR8</strong> + <strong>AGR9</strong> + <strong>AGR10</strong> =</li>
+<li><strong>C</strong> = 14 + <strong>CSN1</strong> - <strong>CSN2</strong>  + <strong>CSN3</strong> - <strong>CSN4</strong> + <strong>CSN5</strong> - <strong>CSN6</strong> + <strong>CSN7</strong> - <strong>CSN8</strong> + <strong>CSN9</strong> + <strong>CSN10</strong> =</li>
+<li><strong>N</strong> = 38 - <strong>EST1</strong> + <strong>EST2</strong>  - <strong>EST3</strong> + <strong>EST4</strong> - <strong>EST5</strong> - <strong>EST6</strong> - <strong>EST7</strong> - <strong>EST8</strong> - <strong>EST9</strong> - <strong>EST10</strong> =</li>
+<li><strong>O</strong> = 8  + <strong>OPN1</strong> - <strong>OPN2</strong>  + <strong>OPN3</strong> - <strong>OPN4</strong> + <strong>OPN5</strong> - <strong>OPN6</strong> + <strong>OPN7</strong> + <strong>OPN8</strong> + <strong>OPN9</strong> + <strong>OPN10</strong> =</li>
+</ol>
+<h4 id="preparation-of-additional-columns">Preparation of additional columns</h4>
+<h4 id="enter-the-calculated-results-into-the-data-frame">Enter the calculated results into the data frame</h4>
+<pre><code>def getExtraversionScore(df):
+    ExtraversionScore = 0
+    ExtraversionScore = 20 + df['EXT1'] - df['EXT2'] + df['EXT3'] - df['EXT4'] + df['EXT5'] - df['EXT6'] + df['EXT7'] - df['EXT8'] + df['EXT9'] - df['EXT10']
+    return ExtraversionScore
+
+def getAgreeablenessScore(df):
+    AgreeablenessScore = 0
+    AgreeablenessScore = 14 - df['AGR1'] + df['AGR2'] - df['AGR3'] + df['AGR4'] - df['AGR5'] + df['AGR6'] - df['AGR7'] + df['AGR8'] + df['AGR9'] + df['AGR10']
+    return AgreeablenessScore
+
+def getConscientiousnessScore(df):
+    ConscientiousnessScore = 0
+    ConscientiousnessScore = 14 + df['CSN1'] - df['CSN2'] + df['CSN3'] - df['CSN4'] + df['CSN5'] - df['CSN6'] + df['CSN7'] - df['CSN8'] + df['CSN9'] + df['CSN10']
+    return ConscientiousnessScore
+
+def getEmotionalStabilityScore(df):
+    EmotionalStabilityScore = 0
+    EmotionalStabilityScore = 38 - df['EST1'] + df['EST2'] - df['EST3'] + df['EST4'] - df['EST5'] - df['EST6'] - df['EST7'] - df['EST8'] - df['EST9'] - df['EST10']
+    return EmotionalStabilityScore
+
+def getOpennessScore(df):
+    OpennessScore = 0
+    OpennessScore = 8 + df['OPN1'] - df['OPN2'] + df['OPN3'] - df['OPN4'] + df['OPN5'] - df['OPN6'] + df['OPN7'] + df['OPN8'] + df['OPN9'] + df['OPN10'] 
+    return OpennessScore    
+
+BigFive['Extraversion']       = BigFive.apply( getExtraversionScore,        axis=1 ) 
+BigFive['Agreeableness']      = BigFive.apply( getAgreeablenessScore,       axis=1 ) 
+BigFive['Conscientiousness']  = BigFive.apply( getConscientiousnessScore,   axis=1 ) 
+BigFive['EmotionalStability'] = BigFive.apply( getEmotionalStabilityScore,  axis=1 ) 
+BigFive['Openness']           = BigFive.apply( getOpennessScore,            axis=1 ) 
+</code></pre>
+<hr>
+<pre><code>BigFive.head()
+</code></pre>
+<hr>
+<pre><code>|   | EXT1 | EXT2 | EXT3 | EXT4 | EXT5 | EXT6 | EXT7 | EXT8 | EXT9 | EXT10 | EST1 | EST2 | EST3 | EST4 | EST5 | EST6 | EST7 | EST8 | EST9 | EST10 | AGR1 | AGR2 | AGR3 | AGR4 | AGR5 | AGR6 | AGR7 | AGR8 | AGR9 | AGR10 | CSN1 | CSN2 | CSN3 | CSN4 | CSN5 | CSN6 | CSN7 | CSN8 | CSN9 | CSN10 | OPN1 | OPN2 | OPN3 | OPN4 | OPN5 | OPN6 | OPN7 | OPN8 | OPN9 | OPN10 | dateload            | introelapse | testelapse | endelapse | alpha2_code | lat_appx_lots_of_err | long_appx_lots_of_err | country        | Extraversion | Agreeableness | Conscientiousness | EmotionalStability | Openness |
+|---|------|------|------|------|------|------|------|------|------|-------|------|------|------|------|------|------|------|------|------|-------|------|------|------|------|------|------|------|------|------|-------|------|------|------|------|------|------|------|------|------|-------|------|------|------|------|------|------|------|------|------|-------|---------------------|-------------|------------|-----------|-------------|----------------------|-----------------------|----------------|--------------|---------------|-------------------|--------------------|----------|
+| 0 | 4.0  | 1.0  | 5.0  | 2.0  | 5.0  | 1.0  | 5.0  | 2.0  | 4.0  | 1.0   | 1.0  | 4.0  | 4.0  | 2.0  | 2.0  | 2.0  | 2.0  | 2.0  | 3.0  | 2.0   | 2.0  | 5.0  | 2.0  | 4.0  | 2.0  | 3.0  | 2.0  | 4.0  | 3.0  | 4.0   | 3.0  | 4.0  | 3.0  | 2.0  | 2.0  | 4.0  | 4.0  | 2.0  | 4.0  | 4.0   | 5.0  | 1.0  | 4.0  | 1.0  | 4.0  | 1.0  | 5.0  | 3.0  | 4.0  | 5.0   | 2016-03-03 02:01:01 | 9.0         | 234.0      | 6         | GB          | 51.5448              | 0.1991                | United Kingdom | 36.0         | 29.0          | 22.0              | 26.0               | 35.0     |
+| 1 | 3.0  | 5.0  | 3.0  | 4.0  | 3.0  | 3.0  | 2.0  | 5.0  | 1.0  | 5.0   | 2.0  | 3.0  | 4.0  | 1.0  | 3.0  | 1.0  | 2.0  | 1.0  | 3.0  | 1.0   | 1.0  | 4.0  | 1.0  | 5.0  | 1.0  | 5.0  | 3.0  | 4.0  | 5.0  | 3.0   | 3.0  | 2.0  | 5.0  | 3.0  | 3.0  | 1.0  | 3.0  | 3.0  | 5.0  | 3.0   | 1.0  | 2.0  | 4.0  | 2.0  | 3.0  | 1.0  | 4.0  | 2.0  | 5.0  | 3.0   | 2016-03-03 02:01:20 | 12.0        | 179.0      | 11        | MY          | 3.1698               | 101.706               | Malaysia       | 10.0         | 34.0          | 27.0              | 25.0               | 25.0     |
+| 2 | 2.0  | 3.0  | 4.0  | 4.0  | 3.0  | 2.0  | 1.0  | 3.0  | 2.0  | 5.0   | 4.0  | 4.0  | 4.0  | 2.0  | 2.0  | 2.0  | 2.0  | 2.0  | 1.0  | 3.0   | 1.0  | 4.0  | 1.0  | 4.0  | 2.0  | 4.0  | 1.0  | 4.0  | 4.0  | 3.0   | 4.0  | 2.0  | 2.0  | 2.0  | 3.0  | 3.0  | 4.0  | 2.0  | 4.0  | 2.0   | 5.0  | 1.0  | 2.0  | 1.0  | 4.0  | 2.0  | 5.0  | 3.0  | 4.0  | 4.0   | 2016-03-03 02:01:56 | 3.0         | 186.0      | 7         | GB          | 54.9119              | -1.3833               | United Kingdom | 15.0         | 32.0          | 24.0              | 24.0               | 31.0     |
+| 3 | 2.0  | 2.0  | 2.0  | 3.0  | 4.0  | 2.0  | 2.0  | 4.0  | 1.0  | 4.0   | 3.0  | 3.0  | 3.0  | 2.0  | 3.0  | 2.0  | 2.0  | 2.0  | 4.0  | 3.0   | 2.0  | 4.0  | 3.0  | 4.0  | 2.0  | 4.0  | 2.0  | 4.0  | 3.0  | 4.0   | 2.0  | 4.0  | 4.0  | 4.0  | 1.0  | 2.0  | 2.0  | 3.0  | 1.0  | 4.0   | 4.0  | 2.0  | 5.0  | 2.0  | 3.0  | 1.0  | 4.0  | 4.0  | 3.0  | 3.0   | 2016-03-03 02:02:02 | 186.0       | 219.0      | 7         | GB          | 51.75                | -1.25                 | United Kingdom | 16.0         | 28.0          | 15.0              | 21.0               | 29.0     |
+| 5 | 3.0  | 3.0  | 4.0  | 2.0  | 4.0  | 2.0  | 2.0  | 3.0  | 3.0  | 4.0   | 3.0  | 4.0  | 3.0  | 2.0  | 2.0  | 1.0  | 2.0  | 1.0  | 2.0  | 2.0   | 2.0  | 3.0  | 1.0  | 4.0  | 2.0  | 3.0  | 2.0  | 3.0  | 4.0  | 4.0   | 3.0  | 2.0  | 4.0  | 1.0  | 3.0  | 2.0  | 4.0  | 3.0  | 4.0  | 3.0   | 5.0  | 1.0  | 5.0  | 1.0  | 3.0  | 1.0  | 5.0  | 4.0  | 5.0  | 2.0   | 2016-03-03 02:03:12 | 4.0         | 196.0      | 3         | SE          | 59.3333              | 18.05                 | Sweden         | 22.0         | 28.0          | 27.0              | 28.0               | 34       |
+</code></pre>
+<h3 id="personality-summary-for-the-selected-row-in-the-radar-diagram">Personality summary for the selected row in the radar diagram</h3>
+<pre><code>scoresRadar_row_0.create_chart(flag=1 )
+</code></pre>
+<p><img src="/static/images/BigFive/radar_plots/personalityBigFive_radar_for_UK.jpg" alt="personalityBigFive_radar_for_UK"></p>
+<pre><code>scoresRadar_row_25.create_chart(flag=1 )
+</code></pre>
+<p><img src="/static/images/BigFive/radar_plots/personalityBigFive_radar_for_Canada.jpg" alt="personalityBigFive_radar_for_Canada"></p>
+<pre><code>scoresRadar_row_100.create_chart(flag=1)
+</code></pre>
+<p><img src="/static/images/BigFive/radar_plots/personalityBigFive_radar_for_USA.jpg" alt="personalityBigFive_radar_for_USA"></p>
+
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/ArminD93/edit//content/posts/BigFive/project_BigFive_data_analysis.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/posts/bigfive/bigfive_col_names/" class="btn btn-outline-info">
+          <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+          <div class="next-prev-text">Big Five Personality test - columns description</div>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/posts/bigfive/project_bigfive_data_analysisforpoland/" class="btn btn-outline-info">
+            <div>Next <i class="fas fa-chevron-circle-right"></i></div>
+            <div class="next-prev-text">Big Five Personality test - data analysis for Poland</div>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+  <a id="scroll-to-top" class="btn"><i class="fas fa-chevron-circle-up"></i></a>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#data-analysis"><strong>Data analysis:</strong></a>
+      <ul>
+        <li><a href="#preparation-of-groups-based-on-the-name-of-the-country">Preparation of groups based on the name of the country</a></li>
+        <li><a href="#the-number-of-times-each-response-occurs-for-each-issue">The number of times each response occurs for each issue</a></li>
+        <li><a href="#correlation-analysis-in-individual-traits">Correlation analysis in individual traits</a>
+          <ul>
+            <li><a href="#description-and-classification-of-markings">Description and classification of markings</a></li>
+            <li><a href="#data-preparation">Data preparation</a></li>
+            <li><a href="#correlation-maps-for-individual-traits">Correlation maps for individual traits</a></li>
+          </ul>
+        </li>
+        <li><a href="#countries-with-the-highest-extraversion-level">Countries with the highest Extraversion level</a></li>
+        <li><a href="#radar-diagram-for-the-selected-row">Radar diagram for the selected row</a>
+          <ul>
+            <li><a href="#preparing-the-radarchart-class">Preparing the RadarChart class</a></li>
+            <li><a href="#creating-objects">Creating objects</a></li>
+          </ul>
+        </li>
+        <li><a href="#presentation-of-the-results-for-each-personality-trait-for-the-selected-row">Presentation of the results for each personality trait for the selected row</a></li>
+        <li><a href="#calculating-points-for-individual-features">Calculating points for individual features</a>
+          <ul>
+            <li><a href="#preparation-of-additional-columns">Preparation of additional columns</a></li>
+            <li><a href="#enter-the-calculated-results-into-the-data-frame">Enter the calculated results into the data frame</a></li>
+          </ul>
+        </li>
+        <li><a href="#personality-summary-for-the-selected-row-in-the-radar-diagram">Personality summary for the selected row in the radar diagram</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#education">Education</a>
+              </li>
+            
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#projects">Projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#recent-posts">Recent projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#accomplishments">Accomplishments</a>
+              </li>
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>armin.derencz@gmail.com</span></li>
+          
+        </ul>
+      </div>
+      
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png" alt="Toha Theme Logo">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/images/hugo-logo.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+<script src="/js/navbar.js"></script>
+<script src="/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>

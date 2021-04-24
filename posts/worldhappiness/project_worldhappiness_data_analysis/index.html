@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>World Happiness project - data analysis</title>
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/images/favicon_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_2.png" />
+
+
+<link rel="stylesheet" href="/css/style.css" />
+
+    
+<meta name="description" content="World Happiness project - data analysis" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+
+    
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-L5C2B8SPR2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+  </head>
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_2.png" alt="Logo">Armin&#39;s portfolio</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_2.png" class="d-none" id="main-logo" alt="Logo">
+  <img src="/images/inverted-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_2.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="https://armind93.github.io/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">More about projects</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/bigfive/">Big Five Personality test</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/bigfive_about/">About project</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/bigfive_col_names/">Columns description</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/bigfive_modules/">Imported modules</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/bigfive_data_prepare/">Data preparation</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/bigfive/project_bigfive_data_analysis/">Data analysis</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/project_bigfive_data_analysisforpoland/">Poland data analysis</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bigfive/project_bigfive_data_analysisforuk/">United Kingdom data analysis</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/worldhappiness/">World Happiness project - about project</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/worldhappiness/project_worldhappiness_about/">About project</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/worldhappiness/project_worldhappiness_data_presentation/">Data presentation</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/posts/worldhappiness/project_worldhappiness_data_analysis/">Data analysis</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/worldhappiness/project_worldhappiness_machine_learning/">Machine learning</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/kepler/">Kepler Exoplanet Search Results</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_about/">About project</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_col_names/">Columns description</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_modules/">Imported modules</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_data_prepare/">Data presentation</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_data_analysis/">Data analysis</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/kepler/project_kepler_machine_learning/">Machine Learning</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/imageclassproject/">Convolutional network testing for image classification</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/imageclassproject/project_imageclass_about/">About project</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/imageclassproject/project_imageclass_modules/">Imported modules</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/imageclassproject/project_imageclass_data_preparing/">Data preparing</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/imageclassproject/project_imageclass_neural_networks/">Neural networks</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/imageclassproject/project_imageclass_model_test/">Model testing</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/libraryproject/">Project of an automated system for selecting wooden blocks from a rack using Raspberry Pi</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/libraryproject/project_library/">Project of an automated system for selecting wooden blocks from a rack using Raspberry Pi</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/bookprices/">Books prices project</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/bookprices/project_booksprices/">Books Prices</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://armind93.github.io/images/default-hero.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/A85.jpg' alt="Author Image">
+          <h5 class="author-name">Armin Derencz</h5>
+          <p>January 1, 0001</p>
+        </div>
+
+        <div class="title">
+          <h1>World Happiness project - data analysis</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+          <h2 id="2-data-reviewing"><strong>2. Data reviewing</strong>:</h2>
+<p>I checked if data are completed and if there is no NaN values.</p>
+<h3 id="21-correlation-maps">2.1. Correlation maps:</h3>
+<p>On the correlation maps below, we see which factor has the highest influence on happiness score and which of them has lowest. Regardless the years, the highest influence on happiness score of the country has economy level of this country. On the opposite side, the generosity factor has little effect on happiness score.</p>
+<p><img src="/static/images/WorldHappinessReport/corr_maps.jpg" alt="corr_maps"></p>
+<h3 id="22-countries-with-the-highest-happiness-score">2.2. Countries with the highest happiness score</h3>
+<p>In 2015, Switzerland was the country with the highest happiness score their citizens, but in 2016 this country took the second position in the ranking. Through the next years, Switzerland fell on the fourth, the fifth and the sixth place. In 2016, Denmark took the first place in this ranking. Unfortunately, in 2017 came on the second place, and Norway won the competion. In 2018 and 2019, Finland led in the happiness score ranking.</p>
+<p><img src="/static/images/WorldHappinessReport/countries_with_highest_happiness_score.jpg" alt="highest happiness score count plots"></p>
+<h2 id="3-preparing-report-for-one-trait-including-all-years"><strong>3. Preparing report for one trait including all years</strong>:</h2>
+<p>I wanted to transform data into one file which would be contain all factors for only one year. To do this, I prepared two functions:</p>
+<pre><code>def create_report_for_one_feature(report, col1, col2):
+    '''
+    create_report_for_one_feature - Create report which consist only two columns
+    report - set data frame
+    col1 - name of first column from chosen data frame
+    col2 - name of second column from chosen data frame
+
+    '''
+    one_feature_report = report[[col1, col2]]
+    return one_feature_report
+
+
+def create_ALLYears_report(report1, report2, report3, report4, report5, merge_on):
+    '''
+    create_ALLYears_report - merging few data frames together
+    report1, report2, report3, report4, report5  - names of data frames
+    merge_on - set a common column for all data frames
+    '''
+    report_AllYears = pd.merge(report1, report2,  on= merge_on, suffixes=['_2015', '_2016'])
+    report_AllYears = report_AllYears.merge(report3, on= merge_on                             )
+    report_AllYears = report_AllYears.merge(report4, on= merge_on, suffixes=['_2017','_2018'] )
+    report_AllYears = report_AllYears.merge(report5, on= merge_on                             )
+
+    report_AllYears.set_index('Country or region', inplace=True)  
+    return report_AllYears 
+</code></pre>
+<p>First, I run function &ldquo;create_report_for_one_feature()&rdquo; for all 5 reports to extract one factor from all years.</p>
+<pre><code>happy_report2015 = create_report_for_one_feature(report2015, 'Country or region', 'HappinessScore')
+happy_report2016 = create_report_for_one_feature(report2016, 'Country or region', 'HappinessScore')
+happy_report2017 = create_report_for_one_feature(report2017, 'Country or region', 'HappinessScore')
+happy_report2018 = create_report_for_one_feature(report2018, 'Country or region', 'HappinessScore')
+happy_report2019 = create_report_for_one_feature(report2019, 'Country or region', 'HappinessScore')
+
+economy_report2015 = create_report_for_one_feature(report2015, 'Country or region', 'Economy')
+economy_report2016 = create_report_for_one_feature(report2016, 'Country or region', 'Economy')
+economy_report2017 = create_report_for_one_feature(report2017, 'Country or region', 'Economy')
+economy_report2018 = create_report_for_one_feature(report2018, 'Country or region', 'Economy')
+economy_report2019 = create_report_for_one_feature(report2019, 'Country or region', 'Economy')
+
+healthy_report2015 = create_report_for_one_feature(report2015, 'Country or region', 'Healthy_life_expectancy')
+healthy_report2016 = create_report_for_one_feature(report2016, 'Country or region', 'Healthy_life_expectancy')
+healthy_report2017 = create_report_for_one_feature(report2017, 'Country or region', 'Healthy_life_expectancy')
+healthy_report2018 = create_report_for_one_feature(report2018, 'Country or region', 'Healthy_life_expectancy')
+healthy_report2019 = create_report_for_one_feature(report2019, 'Country or region', 'Healthy_life_expectancy')
+
+social_support_report2015 = create_report_for_one_feature(report2015, 'Country or region', 'Social_support')
+social_support_report2016 = create_report_for_one_feature(report2016, 'Country or region', 'Social_support')
+social_support_report2017 = create_report_for_one_feature(report2017, 'Country or region', 'Social_support')
+social_support_report2018 = create_report_for_one_feature(report2018, 'Country or region', 'Social_support')
+social_support_report2019 = create_report_for_one_feature(report2019, 'Country or region', 'Social_support')
+</code></pre>
+<p>Then, using function &ldquo;create_ALL Years report&rdquo;, I merged all years into into one file.</p>
+<pre><code>happy_AllYears = create_ALLYears_report(happy_report2015, happy_report2016, happy_report2017, happy_report2018, happy_report2019, merge_on='Country or region')
+happy_AllYears.head()
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/happyAllYears.jpg" alt="happiness2015"></p>
+<pre><code>economy_AllYears = create_ALLYears_report(economy_report2015, economy_report2016, economy_report2017, economy_report2018, economy_report2019, merge_on='Country or region')
+economy_AllYears.head()
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/economyAllYears.jpg" alt="economyAllYears"></p>
+<pre><code>healthy_AllYears = create_ALLYears_report(healthy_report2015, healthy_report2016, healthy_report2017, healthy_report2018, healthy_report2019, merge_on='Country or region')
+healthy_AllYears.head()
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/healthAllYears.jpg" alt="healthAllYears"></p>
+<pre><code>social_support_AllYears = create_ALLYears_report(social_support_report2015, social_support_report2016, social_support_report2017, social_support_report2018, social_support_report2019, merge_on='Country or region')
+social_support_AllYears.head()
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/socialAllYears.jpg" alt="socialAllYears"></p>
+<h3 id="31-setting-all-years-in-one-column">3.1. Setting all years in one column</h3>
+<p>I wanted to set all years in one column of data frame. To do this, I use pandas method called stack(). Next, I have to use additional method - to_frame() which helps convert result of stack() method to data frame.</p>
+<pre><code>happy_AllYears_stacked = happy_AllYears.stack().to_frame()
+economy_AllYears_stacked = economy_AllYears.stack().to_frame()
+healthy_AllYears_stacked = healthy_AllYears.stack().to_frame()
+social_support_AllYears_stacked = social_support_AllYears.stack().to_frame()
+</code></pre>
+<p>It&rsquo;s a good idea to reset the index:</p>
+<pre><code>happy_AllYears_stacked.reset_index(inplace=True)
+economy_AllYears_stacked.reset_index(inplace=True)
+healthy_AllYears_stacked.reset_index(inplace=True)
+social_support_AllYears_stacked.reset_index(inplace=True)
+</code></pre>
+<p>Result of used above methods:</p>
+<pre><code>happy_AllYears_stacked.head()
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/AllYearsInOneColumn_1.jpg" alt="AllYearsInOneColumn_1"></p>
+<p>It&rsquo;s good to rename columns names in oder to better recognize them. I used builded in pandas method rename()</p>
+<pre><code>newHappyColNames   = { 'level_1'  :   'Year',
+                             0    :   'HappinessScore'}
+
+newEconomyColNames = { 'level_1'  :   'Year',
+                               0  :   'Economy'}
+
+newHealthyColNames = { 'level_1'  :   'Year',
+                               0  :   'Health (LifeExpectancy)'}
+
+newSocialColNames  = { 'level_1'  :   'Year',
+                               0  :   'socialSupport'}
+                               
+happy_AllYears_stacked.rename(columns=newHappyColNames, inplace=True)
+economy_AllYears_stacked.rename(columns=newEconomyColNames, inplace=True)
+healthy_AllYears_stacked.rename(columns=newHealthyColNames, inplace=True)
+social_support_AllYears_stacked.rename(columns=newSocialColNames, inplace=True)
+
+happy_AllYears_stacked.head()
+economy_AllYears_stacked.head()
+healthy_AllYears_stacked.head()
+social_support_AllYears_stacked.head()
+</code></pre>
+<p><img src="/static/images/WorldHappinessReport/happy_AllYears_stacked.jpg" alt="happy_AllYears_stacked"><img src="/static/images/WorldHappinessReport/economy_AllYears_stacked.jpg" alt="economy_AllYears_stacked"></p>
+<p><img src="/static/images/WorldHappinessReport/healthy_AllYears_stacked.jpg" alt="healthy_AllYears_stacked">
+<img src="/static/images/WorldHappinessReport/social_AllYears_stacked.jpg" alt="social_AllYears_stacked"></p>
+<h3 id="32-changes-of-happiness-levels-in-2015-2019-on-line-plot">3.2. Changes of happiness levels in 2015-2019 on line plot</h3>
+<p>Here below, we can see how the citizens happiness score has changed from 2015 to 2019. The largest increase from 2015 to 2019 had Finland. An interesting case is Austria. From 2015 to 2017, score of this country was decreasing, but in 2017 to 2019, it was start to rising. From 2015 Norway and Denmark are the countries with the highest happiness score, which hasn&rsquo;t changed rapidly to 2019.</p>
+<p><img src="/static/images/WorldHappinessReport/img1.png" alt="alt"></p>
+<h3 id="33-presentation-of-changes-in-the-level-of-traits-that-have-the-greatest-impact-on-the-level-of-happiness-in-2015-2019">3.3. Presentation of changes in the level of traits that have the greatest impact on the level of happiness in 2015-2019</h3>
+<p><img src="/static/images/WorldHappinessReport/countries_corr_maps.jpg" alt="countries corr maps"></p>
+<p>This time, I use heat map to show how factors has changed during next years for chosen countries, from 2015 to 2019. From this heat maps we can got to know that:</p>
+<ul>
+<li>in <strong>2015</strong> country with the highest:
+<ul>
+<li><strong>happiness</strong> score was <strong>Switzerland</strong>,</li>
+<li><strong>economy</strong> score was <strong>Qatar</strong>,</li>
+<li><strong>life expectancy (health)</strong> score was <strong>Singapore</strong>,</li>
+<li><strong>social support</strong> score was <strong>Iceland</strong>,</li>
+</ul>
+</li>
+<li>in <strong>2016</strong> country with the highest:
+<ul>
+<li><strong>happiness</strong> score was <strong>Denmark</strong>,</li>
+<li><strong>economy</strong> score was <strong>Qatar</strong>  (score has increased from 1.69 to 1.82 points),</li>
+<li><strong>life expectancy (health)</strong> score was <strong>Singapore</strong> (score has decreased from 1.03 to 0.95 points),</li>
+<li><strong>social support</strong> score was <strong>Iceland</strong> (score has decreased from 1.40 to 1.18 points),</li>
+</ul>
+</li>
+<li>in <strong>2017</strong> country with the highest:
+<ul>
+<li><strong>happiness</strong> score was <strong>Norway</strong>,</li>
+<li><strong>economy</strong> score was <strong>Qatar</strong> (score has increased from 1.82 to 1.87 points),</li>
+<li><strong>life expectancy (health)</strong> score was <strong>Singapore</strong> (score hasn&rsquo;t changed, still equal 0.95 points),</li>
+<li><strong>social support</strong> score was <strong>Iceland</strong> (score has increased from 1.18 to 1.61 points),</li>
+</ul>
+</li>
+<li>in <strong>2018</strong> country with the highest:
+<ul>
+<li><strong>happiness</strong> score was <strong>Finland</strong>,</li>
+<li><strong>economy</strong> score was <strong>United Arab Emirates</strong> (score has increased from 1.63 to 2.10 points),</li>
+<li><strong>life expectancy (health)</strong> score was <strong>Singapore</strong> (score has increased from 0.95 to 1.01 points),</li>
+<li><strong>social support</strong> score was <strong>Iceland</strong> (score has increased from 1.61 to 1.64 points),</li>
+</ul>
+</li>
+<li>in <strong>2019</strong> country with the highest:
+<ul>
+<li><strong>happiness</strong> score was <strong>Finland</strong> (score has increased from 7.63 to 7.77 points),</li>
+<li><strong>economy</strong> score was <strong>Qatar</strong> (score has increased from 1.65 to 1.68 points),</li>
+<li><strong>life expectancy (health)</strong> score was <strong>Singapore</strong> (score has increased from 1.01 to 1.14 points),</li>
+<li><strong>social support</strong> score was <strong>Iceland</strong> (score has decreased from 1.64 to 1.62 points).</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/ArminD93/edit//content/posts/WorldHappiness/project_WorldHappiness_data_analysis.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/search/" class="btn btn-outline-info">
+          <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+          <div class="next-prev-text">Search Results</div>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/posts/worldhappiness/project_worldhappiness_data_presentation/" class="btn btn-outline-info">
+            <div>Next <i class="fas fa-chevron-circle-right"></i></div>
+            <div class="next-prev-text">World Happiness project - data presentation</div>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+  <a id="scroll-to-top" class="btn"><i class="fas fa-chevron-circle-up"></i></a>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#2-data-reviewing"><strong>2. Data reviewing</strong>:</a>
+      <ul>
+        <li><a href="#21-correlation-maps">2.1. Correlation maps:</a></li>
+        <li><a href="#22-countries-with-the-highest-happiness-score">2.2. Countries with the highest happiness score</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-preparing-report-for-one-trait-including-all-years"><strong>3. Preparing report for one trait including all years</strong>:</a>
+      <ul>
+        <li><a href="#31-setting-all-years-in-one-column">3.1. Setting all years in one column</a></li>
+        <li><a href="#32-changes-of-happiness-levels-in-2015-2019-on-line-plot">3.2. Changes of happiness levels in 2015-2019 on line plot</a></li>
+        <li><a href="#33-presentation-of-changes-in-the-level-of-traits-that-have-the-greatest-impact-on-the-level-of-happiness-in-2015-2019">3.3. Presentation of changes in the level of traits that have the greatest impact on the level of happiness in 2015-2019</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#education">Education</a>
+              </li>
+            
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#projects">Projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#recent-posts">Recent projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#accomplishments">Accomplishments</a>
+              </li>
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>armin.derencz@gmail.com</span></li>
+          
+        </ul>
+      </div>
+      
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png" alt="Toha Theme Logo">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/images/hugo-logo.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+<script src="/js/navbar.js"></script>
+<script src="/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>

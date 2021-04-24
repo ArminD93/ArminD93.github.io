@@ -12,24 +12,11 @@
     
     
     <item>
-      <title>Search Results</title>
-      <link>https://armind93.github.io/search/</link>
-      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
-      
-      <guid>https://armind93.github.io/search/</guid>
-      <description>This file exists solely to respond to /search URL with the related search layout template.
-No content shown here is rendered, all content is based in the template layouts/page/search.html
-Setting a very low sitemap priority will tell search engines this is not important content.
-This implementation uses Fusejs, jquery and mark.js
-Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
-    </item>
-    
-    <item>
       <title>Big Five Personality test - about project</title>
-      <link>https://armind93.github.io/projects/bigfive/bigfive_about/</link>
+      <link>https://armind93.github.io/posts/bigfive/bigfive_about/</link>
       <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/bigfive/bigfive_about/</guid>
+      <guid>https://armind93.github.io/posts/bigfive/bigfive_about/</guid>
       <description>Data analysis from the Big Five Personality test.
 link to wikipedia
 link to GitHub Repository</description>
@@ -37,10 +24,10 @@ link to GitHub Repository</description>
     
     <item>
       <title>Convolutional network testing for image classification - about project</title>
-      <link>https://armind93.github.io/projects/imageclassproject/project_imageclass_about/</link>
+      <link>https://armind93.github.io/posts/imageclassproject/project_imageclass_about/</link>
       <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/imageclassproject/project_imageclass_about/</guid>
+      <guid>https://armind93.github.io/posts/imageclassproject/project_imageclass_about/</guid>
       <description>Using convolutional neural network to classifying image into 6 classes.
 link to data
 link to GitHub Repository</description>
@@ -48,30 +35,30 @@ link to GitHub Repository</description>
     
     <item>
       <title>Kepler Exoplanet Search Results - about project</title>
-      <link>https://armind93.github.io/projects/kepler/project_kepler_about/</link>
+      <link>https://armind93.github.io/posts/kepler/project_kepler_about/</link>
       <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/kepler/project_kepler_about/</guid>
+      <guid>https://armind93.github.io/posts/kepler/project_kepler_about/</guid>
       <description>Data analysis from the Kepler Exoplanet Search Results report.
 link to GitHub Repository</description>
     </item>
     
     <item>
       <title>World Happiness project - about project</title>
-      <link>https://armind93.github.io/projects/worldhappiness/project_worldhappiness_about/</link>
+      <link>https://armind93.github.io/posts/worldhappiness/project_worldhappiness_about/</link>
       <pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/worldhappiness/project_worldhappiness_about/</guid>
+      <guid>https://armind93.github.io/posts/worldhappiness/project_worldhappiness_about/</guid>
       <description>The data contain informations which might have influence for people&amp;rsquo;s happiness score in the selected country. We have 5 reports divided by years, from 2015 to 2019.
 Acording to data, the happiness score can be estimated from six factors - economic production, social support, life expectancy, freedom, absence of corruption, and generosity. These factors contribute to making life evaluations higher in each country than they are in Dystopia, a hypothetical country that has values equal to the world’s lowest national averages for each of the six factors.</description>
     </item>
     
     <item>
       <title>Project of an automated system for selecting wooden blocks from a rack using Raspberry Pi</title>
-      <link>https://armind93.github.io/projects/libraryproject/project_library/</link>
+      <link>https://armind93.github.io/posts/libraryproject/project_library/</link>
       <pubDate>Fri, 05 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/libraryproject/project_library/</guid>
+      <guid>https://armind93.github.io/posts/libraryproject/project_library/</guid>
       <description>link to GitHub Repository
 Introduction The device was built using elements from a 3D printer (frame, stepper motors). Three randomly placed wooden blocks on the shelves of the rack are picked up by the gripper and stored in one of the cells in the bottom row of this rack. The place on the bottom shelf is chosen, where the path from these blocks to this place is the shortest
 Overview   Device control through a graphical user interface:</description>
@@ -79,10 +66,10 @@ Overview   Device control through a graphical user interface:</description>
     
     <item>
       <title>Books prices project</title>
-      <link>https://armind93.github.io/projects/bookprices/project_booksprices/</link>
+      <link>https://armind93.github.io/posts/bookprices/project_booksprices/</link>
       <pubDate>Mon, 08 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/bookprices/project_booksprices/</guid>
+      <guid>https://armind93.github.io/posts/bookprices/project_booksprices/</guid>
       <description>link to GitHub repository
 Introduction I wanted to get informations about books prices, which I&amp;rsquo;d like to buy in the future. Additionally, it would be nice to see the price curve on the chart.
 Functions:  Downloading informations about books (title, price, date) from the acount on the website: ebooki.swiatczytnikow.pl. Saving data to the database. Displaying charts - how the price has changed over time for a specific title.  Main menu:   Menu if click t: Menu if click n: All titles: Entering new book data: If you would like to add new book data to database, you have to enter your email from page &amp;ldquo;ebooki.</description>
@@ -94,8 +81,7 @@ Functions:  Downloading informations about books (title, price, date) from the a
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://armind93.github.io/about/</guid>
-      <description>Hi, I&amp;rsquo;m Armin Hugo is the world’s fastest framework for building websites. It is written in Go. It makes use of a variety of open source projects including:
-Skills:   Python:  Completed Udemy course: Python Intermediate (Credential ID: UC-CZ6ZMUWE) Program implemented in the Master’s and Bachelor’s projects    Data analysis:  Completed Udemy course: Data Science: Data analysis in Python and pandas (Credential ID: UC-K631OZR7) pandas, numpy, matplolib, seaborn    Machine learning:  Completed Udemy: Machine Learning in Python.</description>
+      <description>Hi, I&amp;rsquo;m Armin Skills:   Python:  Completed Udemy course: Python Intermediate (Credential ID: UC-CZ6ZMUWE) Program implemented in the Master’s and Bachelor’s projects    Data analysis:  Completed Udemy course: Data Science: Data analysis in Python and pandas (Credential ID: UC-K631OZR7) pandas, numpy, matplolib, seaborn    Machine learning:  Completed Udemy: Machine Learning in Python. Basics, perceptron, regression (Credential ID: UC-1f13cf3e-e300-4e06-81d4-0a9d318179d6) Completed Udemy: Machine Learning Bootcampin Python language ep.</description>
     </item>
     
     <item>
@@ -110,29 +96,29 @@ Skills:   Python:  Completed Udemy course: Python Intermediate (Credential ID: U
     
     <item>
       <title>Big Five Personality test - columns description</title>
-      <link>https://armind93.github.io/projects/bigfive/bigfive_col_names/</link>
+      <link>https://armind93.github.io/posts/bigfive/bigfive_col_names/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/bigfive/bigfive_col_names/</guid>
+      <guid>https://armind93.github.io/posts/bigfive/bigfive_col_names/</guid>
       <description>Dataset contains 1,015,342 questionnaire answers collected online by Open-Source Psychometrics Project. According to information from the page openpsychometrics.org, The big five personality traits are the best accepted and most commonly used model of personality in academic psychology. Thanks to results from this test, researchers can analyse factors of personality which can be applied to individual person.
 On wikipedia page we can got to know that The Big Five personality traits is a taxonomy, or grouping for personality traits.</description>
     </item>
     
     <item>
       <title>Big Five Personality test - data analysis</title>
-      <link>https://armind93.github.io/projects/bigfive/project_bigfive_data_analysis/</link>
+      <link>https://armind93.github.io/posts/bigfive/project_bigfive_data_analysis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/bigfive/project_bigfive_data_analysis/</guid>
+      <guid>https://armind93.github.io/posts/bigfive/project_bigfive_data_analysis/</guid>
       <description>Data analysis: Preparation of groups based on the name of the country countries_groups = BigFive.groupby(by=&#39;country&#39;) # How many groups are there?: len(countries_groups) 221   Countries_groups_counts = countries_groups.size().to_frame(&#39;count&#39;) Countries_groups_counts.reset_index(inplace=True) Countries_groups_counts.head()      country count     0 Afghanistan 46   1 Albania 353   2 Algeria 230   3 American Samoa 1   4 Andorra 15    Countries_groups_counts_descending = Countries_groups_counts.</description>
     </item>
     
     <item>
       <title>Big Five Personality test - data analysis for Poland</title>
-      <link>https://armind93.github.io/projects/bigfive/project_bigfive_data_analysisforpoland/</link>
+      <link>https://armind93.github.io/posts/bigfive/project_bigfive_data_analysisforpoland/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/bigfive/project_bigfive_data_analysisforpoland/</guid>
+      <guid>https://armind93.github.io/posts/bigfive/project_bigfive_data_analysisforpoland/</guid>
       <description>Polish cities - data distribution First, let&amp;rsquo;s see what the distribution of data from Polish cities looks like.
 There is a lot of data collected from the city of Warsaw. There are definitely more of them than for other cities. It can be concluded that the data is not properly balanced.
 Presentation of approximate locations in a scatterplot diagram I wanted to present approximate users locations gathered from Poland on scatterplot diagram.</description>
@@ -140,48 +126,48 @@ Presentation of approximate locations in a scatterplot diagram I wanted to prese
     
     <item>
       <title>Big Five Personality test - data analysis for United Kingdom</title>
-      <link>https://armind93.github.io/projects/bigfive/project_bigfive_data_analysisforuk/</link>
+      <link>https://armind93.github.io/posts/bigfive/project_bigfive_data_analysisforuk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/bigfive/project_bigfive_data_analysisforuk/</guid>
+      <guid>https://armind93.github.io/posts/bigfive/project_bigfive_data_analysisforuk/</guid>
       <description>uk_data.info() &amp;lt;class &#39;pandas.core.frame.DataFrame&#39;&amp;gt; Int64Index: 49662 entries, 0 to 693689 Data columns (total 62 columns): # Column Non-Null Count Dtype --- ------ -------------- ----- 0 country 49662 non-null object 1 EXT1 49662 non-null float32 2 EXT2 49662 non-null float32 3 EXT3 49662 non-null float32 4 EXT4 49662 non-null float32 5 EXT5 49662 non-null float32 6 EXT6 49662 non-null float32 7 EXT7 49662 non-null float32 8 EXT8 49662 non-null float32 9 EXT9 49662 non-null float32 10 EXT10 49662 non-null float32 11 EST1 49662 non-null float32 12 EST2 49662 non-null float32 13 EST3 49662 non-null float32 14 EST4 49662 non-null float32 15 EST5 49662 non-null float32 16 EST6 49662 non-null float32 17 EST7 49662 non-null float32 18 EST8 49662 non-null float32 19 EST9 49662 non-null float32 20 EST10 49662 non-null float32 21 AGR1 49662 non-null float32 22 AGR2 49662 non-null float32 23 AGR3 49662 non-null float32 24 AGR4 49662 non-null float32 25 AGR5 49662 non-null float32 26 AGR6 49662 non-null float32 27 AGR7 49662 non-null float32 28 AGR8 49662 non-null float32 29 AGR9 49662 non-null float32 30 AGR10 49662 non-null float32 31 CSN1 49662 non-null float32 32 CSN2 49662 non-null float32 33 CSN3 49662 non-null float32 34 CSN4 49662 non-null float32 35 CSN5 49662 non-null float32 36 CSN6 49662 non-null float32 37 CSN7 49662 non-null float32 38 CSN8 49662 non-null float32 39 CSN9 49662 non-null float32 40 CSN10 49662 non-null float32 41 OPN1 49662 non-null float32 42 OPN2 49662 non-null float32 43 OPN3 49662 non-null float32 44 OPN4 49662 non-null float32 45 OPN5 49662 non-null float32 46 OPN6 49662 non-null float32 47 OPN7 49662 non-null float32 48 OPN8 49662 non-null float32 49 OPN9 49662 non-null float32 50 OPN10 49662 non-null float32 51 dateload 49662 non-null datetime64[ns] 52 introelapse 49662 non-null float32 53 testelapse 49662 non-null float32 54 endelapse 49662 non-null int16 55 lat_appx_lots_of_err 49662 non-null category 56 long_appx_lots_of_err 49662 non-null category 57 Extraversion 49662 non-null float32 58 Agreeableness 49662 non-null float32 59 Conscientiousness 49662 non-null float32 60 EmotionalStability 49662 non-null float32 61 Openness 49662 non-null float32 dtypes: category(2), datetime64[ns](1), float32(57), int16(1), object(1) memory usage: 15.</description>
     </item>
     
     <item>
       <title>Big Five Personality test - data preparation</title>
-      <link>https://armind93.github.io/projects/bigfive/bigfive_data_prepare/</link>
+      <link>https://armind93.github.io/posts/bigfive/bigfive_data_prepare/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/bigfive/bigfive_data_prepare/</guid>
+      <guid>https://armind93.github.io/posts/bigfive/bigfive_data_prepare/</guid>
       <description>Data preparation: Data presentation BigFive_raw = pd.read_csv( &#39;/content/drive/My Drive/ColabNotebooks/BigFivePersonality/data-final.csv&#39;, low_memory=False, sep=&#39;\t&#39;, usecols=[&#39;EXT1&#39;, &#39;EXT2&#39;, &#39;EXT3&#39;, &#39;EXT4&#39;, &#39;EXT5&#39;, &#39;EXT6&#39;, &#39;EXT7&#39;, &#39;EXT8&#39;, &#39;EXT9&#39;, &#39;EXT10&#39;, &#39;EST1&#39;, &#39;EST2&#39;, &#39;EST3&#39;, &#39;EST4&#39;, &#39;EST5&#39;, &#39;EST6&#39;, &#39;EST7&#39;, &#39;EST8&#39;, &#39;EST9&#39;, &#39;EST10&#39;, &#39;AGR1&#39;, &#39;AGR2&#39;, &#39;AGR3&#39;, &#39;AGR4&#39;, &#39;AGR5&#39;, &#39;AGR6&#39;, &#39;AGR7&#39;, &#39;AGR8&#39;, &#39;AGR9&#39;, &#39;AGR10&#39;, &#39;CSN1&#39;, &#39;CSN2&#39;, &#39;CSN3&#39;, &#39;CSN4&#39;, &#39;CSN5&#39;, &#39;CSN6&#39;, &#39;CSN7&#39;, &#39;CSN8&#39;, &#39;CSN9&#39;, &#39;CSN10&#39;, &#39;OPN1&#39;, &#39;OPN2&#39;, &#39;OPN3&#39;, &#39;OPN4&#39;, &#39;OPN5&#39;, &#39;OPN6&#39;, &#39;OPN7&#39;, &#39;OPN8&#39;, &#39;OPN9&#39;, &#39;OPN10&#39;, # &#39;EXT1_E&#39;, &#39;EXT2_E&#39;, &#39;EXT3_E&#39;, &#39;EXT4_E&#39;, &#39;EXT5_E&#39;, &#39;EXT6_E&#39;, &#39;EXT7_E&#39;, &#39;EXT8_E&#39;, &#39;EXT9_E&#39;, &#39;EXT10_E&#39;, # &#39;EST1_E&#39;, &#39;EST2_E&#39;, &#39;EST3_E&#39;, &#39;EST4_E&#39;, &#39;EST5_E&#39;, &#39;EST6_E&#39;, &#39;EST7_E&#39;, &#39;EST8_E&#39;, &#39;EST9_E&#39;, &#39;EST10_E&#39;, # &#39;AGR1_E&#39;, &#39;AGR2_E&#39;, &#39;AGR3_E&#39;, &#39;AGR4_E&#39;, &#39;AGR5_E&#39;, &#39;AGR6_E&#39;, &#39;AGR7_E&#39;, &#39;AGR8_E&#39;, &#39;AGR9_E&#39;, &#39;AGR10_E&#39;, # &#39;CSN1_E&#39;, &#39;CSN2_E&#39;, &#39;CSN3_E&#39;, &#39;CSN4_E&#39;, &#39;CSN5_E&#39;, &#39;CSN6_E&#39;, &#39;CSN7_E&#39;, &#39;CSN8_E&#39;, &#39;CSN9_E&#39;, &#39;CSN10_E&#39;, # &#39;OPN1_E&#39;, &#39;OPN2_E&#39;, &#39;OPN3_E&#39;, &#39;OPN4_E&#39;, &#39;OPN5_E&#39;, &#39;OPN6_E&#39;, &#39;OPN7_E&#39;, &#39;OPN8_E&#39;, &#39;OPN9_E&#39;, &#39;OPN10_E&#39;, &#39;dateload&#39;, &#39;introelapse&#39;, &#39;testelapse&#39;, &#39;endelapse&#39;, &#39;IPC&#39;, &#39;country&#39;, &#39;lat_appx_lots_of_err&#39;, &#39;long_appx_lots_of_err&#39; ] ) # Kopia danych BigFive = BigFive_raw.</description>
     </item>
     
     <item>
       <title>Big Five Personality test - imported modules</title>
-      <link>https://armind93.github.io/projects/bigfive/bigfive_modules/</link>
+      <link>https://armind93.github.io/posts/bigfive/bigfive_modules/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/bigfive/bigfive_modules/</guid>
+      <guid>https://armind93.github.io/posts/bigfive/bigfive_modules/</guid>
       <description>link to GitHub Repository
 Import modules try: import pandas as pd import numpy as np np.random.seed(42) import matplotlib.pyplot as plt plt.style.use(&amp;quot;fivethirtyeight&amp;quot;) import plotly.figure_factory as ff import plotly.express as px from plotly.subplots import make_subplots import seaborn as sns from itertools import islice, combinations from geopy.geocoders import Nominatim geolocator = Nominatim(user_agent=&amp;quot;BigFive_project&amp;quot;, timeout=None ) import pycountry_convert as pc import squarify import time import os import swifter import geopandas as gpd except: !pip3 install pycountry_convert !</description>
     </item>
     
     <item>
       <title>Convolutional network testing for image classification - data preparing</title>
-      <link>https://armind93.github.io/projects/imageclassproject/project_imageclass_data_preparing/</link>
+      <link>https://armind93.github.io/posts/imageclassproject/project_imageclass_data_preparing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/imageclassproject/project_imageclass_data_preparing/</guid>
+      <guid>https://armind93.github.io/posts/imageclassproject/project_imageclass_data_preparing/</guid>
       <description>2. Data preparing: !unzip -q &amp;quot;/content/drive/My Drive/ColabNotebooks/intel_image/data/intel_image.zip&amp;quot;  2.1. Number of photos for each class !rm -rf ./images base_dir = &#39;./intel_image&#39; # Przypisujemy katalog bazowy raw_no_of_files = {} classes = [&#39;buildings&#39;, &#39;forest&#39;, &#39;glacier&#39;, &#39;mountain&#39;, &#39;sea&#39;, &#39;street&#39;] for dir in classes: raw_no_of_files[dir] = len(os.listdir(os.path.join(base_dir, dir))) raw_no_of_files.items()  Results:
 dict_items([(&#39;buildings&#39;, 2628), (&#39;forest&#39;, 2745), (&#39;glacier&#39;, 2957), (&#39;mountain&#39;, 3037), (&#39;sea&#39;, 2784), (&#39;street&#39;, 2883)])  2.2. Catalogues creating: train, test, valid data_dir = &#39;./images&#39; # Przypisujemy katalog bazowy if not os.</description>
     </item>
     
     <item>
       <title>Convolutional network testing for image classification - imported modules</title>
-      <link>https://armind93.github.io/projects/imageclassproject/project_imageclass_modules/</link>
+      <link>https://armind93.github.io/posts/imageclassproject/project_imageclass_modules/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/imageclassproject/project_imageclass_modules/</guid>
+      <guid>https://armind93.github.io/posts/imageclassproject/project_imageclass_modules/</guid>
       <description>link to data
 link to GitHub Repository
 1. Import modules import os import time from datetime import datetime as dt import numpy as np import pandas as pd import matplotlib.pyplot as plt import shutil # Pomaga w kopiowaniu plików import seaborn as sns sns.set(style=&amp;quot;ticks&amp;quot;, color_codes=True) from sklearn.metrics import confusion_matrix, classification_report from tensorflow.keras.preprocessing import image from tensorflow.keras.preprocessing.image import ImageDataGenerator from tensorflow.keras.models import Sequential, Model from tensorflow.keras.models import load_model from tensorflow.keras.layers import Input, Dense, Flatten, Dropout, Conv2D, MaxPooling2D, concatenate, BatchNormalization, GlobalAveragePooling2D from tensorflow.</description>
@@ -189,10 +175,10 @@ link to GitHub Repository
     
     <item>
       <title>Convolutional network testing for image classification - model testing</title>
-      <link>https://armind93.github.io/projects/imageclassproject/project_imageclass_model_test/</link>
+      <link>https://armind93.github.io/posts/imageclassproject/project_imageclass_model_test/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/imageclassproject/project_imageclass_model_test/</guid>
+      <guid>https://armind93.github.io/posts/imageclassproject/project_imageclass_model_test/</guid>
       <description>3.6. Models testing: Load best model:
 best_model = load_model(&#39;/content/drive/My Drive/ColabNotebooks/intel_image/models/2020-06-05/model_3_L0.36_A0.86.h5&#39;) # best_model.summary()  3.6.1. TestModel class Create TestModel class:
 class TestModel: def __init__(self, model_dict): self.model_dict = model_dict self.y_pred_list = [] self.models_metrics_list = [] self.models_errors_list = [] self.model_name_idx = 0 self.y_pred_idx = 0 self.models_metrics_idx = 0 self.errors_df_idx = 0 self.test_dir_list = [test_buildings_dir, test_forest_dir, test_glacier_dir, test_mountain_dir, test_sea_dir, test_street_dir] def __prepare_test_generator(self): self.test_datagen = ImageDataGenerator(rescale=1./255.) self.test_generator = self.test_datagen.flow_from_directory(test_dir, target_size=(150, 150), batch_size=32, class_mode=&#39;categorical&#39;, shuffle=False ) def __get_y_pred(self): self.</description>
@@ -200,57 +186,57 @@ class TestModel: def __init__(self, model_dict): self.model_dict = model_dict se
     
     <item>
       <title>Convolutional network testing for image classification - neural networks</title>
-      <link>https://armind93.github.io/projects/imageclassproject/project_imageclass_neural_networks/</link>
+      <link>https://armind93.github.io/posts/imageclassproject/project_imageclass_neural_networks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/imageclassproject/project_imageclass_neural_networks/</guid>
+      <guid>https://armind93.github.io/posts/imageclassproject/project_imageclass_neural_networks/</guid>
       <description>3. Neural networks: class Network: def __init__(self, model_name, epochs, optimizer): self.model_name = model_name self.epochs = epochs self.optimizer = optimizer self.tz = &#39;CEST&#39; def model_summary(self): self.model_name.summary() def save_model(self, file_name): self.models_dir = &#39;/content/drive/My Drive/ColabNotebooks/intel_image/models/&#39; + dt.now().strftime(&#39;%Y-%m-%d/&#39;) if not os.path.exists(self.models_dir): os.makedirs(self.models_dir) self.model_name.save(self.models_dir + file_name + &#39;.h5&#39;) def train(self, verbose=0, ): self.model_name.compile(optimizer= self.optimizer, loss=&#39;categorical_crossentropy&#39;, metrics=[&#39;accuracy&#39;]) log_dir = &#39;logs/&#39; + dt.now().strftime(&#39;%Y-%m-%d_%H:%M:%S&#39;+ self.tz) tensorboard = TensorBoard(log_dir=log_dir, histogram_freq=1 ) # -------------------------------------------------------- time_start = time.time() self.history = self.model_name.fit( train_generator, steps_per_epoch= steps_per_epoch, epochs= self.</description>
     </item>
     
     <item>
       <title>Kepler Exoplanet Search Results - data analysis</title>
-      <link>https://armind93.github.io/projects/kepler/project_kepler_col_names/</link>
+      <link>https://armind93.github.io/posts/kepler/project_kepler_col_names/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/kepler/project_kepler_col_names/</guid>
+      <guid>https://armind93.github.io/posts/kepler/project_kepler_col_names/</guid>
       <description>1. Description of the values ​​from the columns KOI - Kepler Objects of Interest
    column name description     kepid Kepler Identification   kepoi_name KOI Name. A number used to identify and track a Kepler Object of Interest (KOI). A KOI is a target identified by the Kepler Project that displays at least one transit-like sequence within Kepler time-series photometry that appears to be of astrophysical origin and initially consistent with a planetary transit hypothesis.</description>
     </item>
     
     <item>
       <title>Kepler Exoplanet Search Results - data analysis</title>
-      <link>https://armind93.github.io/projects/kepler/project_kepler_data_analysis/</link>
+      <link>https://armind93.github.io/posts/kepler/project_kepler_data_analysis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/kepler/project_kepler_data_analysis/</guid>
+      <guid>https://armind93.github.io/posts/kepler/project_kepler_data_analysis/</guid>
       <description>5. Data analysis Columns names: KOI - Kepler Objects of Interest
    column name description     koi_period Orbital Period (days) The interval between consecutive planetary transits.   koi_time0bk Transit Epoch (BJD - 2 454 833,0)) The time corresponding to the center of the first detected transit in Barycentric Julian Day (BJD) minus a constant offset of 2,454,833.0 days. The offset corresponds to 12:00 on Jan 1, 2009 UTC.</description>
     </item>
     
     <item>
       <title>Kepler Exoplanet Search Results - data presentation</title>
-      <link>https://armind93.github.io/projects/kepler/project_kepler_data_prepare/</link>
+      <link>https://armind93.github.io/posts/kepler/project_kepler_data_prepare/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/kepler/project_kepler_data_prepare/</guid>
+      <guid>https://armind93.github.io/posts/kepler/project_kepler_data_prepare/</guid>
       <description>3. Data preparation: 3.1. Data presentation kepler_raw = pd.read_csv(&#39;/content/drive/My Drive/ColabNotebooks/KeplerExoplanetSearchResults/datasets/cumulative.csv&#39;, low_memory=False) # Kopia danych kepler = kepler_raw.copy() kepler.head()  kepler.info(memory_usage=&#39;Deep&#39;) &amp;lt;class &#39;pandas.core.frame.DataFrame&#39;&amp;gt; RangeIndex: 9564 entries, 0 to 9563 Data columns (total 50 columns): # Column Non-Null Count Dtype --- ------ -------------- ----- 0 rowid 9564 non-null int64 1 kepid 9564 non-null int64 2 kepoi_name 9564 non-null object 3 kepler_name 2294 non-null object 4 koi_disposition 9564 non-null object 5 koi_pdisposition 9564 non-null object 6 koi_score 8054 non-null float64 7 koi_fpflag_nt 9564 non-null int64 8 koi_fpflag_ss 9564 non-null int64 9 koi_fpflag_co 9564 non-null int64 10 koi_fpflag_ec 9564 non-null int64 11 koi_period 9564 non-null float64 12 koi_period_err1 9110 non-null float64 13 koi_period_err2 9110 non-null float64 14 koi_time0bk 9564 non-null float64 15 koi_time0bk_err1 9110 non-null float64 16 koi_time0bk_err2 9110 non-null float64 17 koi_impact 9201 non-null float64 18 koi_impact_err1 9110 non-null float64 19 koi_impact_err2 9110 non-null float64 20 koi_duration 9564 non-null float64 21 koi_duration_err1 9110 non-null float64 22 koi_duration_err2 9110 non-null float64 23 koi_depth 9201 non-null float64 24 koi_depth_err1 9110 non-null float64 25 koi_depth_err2 9110 non-null float64 26 koi_prad 9201 non-null float64 27 koi_prad_err1 9201 non-null float64 28 koi_prad_err2 9201 non-null float64 29 koi_teq 9201 non-null float64 30 koi_teq_err1 0 non-null float64 31 koi_teq_err2 0 non-null float64 32 koi_insol 9243 non-null float64 33 koi_insol_err1 9243 non-null float64 34 koi_insol_err2 9243 non-null float64 35 koi_model_snr 9201 non-null float64 36 koi_tce_plnt_num 9218 non-null float64 37 koi_tce_delivname 9218 non-null object 38 koi_steff 9201 non-null float64 39 koi_steff_err1 9096 non-null float64 40 koi_steff_err2 9081 non-null float64 41 koi_slogg 9201 non-null float64 42 koi_slogg_err1 9096 non-null float64 43 koi_slogg_err2 9096 non-null float64 44 koi_srad 9201 non-null float64 45 koi_srad_err1 9096 non-null float64 46 koi_srad_err2 9096 non-null float64 47 ra 9564 non-null float64 48 dec 9564 non-null float64 49 koi_kepmag 9563 non-null float64 dtypes: float64(39), int64(6), object(5) memory usage: 3.</description>
     </item>
     
     <item>
       <title>Kepler Exoplanet Search Results - imported modules</title>
-      <link>https://armind93.github.io/projects/kepler/project_kepler_modules/</link>
+      <link>https://armind93.github.io/posts/kepler/project_kepler_modules/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/kepler/project_kepler_modules/</guid>
+      <guid>https://armind93.github.io/posts/kepler/project_kepler_modules/</guid>
       <description>2. Import modules import pandas as pd import numpy as np import matplotlib.pyplot as plt import plotly.figure_factory as ff import plotly.express as px from plotly.subplots import make_subplots import seaborn as sns import plotly.express as px from plotly.subplots import make_subplots import seaborn as sns sns.set(style=&amp;quot;ticks&amp;quot;, color_codes=True) from sklearn.linear_model import LogisticRegression from sklearn.neighbors import KNeighborsClassifier from sklearn.tree import DecisionTreeClassifier from sklearn.ensemble import RandomForestClassifier from sklearn.svm import SVC from sklearn.naive_bayes import GaussianNB from sklearn.</description>
     </item>
     
     <item>
       <title>Kepler Exoplanet Search Results - machine learning</title>
-      <link>https://armind93.github.io/projects/kepler/project_kepler_machine_learning/</link>
+      <link>https://armind93.github.io/posts/kepler/project_kepler_machine_learning/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/kepler/project_kepler_machine_learning/</guid>
+      <guid>https://armind93.github.io/posts/kepler/project_kepler_machine_learning/</guid>
       <description>6. Machine learning: 6.1. Preparing data for machine learning: kepler.head()   | | koi_disposition | koi_fpflag_nt | koi_fpflag_ss | koi_fpflag_co | koi_fpflag_ec | koi_period | koi_time0bk | koi_impact | koi_duration | koi_depth | koi_prad | koi_teq | koi_insol | koi_model_snr | koi_steff | koi_slogg | koi_srad | ra | dec | koi_kepmag | |---|-----------------|---------------|---------------|---------------|---------------|------------|-------------|------------|--------------|-----------|----------|---------|-----------|---------------|-----------|-----------|----------|-----------|-----------|------------| | 0 | CONFIRMED | 0 | 0 | 0 | 0 | 9.488036 | 170.</description>
     </item>
     
@@ -282,20 +268,20 @@ Initial setup Search depends on additional output content type of JSON in config
     
     <item>
       <title>World Happiness project - data analysis</title>
-      <link>https://armind93.github.io/projects/worldhappiness/project_worldhappiness_data_analysis/</link>
+      <link>https://armind93.github.io/posts/worldhappiness/project_worldhappiness_data_analysis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/worldhappiness/project_worldhappiness_data_analysis/</guid>
+      <guid>https://armind93.github.io/posts/worldhappiness/project_worldhappiness_data_analysis/</guid>
       <description>2. Data reviewing: I checked if data are completed and if there is no NaN values.
 2.1. Correlation maps: On the correlation maps below, we see which factor has the highest influence on happiness score and which of them has lowest. Regardless the years, the highest influence on happiness score of the country has economy level of this country. On the opposite side, the generosity factor has little effect on happiness score.</description>
     </item>
     
     <item>
       <title>World Happiness project - data presentation</title>
-      <link>https://armind93.github.io/projects/worldhappiness/project_worldhappiness_data_presentation/</link>
+      <link>https://armind93.github.io/posts/worldhappiness/project_worldhappiness_data_presentation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/worldhappiness/project_worldhappiness_data_presentation/</guid>
+      <guid>https://armind93.github.io/posts/worldhappiness/project_worldhappiness_data_presentation/</guid>
       <description>1. Data presentation: Data downloaded from kaggle was splitted into years, which means in one file we have all factors from one year and we&amp;rsquo;ve 5 data files.:
   Data from 2015:   Data from 2016:   Data from 2017:
   Data from 2018:   Data from 2019:   At the beginning, I considered each report separately, and then sum up my analysis into one report - summary report.</description>
@@ -303,10 +289,10 @@ Initial setup Search depends on additional output content type of JSON in config
     
     <item>
       <title>World Happiness project - machine learning</title>
-      <link>https://armind93.github.io/projects/worldhappiness/project_worldhappiness_machine_learning/</link>
+      <link>https://armind93.github.io/posts/worldhappiness/project_worldhappiness_machine_learning/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://armind93.github.io/projects/worldhappiness/project_worldhappiness_machine_learning/</guid>
+      <guid>https://armind93.github.io/posts/worldhappiness/project_worldhappiness_machine_learning/</guid>
       <description>4. Preparing data to machine learning: I wanted to link all factors into one dataframe, where all years were located in one column. I used merge() method, where I chose merging on columns &amp;lsquo;Country or region&amp;rsquo; and &amp;lsquo;Year&amp;rsquo;.
 AllFeatures = pd.merge(happy_AllYears_stacked, economy_AllYears_stacked, on= [&#39;Country or region&#39;, &#39;Year&#39;] ) AllFeatures = AllFeatures.merge(healthy_AllYears_stacked, on= [&#39;Country or region&#39;, &#39;Year&#39;] ) AllFeatures = AllFeatures.merge(social_support_AllYears_stacked, on= [&#39;Country or region&#39;, &#39;Year&#39;] ) AllFeatures.head()  Next, I wished to find out what the descibe() method returns for column &amp;lsquo;happinessScore&amp;rsquo; in this &amp;lsquo;AllYears&amp;rsquo; data frame.</description>
     </item>

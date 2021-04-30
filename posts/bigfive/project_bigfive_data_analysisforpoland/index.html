@@ -486,11 +486,11 @@ if (!doNotTrack) {
         </div>
 
         <div class="post-content" id="post-content">
-          <h4 id="polish-cities---data-distribution">Polish cities - data distribution</h4>
+          <h2 id="polish-cities---data-distribution">Polish cities - data distribution</h2>
 <p>First, let&rsquo;s see what the distribution of data from Polish cities looks like.</p>
 <p><img src="/static/images/BigFive/places_groups.jpg" alt="places_groups"></p>
 <p>There is a lot of data collected from the city of Warsaw. There are definitely more of them than for other cities. It can be concluded that the data is not properly balanced.</p>
-<h4 id="presentation-of-approximate-locations-in-a-scatterplot-diagram">Presentation of approximate locations in a scatterplot diagram</h4>
+<h2 id="presentation-of-approximate-locations-in-a-scatterplot-diagram">Presentation of approximate locations in a scatterplot diagram</h2>
 <p>I wanted to present approximate users locations gathered from Poland on scatterplot diagram. In order to do this, first I extracted group from main data frame, which contain informations only about Poland.</p>
 <pre><code>pol_data = countries_groups.get_group('Poland')
 pol_data.head(3)
@@ -800,12 +800,11 @@ scoresRadar_pol_data_row_393   = RadarChart( rowNo= 393,   data=pol_data   )
       <div class="toc">
         <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#polish-cities---data-distribution">Polish cities - data distribution</a></li>
+    <li><a href="#presentation-of-approximate-locations-in-a-scatterplot-diagram">Presentation of approximate locations in a scatterplot diagram</a>
       <ul>
         <li>
           <ul>
-            <li><a href="#polish-cities---data-distribution">Polish cities - data distribution</a></li>
-            <li><a href="#presentation-of-approximate-locations-in-a-scatterplot-diagram">Presentation of approximate locations in a scatterplot diagram</a></li>
             <li><a href="#counted-statistical-values-for-personalities-data">Counted statistical values for personalities data</a>
               <ul>
                 <li><a href="#box-plots-for-personalities-data">Box plots for personalities data:</a></li>

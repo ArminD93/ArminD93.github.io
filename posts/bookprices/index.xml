@@ -18,7 +18,7 @@
       
       <guid>https://armind93.github.io/posts/bookprices/project_booksprices/</guid>
       <description>link to GitHub repository
-Introduction I wanted to get informations about books prices, which I&amp;rsquo;d like to buy in the future. Additionally, it would be nice to see the price curve on the chart.
+About project I wanted to get informations about books prices, which I&amp;rsquo;d like to buy in the future. Additionally, it would be nice to see the price curve on the chart.
 Functions:  Downloading informations about books (title, price, date) from the acount on the website: ebooki.swiatczytnikow.pl. Saving data to the database. Displaying charts - how the price has changed over time for a specific title.  Main menu:   Menu if click t: Menu if click n: All titles: Entering new book data: If you would like to add new book data to database, you have to enter your email from page &amp;ldquo;ebooki.</description>
     </item>
     

@@ -18,7 +18,7 @@
       
       <guid>https://armind93.github.io/posts/libraryproject/project_library/</guid>
       <description>link to GitHub Repository
-Introduction The device was built using elements from a 3D printer (frame, stepper motors). Three randomly placed wooden blocks on the shelves of the rack are picked up by the gripper and stored in one of the cells in the bottom row of this rack. The place on the bottom shelf is chosen, where the path from these blocks to this place is the shortest
+Introduction The device was built using elements from a 3D printer (frame, stepper motors). Three randomly placed wooden blocks on the shelves of the rack are picked up by the gripper and stored in one of the cells in the bottom row of this rack. The place on the bottom shelf is chosen, where the path from these blocks to this place is the shortest.
 Overview   Device control through a graphical user interface:</description>
     </item>
     

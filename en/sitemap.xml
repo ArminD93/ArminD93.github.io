@@ -130,19 +130,31 @@
   </url>
   
   <url>
-    <loc>https://armind93.github.io/posts/imageclassproject/project_imageclass_data_preparing/</loc>
+    <loc>https://armind93.github.io/posts/imageclassproject/kerasversion/</loc>
   </url>
   
   <url>
-    <loc>https://armind93.github.io/posts/imageclassproject/project_imageclass_modules/</loc>
+    <loc>https://armind93.github.io/posts/imageclassproject/pytorchversion/</loc>
   </url>
   
   <url>
-    <loc>https://armind93.github.io/posts/imageclassproject/project_imageclass_model_test/</loc>
+    <loc>https://armind93.github.io/posts/imageclassproject/kerasversion/project_imageclass_data_preparing/</loc>
   </url>
   
   <url>
-    <loc>https://armind93.github.io/posts/imageclassproject/project_imageclass_neural_networks/</loc>
+    <loc>https://armind93.github.io/posts/imageclassproject/kerasversion/project_imageclass_modules/</loc>
+  </url>
+  
+  <url>
+    <loc>https://armind93.github.io/posts/imageclassproject/kerasversion/project_imageclass_model_test/</loc>
+  </url>
+  
+  <url>
+    <loc>https://armind93.github.io/posts/imageclassproject/kerasversion/project_imageclass_neural_networks/</loc>
+  </url>
+  
+  <url>
+    <loc>https://armind93.github.io/posts/imageclassproject/pytorchversion/pytorch_data_preparing/</loc>
   </url>
   
   <url>
@@ -167,6 +179,10 @@
   
   <url>
     <loc>https://armind93.github.io/notes/</loc>
+  </url>
+  
+  <url>
+    <loc>https://armind93.github.io/posts/imageclassproject/pytorchversion/pytorch_modules/</loc>
   </url>
   
   <url>

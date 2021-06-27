@@ -22,46 +22,5 @@ link to data
 link to GitHub Repository</description>
     </item>
     
-    <item>
-      <title>Convolutional network testing for image classification - data preparing</title>
-      <link>https://armind93.github.io/posts/imageclassproject/project_imageclass_data_preparing/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://armind93.github.io/posts/imageclassproject/project_imageclass_data_preparing/</guid>
-      <description>2. Data preparing: !unzip -q &amp;quot;/content/drive/My Drive/ColabNotebooks/intel_image/data/intel_image.zip&amp;quot;  2.1. Number of photos for each class !rm -rf ./images base_dir = &#39;./intel_image&#39; # Przypisujemy katalog bazowy raw_no_of_files = {} classes = [&#39;buildings&#39;, &#39;forest&#39;, &#39;glacier&#39;, &#39;mountain&#39;, &#39;sea&#39;, &#39;street&#39;] for dir in classes: raw_no_of_files[dir] = len(os.listdir(os.path.join(base_dir, dir))) raw_no_of_files.items()  Results:
-dict_items([(&#39;buildings&#39;, 2628), (&#39;forest&#39;, 2745), (&#39;glacier&#39;, 2957), (&#39;mountain&#39;, 3037), (&#39;sea&#39;, 2784), (&#39;street&#39;, 2883)])  2.2. Catalogues creating: train, test, valid data_dir = &#39;./images&#39; # Przypisujemy katalog bazowy if not os.</description>
-    </item>
-    
-    <item>
-      <title>Convolutional network testing for image classification - imported modules</title>
-      <link>https://armind93.github.io/posts/imageclassproject/project_imageclass_modules/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://armind93.github.io/posts/imageclassproject/project_imageclass_modules/</guid>
-      <description>link to data
-link to GitHub Repository
-1. Import modules import os import time from datetime import datetime as dt import numpy as np import pandas as pd import matplotlib.pyplot as plt import shutil # Pomaga w kopiowaniu plików import seaborn as sns sns.set(style=&amp;quot;ticks&amp;quot;, color_codes=True) from sklearn.metrics import confusion_matrix, classification_report from tensorflow.keras.preprocessing import image from tensorflow.keras.preprocessing.image import ImageDataGenerator from tensorflow.keras.models import Sequential, Model from tensorflow.keras.models import load_model from tensorflow.keras.layers import Input, Dense, Flatten, Dropout, Conv2D, MaxPooling2D, concatenate, BatchNormalization, GlobalAveragePooling2D from tensorflow.</description>
-    </item>
-    
-    <item>
-      <title>Convolutional network testing for image classification - model testing</title>
-      <link>https://armind93.github.io/posts/imageclassproject/project_imageclass_model_test/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://armind93.github.io/posts/imageclassproject/project_imageclass_model_test/</guid>
-      <description>3.6. Models testing: Load best model:
-best_model = load_model(&#39;/content/drive/My Drive/ColabNotebooks/intel_image/models/2020-06-05/model_3_L0.36_A0.86.h5&#39;) # best_model.summary()  3.6.1. TestModel class Create TestModel class:
-class TestModel: def __init__(self, model_dict): self.model_dict = model_dict self.y_pred_list = [] self.models_metrics_list = [] self.models_errors_list = [] self.model_name_idx = 0 self.y_pred_idx = 0 self.models_metrics_idx = 0 self.errors_df_idx = 0 self.test_dir_list = [test_buildings_dir, test_forest_dir, test_glacier_dir, test_mountain_dir, test_sea_dir, test_street_dir] def __prepare_test_generator(self): self.test_datagen = ImageDataGenerator(rescale=1./255.) self.test_generator = self.test_datagen.flow_from_directory(test_dir, target_size=(150, 150), batch_size=32, class_mode=&#39;categorical&#39;, shuffle=False ) def __get_y_pred(self): self.</description>
-    </item>
-    
-    <item>
-      <title>Convolutional network testing for image classification - neural networks</title>
-      <link>https://armind93.github.io/posts/imageclassproject/project_imageclass_neural_networks/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://armind93.github.io/posts/imageclassproject/project_imageclass_neural_networks/</guid>
-      <description>3. Neural networks: class Network: def __init__(self, model_name, epochs, optimizer): self.model_name = model_name self.epochs = epochs self.optimizer = optimizer self.tz = &#39;CEST&#39; def model_summary(self): self.model_name.summary() def save_model(self, file_name): self.models_dir = &#39;/content/drive/My Drive/ColabNotebooks/intel_image/models/&#39; + dt.now().strftime(&#39;%Y-%m-%d/&#39;) if not os.path.exists(self.models_dir): os.makedirs(self.models_dir) self.model_name.save(self.models_dir + file_name + &#39;.h5&#39;) def train(self, verbose=0, ): self.model_name.compile(optimizer= self.optimizer, loss=&#39;categorical_crossentropy&#39;, metrics=[&#39;accuracy&#39;]) log_dir = &#39;logs/&#39; + dt.now().strftime(&#39;%Y-%m-%d_%H:%M:%S&#39;+ self.tz) tensorboard = TensorBoard(log_dir=log_dir, histogram_freq=1 ) # -------------------------------------------------------- time_start = time.time() self.history = self.model_name.fit( train_generator, steps_per_epoch= steps_per_epoch, epochs= self.</description>
-    </item>
-    
   </channel>
 </rss>
